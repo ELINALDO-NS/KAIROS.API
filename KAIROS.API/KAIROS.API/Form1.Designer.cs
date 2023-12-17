@@ -30,9 +30,9 @@
         {
             tabControl1 = new TabControl();
             InsereCadastros = new TabPage();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btn_Iniciar = new Button();
+            btn_Valida_Dados = new Button();
+            btn_Lista_Horarios = new Button();
             textBox6 = new TextBox();
             label6 = new Label();
             textBox5 = new TextBox();
@@ -43,7 +43,7 @@
             label3 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            btn_LocalExcel = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
@@ -63,9 +63,9 @@
             // 
             // InsereCadastros
             // 
-            InsereCadastros.Controls.Add(button4);
-            InsereCadastros.Controls.Add(button3);
-            InsereCadastros.Controls.Add(button2);
+            InsereCadastros.Controls.Add(btn_Iniciar);
+            InsereCadastros.Controls.Add(btn_Valida_Dados);
+            InsereCadastros.Controls.Add(btn_Lista_Horarios);
             InsereCadastros.Controls.Add(textBox6);
             InsereCadastros.Controls.Add(label6);
             InsereCadastros.Controls.Add(textBox5);
@@ -76,7 +76,7 @@
             InsereCadastros.Controls.Add(label3);
             InsereCadastros.Controls.Add(textBox2);
             InsereCadastros.Controls.Add(label2);
-            InsereCadastros.Controls.Add(button1);
+            InsereCadastros.Controls.Add(btn_LocalExcel);
             InsereCadastros.Controls.Add(textBox1);
             InsereCadastros.Controls.Add(label1);
             InsereCadastros.Location = new Point(4, 24);
@@ -87,38 +87,39 @@
             InsereCadastros.Text = "Insere Cadastros";
             InsereCadastros.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_Iniciar
             // 
-            button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button4.Location = new Point(268, 177);
-            button4.Name = "button4";
-            button4.Size = new Size(144, 23);
-            button4.TabIndex = 15;
-            button4.Text = "Iniciar";
-            button4.TextAlign = ContentAlignment.TopCenter;
-            button4.UseVisualStyleBackColor = true;
+            btn_Iniciar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_Iniciar.Location = new Point(268, 177);
+            btn_Iniciar.Name = "btn_Iniciar";
+            btn_Iniciar.Size = new Size(144, 23);
+            btn_Iniciar.TabIndex = 15;
+            btn_Iniciar.Text = "Iniciar";
+            btn_Iniciar.TextAlign = ContentAlignment.TopCenter;
+            btn_Iniciar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Valida_Dados
             // 
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button3.Location = new Point(268, 131);
-            button3.Name = "button3";
-            button3.Size = new Size(144, 23);
-            button3.TabIndex = 14;
-            button3.Text = "Valida Dados";
-            button3.TextAlign = ContentAlignment.TopCenter;
-            button3.UseVisualStyleBackColor = true;
+            btn_Valida_Dados.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_Valida_Dados.Location = new Point(268, 131);
+            btn_Valida_Dados.Name = "btn_Valida_Dados";
+            btn_Valida_Dados.Size = new Size(144, 23);
+            btn_Valida_Dados.TabIndex = 14;
+            btn_Valida_Dados.Text = "Valida Dados";
+            btn_Valida_Dados.TextAlign = ContentAlignment.TopCenter;
+            btn_Valida_Dados.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Lista_Horarios
             // 
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button2.Location = new Point(268, 93);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 23);
-            button2.TabIndex = 13;
-            button2.Text = "Lista Horarios";
-            button2.TextAlign = ContentAlignment.TopCenter;
-            button2.UseVisualStyleBackColor = true;
+            btn_Lista_Horarios.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_Lista_Horarios.Location = new Point(268, 93);
+            btn_Lista_Horarios.Name = "btn_Lista_Horarios";
+            btn_Lista_Horarios.Size = new Size(144, 23);
+            btn_Lista_Horarios.TabIndex = 13;
+            btn_Lista_Horarios.Text = "Lista Horarios";
+            btn_Lista_Horarios.TextAlign = ContentAlignment.TopCenter;
+            btn_Lista_Horarios.UseVisualStyleBackColor = true;
+            btn_Lista_Horarios.Click += btn_Lista_Horarios_Click;
             // 
             // textBox6
             // 
@@ -210,16 +211,16 @@
             label2.TabIndex = 3;
             label2.Text = "Senha";
             // 
-            // button1
+            // btn_LocalExcel
             // 
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button1.Location = new Point(322, 10);
-            button1.Name = "button1";
-            button1.Size = new Size(58, 23);
-            button1.TabIndex = 2;
-            button1.Text = "...";
-            button1.TextAlign = ContentAlignment.TopCenter;
-            button1.UseVisualStyleBackColor = true;
+            btn_LocalExcel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_LocalExcel.Location = new Point(322, 10);
+            btn_LocalExcel.Name = "btn_LocalExcel";
+            btn_LocalExcel.Size = new Size(58, 23);
+            btn_LocalExcel.TabIndex = 2;
+            btn_LocalExcel.Text = "...";
+            btn_LocalExcel.TextAlign = ContentAlignment.TopCenter;
+            btn_LocalExcel.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -273,14 +274,14 @@
         private Label label3;
         private TextBox textBox2;
         private Label label2;
-        private Button button1;
+        private Button btn_LocalExcel;
         private TextBox textBox1;
         private Label label1;
         private TextBox textBox4;
         private Label label4;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btn_Iniciar;
+        private Button btn_Valida_Dados;
+        private Button btn_Lista_Horarios;
         private TextBox textBox6;
         private Label label6;
         private TextBox textBox5;

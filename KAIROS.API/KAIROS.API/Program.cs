@@ -1,3 +1,8 @@
+using KAIROS.API.Repositorio;
+using KAIROS.API.Repositorio.Interface;
+using Microsoft.Extensions.DependencyInjection;
+using System.Configuration;
+
 namespace KAIROS.API
 {
     internal static class Program
@@ -10,8 +15,16 @@ namespace KAIROS.API
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            // Configurar serviços
+            var serviceProvider = new ServiceCollection()
+                .AddScoped<IExcelRepositorio, ExcelRepositorio>()                
+                .BuildServiceProvider();
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Form1(serviceProvider));
+            
         }
     }
 }

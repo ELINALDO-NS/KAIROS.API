@@ -9,7 +9,7 @@ namespace KAIROS.API
 {
     static class RemoveAcentos
     {
-        public static string RemoveAccents(this string text)
+        public static string Remove(this string text)
         {
             StringBuilder sbReturn = new StringBuilder();
             var arrayText = text.Normalize(NormalizationForm.FormD).ToCharArray();

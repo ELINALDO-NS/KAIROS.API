@@ -17,11 +17,9 @@ namespace KAIROS.API
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            // Configurar serviços
             var serviceProvider = new ServiceCollection()
-                .AddScoped<IExcelRepositorio, ExcelRepositorio>()                
-                .BuildServiceProvider();
+           .AddScoped<IExcelRepositorio, ExcelRepositorio>()
+            .BuildServiceProvider();
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1(serviceProvider));
             

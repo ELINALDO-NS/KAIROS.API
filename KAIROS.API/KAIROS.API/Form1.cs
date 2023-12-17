@@ -9,22 +9,30 @@ namespace KAIROS.API
     {
         private readonly IExcelRepositorio _excel;
 
-
-
         public Form1(ServiceProvider serviceProvider)
         {
-            ServiceProvider = serviceProvider;
-            _excel = new ExcelRepositorio();
             InitializeComponent();
-
+            _excel = serviceProvider.GetRequiredService<IExcelRepositorio>();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-        public ServiceProvider ServiceProvider { get; }
+        }      
 
         private void btn_Lista_Horarios_Click(object sender, EventArgs e)
         {
-            _excel.LerCargos(PatchExcel);
-            MessageBox.Show("Ok");
+            try
+            {
+                _excel.LerCargos(PatchExcel);
+                _excel.LerEstrutura(PatchExcel);
+                MessageBox.Show("Ok");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+           
         }
         public string PatchExcel;
         public bool PathExcel()
@@ -67,5 +75,7 @@ namespace KAIROS.API
         {
             PathExcel();
         }
+
+
     }
 }

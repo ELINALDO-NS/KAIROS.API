@@ -44,7 +44,7 @@
             textBox2 = new TextBox();
             label2 = new Label();
             btn_LocalExcel = new Button();
-            textBox1 = new TextBox();
+            Txb_Excel = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
             tabControl1.SuspendLayout();
@@ -77,7 +77,7 @@
             InsereCadastros.Controls.Add(textBox2);
             InsereCadastros.Controls.Add(label2);
             InsereCadastros.Controls.Add(btn_LocalExcel);
-            InsereCadastros.Controls.Add(textBox1);
+            InsereCadastros.Controls.Add(Txb_Excel);
             InsereCadastros.Controls.Add(label1);
             InsereCadastros.Location = new Point(4, 24);
             InsereCadastros.Name = "InsereCadastros";
@@ -221,14 +221,15 @@
             btn_LocalExcel.Text = "...";
             btn_LocalExcel.TextAlign = ContentAlignment.TopCenter;
             btn_LocalExcel.UseVisualStyleBackColor = true;
+            btn_LocalExcel.Click += btn_LocalExcel_Click;
             // 
-            // textBox1
+            // Txb_Excel
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox1.Location = new Point(113, 10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 25);
-            textBox1.TabIndex = 1;
+            Txb_Excel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_Excel.Location = new Point(113, 10);
+            Txb_Excel.Name = "Txb_Excel";
+            Txb_Excel.Size = new Size(193, 25);
+            Txb_Excel.TabIndex = 1;
             // 
             // label1
             // 
@@ -275,7 +276,7 @@
         private TextBox textBox2;
         private Label label2;
         private Button btn_LocalExcel;
-        private TextBox textBox1;
+        private TextBox Txb_Excel;
         private Label label1;
         private TextBox textBox4;
         private Label label4;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KAIROS.API.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,11 @@ namespace KAIROS.API.Repositorio.Interface
 {
     public interface IExcelRepositorio
     {
-        Task ListaHorario(string caminho);
+        Task< List<Cargo>> LerCargos(string Caminho);
+        Task LerEstrutura(string Caminho);
+        Task LerHoarios(string Caminho);
+        Task LerPessoas(string Caminho);
+        Task ListaHorarios(string caminho);
+
     }
 }

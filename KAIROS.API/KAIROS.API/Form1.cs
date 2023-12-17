@@ -23,8 +23,49 @@ namespace KAIROS.API
 
         private void btn_Lista_Horarios_Click(object sender, EventArgs e)
         {
-            _excel.ListaHorario("C:\\Users\\Santos\\Desktop\\");
+            _excel.LerCargos(PatchExcel);
             MessageBox.Show("Ok");
+        }
+        public string PatchExcel;
+        public bool PathExcel()
+        {
+            try
+            {
+
+                using (OpenFileDialog OpenFileDialog1 = new OpenFileDialog())
+                {
+                    OpenFileDialog1.Filter = "Text files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        PatchExcel = OpenFileDialog1.FileName;
+                        Txb_Excel.Text = OpenFileDialog1.FileName;
+                        //Txb_Excel.Text = OpenFileDialog1.FileName;
+
+                        return true;
+                    }
+                    else
+                    {
+
+                        return false;
+
+                    }
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Modelo Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+
+        private void btn_LocalExcel_Click(object sender, EventArgs e)
+        {
+            PathExcel();
         }
     }
 }

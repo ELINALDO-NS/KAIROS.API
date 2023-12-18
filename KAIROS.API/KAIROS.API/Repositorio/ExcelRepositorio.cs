@@ -23,27 +23,25 @@ namespace KAIROS.API.Repositorio
         public async Task<List<Cargo>> LerCargos(string caminho)
         {
             var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
-
             ExcelWorksheet PlanilhaCargos = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "CARGOS");
             ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
             var cargos = new List<Cargo>();
             int Linha = 4;
             int Codigo = 1;
+
             while (true)
             {
-                if (!string.IsNullOrEmpty(Convert.ToString(PlanilhaCargos.Cells[Linha, 2].Value)))
+                string DescricaoPlCargo = RemoveAcentos.Remove(Convert.ToString(PlanilhaCargos.Cells[Linha, 2].Value)).Replace(" ", "");
+                if (!string.IsNullOrEmpty(DescricaoPlCargo))
                 {
-                    if (!cargos.Any(a => RemoveAcentos.Remove(a.Descricao.Replace(" ", "")) == RemoveAcentos.Remove(PlanilhaCargos.Cells[Linha, 2].Value.ToString().Replace(" ", ""))))
+                    if (!cargos.Any(a => a.Descricao.Contains(DescricaoPlCargo)))
                     {
                         cargos.Add(new Cargo
                         {
                             Codigo = Codigo,
-                            Descricao = RemoveAcentos.Remove(PlanilhaCargos.Cells[Linha, 2].Value.ToString())
-
-
-                        });
+                            Descricao = DescricaoPlCargo
+                        }); ;
                         Codigo++;
-
                     }
                     Linha++;
                 }
@@ -55,35 +53,33 @@ namespace KAIROS.API.Repositorio
             Linha = 4;
             while (true)
             {
-                if (!string.IsNullOrEmpty(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 2].Value)))
+                string DescricaoPlFuncionario = RemoveAcentos.Remove(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value)).Replace(" ", "");
+                if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
                 {
                     
-                    if (!cargos.Any(a => RemoveAcentos.Remove(a.Descricao.Replace(" ", "")) == RemoveAcentos.Remove(PlanilhaFuncionario.Cells[Linha, 17].Value.ToString().Replace(" ", ""))))
+                    if (!cargos.Any(a => a.Descricao.Contains(DescricaoPlFuncionario)))
                     {
                         cargos.Add(new Cargo
                         {
                             Codigo = Codigo,
-                            Descricao = RemoveAcentos.Remove(PlanilhaFuncionario.Cells[Linha, 17].Value.ToString())
-
-
+                            Descricao = DescricaoPlFuncionario
                         });
                         Codigo++;
-
                     }
 
                     Linha++;
                 }
                 else
-                {
+                { 
                     break;
                 }
             }
 
-            return cargos;
+            return cargos.OrderBy(x => x.Descricao).ToList(); ;
 
         }
 
-        public async Task LerEstrutura(string caminho)
+        public async Task<List<Estrutura>> LerEstrutura(string caminho)
         {
 
             var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
@@ -96,44 +92,41 @@ namespace KAIROS.API.Repositorio
 
             while (true)
             {
-                if (!string.IsNullOrEmpty(Convert.ToString(PlanilhaDepartamentos.Cells[Linha, 2].Value)))
+                string DescricaoPlDepartamento = RemoveAcentos.Remove(Convert.ToString(PlanilhaDepartamentos.Cells[Linha, 2].Value)).Replace(" ", ""); 
+                if (!string.IsNullOrEmpty(DescricaoPlDepartamento))
                 {
-                    if (!estrutura.Any(a => RemoveAcentos.Remove(a.Descricao.Replace(" ", "")) == RemoveAcentos.Remove(PlanilhaDepartamentos.Cells[Linha, 2].Value.ToString().Replace(" ", ""))))
+                    if (!estrutura.Any(a => a.Descricao.Contains(DescricaoPlDepartamento)))
                     {
                         estrutura.Add(new Estrutura
                         {
                             Codigo = Codigo,
-                            Descricao = RemoveAcentos.Remove(PlanilhaDepartamentos.Cells[Linha, 2].Value.ToString())
-
-
+                            Descricao = DescricaoPlDepartamento
                         });
                         Codigo++;
-
                     }
 
                     Linha++;
                 }
                 else
-                {
+                { 
                     break;
                 }
             }
             Linha = 4;
             while (true)
             {
-                if (!string.IsNullOrEmpty(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 2].Value)))
+                string DescricaoPlFuncionario = RemoveAcentos.Remove(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 2].Value)).Replace(" ", "");
+
+                if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
                 {
-                    if (!estrutura.Any(a => RemoveAcentos.Remove(a.Descricao.Replace(" ", "")) == RemoveAcentos.Remove(PlanilhaFuncionario.Cells[Linha, 15].Value.ToString().Replace(" ", ""))))
+                    if (!estrutura.Any(a => a.Descricao.Contains(DescricaoPlFuncionario)))
                     {
                         estrutura.Add(new Estrutura
                         {
                             Codigo = Codigo,
-                            Descricao = RemoveAcentos.Remove(PlanilhaFuncionario.Cells[Linha, 15].Value.ToString())
-
-
+                            Descricao = DescricaoPlFuncionario
                         });
                         Codigo++;
-
                     }
 
                     Linha++;
@@ -144,7 +137,7 @@ namespace KAIROS.API.Repositorio
                 }
             }
 
-
+            return estrutura.OrderBy(x => x.Descricao).ToList();
 
 
         }

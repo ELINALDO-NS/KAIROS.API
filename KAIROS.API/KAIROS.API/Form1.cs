@@ -17,14 +17,17 @@ namespace KAIROS.API
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }      
+        }
+        
 
         private void btn_Lista_Horarios_Click(object sender, EventArgs e)
         {
             try
             {
-                _excel.LerCargos(PatchExcel);
-                _excel.LerEstrutura(PatchExcel);
+                _excel.SalvaHorarios("C:\\Users\\SUPORTE\\Desktop");
+                //_excel.LerCargos(PatchExcel);
+               // _excel.LerEstrutura(PatchExcel);
+               // _excel.ListaHoarios(PatchExcel);
                 MessageBox.Show("Ok");
             }
             catch (Exception ex)

@@ -97,6 +97,7 @@ namespace KAIROS.API.Model
             public int Codigo { get; set; }
             [JsonIgnore]
             public string Descricao { get; set; }
+            public string DescricaoFormatada { get; set; }
             public Horario? Horario { get; set; }
             public string Inicio { get; set; }
             public string Fim { get; set; }

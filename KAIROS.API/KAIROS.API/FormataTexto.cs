@@ -32,5 +32,9 @@ namespace KAIROS.API
             }
             return Regex.Replace(sbReturn.ToString().ToUpper(), @"[^a-zA-Z0-9]", "").Replace(" ","");
         }
+        public static string SoNumenros(string Numero)
+        {
+            return Regex.Replace(Numero,@"[^\d]", "");
+        }
     }
 }

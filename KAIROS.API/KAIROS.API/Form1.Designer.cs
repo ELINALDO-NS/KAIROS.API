@@ -97,6 +97,7 @@
             btn_Iniciar.Text = "Iniciar";
             btn_Iniciar.TextAlign = ContentAlignment.TopCenter;
             btn_Iniciar.UseVisualStyleBackColor = true;
+            btn_Iniciar.Click += btn_Iniciar_Click;
             // 
             // btn_Valida_Dados
             // 

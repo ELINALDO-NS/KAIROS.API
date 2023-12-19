@@ -1,6 +1,7 @@
 using KAIROS.API.Repositorio;
 using KAIROS.API.Repositorio.Interface;
 using Microsoft.Extensions.DependencyInjection;
+using OfficeOpenXml.FormulaParsing.Exceptions;
 using System.Runtime.CompilerServices;
 
 namespace KAIROS.API
@@ -18,27 +19,39 @@ namespace KAIROS.API
         {
 
         }
-        
+
 
         private void btn_Lista_Horarios_Click(object sender, EventArgs e)
         {
+
             try
             {
-                _excel.SalvaHorarios("C:\\Users\\SUPORTE\\Desktop");
-                //_excel.LerCargos(PatchExcel);
-               // _excel.LerEstrutura(PatchExcel);
-               // _excel.ListaHoarios(PatchExcel);
-                MessageBox.Show("Ok");
+                if (string.IsNullOrEmpty(Txb_Excel.Text))
+                {
+                    MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario");
+                    return;
+                }
+                string LocalGravacao = PathGravacao();
+                if (!string.IsNullOrEmpty(LocalGravacao))
+                {
+                    _excel.SalvaHorarios(Txb_Excel.Text, LocalGravacao);
+                    MessageBox.Show("Ok");
+                }
+                else
+                {
+
+                    return;
+                }
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
-        public string PatchExcel;
-        public bool PathExcel()
+        public bool PathLeitura()
         {
             try
             {
@@ -48,9 +61,7 @@ namespace KAIROS.API
                     OpenFileDialog1.Filter = "Text files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
                     if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
                     {
-                        PatchExcel = OpenFileDialog1.FileName;
                         Txb_Excel.Text = OpenFileDialog1.FileName;
-                        //Txb_Excel.Text = OpenFileDialog1.FileName;
 
                         return true;
                     }
@@ -62,8 +73,6 @@ namespace KAIROS.API
                     }
                 }
 
-
-
             }
             catch (Exception ex)
             {
@@ -73,12 +82,41 @@ namespace KAIROS.API
             }
 
         }
-
-        private void btn_LocalExcel_Click(object sender, EventArgs e)
+        public string PathGravacao()
         {
-            PathExcel();
+            try
+            {
+
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                {
+
+                    if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        return folderBrowserDialog.SelectedPath;
+                    }
+
+                }
+                return "";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Local de Gravação Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
+
         }
 
 
+        private void btn_LocalExcel_Click(object sender, EventArgs e)
+        {
+            PathLeitura();
+        }
+
+        private void btn_Iniciar_Click(object sender, EventArgs e)
+        {
+            _excel.ListaPessoas(Txb_Excel.Text);
+            MessageBox.Show("OK");
+        }
     }
 }

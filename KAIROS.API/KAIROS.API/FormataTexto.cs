@@ -21,7 +21,7 @@ namespace KAIROS.API
             }
             return sbReturn.ToString().ToUpper();
         }
-        public static string FormataHorario(this string text)
+        public static string SoLetrasENumeros(this string text)
         {
             StringBuilder sbReturn = new StringBuilder();
             var arrayText = text.Normalize(NormalizationForm.FormD).ToCharArray();
@@ -30,7 +30,7 @@ namespace KAIROS.API
                 if (CharUnicodeInfo.GetUnicodeCategory(letter) != UnicodeCategory.NonSpacingMark)
                     sbReturn.Append(letter);
             }
-            return Regex.Replace(sbReturn.ToString().ToUpper(), @"[^a-zA-Z0-9]", "").Replace(" ","");
+            return Regex.Replace(sbReturn.ToString().ToUpper(), @"[^a-zA-Z0-9]", "");
         }
         public static string SoNumenros(string Numero)
         {

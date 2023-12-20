@@ -13,7 +13,7 @@ namespace KAIROS.API
         public Form1(ServiceProvider serviceProvider)
         {
             InitializeComponent();
-            _excel = serviceProvider.GetRequiredService<IExcelRepositorio>();
+            _excel = new ExcelRepositorio();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace KAIROS.API
                 string LocalGravacao = PathGravacao();
                 if (!string.IsNullOrEmpty(LocalGravacao))
                 {
-                    _excel.SalvaHorarios(Txb_Excel.Text, LocalGravacao);
+                    _excel.SalvaHorarios(Txb_Excel.Text, LocalGravacao);                   
                     MessageBox.Show("Ok");
                 }
                 else

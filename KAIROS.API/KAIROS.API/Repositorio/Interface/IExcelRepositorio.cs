@@ -10,7 +10,7 @@ namespace KAIROS.API.Repositorio.Interface
     public interface IExcelRepositorio
     {
         Task< List<Cargo>> ListaCargos(string Caminho);
-        Task<List<Estrutura>> ListaEstrutura(string Caminho);
+        Task<List<Estrutura>> ListaEstruturas(string Caminho);
         Task<List<Horarios>> ListaHorarios(string Caminho);
         Task<List<Pessoa>> ListaPessoas(string Caminho);
         Task SalvaHorarios(string caminhoLeitura, string SalvarEm);

@@ -1,0 +1,1121 @@
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+Cargo: Supervisor não encontrada para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+Cargo: Tec. De serviço não encontrada para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 12
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 13
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+Cargo: ASSIST ADM não encontrada para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 15
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(SEG A SEX 07-00 13-00 14-12 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+Cargo: Manobrista não encontrada para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 14
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+Cargo: Lavador de veículos  não encontrada para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6
+(SEG A SEX 07-00 12-00 13-12 17-00) Horario não encontrado para o funcionario, Matricula: 6

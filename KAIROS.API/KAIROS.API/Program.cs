@@ -19,6 +19,7 @@ namespace KAIROS.API
             Application.SetCompatibleTextRenderingDefault(false);
             var serviceProvider = new ServiceCollection()
            .AddScoped<IExcelRepositorio, ExcelRepositorio>()
+           .AddScoped<IAPIRepositorio, APIRepositorio>()
             .BuildServiceProvider();
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1(serviceProvider));

@@ -98,3 +98,5 @@ C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0
 C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\KAIROS.API.csproj.AssemblyReference.cache
 C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\KAIROS.API.csproj.CopyComplete
+C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\RestSharp.dll

@@ -9,11 +9,13 @@ namespace KAIROS.API
     public partial class Form1 : Form
     {
         private readonly IExcelRepositorio _excel;
+        private readonly IAPIRepositorio _API;
 
         public Form1(ServiceProvider serviceProvider)
         {
             InitializeComponent();
-            _excel = new ExcelRepositorio();
+            _excel = serviceProvider.GetRequiredService<IExcelRepositorio>();
+            _API = serviceProvider.GetRequiredService<IAPIRepositorio>();    
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -115,7 +117,7 @@ namespace KAIROS.API
 
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
-            _excel.ListaPessoas(Txb_Excel.Text);
+            _API.ListaHorariosAPI(txb_Key.Text,Txb_CNPJ.Text);
             MessageBox.Show("OK");
         }
     }

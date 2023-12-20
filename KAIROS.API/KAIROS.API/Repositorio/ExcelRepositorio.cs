@@ -80,7 +80,7 @@ namespace KAIROS.API.Repositorio
                     }
                 }
             });
-            return cargos.OrderBy(x => x.Descricao).ToList(); ;
+            return cargos;
 
         }
 
@@ -143,7 +143,7 @@ namespace KAIROS.API.Repositorio
                     }
                 }
             });
-            return estrutura.OrderBy(x => x.Descricao).ToList();
+            return estrutura;
 
 
         }
@@ -171,7 +171,7 @@ namespace KAIROS.API.Repositorio
                         {
                             horario.Add(new Horarios
                             {
-                                Codigo = Codigo,
+                                Codigo = Codigo.ToString(),
                                 Descricao = DescricaoPHorario,
                             });
                             Codigo++;
@@ -194,7 +194,7 @@ namespace KAIROS.API.Repositorio
                         {
                             horario.Add(new Horarios
                             {
-                                Codigo = Codigo,
+                                Codigo = Codigo.ToString(),
                                 Descricao = DescricaoPFuncionario
                             });
                             Codigo++;
@@ -208,11 +208,11 @@ namespace KAIROS.API.Repositorio
                     }
                 }
             });
-            return horario.OrderBy(x => x.Descricao).ToList();
+            return horario;
 
         }
 
-        public async Task<List<Pessoa>> ListaPessoas(string caminho)
+        public async Task<List<Pessoa>> ListaPessoas(string caminho, bool API)
         {
             var Pessoas = new List<Pessoa>();
             var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
@@ -263,6 +263,76 @@ namespace KAIROS.API.Repositorio
                               string Sexo = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper();
                               string CNPJ = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 20].Value);
                               var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1, CnpjEmpresa = CNPJ };
+                              if (API)
+                              {
+                                  #region Estrutura
+                                  foreach (var e in estruturas)
+                                  {
+                                      if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")) && Departamento.CNPJ == e.CNPJ)
+                                      {
+                                          Departamento.Codigo = 0;
+                                          Departamento.Id = e.Id;
+                                          break;
+                                      }
+                                      else
+                                      {
+                                          Log.GravaLog($"Estrutura: {Departamento} não encontrada para o funcionario, Matricula: " +
+                                          MAtricula.ToString());
+                                      }
+                                  }
+
+
+
+                                  #endregion
+                                  #region Cargo
+
+                                  foreach (var C in cargos)
+                                  {
+
+                                      if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) && C.CNPJ == CNPJ)
+                                      {
+                                          Cargo.Codigo = 0;
+                                          Cargo.Id = C.Id;
+                                          break;
+                                      }
+                                      else
+                                      {
+                                          Log.GravaLog($"Cargo: {CargoPessoa} não encontrada para o funcionario, Matricula: " +
+                                          Matricula);
+
+                                      }
+
+                                  }
+
+
+                                  #endregion
+                                  #region Horario
+                                  foreach (var H in horarios)
+                                  {
+                                      if (H.Descricao.Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))) && H.CNPJ == CNPJ)
+                                      {
+
+                                          Horario.Add(new Horarios()
+                                          {
+                                              Inicio = DateTime.Now.ToString(),
+                                              Fim = "31/12/9999 23:59:59",
+                                              Horario = new Horario() { Id = H.Horario.Id }
+                                          });
+
+                                          break;
+                                      }
+                                      else
+                                      {
+
+                                          Log.GravaLog($"({HorarioPessoa}) Horario não encontrado para o funcionario, Matricula: " +
+                                          MAtricula);
+                                      }
+                                  }
+
+
+
+                                  #endregion
+                              }
 
                               #region Base de Horas
                               if (!string.IsNullOrEmpty(BaseDeHoras))
@@ -302,74 +372,7 @@ namespace KAIROS.API.Repositorio
                               {
                                   controlaPonto = "true";
                               }
-                              #endregion
-                              #region Estrutura
-                              foreach (var e in estruturas)
-                              {
-                                  if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")) && Departamento.CNPJ == e.CNPJ)
-                                  {
-                                      Departamento.Codigo = 0;
-                                      Departamento.Id = e.Id;
-                                      break;
-                                  }
-                                  else
-                                  {
-                                      Log.GravaLog($"Estrutura: {Departamento} não encontrada para o funcionario, Matricula: " +
-                                      MAtricula.ToString());
-                                  }
-                              }
-
-
-
-                              #endregion
-                              #region Cargo
-
-                              foreach (var C in cargos)
-                              {
-
-                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) && C.CNPJ == CNPJ)
-                                  {
-                                      Cargo.Codigo = 0;
-                                      Cargo.Id = C.Id;
-                                      break;
-                                  }
-                                  else
-                                  {
-                                      Log.GravaLog($"Cargo: {CargoPessoa} não encontrada para o funcionario, Matricula: " +
-                                      Matricula);
-
-                                  }
-
-                              }
-
-
-                              #endregion
-                              #region Horario
-                              foreach (var H in horarios)
-                              {
-                                  if (H.Descricao.Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))) && H.CNPJ == CNPJ)
-                                  {
-
-                                      Horario.Add(new Horarios()
-                                      {
-                                          Inicio = DateTime.Now.ToString(),
-                                          Fim = "31/12/9999 23:59:59",
-                                          Horario = new Horario() { Id = H.Horario.Id }
-                                      });
-
-                                      break;
-                                  }
-                                  else
-                                  {
-
-                                      Log.GravaLog($"({HorarioPessoa}) Horario não encontrado para o funcionario, Matricula: " +
-                                      MAtricula);
-                                  }
-                              }
-
-
-
-                              #endregion
+                              #endregion                             
                               #region PIS
                               if (string.IsNullOrEmpty(PIS))
                               {
@@ -416,8 +419,8 @@ namespace KAIROS.API.Repositorio
                               break;
                           }
                       }
-                  });
-            
+            });
+
             return Pessoas;
         }
 

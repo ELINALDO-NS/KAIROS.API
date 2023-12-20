@@ -35,9 +35,9 @@
             btn_Lista_Horarios = new Button();
             textBox6 = new TextBox();
             label6 = new Label();
-            textBox5 = new TextBox();
+            Txb_CNPJ = new TextBox();
             label5 = new Label();
-            textBox4 = new TextBox();
+            txb_Key = new TextBox();
             label4 = new Label();
             textBox3 = new TextBox();
             label3 = new Label();
@@ -47,8 +47,17 @@
             Txb_Excel = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label7 = new Label();
+            textBox7 = new TextBox();
+            label8 = new Label();
+            button2 = new Button();
+            textBox8 = new TextBox();
+            label9 = new Label();
             tabControl1.SuspendLayout();
             InsereCadastros.SuspendLayout();
+            tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -68,9 +77,9 @@
             InsereCadastros.Controls.Add(btn_Lista_Horarios);
             InsereCadastros.Controls.Add(textBox6);
             InsereCadastros.Controls.Add(label6);
-            InsereCadastros.Controls.Add(textBox5);
+            InsereCadastros.Controls.Add(Txb_CNPJ);
             InsereCadastros.Controls.Add(label5);
-            InsereCadastros.Controls.Add(textBox4);
+            InsereCadastros.Controls.Add(txb_Key);
             InsereCadastros.Controls.Add(label4);
             InsereCadastros.Controls.Add(textBox3);
             InsereCadastros.Controls.Add(label3);
@@ -140,13 +149,14 @@
             label6.TabIndex = 11;
             label6.Text = "CPF Responsavel";
             // 
-            // textBox5
+            // Txb_CNPJ
             // 
-            textBox5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox5.Location = new Point(62, 131);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(193, 25);
-            textBox5.TabIndex = 10;
+            Txb_CNPJ.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_CNPJ.Location = new Point(62, 131);
+            Txb_CNPJ.Name = "Txb_CNPJ";
+            Txb_CNPJ.Size = new Size(193, 25);
+            Txb_CNPJ.TabIndex = 10;
+            Txb_CNPJ.Text = " 63.227.763/0001-90";
             // 
             // label5
             // 
@@ -158,13 +168,14 @@
             label5.TabIndex = 9;
             label5.Text = "CNPJ";
             // 
-            // textBox4
+            // txb_Key
             // 
-            textBox4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox4.Location = new Point(62, 93);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(193, 25);
-            textBox4.TabIndex = 8;
+            txb_Key.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txb_Key.Location = new Point(62, 93);
+            txb_Key.Name = "txb_Key";
+            txb_Key.Size = new Size(193, 25);
+            txb_Key.TabIndex = 8;
+            txb_Key.Text = "52dede3f-8a15-49eb-bb04-55e0e2c7c111";
             // 
             // label4
             // 
@@ -229,6 +240,7 @@
             Txb_Excel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             Txb_Excel.Location = new Point(113, 10);
             Txb_Excel.Name = "Txb_Excel";
+            Txb_Excel.ReadOnly = true;
             Txb_Excel.Size = new Size(193, 25);
             Txb_Excel.TabIndex = 1;
             // 
@@ -244,6 +256,14 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(textBox1);
+            tabPage2.Controls.Add(label7);
+            tabPage2.Controls.Add(textBox7);
+            tabPage2.Controls.Add(label8);
+            tabPage2.Controls.Add(button2);
+            tabPage2.Controls.Add(textBox8);
+            tabPage2.Controls.Add(label9);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -251,6 +271,83 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Insere Saldo BH";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            button1.Location = new Point(102, 109);
+            button1.Name = "button1";
+            button1.Size = new Size(165, 27);
+            button1.TabIndex = 23;
+            button1.Text = "Iniciar";
+            button1.TextAlign = ContentAlignment.TopCenter;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            textBox1.Location = new Point(61, 51);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(193, 25);
+            textBox1.TabIndex = 22;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label7.Location = new Point(6, 59);
+            label7.Name = "label7";
+            label7.Size = new Size(55, 17);
+            label7.TabIndex = 21;
+            label7.Text = "Usuario";
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            textBox7.Location = new Point(314, 51);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(97, 25);
+            textBox7.TabIndex = 20;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label8.Location = new Point(267, 59);
+            label8.Name = "label8";
+            label8.Size = new Size(45, 17);
+            label8.TabIndex = 19;
+            label8.Text = "Senha";
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            button2.Location = new Point(321, 6);
+            button2.Name = "button2";
+            button2.Size = new Size(58, 23);
+            button2.TabIndex = 18;
+            button2.Text = "...";
+            button2.TextAlign = ContentAlignment.TopCenter;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            textBox8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            textBox8.Location = new Point(112, 6);
+            textBox8.Name = "textBox8";
+            textBox8.ReadOnly = true;
+            textBox8.Size = new Size(193, 25);
+            textBox8.TabIndex = 17;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label9.Location = new Point(6, 14);
+            label9.Name = "label9";
+            label9.Size = new Size(98, 17);
+            label9.TabIndex = 16;
+            label9.Text = "Caminho Excel";
             // 
             // Form1
             // 
@@ -265,6 +362,8 @@
             tabControl1.ResumeLayout(false);
             InsereCadastros.ResumeLayout(false);
             InsereCadastros.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -280,14 +379,22 @@
         private Button btn_LocalExcel;
         private TextBox Txb_Excel;
         private Label label1;
-        private TextBox textBox4;
+        private TextBox txb_Key;
         private Label label4;
         private Button btn_Iniciar;
         private Button btn_Valida_Dados;
         private Button btn_Lista_Horarios;
         private TextBox textBox6;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox Txb_CNPJ;
         private Label label5;
+        private Button button1;
+        private TextBox textBox1;
+        private Label label7;
+        private TextBox textBox7;
+        private Label label8;
+        private Button button2;
+        private TextBox textBox8;
+        private Label label9;
     }
 }

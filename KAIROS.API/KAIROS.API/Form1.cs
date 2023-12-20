@@ -117,7 +117,7 @@ namespace KAIROS.API
 
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
-            _API.ListaHorariosAPI(txb_Key.Text,Txb_CNPJ.Text);
+            
             MessageBox.Show("OK");
         }
     }

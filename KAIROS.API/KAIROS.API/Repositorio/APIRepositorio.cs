@@ -21,64 +21,141 @@ namespace KAIROS.API.Repositorio
         string ListaPessoas_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SearchPeople";
         string SalvaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SavePerson";
         string ListaHorario_URL = "https://www.dimepkairos.com.br/RestServiceApi/Schedules/GetSchedulesSummary";
+        private readonly IExcelRepositorio _excel;
 
-
-        public Task InsereCargosAPI(string Key, string CNPJ, Cargo cargo)
+        public APIRepositorio(IExcelRepositorio excel)
         {
-            throw new NotImplementedException();
+            _excel = excel;
         }
 
-        public Task InsereEstruturasAPI(string Key, string CNPJ, Estrutura estrutura)
+
+        public async Task InsereCargosAPI(string Key, string CNPJ, string caminho)
         {
-            throw new NotImplementedException();
+            var cargos = await _excel.ListaCargos(caminho);
+            foreach (var item in cargos)
+            {
+                using (var client = new RestClient(SalvaCargo_URL))
+                {
+                    var request = new RestRequest("", Method.Post);
+                    request.AddHeader("Content-Type", "application/json");
+                    request.AddHeader("key", Key);
+                    request.AddHeader("identifier", CNPJ);
+
+                    var carg = JsonConvert.SerializeObject(item);
+                    request.AddParameter("application/json", carg, ParameterType.RequestBody);
+                    var response = client.Execute(request).Content;
+                    Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response);
+
+                    if (!Resposta.Sucesso)
+                    {
+                        string R = "";
+                        if (Resposta.Mensagem.Contains("Could not complete the action because there is a job " +
+                            "position with the same code"))
+                        {
+                            R = "Não foi possível concluir a ação porque existe um cargo com o mesmo código.";
+                            Log.GravaLog("Salva Cargos - " + R + " : " + item.Codigo + " - " + item.Descricao);
+                        }
+                        else
+                        {
+                            Log.GravaLog("Salva Cargos - " + item.Descricao + " - " + Resposta.Mensagem);
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        public async Task InsereEstruturasAPI(string Key, string CNPJ, string Caminho)
+        {
+            var estruturas = await _excel.ListaEstruturas(Caminho);
+            foreach (var item in estruturas)
+            {
+                using (var client = new RestClient(SalvaEstrutura_URL))
+                {
+
+                    var request = new RestRequest("", Method.Post);
+                    request.AddHeader("Content-Type", "application/json");
+                    request.AddHeader("key", Key);
+                    request.AddHeader("identifier", CNPJ);
+                    var estr = JsonConvert.SerializeObject(item);
+                    request.AddParameter("application/json", estr, ParameterType.RequestBody);
+                    var response = client.Execute(request).Content;
+                    Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response);
+                    if (!Resposta.Sucesso)
+                    {
+                        string R = "";
+                        if (Resposta.Mensagem.Contains("Could not complete the action because there" +
+                            " is a structure with the same description."))
+                        {
+                            R = " Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição.";
+                            Log.GravaLog(R + " : " + item.Codigo + " - " + item.Descricao + " - " + CNPJ);
+                        }
+                        else
+                        {
+                            Log.GravaLog("Salva Estrutura - " + " : " + item.Codigo + " - " + item.Descricao + " - " + CNPJ + Resposta.Mensagem);
+                        }
+
+                    }
+
+
+                }
+
+            }
         }
 
         public async Task<List<Cargo>> ListaCargosAPI(string Key, string CNPJ)
         {
             var cargos = new List<Cargo>();
-            var client = new RestClient(ListarCargos_URL);
-            var request = new RestRequest("", Method.Post);
-            request.AddHeader("Content-Type", "application/json");
-            request.AddHeader("key", Key);
-            request.AddHeader("identifier", CNPJ);
-            var body = @"
+            await Task.Run(() =>
+                  {
+                      var client = new RestClient(ListarCargos_URL);
+                      var request = new RestRequest("", Method.Post);
+                      request.AddHeader("Content-Type", "application/json");
+                      request.AddHeader("key", Key);
+                      request.AddHeader("identifier", CNPJ);
+                      var body = @"
                             " + "\n" +
-                        @"{
+                                  @"{
                             " + "\n" +
-                        @"  ""Codigo"" : 0
+                                  @"  ""Codigo"" : 0
                             " + "\n" +
-                        @"}
+                                  @"}
                             " + "\n" +
-                    @"";
-            request.AddParameter("application/json", body, ParameterType.RequestBody);
-            var response = client.Execute(request);
-            Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-            cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()).OrderBy(x => x.Descricao).ToList());
-
+                              @"";
+                      request.AddParameter("application/json", body, ParameterType.RequestBody);
+                      var response = client.Execute(request);
+                      Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                      cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()).OrderBy(x => x.Descricao).ToList());
+                  });
             return cargos;
         }
 
         public async Task<List<Estrutura>> ListaEstruturasAPI(string Key, string CNPJ)
         {
             var estruturas = new List<Estrutura>();
-            var client = new RestClient(ListarEstrutura_URL);
-            var request = new RestRequest("", Method.Post);
-            request.AddHeader("Content-Type", "application/json");
-            request.AddHeader("key", Key);
-            request.AddHeader("identifier", CNPJ);
-            var body = @"
+            await Task.Run(() =>
+            {
+                var client = new RestClient(ListarEstrutura_URL);
+                var request = new RestRequest("", Method.Post);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("key", Key);
+                request.AddHeader("identifier", CNPJ);
+                var body = @"
                          " + "\n" +
-                     @"{
+                         @"{
                          " + "\n" +
-                     @"  ""Codigo"" : 0
+                         @"  ""Codigo"" : 0
                          " + "\n" +
-                     @"}
+                         @"}
                          " + "\n" +
-                     @"";
-            request.AddParameter("application/json", body, ParameterType.RequestBody);
-            var response = client.Execute(request);
-            Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-            estruturas.AddRange(JsonConvert.DeserializeObject<List<Estrutura>>(Resposta.Obj.ToString()).OrderBy(x => x.Descricao));
+                         @"";
+                request.AddParameter("application/json", body, ParameterType.RequestBody);
+                var response = client.Execute(request);
+                Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                estruturas.AddRange(JsonConvert.DeserializeObject<List<Estrutura>>(Resposta.Obj.ToString()).OrderBy(x => x.Descricao));
+            });
             return estruturas;
         }
 

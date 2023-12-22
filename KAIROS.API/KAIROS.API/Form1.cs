@@ -115,10 +115,16 @@ namespace KAIROS.API
             PathLeitura();
         }
 
-        private void btn_Iniciar_Click(object sender, EventArgs e)
+        private async void btn_Iniciar_Click(object sender, EventArgs e)
         {
-            
+
+            await Task.WhenAll(
+            _API.InserePessoaAPI(txb_Key.Text.Trim(), Txb_CNPJ.Text.Trim(), Txb_Excel.Text)
+            );
+
             MessageBox.Show("OK");
+
+
         }
     }
 }

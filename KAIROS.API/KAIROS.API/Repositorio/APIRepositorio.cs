@@ -5,6 +5,7 @@ using RestSharp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -127,7 +128,7 @@ namespace KAIROS.API.Repositorio
                       request.AddParameter("application/json", body, ParameterType.RequestBody);
                       var response = client.Execute(request);
                       Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                      cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()).OrderBy(x => x.Descricao).ToList());
+                      cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()));
                   });
             return cargos;
         }
@@ -154,7 +155,7 @@ namespace KAIROS.API.Repositorio
                 request.AddParameter("application/json", body, ParameterType.RequestBody);
                 var response = client.Execute(request);
                 Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                estruturas.AddRange(JsonConvert.DeserializeObject<List<Estrutura>>(Resposta.Obj.ToString()).OrderBy(x => x.Descricao));
+                estruturas.AddRange(JsonConvert.DeserializeObject<List<Estrutura>>(Resposta.Obj.ToString()));
             });
             return estruturas;
         }
@@ -176,6 +177,42 @@ namespace KAIROS.API.Repositorio
                 horario.AddRange(JsonConvert.DeserializeObject<List<Horarios>>(Resposta.Obj.ToString()));
             });
             return horario;
+        }
+
+        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho)
+        {
+             await InsereEstruturasAPI(Key,CNPJ, caminho);
+             await InsereCargosAPI(Key,CNPJ, caminho);             
+            var Cargos = await ListaCargosAPI(Key,CNPJ);
+            var Estruturas = await ListaEstruturasAPI(Key,CNPJ);
+            var Horarios = await ListaHorariosAPI(Key,CNPJ);
+            var pessoas = await _excel.ListaPessoas(caminho,Cargos,Estruturas,Horarios);           
+            Parallel.ForEach(pessoas, Pessoa =>
+            {
+                    var client = new RestClient(SalvaPessoa_URL);
+                    var request = new RestRequest("", Method.Post);
+                    request.AddHeader("Content-Type", "application/json");
+                    request.AddHeader("key", Key);
+                    request.AddHeader("identifier", CNPJ);
+                    var JPessoa = JsonConvert.SerializeObject(Pessoa);
+                    request.AddJsonBody(JPessoa);
+                    request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
+                    var response = client.Execute(request);
+                    if (response.ContentType.Equals("application/json"))
+                    {
+                        var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                        if (!Resposta.Sucesso)
+                        {
+                            Log.GravaLog("Salva Pessoa - " + Resposta.Mensagem + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
+                        }
+
+                    }
+                    else
+                    {
+                        Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
+                    }
+
+            });
         }
     }
 }

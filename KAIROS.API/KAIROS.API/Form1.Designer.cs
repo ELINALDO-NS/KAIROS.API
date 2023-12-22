@@ -156,7 +156,7 @@
             Txb_CNPJ.Name = "Txb_CNPJ";
             Txb_CNPJ.Size = new Size(193, 25);
             Txb_CNPJ.TabIndex = 10;
-            Txb_CNPJ.Text = " 63.227.763/0001-90";
+            Txb_CNPJ.Text = "13.466.677/0001-61 \t";
             // 
             // label5
             // 
@@ -175,7 +175,7 @@
             txb_Key.Name = "txb_Key";
             txb_Key.Size = new Size(193, 25);
             txb_Key.TabIndex = 8;
-            txb_Key.Text = "52dede3f-8a15-49eb-bb04-55e0e2c7c111";
+            txb_Key.Text = "ef839028-5006-4c6a-9bf8-267b3699a7f0";
             // 
             // label4
             // 

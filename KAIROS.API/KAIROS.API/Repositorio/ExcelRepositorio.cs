@@ -25,14 +25,15 @@ namespace KAIROS.API.Repositorio
         public async Task<List<Cargo>> ListaCargos(string caminho)
         {
             var cargos = new List<Cargo>();
+            var cargosOrdenados = new List<Cargo>();
             await Task.Run(() =>
             {
                 var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
                 ExcelWorksheet PlanilhaCargos = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "CARGOS");
                 ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
 
+
                 int Linha = 4;
-                int Codigo = 1;
 
                 while (true)
                 {
@@ -43,10 +44,10 @@ namespace KAIROS.API.Repositorio
                         {
                             cargos.Add(new Cargo
                             {
-                                Codigo = Codigo,
+
                                 Descricao = DescricaoPlCargo
-                            }); ;
-                            Codigo++;
+                            });
+
                         }
                         Linha++;
                     }
@@ -66,10 +67,10 @@ namespace KAIROS.API.Repositorio
                         {
                             cargos.Add(new Cargo
                             {
-                                Codigo = Codigo,
+
                                 Descricao = DescricaoPlFuncionario
                             });
-                            Codigo++;
+
                         }
 
                         Linha++;
@@ -80,13 +81,17 @@ namespace KAIROS.API.Repositorio
                     }
                 }
             });
-            return cargos;
+            int codigo = 1;
+            cargosOrdenados = cargos.OrderBy(c => c.Descricao).ToList();
+            cargosOrdenados.ForEach(c => { c.Codigo = codigo; codigo++; });
+            return cargosOrdenados;
 
         }
 
         public async Task<List<Estrutura>> ListaEstruturas(string caminho)
         {
             var estrutura = new List<Estrutura>();
+            var estruturaOrdenada = new List<Estrutura>();
             await Task.Run(() =>
             {
                 var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
@@ -94,7 +99,6 @@ namespace KAIROS.API.Repositorio
                 ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
 
                 int Linha = 4;
-                int Codigo = 1;
 
                 while (true)
                 {
@@ -105,10 +109,10 @@ namespace KAIROS.API.Repositorio
                         {
                             estrutura.Add(new Estrutura
                             {
-                                Codigo = Codigo,
+
                                 Descricao = DescricaoPlDepartamento
                             });
-                            Codigo++;
+
                         }
 
                         Linha++;
@@ -129,10 +133,10 @@ namespace KAIROS.API.Repositorio
                         {
                             estrutura.Add(new Estrutura
                             {
-                                Codigo = Codigo,
+
                                 Descricao = DescricaoPlFuncionario
                             });
-                            Codigo++;
+
                         }
 
                         Linha++;
@@ -143,7 +147,10 @@ namespace KAIROS.API.Repositorio
                     }
                 }
             });
-            return estrutura;
+            int codigo = 1;
+            estruturaOrdenada = estrutura.OrderBy(c => c.Descricao).ToList();
+            estruturaOrdenada.ForEach(c => { c.Codigo = codigo; codigo++; });
+            return estruturaOrdenada;
 
 
         }
@@ -212,14 +219,14 @@ namespace KAIROS.API.Repositorio
 
         }
 
-        public async Task<List<Pessoa>> ListaPessoas(string caminho, bool API)
+        public async Task<List<Pessoa>> ListaPessoas(string caminho,List<Cargo> Cargos,List<Estrutura> Estruturas,List<Horarios> Horarois)
         {
+            var estruturas = Estruturas;
+            var horarios = Horarois;
+            var cargos = Cargos;
             var Pessoas = new List<Pessoa>();
             var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
             ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
-            var estruturas = await ListaEstruturas(caminho);
-            var horarios = await ListaHorarios(caminho);
-            var cargos = await ListaCargos(caminho);
             int Linha = 4;
             await Task.Run(() =>
                   {
@@ -263,76 +270,75 @@ namespace KAIROS.API.Repositorio
                               string Sexo = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper();
                               string CNPJ = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 20].Value);
                               var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1, CnpjEmpresa = CNPJ };
-                              if (API)
+
+                              #region Estrutura
+                              foreach (var e in estruturas)
                               {
-                                  #region Estrutura
-                                  foreach (var e in estruturas)
+                                  if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")) && Departamento.CNPJ == e.CNPJ)
                                   {
-                                      if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")) && Departamento.CNPJ == e.CNPJ)
-                                      {
-                                          Departamento.Codigo = 0;
-                                          Departamento.Id = e.Id;
-                                          break;
-                                      }
-                                      else
-                                      {
-                                          Log.GravaLog($"Estrutura: {Departamento} não encontrada para o funcionario, Matricula: " +
-                                          MAtricula.ToString());
-                                      }
+                                      Departamento.Codigo = 0;
+                                      Departamento.Id = e.Id;
+                                      break;
                                   }
-
-
-
-                                  #endregion
-                                  #region Cargo
-
-                                  foreach (var C in cargos)
+                                  else
                                   {
-
-                                      if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) && C.CNPJ == CNPJ)
-                                      {
-                                          Cargo.Codigo = 0;
-                                          Cargo.Id = C.Id;
-                                          break;
-                                      }
-                                      else
-                                      {
-                                          Log.GravaLog($"Cargo: {CargoPessoa} não encontrada para o funcionario, Matricula: " +
-                                          Matricula);
-
-                                      }
-
+                                      Log.GravaLog($"Estrutura: {Departamento} não encontrada para o funcionario, Matricula: " +
+                                      MAtricula.ToString());
                                   }
-
-
-                                  #endregion
-                                  #region Horario
-                                  foreach (var H in horarios)
-                                  {
-                                      if (H.Descricao.Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))) && H.CNPJ == CNPJ)
-                                      {
-
-                                          Horario.Add(new Horarios()
-                                          {
-                                              Inicio = DateTime.Now.ToString(),
-                                              Fim = "31/12/9999 23:59:59",
-                                              Horario = new Horario() { Id = H.Horario.Id }
-                                          });
-
-                                          break;
-                                      }
-                                      else
-                                      {
-
-                                          Log.GravaLog($"({HorarioPessoa}) Horario não encontrado para o funcionario, Matricula: " +
-                                          MAtricula);
-                                      }
-                                  }
-
-
-
-                                  #endregion
                               }
+
+
+
+                              #endregion
+                              #region Cargo
+
+                              foreach (var C in cargos)
+                              {
+
+                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) && C.CNPJ == CNPJ)
+                                  {
+                                      Cargo.Codigo = 0;
+                                      Cargo.Id = C.Id;
+                                      break;
+                                  }
+                                  else
+                                  {
+                                      Log.GravaLog($"Cargo: {CargoPessoa} não encontrada para o funcionario, Matricula: " +
+                                      Matricula);
+
+                                  }
+
+                              }
+
+
+                              #endregion
+                              #region Horario
+                              foreach (var H in horarios)
+                              {
+                                  if (H.Descricao.Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))) && H.CNPJ == CNPJ)
+                                  {
+
+                                      Horario.Add(new Horarios()
+                                      {
+                                          Inicio = DateTime.Now.ToString(),
+                                          Fim = "31/12/9999 23:59:59",
+                                          Horario = new Horario() { Id = H.Horario.Id }
+                                      });
+
+                                      break;
+                                  }
+                                  else
+                                  {
+
+                                      Log.GravaLog($"({HorarioPessoa}) Horario não encontrado para o funcionario, Matricula: " +
+                                      MAtricula);
+                                  }
+                              }
+
+
+
+                              #endregion
+
 
                               #region Base de Horas
                               if (!string.IsNullOrEmpty(BaseDeHoras))
@@ -419,7 +425,7 @@ namespace KAIROS.API.Repositorio
                               break;
                           }
                       }
-            });
+                  });
 
             return Pessoas;
         }

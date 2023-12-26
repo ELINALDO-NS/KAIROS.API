@@ -33,7 +33,7 @@
             btn_Iniciar = new Button();
             btn_Valida_Dados = new Button();
             btn_Lista_Horarios = new Button();
-            textBox6 = new TextBox();
+            Txb_CPFResponsavel = new TextBox();
             label6 = new Label();
             Txb_CNPJ = new TextBox();
             label5 = new Label();
@@ -75,7 +75,7 @@
             InsereCadastros.Controls.Add(btn_Iniciar);
             InsereCadastros.Controls.Add(btn_Valida_Dados);
             InsereCadastros.Controls.Add(btn_Lista_Horarios);
-            InsereCadastros.Controls.Add(textBox6);
+            InsereCadastros.Controls.Add(Txb_CPFResponsavel);
             InsereCadastros.Controls.Add(label6);
             InsereCadastros.Controls.Add(Txb_CNPJ);
             InsereCadastros.Controls.Add(label5);
@@ -131,13 +131,13 @@
             btn_Lista_Horarios.UseVisualStyleBackColor = true;
             btn_Lista_Horarios.Click += btn_Lista_Horarios_Click;
             // 
-            // textBox6
+            // Txb_CPFResponsavel
             // 
-            textBox6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox6.Location = new Point(123, 177);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(130, 25);
-            textBox6.TabIndex = 12;
+            Txb_CPFResponsavel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_CPFResponsavel.Location = new Point(123, 177);
+            Txb_CPFResponsavel.Name = "Txb_CPFResponsavel";
+            Txb_CPFResponsavel.Size = new Size(130, 25);
+            Txb_CPFResponsavel.TabIndex = 12;
             // 
             // label6
             // 
@@ -384,7 +384,7 @@
         private Button btn_Iniciar;
         private Button btn_Valida_Dados;
         private Button btn_Lista_Horarios;
-        private TextBox textBox6;
+        private TextBox Txb_CPFResponsavel;
         private Label label6;
         private TextBox Txb_CNPJ;
         private Label label5;

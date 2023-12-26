@@ -179,14 +179,18 @@ namespace KAIROS.API.Repositorio
             return horario;
         }
 
-        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho)
+        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho,string CPFResponsavel)
         {
              await InsereEstruturasAPI(Key,CNPJ, caminho);
              await InsereCargosAPI(Key,CNPJ, caminho);             
             var Cargos = await ListaCargosAPI(Key,CNPJ);
             var Estruturas = await ListaEstruturasAPI(Key,CNPJ);
             var Horarios = await ListaHorariosAPI(Key,CNPJ);
-            var pessoas = await _excel.ListaPessoas(caminho,Cargos,Estruturas,Horarios);           
+            var pessoas = await _excel.ListaPessoas(caminho,CPFResponsavel,Cargos,Estruturas,Horarios);
+            try
+            {
+
+           
             Parallel.ForEach(pessoas, Pessoa =>
             {
                     var client = new RestClient(SalvaPessoa_URL);
@@ -213,6 +217,12 @@ namespace KAIROS.API.Repositorio
                     }
 
             });
+            }
+            catch (Exception ex)
+            {
+
+                string a = ex.Message;
+            }
         }
     }
 }

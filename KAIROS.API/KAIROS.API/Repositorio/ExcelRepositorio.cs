@@ -180,6 +180,7 @@ namespace KAIROS.API.Repositorio
                             {
                                 Codigo = Codigo.ToString(),
                                 Descricao = DescricaoPHorario,
+
                             });
                             Codigo++;
                         }
@@ -219,7 +220,7 @@ namespace KAIROS.API.Repositorio
 
         }
 
-        public async Task<List<Pessoa>> ListaPessoas(string caminho,List<Cargo> Cargos,List<Estrutura> Estruturas,List<Horarios> Horarois)
+        public async Task<List<Pessoa>> ListaPessoas(string caminho,string CPFResponsavel,List<Cargo> Cargos,List<Estrutura> Estruturas,List<Horarios> Horarois)
         {
             var estruturas = Estruturas;
             var horarios = Horarois;
@@ -255,6 +256,7 @@ namespace KAIROS.API.Repositorio
                               string DepartamentoPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 15].Value);
                               string HorarioPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 16].Value);
                               var Horario = new List<Horarios>();
+                              var RegraDeCaldulo = new List<Regrascalculo>();
                               string CargoPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value);
                               var Cargo = new Cargo();
                               string EscalaDeFOlga = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 18].Value);
@@ -269,12 +271,12 @@ namespace KAIROS.API.Repositorio
 
                               string Sexo = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper();
                               string CNPJ = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 20].Value);
-                              var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1, CnpjEmpresa = CNPJ };
+                              var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1 };
 
                               #region Estrutura
                               foreach (var e in estruturas)
                               {
-                                  if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")) && Departamento.CNPJ == e.CNPJ)
+                                  if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")))
                                   {
                                       Departamento.Codigo = 0;
                                       Departamento.Id = e.Id;
@@ -295,7 +297,7 @@ namespace KAIROS.API.Repositorio
                               foreach (var C in cargos)
                               {
 
-                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) && C.CNPJ == CNPJ)
+                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) )
                                   {
                                       Cargo.Codigo = 0;
                                       Cargo.Id = C.Id;
@@ -315,14 +317,15 @@ namespace KAIROS.API.Repositorio
                               #region Horario
                               foreach (var H in horarios)
                               {
-                                  if (H.Descricao.Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))) && H.CNPJ == CNPJ)
+                                  if (FormataTexto.SoLetrasENumeros(H.Descricao.Replace(" ", "")).Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))))
                                   {
 
                                       Horario.Add(new Horarios()
                                       {
+                                          //Codigo = H.Codigo,
                                           Inicio = DateTime.Now.ToString(),
                                           Fim = "31/12/9999 23:59:59",
-                                          Horario = new Horario() { Id = H.Horario.Id }
+                                          Horario = new Horario() { Id = H.Id }
                                       });
 
                                       break;
@@ -338,8 +341,6 @@ namespace KAIROS.API.Repositorio
 
 
                               #endregion
-
-
                               #region Base de Horas
                               if (!string.IsNullOrEmpty(BaseDeHoras))
                               {
@@ -402,13 +403,15 @@ namespace KAIROS.API.Repositorio
                                       BaseHoras = float.Parse(BaseDeHoras),
                                       ControlaPonto = Convert.ToBoolean(controlaPonto),
                                       Estrutura = Departamento,
-                                      HorarioPessoa = HorarioPessoa,
+                                      //HorarioPessoa = HorarioPessoa,
                                       Horarios = Horario.ToArray(),
+                                      RegrasCalculo = RegraDeCaldulo.ToArray(),
                                       Cargo = Cargo,
                                       //EscalaFolga = EscalaDeFOlga,
                                       Sexo = Convert.ToInt32(Sexo),
                                       TipoFuncionario = TipoDeFuncionario,
                                       AmbienteTrabalhoPessoa = AmbienteDeTrabalho.ToArray(),
+                                      CpfResponsavel = CPFResponsavel,
                                       CNPJ = CNPJ
 
 

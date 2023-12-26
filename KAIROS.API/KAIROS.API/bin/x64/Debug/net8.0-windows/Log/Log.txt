@@ -5,5 +5,11 @@ Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEVOPS
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - QA
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Cargo: DEV não encontrada para o funcionario, Matricula: 1
-Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3

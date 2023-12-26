@@ -12,7 +12,7 @@ namespace KAIROS.API.Repositorio.Interface
         Task< List<Cargo>> ListaCargos(string Caminho);
         Task<List<Estrutura>> ListaEstruturas(string Caminho);
         Task<List<Horarios>> ListaHorarios(string Caminho);
-        Task<List<Pessoa>> ListaPessoas(string caminho, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois);
+        Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois);
         Task SalvaHorarios(string caminhoLeitura, string SalvarEm);
 
     }

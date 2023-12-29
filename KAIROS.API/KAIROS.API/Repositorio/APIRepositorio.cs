@@ -181,12 +181,19 @@ namespace KAIROS.API.Repositorio
 
         public async Task InserePessoaAPI(string Key, string CNPJ, string caminho,string CPFResponsavel)
         {
-             await InsereEstruturasAPI(Key,CNPJ, caminho);
-             await InsereCargosAPI(Key,CNPJ, caminho);             
-            var Cargos = await ListaCargosAPI(Key,CNPJ);
-            var Estruturas = await ListaEstruturasAPI(Key,CNPJ);
-            var Horarios = await ListaHorariosAPI(Key,CNPJ);
-            var pessoas = await _excel.ListaPessoas(caminho,CPFResponsavel,Cargos,Estruturas,Horarios);
+            List<Cargo> Cargos = new();
+            List<Estrutura> Estruturas = new();
+            List<Horarios> Horarios = new();
+            List<Pessoa> pessoas = new();
+            await Task.WhenAll(InsereEstruturasAPI(Key, CNPJ, caminho),
+             InsereCargosAPI(Key, CNPJ, caminho)
+             );
+            await Task.WhenAll(
+                Task.Run(async () => { Cargos = await ListaCargosAPI(Key, CNPJ); }),
+                Task.Run(async () => { Estruturas = await ListaEstruturasAPI(Key, CNPJ); }),
+                Task.Run(async () => { Horarios = await ListaHorariosAPI(Key, CNPJ); })
+                );       
+            pessoas = await _excel.ListaPessoas(caminho,CPFResponsavel,Cargos,Estruturas,Horarios);
             try
             {
 

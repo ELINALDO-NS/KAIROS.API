@@ -87,6 +87,64 @@ namespace KAIROS.API.Repositorio
             return cargosOrdenados;
 
         }
+        public async Task<List<Cargo>> ListaCargosNovo(string caminho)
+        {
+            var cargos = new List<Cargo>();
+            var cargosOrdenados = new List<Cargo>();
+            await Task.Run(() =>
+            {
+
+                int Linha = 4;
+                while (true)
+                {
+                    string DescricaoPlCargo = LeExcel(caminho,"CARGOS", Linha, 2);
+                    if (!string.IsNullOrEmpty(DescricaoPlCargo))
+                    {
+                        if (!cargos.Any(a => a.Descricao.Replace(" ", "").Contains(DescricaoPlCargo.Replace(" ", ""))))
+                        {
+                            cargos.Add(new Cargo
+                            {
+                                Descricao = DescricaoPlCargo
+                            });
+
+                        }
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                Linha = 4;
+                while (true)
+                {
+                    string DescricaoPlCargo = LeExcel(caminho, "FUNCIONÁRIOS", Linha, 17);
+                    if (!string.IsNullOrEmpty(DescricaoPlCargo))
+                    {
+                        if (!cargos.Any(a => a.Descricao.Replace(" ", "").Contains(DescricaoPlCargo.Replace(" ", ""))))
+                        {
+                            cargos.Add(new Cargo
+                            {
+                                Descricao = DescricaoPlCargo
+                            });
+
+                        }
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+            });
+            int codigo = 1;
+            cargosOrdenados = cargos.OrderBy(c => c.Descricao).ToList();
+            cargosOrdenados.ForEach(c => { c.Codigo = codigo; codigo++; });
+            return cargosOrdenados;
+
+        }
+
 
         public async Task<List<Estrutura>> ListaEstruturas(string caminho)
         {
@@ -126,6 +184,68 @@ namespace KAIROS.API.Repositorio
                 while (true)
                 {
                     string DescricaoPlFuncionario = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 15].Value));
+
+                    if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
+                    {
+                        if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Contains(DescricaoPlFuncionario.Replace(" ", ""))))
+                        {
+                            estrutura.Add(new Estrutura
+                            {
+
+                                Descricao = DescricaoPlFuncionario
+                            });
+
+                        }
+
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            });
+            int codigo = 1;
+            estruturaOrdenada = estrutura.OrderBy(c => c.Descricao).ToList();
+            estruturaOrdenada.ForEach(c => { c.Codigo = codigo; codigo++; });
+            return estruturaOrdenada;
+
+
+        }
+        public async Task<List<Estrutura>> ListaEstruturasNovo(string caminho)
+        {
+            var estrutura = new List<Estrutura>();
+            var estruturaOrdenada = new List<Estrutura>();
+            await Task.Run(() =>
+            {
+                int Linha = 4;
+
+                while (true)
+                {
+                    string DescricaoPlDepartamento = LeExcel(caminho,"DEPARTAMENTOS",Linha,2);
+                    if (!string.IsNullOrEmpty(DescricaoPlDepartamento))
+                    {
+                        if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Contains(DescricaoPlDepartamento.Replace(" ", ""))))
+                        {
+                            estrutura.Add(new Estrutura
+                            {
+
+                                Descricao = DescricaoPlDepartamento
+                            });
+
+                        }
+
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                Linha = 4;
+                while (true)
+                {
+                    string DescricaoPlFuncionario = LeExcel(caminho, "FUNCIONÁRIOS", Linha, 15);
 
                     if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
                     {
@@ -219,8 +339,68 @@ namespace KAIROS.API.Repositorio
             return horario;
 
         }
+        public async Task<List<Horarios>> ListaHorariosNovo(string caminho)
+        {
+            var horario = new List<Horarios>();
+            await Task.Run(() =>
+            {
 
-        public async Task<List<Pessoa>> ListaPessoas(string caminho,string CPFResponsavel,List<Cargo> Cargos,List<Estrutura> Estruturas,List<Horarios> Horarois)
+                int Linha = 5;
+                int Codigo = 1;
+
+                while (true)
+                {
+
+                    string DescricaoPHorario = LeExcel(caminho, "HORÁRIOS",Linha,2);
+                    if (!string.IsNullOrEmpty(DescricaoPHorario))
+                    {
+                        if (!horario.Any(a => FormataTexto.SoLetrasENumeros(a.Descricao).Replace(" ", "").Contains(FormataTexto.SoLetrasENumeros(DescricaoPHorario).Replace(" ", ""))))
+                        {
+                            horario.Add(new Horarios
+                            {
+                                Codigo = Codigo.ToString(),
+                                Descricao = DescricaoPHorario,
+
+                            });
+                            Codigo++;
+                        }
+
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                Linha = 4;
+                while (true)
+                {
+                   
+                    string DescricaoPFuncionario = LeExcel(caminho, "FUNCIONÁRIOS", Linha, 16);
+                    if (!string.IsNullOrEmpty(DescricaoPFuncionario))
+                    {
+                        if (!horario.Any(a => FormataTexto.SoLetrasENumeros(a.Descricao).Replace(" ", "").Contains(FormataTexto.SoLetrasENumeros(DescricaoPFuncionario).Replace(" ", ""))))
+                        {
+                            horario.Add(new Horarios
+                            {
+                                Codigo = Codigo.ToString(),
+                                Descricao = DescricaoPFuncionario
+                            });
+                            Codigo++;
+                        }
+
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            });
+            return horario;
+
+        }
+        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois)
         {
             var estruturas = Estruturas;
             var horarios = Horarois;
@@ -297,7 +477,7 @@ namespace KAIROS.API.Repositorio
                               foreach (var C in cargos)
                               {
 
-                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")) )
+                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")))
                                   {
                                       Cargo.Codigo = 0;
                                       Cargo.Id = C.Id;
@@ -435,7 +615,7 @@ namespace KAIROS.API.Repositorio
 
         public async Task SalvaHorarios(string caminhoLeitura, string SalvarEm)
         {
-            var horarios = await ListaHorarios(caminhoLeitura);
+            var horarios = await ListaHorariosNovo(caminhoLeitura);
             await Task.Run(() =>
             {
 
@@ -488,6 +668,21 @@ namespace KAIROS.API.Repositorio
 
             });
         }
+
+        private string LeExcel(string Caminho, string Planilha, int Linha, int Celula)
+        {
+            var Planila = new ExcelPackage(new FileInfo(Caminho));
+            ExcelWorksheet PlanilaSelecionada = Planila.Workbook.Worksheets.First(a => a.Name == Planilha);
+            if (PlanilaSelecionada == null)
+            {
+                throw new Exception("Planilha não encontrada !");
+            }
+            string DadoLido = string.Empty;
+            int linha = Linha;
+            DadoLido = Convert.ToString(PlanilaSelecionada.Cells[Linha, Celula].Value);
+            return DadoLido;
+        }
     }
 }
+
 

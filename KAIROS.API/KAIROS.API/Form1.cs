@@ -119,6 +119,7 @@ namespace KAIROS.API
         {
 
             await Task.WhenAll(
+                ///_excel.ListaPessoas(Txb_Excel.Text,)
             _API.InserePessoaAPI(txb_Key.Text.Trim(), Txb_CNPJ.Text.Trim(), Txb_Excel.Text,Txb_CPFResponsavel.Text)
             );
 

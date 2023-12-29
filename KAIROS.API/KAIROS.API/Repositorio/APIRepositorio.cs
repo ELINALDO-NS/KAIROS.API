@@ -179,27 +179,29 @@ namespace KAIROS.API.Repositorio
             return horario;
         }
 
-        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho,string CPFResponsavel)
+        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel)
         {
             List<Cargo> Cargos = new();
             List<Estrutura> Estruturas = new();
             List<Horarios> Horarios = new();
             List<Pessoa> pessoas = new();
-            await Task.WhenAll(InsereEstruturasAPI(Key, CNPJ, caminho),
-             InsereCargosAPI(Key, CNPJ, caminho)
+
+            await Task.WhenAll(
+                InsereEstruturasAPI(Key, CNPJ, caminho),
+                InsereCargosAPI(Key, CNPJ, caminho)
              );
             await Task.WhenAll(
                 Task.Run(async () => { Cargos = await ListaCargosAPI(Key, CNPJ); }),
                 Task.Run(async () => { Estruturas = await ListaEstruturasAPI(Key, CNPJ); }),
                 Task.Run(async () => { Horarios = await ListaHorariosAPI(Key, CNPJ); })
-                );       
-            pessoas = await _excel.ListaPessoas(caminho,CPFResponsavel,Cargos,Estruturas,Horarios);
+                );
+            pessoas = await _excel.ListaPessoas(caminho, CPFResponsavel, Cargos, Estruturas, Horarios);
             try
             {
 
-           
-            Parallel.ForEach(pessoas, Pessoa =>
-            {
+
+                Parallel.ForEach(pessoas, Pessoa =>
+                {
                     var client = new RestClient(SalvaPessoa_URL);
                     var request = new RestRequest("", Method.Post);
                     request.AddHeader("Content-Type", "application/json");
@@ -223,7 +225,7 @@ namespace KAIROS.API.Repositorio
                         Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
                     }
 
-            });
+                });
             }
             catch (Exception ex)
             {

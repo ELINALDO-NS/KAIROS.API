@@ -114,9 +114,10 @@ namespace KAIROS.API
         {
             PathLeitura();
         }
-
+        
         private async void btn_Iniciar_Click(object sender, EventArgs e)
         {
+            
 
             if (string.IsNullOrEmpty(txb_Key.Text.Trim()) || string.IsNullOrEmpty(Txb_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_CPFResponsavel.Text))
             {
@@ -131,8 +132,14 @@ namespace KAIROS.API
                 }
                
             }
+            string log = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log");
+            if (File.Exists(log))
+            {
+                File.Delete(log);
+            }
+            
             await Task.WhenAll(
-                ///_excel.ListaPessoas(Txb_Excel.Text,)
+                //_excel.ListaPessoas(Txb_Excel.Text)
             _API.InserePessoaAPI(txb_Key.Text.Trim(), Txb_CNPJ.Text.Trim(), Txb_Excel.Text,Txb_CPFResponsavel.Text)
             );
 

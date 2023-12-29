@@ -179,3 +179,36 @@ Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
 Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 2 - Matricula : 2 - FUNCIONARIO RELOPOINT 2
 Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 3 - Matricula : 3 - FUNCIONARIO RELOPOINT 3
 Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 1 - Matricula : 1 - FUNCIONARIO RELOPOINT 1
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRACAO - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Salva Pessoa - CpfResponsavel is invalid - Matricula : 2 - FUNCIONARIO RELOPOINT 2
+Salva Pessoa - CpfResponsavel is invalid - Matricula : 3 - FUNCIONARIO RELOPOINT 3
+Salva Pessoa - CpfResponsavel is invalid - Matricula : 1 - FUNCIONARIO RELOPOINT 1

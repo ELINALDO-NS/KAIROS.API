@@ -118,6 +118,19 @@ namespace KAIROS.API
         private async void btn_Iniciar_Click(object sender, EventArgs e)
         {
 
+            if (string.IsNullOrEmpty(txb_Key.Text.Trim()) || string.IsNullOrEmpty(Txb_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_CPFResponsavel.Text))
+            {
+                MessageBox.Show("Verifique os Campos: KEY, CNPJ, e CPFResponsavel","Iniciar",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txb_Excel.Text))
+            {
+                if (!PathLeitura())
+                {
+                    return;
+                }
+               
+            }
             await Task.WhenAll(
                 ///_excel.ListaPessoas(Txb_Excel.Text,)
             _API.InserePessoaAPI(txb_Key.Text.Trim(), Txb_CNPJ.Text.Trim(), Txb_Excel.Text,Txb_CPFResponsavel.Text)

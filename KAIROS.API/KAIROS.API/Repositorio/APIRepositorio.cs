@@ -32,7 +32,7 @@ namespace KAIROS.API.Repositorio
 
         public async Task InsereCargosAPI(string Key, string CNPJ, string caminho)
         {
-            var cargos = await _excel.ListaCargos(caminho);
+            var cargos = await _excel.ListaCargosNovo(caminho);
             foreach (var item in cargos)
             {
                 using (var client = new RestClient(SalvaCargo_URL))
@@ -70,7 +70,7 @@ namespace KAIROS.API.Repositorio
 
         public async Task InsereEstruturasAPI(string Key, string CNPJ, string Caminho)
         {
-            var estruturas = await _excel.ListaEstruturas(Caminho);
+            var estruturas = await _excel.ListaEstruturasNovo(Caminho);
             foreach (var item in estruturas)
             {
                 using (var client = new RestClient(SalvaEstrutura_URL))
@@ -179,26 +179,12 @@ namespace KAIROS.API.Repositorio
             return horario;
         }
 
-        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel)
+        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel, List<Pessoa> pessoas)
         {
-            List<Cargo> Cargos = new();
-            List<Estrutura> Estruturas = new();
-            List<Horarios> Horarios = new();
-            List<Pessoa> pessoas = new();
-
-            await Task.WhenAll(
-                InsereEstruturasAPI(Key, CNPJ, caminho),
-                InsereCargosAPI(Key, CNPJ, caminho)
-             );
-            await Task.WhenAll(
-                Task.Run(async () => { Cargos = await ListaCargosAPI(Key, CNPJ); }),
-                Task.Run(async () => { Estruturas = await ListaEstruturasAPI(Key, CNPJ); }),
-                Task.Run(async () => { Horarios = await ListaHorariosAPI(Key, CNPJ); })
-                );
-            pessoas = await _excel.ListaPessoas(caminho, CPFResponsavel, Cargos, Estruturas, Horarios);
+            int status = 0;
+            Form1.StatusPessoas = $"{status}/{pessoas.Count}";
             try
             {
-
 
                 Parallel.ForEach(pessoas, Pessoa =>
                 {
@@ -224,7 +210,7 @@ namespace KAIROS.API.Repositorio
                     {
                         Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
                     }
-
+                    Form1.StatusPessoas = $"{status}/{pessoas.Count}";
                 });
             }
             catch (Exception ex)

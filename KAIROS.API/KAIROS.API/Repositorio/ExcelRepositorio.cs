@@ -145,7 +145,6 @@ namespace KAIROS.API.Repositorio
 
         }
 
-
         public async Task<List<Estrutura>> ListaEstruturas(string caminho)
         {
             var estrutura = new List<Estrutura>();

@@ -40,12 +40,12 @@
             CheckEstruturas = new PictureBox();
             CheckHorarios = new PictureBox();
             CheckValidaDados = new PictureBox();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label10 = new Label();
+            Lbl_StatusPessoa = new Label();
+            Lbl_Pessoas = new Label();
+            Lbl_Cargos = new Label();
+            Lbl_Estruturas = new Label();
+            Lbl_Horarios = new Label();
+            Lbl_ValidaDados = new Label();
             btn_Iniciar = new Button();
             btn_Valida_Dados = new Button();
             btn_Lista_Horarios = new Button();
@@ -106,12 +106,12 @@
             InsereCadastros.Controls.Add(CheckEstruturas);
             InsereCadastros.Controls.Add(CheckHorarios);
             InsereCadastros.Controls.Add(CheckValidaDados);
-            InsereCadastros.Controls.Add(label15);
-            InsereCadastros.Controls.Add(label14);
-            InsereCadastros.Controls.Add(label13);
-            InsereCadastros.Controls.Add(label12);
-            InsereCadastros.Controls.Add(label11);
-            InsereCadastros.Controls.Add(label10);
+            InsereCadastros.Controls.Add(Lbl_StatusPessoa);
+            InsereCadastros.Controls.Add(Lbl_Pessoas);
+            InsereCadastros.Controls.Add(Lbl_Cargos);
+            InsereCadastros.Controls.Add(Lbl_Estruturas);
+            InsereCadastros.Controls.Add(Lbl_Horarios);
+            InsereCadastros.Controls.Add(Lbl_ValidaDados);
             InsereCadastros.Controls.Add(btn_Iniciar);
             InsereCadastros.Controls.Add(btn_Valida_Dados);
             InsereCadastros.Controls.Add(btn_Lista_Horarios);
@@ -235,71 +235,71 @@
             CheckValidaDados.TabStop = false;
             CheckValidaDados.Visible = false;
             // 
-            // label15
+            // Lbl_StatusPessoa
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label15.Location = new Point(522, 238);
-            label15.Name = "label15";
-            label15.Size = new Size(70, 17);
-            label15.TabIndex = 21;
-            label15.Text = "1000/1000";
-            label15.Visible = false;
+            Lbl_StatusPessoa.AutoSize = true;
+            Lbl_StatusPessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_StatusPessoa.Location = new Point(522, 238);
+            Lbl_StatusPessoa.Name = "Lbl_StatusPessoa";
+            Lbl_StatusPessoa.Size = new Size(70, 17);
+            Lbl_StatusPessoa.TabIndex = 21;
+            Lbl_StatusPessoa.Text = "1000/1000";
+            Lbl_StatusPessoa.Visible = false;
             // 
-            // label14
+            // Lbl_Pessoas
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label14.Location = new Point(460, 238);
-            label14.Name = "label14";
-            label14.Size = new Size(56, 17);
-            label14.TabIndex = 20;
-            label14.Text = "Pessoas";
-            label14.Visible = false;
+            Lbl_Pessoas.AutoSize = true;
+            Lbl_Pessoas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_Pessoas.Location = new Point(460, 238);
+            Lbl_Pessoas.Name = "Lbl_Pessoas";
+            Lbl_Pessoas.Size = new Size(56, 17);
+            Lbl_Pessoas.TabIndex = 20;
+            Lbl_Pessoas.Text = "Pessoas";
+            Lbl_Pessoas.Visible = false;
             // 
-            // label13
+            // Lbl_Cargos
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label13.Location = new Point(371, 238);
-            label13.Name = "label13";
-            label13.Size = new Size(50, 17);
-            label13.TabIndex = 19;
-            label13.Text = "Cargos";
-            label13.Visible = false;
+            Lbl_Cargos.AutoSize = true;
+            Lbl_Cargos.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_Cargos.Location = new Point(371, 238);
+            Lbl_Cargos.Name = "Lbl_Cargos";
+            Lbl_Cargos.Size = new Size(50, 17);
+            Lbl_Cargos.TabIndex = 19;
+            Lbl_Cargos.Text = "Cargos";
+            Lbl_Cargos.Visible = false;
             // 
-            // label12
+            // Lbl_Estruturas
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label12.Location = new Point(259, 238);
-            label12.Name = "label12";
-            label12.Size = new Size(70, 17);
-            label12.TabIndex = 18;
-            label12.Text = "Estruturas";
-            label12.Visible = false;
+            Lbl_Estruturas.AutoSize = true;
+            Lbl_Estruturas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_Estruturas.Location = new Point(259, 238);
+            Lbl_Estruturas.Name = "Lbl_Estruturas";
+            Lbl_Estruturas.Size = new Size(70, 17);
+            Lbl_Estruturas.TabIndex = 18;
+            Lbl_Estruturas.Text = "Estruturas";
+            Lbl_Estruturas.Visible = false;
             // 
-            // label11
+            // Lbl_Horarios
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label11.Location = new Point(159, 238);
-            label11.Name = "label11";
-            label11.Size = new Size(61, 17);
-            label11.TabIndex = 17;
-            label11.Text = "Horarios";
-            label11.Visible = false;
+            Lbl_Horarios.AutoSize = true;
+            Lbl_Horarios.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_Horarios.Location = new Point(159, 238);
+            Lbl_Horarios.Name = "Lbl_Horarios";
+            Lbl_Horarios.Size = new Size(61, 17);
+            Lbl_Horarios.TabIndex = 17;
+            Lbl_Horarios.Text = "Horarios";
+            Lbl_Horarios.Visible = false;
             // 
-            // label10
+            // Lbl_ValidaDados
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label10.Location = new Point(7, 238);
-            label10.Name = "label10";
-            label10.Size = new Size(113, 17);
-            label10.TabIndex = 16;
-            label10.Text = "Validando Dados";
-            label10.Visible = false;
+            Lbl_ValidaDados.AutoSize = true;
+            Lbl_ValidaDados.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_ValidaDados.Location = new Point(7, 238);
+            Lbl_ValidaDados.Name = "Lbl_ValidaDados";
+            Lbl_ValidaDados.Size = new Size(113, 17);
+            Lbl_ValidaDados.TabIndex = 16;
+            Lbl_ValidaDados.Text = "Validando Dados";
+            Lbl_ValidaDados.Visible = false;
             // 
             // btn_Iniciar
             // 
@@ -611,12 +611,12 @@
         private TextBox textBox8;
         private Label label9;
         private PictureBox CheckValidaDados;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private Label label10;
+        private Label Lbl_StatusPessoa;
+        private Label Lbl_Pessoas;
+        private Label Lbl_Cargos;
+        private Label Lbl_Estruturas;
+        private Label Lbl_Horarios;
+        private Label Lbl_ValidaDados;
         private PictureBox CheckPessoa;
         private PictureBox CheckCargos;
         private PictureBox CheckEstruturas;

@@ -101,3 +101,6 @@ C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0
 C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\RestSharp.dll
 C:\Users\SUPORTE\Documents\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\KAIROS.API.Properties.Resources.resources
+C:\Users\Santos\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Santos\Documents\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\RestSharp.dll
+C:\Users\Santos\Documents\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\KAIROS.API.Properties.Resources.resources

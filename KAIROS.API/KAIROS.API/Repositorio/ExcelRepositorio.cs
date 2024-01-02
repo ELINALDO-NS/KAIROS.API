@@ -436,7 +436,7 @@ namespace KAIROS.API.Repositorio
                               string HorarioPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 16].Value);
                               var Horario = new List<Horarios>();
                               var RegraDeCaldulo = new List<Regrascalculo>();
-                              string CargoPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value);
+                              string CargoPessoa = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value));
                               var Cargo = new Cargo();
                               string EscalaDeFOlga = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 18].Value);
                               var AmbienteDeTrabalho = new List<Ambientetrabalhopessoa>();
@@ -455,7 +455,7 @@ namespace KAIROS.API.Repositorio
                               #region Estrutura
                               foreach (var e in estruturas)
                               {
-                                  if (e.Descricao.Contains(DepartamentoPessoa.Replace(" ", "")))
+                                  if (e.Descricao.Equals(DepartamentoPessoa.Replace(" ", "")))
                                   {
                                       Departamento.Codigo = 0;
                                       Departamento.Id = e.Id;
@@ -472,11 +472,11 @@ namespace KAIROS.API.Repositorio
 
                               #endregion
                               #region Cargo
-
+                              
                               foreach (var C in cargos)
                               {
-
-                                  if (C.Descricao.Replace(" ", "").Contains(CargoPessoa.Replace(" ", "")))
+                                  
+                                  if (FormataTexto.RemoveAcentos(C.Descricao.Replace(" ", "")).Equals(CargoPessoa.Replace(" ", "")))
                                   {
                                       Cargo.Codigo = 0;
                                       Cargo.Id = C.Id;
@@ -494,9 +494,11 @@ namespace KAIROS.API.Repositorio
 
                               #endregion
                               #region Horario
+
+                              
                               foreach (var H in horarios)
                               {
-                                  if (FormataTexto.SoLetrasENumeros(H.Descricao.Replace(" ", "")).Contains(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))))
+                                  if (FormataTexto.SoLetrasENumeros(H.Descricao.Replace(" ", "")).Equals(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))))
                                   {
 
                                       Horario.Add(new Horarios()
@@ -592,9 +594,6 @@ namespace KAIROS.API.Repositorio
                                       AmbienteTrabalhoPessoa = AmbienteDeTrabalho.ToArray(),
                                       CpfResponsavel = CPFResponsavel,
                                       CNPJ = CNPJ
-
-
-
 
                                   });
 

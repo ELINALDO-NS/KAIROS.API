@@ -22,7 +22,7 @@ namespace KAIROS.API
         {
 
         }
-        public static string StatusPessoas = string.Empty;
+
 
         private void btn_Lista_Horarios_Click(object sender, EventArgs e)
         {
@@ -161,7 +161,14 @@ namespace KAIROS.API
              {
                  AlterarStatus(SpinCargos, CheckCargos, true);
                  await _API.InsereCargosAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
-             }));
+             }),
+             Task.Run(async () =>
+             {
+                 AlterarStatus(SpinHorarios, CheckHorarios, true);
+                 Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
+                 AlterarStatus(SpinHorarios, CheckHorarios, false);
+             })
+             );
             await Task.WhenAll(
              Task.Run(async () =>
                 {
@@ -172,17 +179,28 @@ namespace KAIROS.API
                 {
                     Estruturas = await _API.ListaEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text);
                     AlterarStatus(SpinEstrutura, CheckEstruturas, false);
-                }),
-             Task.Run(async () =>
-                {
-                    Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
-                    AlterarStatus(SpinHorarios, CheckHorarios, false);
-                }));
+                })
+             );
 
-            var ListaPessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
-            await _API.InserePessoaAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text, Txb_CPFResponsavel.Text, ListaPessoas);
+
+
+
+            pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
+            await Task.Run(() =>
+            {
+                int Stp = 0;
+                Parallel.ForEach(pessoas, pessoa =>
+                {
+                    _API.InserePessoaAPINOVO(txb_Key.Text, Txb_CNPJ.Text, pessoa);
+                    Stp++;
+                    Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
+
+                });
+            });
+
+
             Lbl_StatusPessoa.Visible = false;
-            AlterarStatus(SpinCargos, CheckPessoa, true);
+            AlterarStatus(CheckPessoa, CheckPessoa, false);
 
             MessageBox.Show("OK");
 
@@ -192,13 +210,14 @@ namespace KAIROS.API
         private static void AlterarStatus(PictureBox Spin, PictureBox Check, bool Visible)
         {
 
-            if (Spin.InvokeRequired && Check.InvokeRequired)
-            {
-                Spin.Invoke(new Action(() => Spin.Visible = Visible));
-                Check.Invoke(new Action(() => Check.Visible = !Visible));
-            }
-
-
+            //if (Spin.InvokeRequired && Check.InvokeRequired)
+            //{
+            Spin.Invoke(new Action(() => Spin.Visible = Visible));
+            Check.Invoke(new Action(() => Check.Visible = !Visible));
+            //}
         }
+
+
     }
+
 }

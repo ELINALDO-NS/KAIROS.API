@@ -1,18 +1,1078 @@
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - DESENVOLVIMENTO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - INFRAESTRUTURA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - QUALIDADE - 13.466.677/0001-61
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - DEV
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEVOPS
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - QA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 -  MOTORISTA CARRETEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - ADMINISTRADOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - ADMINISTRATIVO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - ASSIS COMERCIAL I
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - PORTARIA - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - ASSIST FATURAMENTO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PRODUÇÃO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - ASSISTENTE ADMINISTRATIVO N
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - ASSISTENTE COMERCIAL
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - ASSISTENTE FINANCEIRO N I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 8 - ASSISTENTE FINANCEIRO N II
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 9 - ASSISTENTE PRODUÇÃO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 10 - AUX PRODUCAO I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 11 - CARREGADOR
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 12 - ENC DE PRODUÇÃO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 13 - ENGENHEIRO AGRÔNOMO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 14 - FAXINEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 15 - JARDNEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 16 - OP DE EMPILHADEIRA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 17 - OP PÁ CARREGADEIRA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 18 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 19 - SUPERVISOR FATURAMENTO
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 23
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 23
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 36
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 37
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 37
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 37
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 81
+Cargo: ASSIS COMERCIAL I não encontrada para o funcionario, Matricula: 81
+Cargo: ASSIS COMERCIAL I não encontrada para o funcionario, Matricula: 81
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 81
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 82
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 82
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 82
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 22
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 22
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 59
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+Salva Pessoa - Register number already exists in employee ANTONIO CARLOS NASCIMENTO DOS SANTOS - Matricula : 54 - ANTONIO CARLOS NASCIMENTO DOS SANTOS
+Salva Pessoa - Register number already exists in employee ANDERSON LUIS DE OLIVEIRA GOMES - Matricula : 36 - ANDERSON LUIS DE OLIVEIRA GOMES
+Salva Pessoa - Register number already exists in employee JOEL DE JESUS SILVA - Matricula : 7 - JOEL DE JESUS SILVA
+Salva Pessoa - Register number already exists in employee JOSE VENANCIO PEREIRA - Matricula : 9 - JOSE VENANCIO PEREIRA
+Salva Pessoa - Register number already exists in employee AISLAN QUEIROZ BRANDAO - Matricula : 23 - AISLAN QUEIROZ BRANDAO
+Salva Pessoa - Register number already exists in employee EDCARLOS PEREIRA - Matricula : 81 - EDCARLOS PEREIRA
+Salva Pessoa - Register number already exists in employee DINHO GOES DE LIMA - Matricula : 66 - DINHO GOES DE LIMA
+Salva Pessoa - Register number already exists in employee ANDERSON COUTINHO DE SANTANA - Matricula : 34 - ANDERSON COUTINHO DE SANTANA
+Salva Pessoa - Register number already exists in employee JOSE GUILHERME ADORNO SANTOS SILVA - Matricula : 22 - JOSE GUILHERME ADORNO SANTOS SILVA
+Salva Pessoa - Register number already exists in employee JOAQUIM SOUZA DA SILVA - Matricula : 30 - JOAQUIM SOUZA DA SILVA
+Salva Pessoa - Register number already exists in employee JOSE RONIVON MENDES SANTANA - Matricula : 59 - JOSE RONIVON MENDES SANTANA
+Salva Pessoa - Register number already exists in employee ANTONIO CESAR DOS SANTOS - Matricula : 38 - ANTONIO CESAR DOS SANTOS
+Salva Pessoa - Register number already exists in employee CARLOS ALBERTO NERIS BARBOSA - Matricula : 11 - CARLOS ALBERTO NERIS BARBOSA
+Salva Pessoa - Register number already exists in employee ERICK LAZARO REIS VILA VERDE - Matricula : 82 - ERICK LAZARO REIS VILA VERDE
+Salva Pessoa - Register number already exists in employee EVANDRO DOS SANTOS - Matricula : 5 - EVANDRO DOS SANTOS
+Salva Pessoa - Register number already exists in employee ELISANGELA COSTA DOS SANTOS - Matricula : 62 - ELISANGELA COSTA DOS SANTOS
+Salva Pessoa - Register number already exists in employee ANTONIO MARCOS DE OLIVEIRA BRANDAO - Matricula : 37 - ANTONIO MARCOS DE OLIVEIRA BRANDAO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 -  MOTORISTA CARRETEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - ADMINISTRADOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - ADMINISTRATIVO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - ASSIS COMERCIAL I
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - PORTARIA - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - ASSIST FATURAMENTO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PRODUÇÃO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - ASSISTENTE ADMINISTRATIVO N
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - ASSISTENTE COMERCIAL
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - ASSISTENTE FINANCEIRO N I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 8 - ASSISTENTE FINANCEIRO N II
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 9 - ASSISTENTE PRODUÇÃO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 10 - AUX PRODUCAO I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 11 - CARREGADOR
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 12 - ENC DE PRODUÇÃO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 13 - ENGENHEIRO AGRÔNOMO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 14 - FAXINEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 15 - JARDNEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 16 - OP DE EMPILHADEIRA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 17 - OP PÁ CARREGADEIRA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 18 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 19 - SUPERVISOR FATURAMENTO
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 23
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 23
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 36
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 37
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 37
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 37
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 81
+Cargo: ASSIS COMERCIAL I não encontrada para o funcionario, Matricula: 81
+Cargo: ASSIS COMERCIAL I não encontrada para o funcionario, Matricula: 81
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 81
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 82
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 82
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 82
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 22
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 22
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 59
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+Salva Pessoa - Register number already exists in employee JOEL DE JESUS SILVA - Matricula : 7 - JOEL DE JESUS SILVA
+Salva Pessoa - Register number already exists in employee ANTONIO CESAR DOS SANTOS - Matricula : 38 - ANTONIO CESAR DOS SANTOS
+Salva Pessoa - Register number already exists in employee ANTONIO MARCOS DE OLIVEIRA BRANDAO - Matricula : 37 - ANTONIO MARCOS DE OLIVEIRA BRANDAO
+Salva Pessoa - Register number already exists in employee ELISANGELA COSTA DOS SANTOS - Matricula : 62 - ELISANGELA COSTA DOS SANTOS
+Salva Pessoa - Register number already exists in employee ANTONIO CARLOS NASCIMENTO DOS SANTOS - Matricula : 54 - ANTONIO CARLOS NASCIMENTO DOS SANTOS
+Salva Pessoa - Register number already exists in employee CARLOS ALBERTO NERIS BARBOSA - Matricula : 11 - CARLOS ALBERTO NERIS BARBOSA
+Salva Pessoa - Register number already exists in employee AISLAN QUEIROZ BRANDAO - Matricula : 23 - AISLAN QUEIROZ BRANDAO
+Salva Pessoa - Register number already exists in employee ANDERSON COUTINHO DE SANTANA - Matricula : 34 - ANDERSON COUTINHO DE SANTANA
+Salva Pessoa - Register number already exists in employee EDCARLOS PEREIRA - Matricula : 81 - EDCARLOS PEREIRA
+Salva Pessoa - Register number already exists in employee JOAQUIM SOUZA DA SILVA - Matricula : 30 - JOAQUIM SOUZA DA SILVA
+Salva Pessoa - Register number already exists in employee ANDERSON LUIS DE OLIVEIRA GOMES - Matricula : 36 - ANDERSON LUIS DE OLIVEIRA GOMES
+Salva Pessoa - Register number already exists in employee JOSE VENANCIO PEREIRA - Matricula : 9 - JOSE VENANCIO PEREIRA
+Salva Pessoa - Register number already exists in employee ERICK LAZARO REIS VILA VERDE - Matricula : 82 - ERICK LAZARO REIS VILA VERDE
+Salva Pessoa - Register number already exists in employee JOSE RONIVON MENDES SANTANA - Matricula : 59 - JOSE RONIVON MENDES SANTANA
+Salva Pessoa - Register number already exists in employee DINHO GOES DE LIMA - Matricula : 66 - DINHO GOES DE LIMA
+Salva Pessoa - Register number already exists in employee JOSE GUILHERME ADORNO SANTOS SILVA - Matricula : 22 - JOSE GUILHERME ADORNO SANTOS SILVA
+Salva Pessoa - Register number already exists in employee EVANDRO DOS SANTOS - Matricula : 5 - EVANDRO DOS SANTOS
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 -  MOTORISTA CARRETEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - ADMINISTRADOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - ASSIS COMERCIAL I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - ASSIST FATURAMENTO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - ADMINISTRATIVO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - ASSISTENTE ADMINISTRATIVO N
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - PORTARIA - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - ASSISTENTE COMERCIAL
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PRODUÇÃO - 32.394.782/0001-87
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - ASSISTENTE FINANCEIRO N I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 8 - ASSISTENTE FINANCEIRO N II
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 9 - ASSISTENTE PRODUÇÃO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 10 - AUX PRODUCAO I
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 11 - CARREGADOR
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 12 - ENC DE PRODUÇÃO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 13 - ENGENHEIRO AGRÔNOMO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 14 - FAXINEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 15 - JARDNEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 16 - OP DE EMPILHADEIRA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 17 - OP PÁ CARREGADEIRA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 18 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 19 - SUPERVISOR FATURAMENTO
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+Cargo: SUPERVISOR FATURAMENTO não encontrada para o funcionario, Matricula: 23
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 23
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 23
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+(ESCALA 12X36 -  18 ÁS 06 (NOTUNO PAR)) Horario não encontrado para o funcionario, Matricula: 34
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+Cargo: ENGENHEIRO AGRÔNOMO não encontrada para o funcionario, Matricula: 36
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 36
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 54
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 38
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 37
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 37
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 37
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 11
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 66
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 81
+Cargo: ASSIS COMERCIAL I não encontrada para o funcionario, Matricula: 81
+Cargo: ASSIS COMERCIAL I não encontrada para o funcionario, Matricula: 81
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 81
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+Cargo: ASSIST FATURAMENTO não encontrada para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 62
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 82
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+Cargo: ASSISTENTE FINANCEIRO N I não encontrada para o funcionario, Matricula: 82
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 82
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 82
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+Cargo: ASSISTENTE ADMINISTRATIVO N não encontrada para o funcionario, Matricula: 5
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 5
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 30
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+Cargo: AUX PRODUCAO I não encontrada para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+(SEG - SAB- 00-00H - 04H00 - 05H00 - 08H00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+Cargo: ASSISTENTE FINANCEIRO N II não encontrada para o funcionario, Matricula: 22
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 22
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 22
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+Cargo: OP DE EMPILHADEIRA não encontrada para o funcionario, Matricula: 59
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 59
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 59
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+Cargo: OP PÁ CARREGADEIRA não encontrada para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+(SEG - SAB- 08-00H - 12H00 - 13H00 - 16-20) Horario não encontrado para o funcionario, Matricula: 9
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 88888
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 25
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 25
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 25
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 25
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 50
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 50
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 50
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 50
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 70
+Cargo: ASSISTENTE COMERCIAL não encontrada para o funcionario, Matricula: 70
+Cargo: ASSISTENTE COMERCIAL não encontrada para o funcionario, Matricula: 70
+Cargo: ASSISTENTE COMERCIAL não encontrada para o funcionario, Matricula: 70
+Cargo: ASSISTENTE COMERCIAL não encontrada para o funcionario, Matricula: 70
+Cargo: ASSISTENTE COMERCIAL não encontrada para o funcionario, Matricula: 70
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 70
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 70
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+Cargo: PORTEIRO não encontrada para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+( ESCALA 12X36 -  06 ÁS 18 (DIURNO IMPAR)) Horario não encontrado para o funcionario, Matricula: 42
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+Cargo: FAXINEIRO não encontrada para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+(MANHÃ  (06-30 ÁS 15-30)) Horario não encontrado para o funcionario, Matricula: 49
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 4
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 4
+(08-00 12-00 13-00 18-00 SEX 08-00 17-00) Horario não encontrado para o funcionario, Matricula: 4
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 19
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 19
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 19
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+Cargo: CARREGADOR não encontrada para o funcionario, Matricula: 19
+(08-00 12-00 13-00 17-00 SAB 08-00 12-00 ) Horario não encontrado para o funcionario, Matricula: 19
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 53
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 53
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 53
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+Cargo: ASSISTENTE PRODUÇÃO não encontrada para o funcionario, Matricula: 53
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 53
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 53
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 53
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 53
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 53
+(SEG - SAB- 16-10H - 21H00 - 22H00 - 00-10) Horario não encontrado para o funcionario, Matricula: 53
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 60
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 60
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 60
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Cargo: ENC DE PRODUÇÃO não encontrada para o funcionario, Matricula: 60
+Salva Pessoa - Register number already exists in employee AISLAN QUEIROZ BRANDAO - Matricula : 23 - AISLAN QUEIROZ BRANDAO
+Salva Pessoa - Register number already exists in employee JOAQUIM SOUZA DA SILVA - Matricula : 30 - JOAQUIM SOUZA DA SILVA
+Salva Pessoa - Register number already exists in employee DINHO GOES DE LIMA - Matricula : 66 - DINHO GOES DE LIMA
+Salva Pessoa - Register number already exists in employee CARLOS ALBERTO NERIS BARBOSA - Matricula : 11 - CARLOS ALBERTO NERIS BARBOSA
+Salva Pessoa - Register number already exists in employee ANDERSON LUIS DE OLIVEIRA GOMES - Matricula : 36 - ANDERSON LUIS DE OLIVEIRA GOMES
+Salva Pessoa - Register number already exists in employee JOSE GUILHERME ADORNO SANTOS SILVA - Matricula : 22 - JOSE GUILHERME ADORNO SANTOS SILVA
+Salva Pessoa - Register number already exists in employee ERICK LAZARO REIS VILA VERDE - Matricula : 82 - ERICK LAZARO REIS VILA VERDE
+Salva Pessoa - Register number already exists in employee ANTONIO CESAR DOS SANTOS - Matricula : 38 - ANTONIO CESAR DOS SANTOS
+Salva Pessoa - Register number already exists in employee JOEL DE JESUS SILVA - Matricula : 7 - JOEL DE JESUS SILVA
+Salva Pessoa - Register number already exists in employee ANDERSON COUTINHO DE SANTANA - Matricula : 34 - ANDERSON COUTINHO DE SANTANA
+Salva Pessoa - Register number already exists in employee EVANDRO DOS SANTOS - Matricula : 5 - EVANDRO DOS SANTOS
+Salva Pessoa - Register number already exists in employee EDCARLOS PEREIRA - Matricula : 81 - EDCARLOS PEREIRA
+Salva Pessoa - Register number already exists in employee JOSE VENANCIO PEREIRA - Matricula : 9 - JOSE VENANCIO PEREIRA
+Salva Pessoa - Register number already exists in employee JOSE RONIVON MENDES SANTANA - Matricula : 59 - JOSE RONIVON MENDES SANTANA
+Salva Pessoa - Register number already exists in employee ELISANGELA COSTA DOS SANTOS - Matricula : 62 - ELISANGELA COSTA DOS SANTOS
+Salva Pessoa - Register number already exists in employee ANTONIO CARLOS NASCIMENTO DOS SANTOS - Matricula : 54 - ANTONIO CARLOS NASCIMENTO DOS SANTOS
+Salva Pessoa - Register number already exists in employee ANTONIO MARCOS DE OLIVEIRA BRANDAO - Matricula : 37 - ANTONIO MARCOS DE OLIVEIRA BRANDAO
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
 Cargo: DEV não encontrada para o funcionario, Matricula: 1
@@ -30,21 +1090,18 @@ Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matric
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Salva Pessoa - CpfResponsavel not informed - Matricula : 3 - FUNCIONARIO RELOPOINT 3
-Salva Pessoa - CpfResponsavel not informed - Matricula : 2 - FUNCIONARIO RELOPOINT 2
-Salva Pessoa - CpfResponsavel not informed - Matricula : 1 - FUNCIONARIO RELOPOINT 1
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRACAO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
@@ -63,21 +1120,49 @@ Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matric
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Salva Pessoa - CpfResponsavel not informed - Matricula : 1 - FUNCIONARIO RELOPOINT 1
-Salva Pessoa - CpfResponsavel not informed - Matricula : 2 - FUNCIONARIO RELOPOINT 2
-Salva Pessoa - CpfResponsavel not informed - Matricula : 3 - FUNCIONARIO RELOPOINT 3
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRACAO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Salva Pessoa - Cpf number already exists in employee FUNCIONARIO RELOPOINT 2 - Matricula : 2 - FUNCIONARIO RELOPOINT 2
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
@@ -96,100 +1181,17 @@ Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matric
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Salva Pessoa - CpfResponsavel not informed - Matricula : 1 - FUNCIONARIO RELOPOINT 1
-Salva Pessoa - CpfResponsavel not informed - Matricula : 2 - FUNCIONARIO RELOPOINT 2
-Salva Pessoa - CpfResponsavel not informed - Matricula : 3 - FUNCIONARIO RELOPOINT 3
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRACAO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Cargo: DEV não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Cargo: DEV não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRACAO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
-Cargo: DEV não encontrada para o funcionario, Matricula: 1
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Cargo: QA não encontrada para o funcionario, Matricula: 2
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
-Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 2 - Matricula : 2 - FUNCIONARIO RELOPOINT 2
-Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 3 - Matricula : 3 - FUNCIONARIO RELOPOINT 3
-Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 1 - Matricula : 1 - FUNCIONARIO RELOPOINT 1
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRACAO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
-Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
 Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
 Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
@@ -210,5 +1212,127 @@ Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matric
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
 Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
 Salva Pessoa - CpfResponsavel is invalid - Matricula : 2 - FUNCIONARIO RELOPOINT 2
-Salva Pessoa - CpfResponsavel is invalid - Matricula : 3 - FUNCIONARIO RELOPOINT 3
 Salva Pessoa - CpfResponsavel is invalid - Matricula : 1 - FUNCIONARIO RELOPOINT 1
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 2 - Matricula : 2 - FUNCIONARIO RELOPOINT 2
+Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 3 - Matricula : 3 - FUNCIONARIO RELOPOINT 3
+Salva Pessoa - Register number already exists in employee FUNCIONARIO RELOPOINT 1 - Matricula : 1 - FUNCIONARIO RELOPOINT 1
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - ADMINISTRAÇÃO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMMINISTRADOR 
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 2 - DESENVOLVIMENTO - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - DEV
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - INFRAESTRUTURA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - DEVOPS
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 4 - PORTARIA - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 5 - QUALIDADE - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 5 - QA
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 6 - RECEPCIONISTA
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 6 - VENDAS - 13.466.677/0001-61 	
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 7 - VENDEDOR
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 1
+Cargo: DEV não encontrada para o funcionario, Matricula: 1
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Cargo: QA não encontrada para o funcionario, Matricula: 2
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Estrutura: KAIROS.API.Model.Estrutura não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3
+Cargo: DEVOPS não encontrada para o funcionario, Matricula: 3

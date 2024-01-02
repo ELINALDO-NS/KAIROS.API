@@ -139,7 +139,7 @@
             // SpinCargos
             // 
             SpinCargos.Image = (Image)resources.GetObject("SpinCargos.Image");
-            SpinCargos.Location = new Point(424, 236);
+            SpinCargos.Location = new Point(324, 227);
             SpinCargos.Name = "SpinCargos";
             SpinCargos.Size = new Size(30, 20);
             SpinCargos.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -150,7 +150,7 @@
             // SpinEstrutura
             // 
             SpinEstrutura.Image = (Image)resources.GetObject("SpinEstrutura.Image");
-            SpinEstrutura.Location = new Point(335, 236);
+            SpinEstrutura.Location = new Point(235, 227);
             SpinEstrutura.Name = "SpinEstrutura";
             SpinEstrutura.Size = new Size(30, 20);
             SpinEstrutura.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -161,7 +161,7 @@
             // SpinHorarios
             // 
             SpinHorarios.Image = (Image)resources.GetObject("SpinHorarios.Image");
-            SpinHorarios.Location = new Point(223, 236);
+            SpinHorarios.Location = new Point(424, 227);
             SpinHorarios.Name = "SpinHorarios";
             SpinHorarios.Size = new Size(30, 20);
             SpinHorarios.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -172,7 +172,7 @@
             // SpinValidaDados
             // 
             SpinValidaDados.Image = (Image)resources.GetObject("SpinValidaDados.Image");
-            SpinValidaDados.Location = new Point(123, 236);
+            SpinValidaDados.Location = new Point(123, 227);
             SpinValidaDados.Name = "SpinValidaDados";
             SpinValidaDados.Size = new Size(30, 20);
             SpinValidaDados.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -183,7 +183,7 @@
             // CheckPessoa
             // 
             CheckPessoa.Image = (Image)resources.GetObject("CheckPessoa.Image");
-            CheckPessoa.Location = new Point(522, 235);
+            CheckPessoa.Location = new Point(522, 227);
             CheckPessoa.Name = "CheckPessoa";
             CheckPessoa.Size = new Size(30, 20);
             CheckPessoa.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -194,7 +194,7 @@
             // CheckCargos
             // 
             CheckCargos.Image = (Image)resources.GetObject("CheckCargos.Image");
-            CheckCargos.Location = new Point(424, 235);
+            CheckCargos.Location = new Point(324, 227);
             CheckCargos.Name = "CheckCargos";
             CheckCargos.Size = new Size(30, 20);
             CheckCargos.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -205,7 +205,7 @@
             // CheckEstruturas
             // 
             CheckEstruturas.Image = (Image)resources.GetObject("CheckEstruturas.Image");
-            CheckEstruturas.Location = new Point(335, 235);
+            CheckEstruturas.Location = new Point(235, 227);
             CheckEstruturas.Name = "CheckEstruturas";
             CheckEstruturas.Size = new Size(30, 20);
             CheckEstruturas.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -216,7 +216,7 @@
             // CheckHorarios
             // 
             CheckHorarios.Image = (Image)resources.GetObject("CheckHorarios.Image");
-            CheckHorarios.Location = new Point(223, 235);
+            CheckHorarios.Location = new Point(424, 227);
             CheckHorarios.Name = "CheckHorarios";
             CheckHorarios.Size = new Size(30, 20);
             CheckHorarios.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -227,7 +227,7 @@
             // CheckValidaDados
             // 
             CheckValidaDados.Image = (Image)resources.GetObject("CheckValidaDados.Image");
-            CheckValidaDados.Location = new Point(123, 235);
+            CheckValidaDados.Location = new Point(123, 227);
             CheckValidaDados.Name = "CheckValidaDados";
             CheckValidaDados.Size = new Size(30, 20);
             CheckValidaDados.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -239,18 +239,16 @@
             // 
             Lbl_StatusPessoa.AutoSize = true;
             Lbl_StatusPessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_StatusPessoa.Location = new Point(522, 238);
+            Lbl_StatusPessoa.Location = new Point(522, 230);
             Lbl_StatusPessoa.Name = "Lbl_StatusPessoa";
-            Lbl_StatusPessoa.Size = new Size(70, 17);
+            Lbl_StatusPessoa.Size = new Size(0, 17);
             Lbl_StatusPessoa.TabIndex = 21;
-            Lbl_StatusPessoa.Text = "1000/1000";
-            Lbl_StatusPessoa.Visible = false;
             // 
             // Lbl_Pessoas
             // 
             Lbl_Pessoas.AutoSize = true;
             Lbl_Pessoas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Pessoas.Location = new Point(460, 238);
+            Lbl_Pessoas.Location = new Point(460, 230);
             Lbl_Pessoas.Name = "Lbl_Pessoas";
             Lbl_Pessoas.Size = new Size(56, 17);
             Lbl_Pessoas.TabIndex = 20;
@@ -261,7 +259,7 @@
             // 
             Lbl_Cargos.AutoSize = true;
             Lbl_Cargos.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Cargos.Location = new Point(371, 238);
+            Lbl_Cargos.Location = new Point(271, 230);
             Lbl_Cargos.Name = "Lbl_Cargos";
             Lbl_Cargos.Size = new Size(50, 17);
             Lbl_Cargos.TabIndex = 19;
@@ -272,7 +270,7 @@
             // 
             Lbl_Estruturas.AutoSize = true;
             Lbl_Estruturas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Estruturas.Location = new Point(259, 238);
+            Lbl_Estruturas.Location = new Point(162, 230);
             Lbl_Estruturas.Name = "Lbl_Estruturas";
             Lbl_Estruturas.Size = new Size(70, 17);
             Lbl_Estruturas.TabIndex = 18;
@@ -283,7 +281,7 @@
             // 
             Lbl_Horarios.AutoSize = true;
             Lbl_Horarios.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Horarios.Location = new Point(159, 238);
+            Lbl_Horarios.Location = new Point(360, 230);
             Lbl_Horarios.Name = "Lbl_Horarios";
             Lbl_Horarios.Size = new Size(61, 17);
             Lbl_Horarios.TabIndex = 17;
@@ -294,7 +292,7 @@
             // 
             Lbl_ValidaDados.AutoSize = true;
             Lbl_ValidaDados.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_ValidaDados.Location = new Point(7, 238);
+            Lbl_ValidaDados.Location = new Point(7, 230);
             Lbl_ValidaDados.Name = "Lbl_ValidaDados";
             Lbl_ValidaDados.Size = new Size(113, 17);
             Lbl_ValidaDados.TabIndex = 16;

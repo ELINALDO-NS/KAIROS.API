@@ -178,16 +178,17 @@ namespace KAIROS.API.Repositorio
             });
             return horario;
         }
-
+        public int status;
         public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel, List<Pessoa> pessoas)
         {
-            int status = 0;
-            Form1.StatusPessoas = $"{status}/{pessoas.Count}";
+
+
             try
             {
 
                 Parallel.ForEach(pessoas, Pessoa =>
                 {
+
                     var client = new RestClient(SalvaPessoa_URL);
                     var request = new RestRequest("", Method.Post);
                     request.AddHeader("Content-Type", "application/json");
@@ -210,14 +211,44 @@ namespace KAIROS.API.Repositorio
                     {
                         Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
                     }
-                    Form1.StatusPessoas = $"{status}/{pessoas.Count}";
+
                 });
             }
             catch (Exception ex)
             {
-
                 string a = ex.Message;
             }
         }
+
+        public async Task InserePessoaAPINOVO(string Key, string CNPJ, Pessoa pessoa)
+        {
+
+            var client = new RestClient(SalvaPessoa_URL);
+            var request = new RestRequest("", Method.Post);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("key", Key);
+            request.AddHeader("identifier", CNPJ);
+            var JPessoa = JsonConvert.SerializeObject(pessoa);
+            request.AddJsonBody(JPessoa);
+            request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
+            var response =  client.Execute(request);
+            if (response.ContentType.Equals("application/json"))
+            {
+                var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                if (!Resposta.Sucesso)
+                {
+                    Log.GravaLog("Salva Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+                }
+
+            }
+            else
+            {
+                Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+            }
+
+
+
+        }
+
     }
 }

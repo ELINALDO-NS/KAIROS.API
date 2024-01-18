@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace KAIROS.API
 {
-    public static class ValidaPIS
+    public static class ValPIS
     {
         public static bool IsPis(string pis)
         {
             int[] multiplicador = new int[10] { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
             int soma;
             int resto;
+            pis = pis.Trim();
+            pis = pis.Replace("-", "").Replace(".", "").PadLeft(11, '0');
 
             if (pis.Trim().Length != 11)
                 return false;
 
-            pis = pis.Trim();
-            pis = pis.Replace("-", "").Replace(".", "").PadLeft(11, '0');
+
 
 
             soma = 0;

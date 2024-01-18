@@ -33,8 +33,9 @@ namespace KAIROS.API.Repositorio
         public async Task InsereCargosAPI(string Key, string CNPJ, string caminho)
         {
             var cargos = await _excel.ListaCargosNovo(caminho);
-            foreach (var item in cargos)
-            {
+            foreach( var cargo in cargos ) 
+            { 
+     
                 using (var client = new RestClient(SalvaCargo_URL))
                 {
                     var request = new RestRequest("", Method.Post);
@@ -42,7 +43,7 @@ namespace KAIROS.API.Repositorio
                     request.AddHeader("key", Key);
                     request.AddHeader("identifier", CNPJ);
 
-                    var carg = JsonConvert.SerializeObject(item);
+                    var carg = JsonConvert.SerializeObject(cargo);
                     request.AddParameter("application/json", carg, ParameterType.RequestBody);
                     var response = client.Execute(request).Content;
                     Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response);
@@ -54,24 +55,24 @@ namespace KAIROS.API.Repositorio
                             "position with the same code"))
                         {
                             R = "Não foi possível concluir a ação porque existe um cargo com o mesmo código.";
-                            Log.GravaLog("Salva Cargos - " + R + " : " + item.Codigo + " - " + item.Descricao);
+                            Log.GravaLog("Salva Cargos - " + R + " : " + cargo.Codigo + " - " + cargo.Descricao);
                         }
                         else
                         {
-                            Log.GravaLog("Salva Cargos - " + item.Descricao + " - " + Resposta.Mensagem);
+                            Log.GravaLog("Salva Cargos - " + cargo.Descricao + " - " + Resposta.Mensagem);
                         }
 
                     }
 
                 }
 
-            }
+            };
         }
 
         public async Task InsereEstruturasAPI(string Key, string CNPJ, string Caminho)
         {
             var estruturas = await _excel.ListaEstruturasNovo(Caminho);
-            foreach (var item in estruturas)
+            foreach( var estrutura in estruturas)
             {
                 using (var client = new RestClient(SalvaEstrutura_URL))
                 {
@@ -80,7 +81,7 @@ namespace KAIROS.API.Repositorio
                     request.AddHeader("Content-Type", "application/json");
                     request.AddHeader("key", Key);
                     request.AddHeader("identifier", CNPJ);
-                    var estr = JsonConvert.SerializeObject(item);
+                    var estr = JsonConvert.SerializeObject(estrutura);
                     request.AddParameter("application/json", estr, ParameterType.RequestBody);
                     var response = client.Execute(request).Content;
                     Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response);
@@ -91,11 +92,11 @@ namespace KAIROS.API.Repositorio
                             " is a structure with the same description."))
                         {
                             R = " Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição.";
-                            Log.GravaLog(R + " : " + item.Codigo + " - " + item.Descricao + " - " + CNPJ);
+                            Log.GravaLog(R + " : " + estrutura.Codigo + " - " + estrutura.Descricao + " - " + CNPJ);
                         }
                         else
                         {
-                            Log.GravaLog("Salva Estrutura - " + " : " + item.Codigo + " - " + item.Descricao + " - " + CNPJ + Resposta.Mensagem);
+                            Log.GravaLog("Salva Estrutura - " + " : " + estrutura.Codigo + " - " + estrutura.Descricao + " - " + CNPJ + Resposta.Mensagem);
                         }
 
                     }
@@ -103,7 +104,7 @@ namespace KAIROS.API.Repositorio
 
                 }
 
-            }
+            };
         }
 
         public async Task<List<Cargo>> ListaCargosAPI(string Key, string CNPJ)

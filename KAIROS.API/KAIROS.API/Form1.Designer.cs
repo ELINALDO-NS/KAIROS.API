@@ -321,6 +321,7 @@
             btn_Valida_Dados.Text = "Valida Dados";
             btn_Valida_Dados.TextAlign = ContentAlignment.TopCenter;
             btn_Valida_Dados.UseVisualStyleBackColor = true;
+            btn_Valida_Dados.Click += btn_Valida_Dados_Click;
             // 
             // btn_Lista_Horarios
             // 

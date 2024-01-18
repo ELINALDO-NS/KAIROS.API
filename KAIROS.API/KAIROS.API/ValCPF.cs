@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace KAIROS.API
 {
-    public static class ValidaCPF
+    public static class ValCPF
     {
         public static bool IsCpf(string cpf)
         {
@@ -19,10 +20,12 @@ namespace KAIROS.API
 
             cpf = cpf.Trim();
             cpf = cpf.Replace(".", "").Replace("-", "");
+            cpf = cpf.PadLeft(11,'0');
 
             if (cpf.Length != 11)
                 return false;
-
+            if (Regex.IsMatch(cpf, @"^(\d)\1{10}$"))
+                return false;
             tempCpf = cpf.Substring(0, 9);
             soma = 0;
 

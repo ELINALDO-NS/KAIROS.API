@@ -20,6 +20,7 @@ namespace KAIROS.API
             var serviceProvider = new ServiceCollection()
            .AddScoped<IExcelRepositorio, ExcelRepositorio>()
            .AddScoped<IAPIRepositorio, APIRepositorio>()
+           .AddScoped<IValidaDadosRepositorio, ValidaDadosRepositorio>()
             .BuildServiceProvider();
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1(serviceProvider));

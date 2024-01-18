@@ -11,20 +11,24 @@ namespace KAIROS.API
     {
         private readonly IExcelRepositorio _excel;
         private readonly IAPIRepositorio _API;
+        private readonly IValidaDadosRepositorio _validaDados;
 
         public Form1(ServiceProvider serviceProvider)
         {
             InitializeComponent();
             _excel = serviceProvider.GetRequiredService<IExcelRepositorio>();
             _API = serviceProvider.GetRequiredService<IAPIRepositorio>();
+            _validaDados = serviceProvider.GetRequiredService<IValidaDadosRepositorio>();
         }
+        string log = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
 
-        private void btn_Lista_Horarios_Click(object sender, EventArgs e)
+        private async void btn_Lista_Horarios_Click(object sender, EventArgs e)
         {
 
             try
@@ -37,7 +41,7 @@ namespace KAIROS.API
                 string LocalGravacao = PathGravacao();
                 if (!string.IsNullOrEmpty(LocalGravacao))
                 {
-                    _excel.SalvaHorarios(Txb_Excel.Text, LocalGravacao);
+                    await _excel.SalvaHorarios(Txb_Excel.Text, LocalGravacao);
                     MessageBox.Show("Ok");
                 }
                 else
@@ -132,11 +136,17 @@ namespace KAIROS.API
                 }
 
             }
-            string log = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log");
             if (File.Exists(log))
             {
                 File.Delete(log);
             }
+            if (await ValidaDados(Txb_Excel.Text) == false)
+            {
+                AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                return;
+            }
+            AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+
             #region Labels
             Lbl_ValidaDados.Visible = true;
             Lbl_Horarios.Visible = true;
@@ -151,58 +161,68 @@ namespace KAIROS.API
             List<Estrutura> Estruturas = new();
             List<Horarios> Horarios = new();
             List<Pessoa> pessoas = new();
-            await Task.WhenAll(
-             Task.Run(async () =>
-             {
-                 AlterarStatus(SpinEstrutura, CheckEstruturas, true);
-                 await _API.InsereEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
-             }),
-             Task.Run(async () =>
-             {
-                 AlterarStatus(SpinCargos, CheckCargos, true);
-                 await _API.InsereCargosAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
-             }),
-             Task.Run(async () =>
-             {
-                 AlterarStatus(SpinHorarios, CheckHorarios, true);
-                 Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
-                 AlterarStatus(SpinHorarios, CheckHorarios, false);
-             })
-             );
-            await Task.WhenAll(
-             Task.Run(async () =>
-                {
-                    Cargos = await _API.ListaCargosAPI(txb_Key.Text, Txb_CNPJ.Text);
-                    AlterarStatus(SpinCargos, CheckCargos, false);
-                }),
-             Task.Run(async () =>
-                {
-                    Estruturas = await _API.ListaEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text);
-                    AlterarStatus(SpinEstrutura, CheckEstruturas, false);
-                })
-             );
-
-
-
-
-            pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
-            await Task.Run(() =>
+            try
             {
-                int Stp = 0;
-                Parallel.ForEach(pessoas, pessoa =>
+                await Task.WhenAll(
+                Task.Run(async () =>
                 {
-                    _API.InserePessoaAPINOVO(txb_Key.Text, Txb_CNPJ.Text, pessoa);
-                    Stp++;
-                    Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
+                    AlterarStatus(SpinEstrutura, CheckEstruturas, true);
+                    await _API.InsereEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
+                }),
+                Task.Run(async () =>
+                {
+                    AlterarStatus(SpinCargos, CheckCargos, true);
+                    await _API.InsereCargosAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
+                }),
+                Task.Run(async () =>
+                {
+                    AlterarStatus(SpinHorarios, CheckHorarios, true);
+                    Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
+                    AlterarStatus(SpinHorarios, CheckHorarios, false);
+                }));
 
+                await Task.WhenAll(
+                Task.Run(async () =>
+                 {
+                     Cargos = await _API.ListaCargosAPI(txb_Key.Text, Txb_CNPJ.Text);
+                     AlterarStatus(SpinCargos, CheckCargos, false);
+                 }),
+                Task.Run(async () =>
+                 {
+                     Estruturas = await _API.ListaEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text);
+                     AlterarStatus(SpinEstrutura, CheckEstruturas, false);
+                 }));
+
+                pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
+                await Task.Run(() =>
+                {
+                    int Stp = 0;
+                    Parallel.ForEach(pessoas, pessoa =>
+                    {
+                        _API.InserePessoaAPINOVO(txb_Key.Text, Txb_CNPJ.Text, pessoa);
+                        Stp++;
+                        Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
+
+                    });
                 });
-            });
 
 
-            Lbl_StatusPessoa.Visible = false;
-            AlterarStatus(CheckPessoa, CheckPessoa, false);
+                Lbl_StatusPessoa.Visible = false;
+                AlterarStatus(CheckPessoa, CheckPessoa, false);
 
-            MessageBox.Show("OK");
+                MessageBox.Show("OK");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Iniciar");
+            }
+
+
+
+
+
 
 
         }
@@ -217,7 +237,94 @@ namespace KAIROS.API
             //}
         }
 
+        public async  Task<bool> ValidaDados(string Caminho)
+        {
+            bool CPF = true;
+            var CPFDuplicado = true;
+            var PIS = true;
+            var PISDuplicado = true;
+            var MatriculaDuplicada = true;
+            var PessoaSemMatricula = true;
+            var DescricaoHorario = true;
+            var EmailDuplicado = true;
+            var DataInvalida = true;
+            var PessoaSemCPF = true;
+            Lbl_ValidaDados.Visible = true;
+            AlterarStatus(SpinValidaDados, CheckValidaDados, true);
 
+            await Task.WhenAll(
+               Task.Run(async () => { CPF = await _validaDados.ValidaCPF(Caminho); }),
+               Task.Run(async () => { CPFDuplicado = await _validaDados.ValidaCPFDuplicado(Caminho); }),
+               Task.Run(async () => { PIS = await _validaDados.ValidaPIS(Caminho); }),
+               Task.Run(async () => { PISDuplicado = await _validaDados.ValidaPISDuplicado(Caminho); }),
+               Task.Run(async () => { MatriculaDuplicada = await _validaDados.ValidaMatriculaDuplicada(Caminho); }),
+               Task.Run(async () => { PessoaSemMatricula = await _validaDados.ValidaPessoaSemMatricula(Caminho); }),
+               Task.Run(async () => { DescricaoHorario = await _validaDados.ValidaDescricaoHorario(Caminho); }),
+               Task.Run(async () => { EmailDuplicado = await _validaDados.ValidaEmailDuplicado(Caminho); }),
+               Task.Run(async () => { DataInvalida = await _validaDados.ValidaDatas(Caminho); }),
+               Task.Run(async () => { PessoaSemCPF = await _validaDados.ValidaPessoaSemCNPJ(Caminho); })
+
+               );
+
+
+            if (!CPF || !CPFDuplicado || !PIS || !PISDuplicado || !MatriculaDuplicada || !PessoaSemMatricula ||
+                 !DescricaoHorario || !EmailDuplicado || !DataInvalida || !PessoaSemCPF)
+            {
+                AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                DialogResult confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    System.Diagnostics.Process.Start("notepad.exe", Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log\Log.txt"));
+                }
+
+                return false;
+            }
+            else
+            {
+               
+                return true;
+            }
+            
+
+
+
+        }
+
+        private async void btn_Valida_Dados_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (File.Exists(log))
+                {
+                    File.Delete(log);
+                }
+
+                if (string.IsNullOrEmpty(Txb_Excel.Text))
+                {
+                    if (!PathLeitura())
+                    {
+                        return;
+                    }
+
+                }
+                if (await ValidaDados(Txb_Excel.Text) == true)
+                {
+                    AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                    MessageBox.Show("Dados OK, NÃO existem dados invalidos ou duplicados !");
+                } 
+            }
+            catch (Exception ex)
+            {
+                AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                MessageBox.Show(ex.Message, "Valida Dados");
+            }
+
+
+
+
+
+        }
     }
 
 }

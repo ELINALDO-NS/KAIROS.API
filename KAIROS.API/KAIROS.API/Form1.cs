@@ -20,7 +20,7 @@ namespace KAIROS.API
             _API = serviceProvider.GetRequiredService<IAPIRepositorio>();
             _validaDados = serviceProvider.GetRequiredService<IValidaDadosRepositorio>();
         }
-        string log = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
+        static string log = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -173,13 +173,8 @@ namespace KAIROS.API
                 {
                     AlterarStatus(SpinCargos, CheckCargos, true);
                     await _API.InsereCargosAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
-                }),
-                Task.Run(async () =>
-                {
-                    AlterarStatus(SpinHorarios, CheckHorarios, true);
-                    Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
-                    AlterarStatus(SpinHorarios, CheckHorarios, false);
-                }));
+                })
+                );
 
                 await Task.WhenAll(
                 Task.Run(async () =>
@@ -188,15 +183,27 @@ namespace KAIROS.API
                      AlterarStatus(SpinCargos, CheckCargos, false);
                  }),
                 Task.Run(async () =>
+                {
+                    AlterarStatus(SpinHorarios, CheckHorarios, true);
+                    Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
+                    AlterarStatus(SpinHorarios, CheckHorarios, false);
+                }),
+                Task.Run(async () =>
                  {
                      Estruturas = await _API.ListaEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text);
                      AlterarStatus(SpinEstrutura, CheckEstruturas, false);
                  }));
 
+                SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = true; }));
                 pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
                 await Task.Run(() =>
                 {
                     int Stp = 0;
+                    SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = false; }));
+
+                    Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
+                   SpinPessoa.Invoke(new MethodInvoker(delegate () { SpinPessoa.Visible = true; }));
+
                     Parallel.ForEach(pessoas, pessoa =>
                     {
                         _API.InserePessoaAPINOVO(txb_Key.Text, Txb_CNPJ.Text, pessoa);

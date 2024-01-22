@@ -1,5 +1,0 @@
-CPF Invalido - 11111111111
-CPF Invalido - 33333333333
-PIS Duplicado - 77777777779
-Matricula Duplicada - 1
-E-Mail Duplicado - relopoint@relopoint.com.br

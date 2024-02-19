@@ -200,9 +200,8 @@ namespace KAIROS.API
                 {
                     int Stp = 0;
                     SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = false; }));
-
                     Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
-                   SpinPessoa.Invoke(new MethodInvoker(delegate () { SpinPessoa.Visible = true; }));
+                    Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Visible = true));
 
                     Parallel.ForEach(pessoas, pessoa =>
                     {
@@ -213,9 +212,8 @@ namespace KAIROS.API
                     });
                 });
 
-
                 Lbl_StatusPessoa.Visible = false;
-                AlterarStatus(CheckPessoa, CheckPessoa, false);
+                AlterarStatus(SpinPessoa, CheckPessoa, false);
 
                 MessageBox.Show("OK");
 
@@ -225,10 +223,6 @@ namespace KAIROS.API
 
                 MessageBox.Show(ex.Message, "Iniciar");
             }
-
-
-
-
 
 
 

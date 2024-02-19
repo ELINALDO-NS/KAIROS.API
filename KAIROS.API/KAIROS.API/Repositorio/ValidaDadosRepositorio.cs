@@ -14,7 +14,6 @@ namespace KAIROS.API.Repositorio
 {
     public class ValidaDadosRepositorio : IValidaDadosRepositorio
     {
-
         public async Task<bool> ValidaCPF(string Caminho)
         {
 
@@ -302,13 +301,11 @@ namespace KAIROS.API.Repositorio
         }
         public async Task<bool> ValidaDatas(string Caminho)
         {
-
             int Linha = 4;
             var excel = new Excel(Caminho);
             bool DataValida = true;
             await Task.Run(() =>
             {
-
                 while (true)
                 {
                     string Pessoa = excel.LeExcel("FUNCIONÁRIOS", Linha, 2);
@@ -322,7 +319,7 @@ namespace KAIROS.API.Repositorio
                         if (!AdmissaoValido)
                         {
                             DataValida = false;
-                            Log.GravaLog($"Data de Admissão Invalida para o Funcionario -  {Pessoa}");
+                            Log.GravaLog($"Funcionario sem data de Admissão, ou data Invalida para o Funcionario -  {Pessoa}");
 
                         }
 
@@ -343,13 +340,16 @@ namespace KAIROS.API.Repositorio
                         DateTime nascimento;
                         bool nascimentoValido = DateTime.TryParseExact(DTnascimento, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out nascimento);
 
-                        if (!nascimentoValido)
+                        if (string.IsNullOrEmpty(DTnascimento))
                         {
-                            DataValida = false;
-                            Log.GravaLog($"Data de Nascimento Invalida para o Funcionario -  {Pessoa}");
+                            Log.GravaLog($"Funcionario sem Data de Nascimento, ou Data Invalida para o Funcionario -   {Pessoa}");
 
                         }
-
+                        else if (!nascimentoValido)
+                        {
+                            DataValida = false;
+                            Log.GravaLog($"Funcionario sem Data de Nascimento, ou Data Invalida para o Funcionario -   {Pessoa}");
+                        }
                     }
                     else
                     {
@@ -357,7 +357,6 @@ namespace KAIROS.API.Repositorio
                     }
                     Linha++;
                 }
-
 
             });
             return DataValida;

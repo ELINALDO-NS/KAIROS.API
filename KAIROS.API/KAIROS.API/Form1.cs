@@ -58,7 +58,7 @@ namespace KAIROS.API
             }
 
         }
-        public bool PathLeitura()
+        public bool PathLeitura(TextBox textBox)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace KAIROS.API
                     OpenFileDialog1.Filter = "Text files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
                     if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
                     {
-                        Txb_Excel.Text = OpenFileDialog1.FileName;
+                        textBox.Text = OpenFileDialog1.FileName;
 
                         return true;
                     }
@@ -116,7 +116,7 @@ namespace KAIROS.API
 
         private void btn_LocalExcel_Click(object sender, EventArgs e)
         {
-            PathLeitura();
+            PathLeitura(Txb_Excel);
         }
 
 
@@ -130,7 +130,7 @@ namespace KAIROS.API
             }
             if (string.IsNullOrEmpty(Txb_Excel.Text))
             {
-                if (!PathLeitura())
+                if (!PathLeitura(Txb_Excel))
                 {
                     return;
                 }
@@ -220,8 +220,12 @@ namespace KAIROS.API
             }
             catch (Exception ex)
             {
+                DialogResult confirm = MessageBox.Show(ex.Message + Environment.NewLine + " Verifique o arquivo de Logs! \n Deseja Abrir o arquivo de LOG ?", "Iniciar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    System.Diagnostics.Process.Start("notepad.exe", Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log\Log.txt"));
+                }
 
-                MessageBox.Show(ex.Message, "Iniciar");
             }
 
 
@@ -238,7 +242,7 @@ namespace KAIROS.API
             //}
         }
 
-        public async  Task<bool> ValidaDados(string Caminho)
+        public async Task<bool> ValidaDados(string Caminho)
         {
             bool CPF = true;
             var CPFDuplicado = true;
@@ -282,10 +286,10 @@ namespace KAIROS.API
             }
             else
             {
-               
+
                 return true;
             }
-            
+
 
 
 
@@ -303,7 +307,7 @@ namespace KAIROS.API
 
                 if (string.IsNullOrEmpty(Txb_Excel.Text))
                 {
-                    if (!PathLeitura())
+                    if (!PathLeitura(Txb_Excel))
                     {
                         return;
                     }
@@ -313,7 +317,7 @@ namespace KAIROS.API
                 {
                     AlterarStatus(SpinValidaDados, CheckValidaDados, false);
                     MessageBox.Show("Dados OK, NÃO existem dados invalidos ou duplicados !");
-                } 
+                }
             }
             catch (Exception ex)
             {
@@ -325,6 +329,19 @@ namespace KAIROS.API
 
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PathLeitura(txb_InsereSaldo_CaminhoExcel);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty( txb_InsereSaldo_CaminhoExcel.Text))
+            {
+                PathLeitura(txb_InsereSaldo_CaminhoExcel);
+            }
         }
     }
 

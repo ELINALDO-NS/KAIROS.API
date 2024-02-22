@@ -60,14 +60,14 @@
             Txb_Excel = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            label7 = new Label();
-            textBox7 = new TextBox();
-            label8 = new Label();
             button2 = new Button();
-            textBox2 = new TextBox();
+            Btn_IsenreSaldo_Iniciar = new Button();
+            txb_InsereSaldo_CaminhoExcel = new TextBox();
             label2 = new Label();
+            btn_InsereSaldo_Usuario = new TextBox();
+            label7 = new Label();
+            btn_InsereSaldo_Senha = new TextBox();
+            label8 = new Label();
             tabControl1.SuspendLayout();
             InsereCadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpinPessoa).BeginInit();
@@ -429,12 +429,12 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(button2);
-            tabPage2.Controls.Add(button1);
-            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(Btn_IsenreSaldo_Iniciar);
+            tabPage2.Controls.Add(txb_InsereSaldo_CaminhoExcel);
             tabPage2.Controls.Add(label2);
-            tabPage2.Controls.Add(textBox1);
+            tabPage2.Controls.Add(btn_InsereSaldo_Usuario);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(textBox7);
+            tabPage2.Controls.Add(btn_InsereSaldo_Senha);
             tabPage2.Controls.Add(label8);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
@@ -444,23 +444,54 @@
             tabPage2.Text = "Insere Saldo BH";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button2
             // 
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button1.Location = new Point(102, 109);
-            button1.Name = "button1";
-            button1.Size = new Size(152, 27);
-            button1.TabIndex = 23;
-            button1.Text = "Iniciar";
-            button1.UseVisualStyleBackColor = true;
+            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            button2.Location = new Point(419, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(58, 23);
+            button2.TabIndex = 5;
+            button2.Text = "...";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // textBox1
+            // Btn_IsenreSaldo_Iniciar
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox1.Location = new Point(61, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(193, 25);
-            textBox1.TabIndex = 22;
+            Btn_IsenreSaldo_Iniciar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Btn_IsenreSaldo_Iniciar.Location = new Point(102, 109);
+            Btn_IsenreSaldo_Iniciar.Name = "Btn_IsenreSaldo_Iniciar";
+            Btn_IsenreSaldo_Iniciar.Size = new Size(152, 27);
+            Btn_IsenreSaldo_Iniciar.TabIndex = 23;
+            Btn_IsenreSaldo_Iniciar.Text = "Iniciar";
+            Btn_IsenreSaldo_Iniciar.UseVisualStyleBackColor = true;
+            Btn_IsenreSaldo_Iniciar.Click += button1_Click;
+            // 
+            // txb_InsereSaldo_CaminhoExcel
+            // 
+            txb_InsereSaldo_CaminhoExcel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txb_InsereSaldo_CaminhoExcel.Location = new Point(115, 10);
+            txb_InsereSaldo_CaminhoExcel.Name = "txb_InsereSaldo_CaminhoExcel";
+            txb_InsereSaldo_CaminhoExcel.ReadOnly = true;
+            txb_InsereSaldo_CaminhoExcel.Size = new Size(287, 25);
+            txb_InsereSaldo_CaminhoExcel.TabIndex = 4;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label2.Location = new Point(9, 17);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 17);
+            label2.TabIndex = 3;
+            label2.Text = "Caminho Excel";
+            // 
+            // btn_InsereSaldo_Usuario
+            // 
+            btn_InsereSaldo_Usuario.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_InsereSaldo_Usuario.Location = new Point(61, 51);
+            btn_InsereSaldo_Usuario.Name = "btn_InsereSaldo_Usuario";
+            btn_InsereSaldo_Usuario.Size = new Size(193, 25);
+            btn_InsereSaldo_Usuario.TabIndex = 22;
             // 
             // label7
             // 
@@ -472,13 +503,13 @@
             label7.TabIndex = 21;
             label7.Text = "Usuario";
             // 
-            // textBox7
+            // btn_InsereSaldo_Senha
             // 
-            textBox7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox7.Location = new Point(314, 51);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(97, 25);
-            textBox7.TabIndex = 20;
+            btn_InsereSaldo_Senha.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_InsereSaldo_Senha.Location = new Point(314, 51);
+            btn_InsereSaldo_Senha.Name = "btn_InsereSaldo_Senha";
+            btn_InsereSaldo_Senha.Size = new Size(97, 25);
+            btn_InsereSaldo_Senha.TabIndex = 20;
             // 
             // label8
             // 
@@ -489,35 +520,6 @@
             label8.Size = new Size(45, 17);
             label8.TabIndex = 19;
             label8.Text = "Senha";
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button2.Location = new Point(419, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(58, 23);
-            button2.TabIndex = 5;
-            button2.Text = "...";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            textBox2.Location = new Point(115, 10);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(287, 25);
-            textBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label2.Location = new Point(9, 17);
-            label2.Name = "label2";
-            label2.Size = new Size(98, 17);
-            label2.TabIndex = 3;
-            label2.Text = "Caminho Excel";
             // 
             // Form1
             // 
@@ -564,10 +566,10 @@
         private Label label6;
         private TextBox Txb_CNPJ;
         private Label label5;
-        private Button button1;
-        private TextBox textBox1;
+        private Button Btn_IsenreSaldo_Iniciar;
+        private TextBox btn_InsereSaldo_Usuario;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox btn_InsereSaldo_Senha;
         private Label label8;
         private PictureBox CheckValidaDados;
         private Label Lbl_StatusPessoa;
@@ -586,7 +588,7 @@
         public PictureBox SpinValidaDados;
         private PictureBox SpinPessoa;
         private Button button2;
-        private TextBox textBox2;
+        private TextBox txb_InsereSaldo_CaminhoExcel;
         private Label label2;
     }
 }

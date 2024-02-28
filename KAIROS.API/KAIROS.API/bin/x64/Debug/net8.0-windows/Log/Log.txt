@@ -1,0 +1,15 @@
+Estrutura: ADMINISTRAÇÃO não encontrada para o funcionario, Matricula: 4
+Cargo: BACKOFFICE não encontrada para o funcionario, Matricula: 4
+(SEG - SEX- 08H00 - 12H00 - 13H30 - 18H18) Horario não encontrado para o funcionario, Matricula: 4
+Estrutura: RH não encontrada para o funcionario, Matricula: 32
+Cargo: ANALISTA I não encontrada para o funcionario, Matricula: 32
+(SEG - SEX- 08H00 - 12H00 - 13H30 - 18H18) Horario não encontrado para o funcionario, Matricula: 32
+Estrutura: TECNICA não encontrada para o funcionario, Matricula: 30
+Cargo: TECNICO não encontrada para o funcionario, Matricula: 30
+(SEG - SEX- 13H00 - 19H00      ) Horario não encontrado para o funcionario, Matricula: 30
+Estrutura: TECNICA não encontrada para o funcionario, Matricula: 31
+Cargo: TECNICO I não encontrada para o funcionario, Matricula: 31
+(SEG - SEX- 08H00 - 12H00 - 13H30 - 18H18) Horario não encontrado para o funcionario, Matricula: 31
+Estrutura: COMERCIAL não encontrada para o funcionario, Matricula: 16
+Cargo: TECNICO II não encontrada para o funcionario, Matricula: 16
+(SEG - SEX- 08H00 - 12H00 - 13H30 - 18H18) Horario não encontrado para o funcionario, Matricula: 16

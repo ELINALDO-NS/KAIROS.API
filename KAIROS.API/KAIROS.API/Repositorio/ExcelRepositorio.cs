@@ -590,6 +590,8 @@ namespace KAIROS.API.Repositorio
                                       DataAdmissao = Admissao,
                                       Rg = RG,
                                       Cpf = CPF,
+                                      Email = Email,
+                                      TelefoneCelular = Celular,
                                       TipoSalario = TipoDeSalario,
                                       BaseHoras = float.Parse(BaseDeHoras),
                                       ControlaPonto = Convert.ToBoolean(controlaPonto),

@@ -572,11 +572,18 @@ namespace KAIROS.API.Repositorio
                               }
                               #endregion                             
                               #region PIS
-                              if (string.IsNullOrEmpty(PIS))
+                              if (string.IsNullOrEmpty(PIS) || PIS == "00000000000")
                               {
                                   PIS = CPF;
                               }
                               #endregion
+                              #region DataNascimento
+                              if (string.IsNullOrEmpty( Nascimento))
+                              {
+                                  Nascimento = "01/01/1753";
+                              }
+                              #endregion
+
 
                               if (!Pessoas.Any(a => a.Matricula.Equals(Matricula)))
                               {

@@ -12,8 +12,8 @@ namespace KAIROS.API.Model
     public class Pessoa
     {
         public int Id { get; set; }
-        public int Matricula { get; set; }
-        public int Cracha { get; set; }
+        public Int64 Matricula { get; set; }
+        public Int64 Cracha { get; set; }
         public string Nome { get; set; }
         public string DataNascimento { get; set; }
         public object Endereco { get; set; }

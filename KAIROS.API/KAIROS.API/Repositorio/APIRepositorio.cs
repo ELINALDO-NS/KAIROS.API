@@ -183,7 +183,6 @@ namespace KAIROS.API.Repositorio
         public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel, List<Pessoa> pessoas)
         {
 
-
             try
             {
 

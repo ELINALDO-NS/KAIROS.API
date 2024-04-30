@@ -424,8 +424,7 @@ namespace KAIROS.API.Repositorio
                               int Matricula = Convert.ToInt32(Regex.Replace(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 1].Value), @"[^\d]", ""));
                               string Nome = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 2].Value));
                               string PIS = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 3].Value)).PadLeft(11, '0');
-                              int Cracha; //= int.TryParse(FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value)));
-                              bool CrachaPessoa = int.TryParse(FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value)), out Cracha);
+                              string Cracha = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value));
                               string Nascimento = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 5].Value);
                               string Admissao = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 6].Value);
                               string RG = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 7].Value));
@@ -544,9 +543,9 @@ namespace KAIROS.API.Repositorio
                               #endregion
                               #region Cracha
 
-                              if (Cracha == 0)
+                              if (Cracha == "")
                               {
-                                  Cracha = Matricula;
+                                  Cracha = Matricula.ToString();
                               }
                               #endregion
                               #region Sexo
@@ -574,7 +573,7 @@ namespace KAIROS.API.Repositorio
                               #region PIS
                               if (string.IsNullOrEmpty(PIS) || PIS == "00000000000")
                               {
-                                  PIS = CPF;
+                                  PIS = CPF.PadLeft(12,'9');
                               }
                               #endregion
                               #region DataNascimento

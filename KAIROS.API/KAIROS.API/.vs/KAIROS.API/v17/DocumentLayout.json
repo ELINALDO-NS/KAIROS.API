@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|c:\\users\\elinaldo\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\model\\resposta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|solutionrelative:model\\resposta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|c:\\users\\elinaldo\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\repositorio\\apirepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|solutionrelative:repositorio\\apirepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|c:\\users\\elinaldo\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\repositorio\\validadadosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|solutionrelative:repositorio\\validadadosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{497873A6-04B1-4420-83D7-F7E1FE229975}|KAIROS.API.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Resposta.cs",
+              "DocumentMoniker": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Model\\Resposta.cs",
+              "RelativeDocumentMoniker": "Model\\Resposta.cs",
+              "ToolTip": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Model\\Resposta.cs",
+              "RelativeToolTip": "Model\\Resposta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:21:28.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\APIRepositorio.cs",
+              "ToolTip": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\APIRepositorio.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:20:27.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ValidaDadosRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\ValidaDadosRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\ValidaDadosRepositorio.cs",
+              "ToolTip": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\ValidaDadosRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\ValidaDadosRepositorio.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAtwBsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:20:09.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs [Projeto]",
+              "RelativeToolTip": "Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:20:09.908Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -24,7 +24,7 @@ namespace KAIROS.API
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
 
@@ -338,10 +338,15 @@ namespace KAIROS.API
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty( txb_InsereSaldo_CaminhoExcel.Text))
+            if (string.IsNullOrEmpty(txb_InsereSaldo_CaminhoExcel.Text))
             {
                 PathLeitura(txb_InsereSaldo_CaminhoExcel);
             }
+        }
+
+        private void Btn_Excel_Desligamento_Click(object sender, EventArgs e)
+        {
+            PathLeitura(Txb_Caminho_Excel_Desligamento);
         }
     }
 

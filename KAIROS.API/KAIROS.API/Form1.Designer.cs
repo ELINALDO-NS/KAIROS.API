@@ -68,6 +68,11 @@
             label7 = new Label();
             btn_InsereSaldo_Senha = new TextBox();
             label8 = new Label();
+            tabPage1 = new TabPage();
+            Btn_Excel_Desligamento = new Button();
+            Txb_Caminho_Excel_Desligamento = new TextBox();
+            label3 = new Label();
+            button1 = new Button();
             tabControl1.SuspendLayout();
             InsereCadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpinPessoa).BeginInit();
@@ -81,12 +86,14 @@
             ((System.ComponentModel.ISupportInitialize)CheckHorarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CheckValidaDados).BeginInit();
             tabPage2.SuspendLayout();
+            tabPage1.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(InsereCadastros);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage1);
             tabControl1.Location = new Point(1, -2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -521,6 +528,62 @@
             label8.TabIndex = 19;
             label8.Text = "Senha";
             // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(Btn_Excel_Desligamento);
+            tabPage1.Controls.Add(Txb_Caminho_Excel_Desligamento);
+            tabPage1.Controls.Add(label3);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(610, 379);
+            tabPage1.TabIndex = 2;
+            tabPage1.Text = "Insere Desligamento";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Excel_Desligamento
+            // 
+            Btn_Excel_Desligamento.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Btn_Excel_Desligamento.Location = new Point(417, 14);
+            Btn_Excel_Desligamento.Name = "Btn_Excel_Desligamento";
+            Btn_Excel_Desligamento.Size = new Size(58, 23);
+            Btn_Excel_Desligamento.TabIndex = 5;
+            Btn_Excel_Desligamento.Text = "...";
+            Btn_Excel_Desligamento.TextAlign = ContentAlignment.TopCenter;
+            Btn_Excel_Desligamento.UseVisualStyleBackColor = true;
+            Btn_Excel_Desligamento.Click += Btn_Excel_Desligamento_Click;
+            // 
+            // Txb_Caminho_Excel_Desligamento
+            // 
+            Txb_Caminho_Excel_Desligamento.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_Caminho_Excel_Desligamento.Location = new Point(113, 12);
+            Txb_Caminho_Excel_Desligamento.Name = "Txb_Caminho_Excel_Desligamento";
+            Txb_Caminho_Excel_Desligamento.ReadOnly = true;
+            Txb_Caminho_Excel_Desligamento.Size = new Size(287, 25);
+            Txb_Caminho_Excel_Desligamento.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label3.Location = new Point(7, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 17);
+            label3.TabIndex = 3;
+            label3.Text = "Caminho Excel";
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(200, 68);
+            button1.Name = "button1";
+            button1.Size = new Size(117, 32);
+            button1.TabIndex = 6;
+            button1.Text = "Iniciar";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -546,6 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)CheckValidaDados).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -590,5 +655,10 @@
         private Button button2;
         private TextBox txb_InsereSaldo_CaminhoExcel;
         private Label label2;
+        private TabPage tabPage1;
+        private Button Btn_Excel_Desligamento;
+        private TextBox Txb_Caminho_Excel_Desligamento;
+        private Label label3;
+        private Button button1;
     }
 }

@@ -547,6 +547,7 @@ namespace KAIROS.API.Repositorio
                               {
                                   Cracha = Matricula.ToString();
                               }
+                        
                               #endregion
                               #region Sexo
 

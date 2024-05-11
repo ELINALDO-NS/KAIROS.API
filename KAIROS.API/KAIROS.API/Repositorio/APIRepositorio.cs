@@ -22,6 +22,7 @@ namespace KAIROS.API.Repositorio
         string ListaPessoas_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SearchPeople";
         string SalvaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SavePerson";
         string ListaHorario_URL = "https://www.dimepkairos.com.br/RestServiceApi/Schedules/GetSchedulesSummary";
+        string DeslihaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/Dismiss/MarkDismiss ";
         private readonly IExcelRepositorio _excel;
 
         public APIRepositorio(IExcelRepositorio excel)
@@ -250,5 +251,32 @@ namespace KAIROS.API.Repositorio
 
         }
 
+        public async Task DesligaPessoa(string Key, string CNPJ, Desligamento pessoa)
+        {
+
+            var client = new RestClient(DeslihaPessoa_URL);
+            var request = new RestRequest("", Method.Post);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("key", Key);
+            request.AddHeader("identifier", CNPJ);
+            var JPessoa = JsonConvert.SerializeObject(pessoa);
+            request.AddJsonBody(JPessoa);
+            request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
+            var response = client.Execute(request);
+            if (response.ContentType.Equals("application/json"))
+            {
+                var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                if (!Resposta.Sucesso)
+                {
+                    Log.GravaLog("Desliga Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+                }
+
+            }
+            else
+            {
+                Log.GravaLog("Desliga Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula);
+            }
+
+        }
     }
 }

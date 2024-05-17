@@ -1,0 +1,7 @@
+Salva Estrutura -  : 1 - ADMINISTRAÇÃO - 15.127.483/0014-81Could not complete the action because there is a structure with the same code.
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - ADMINISTRADOR
+Salva Estrutura -  : 2 - PORTARIA - 15.127.483/0014-81Could not complete the action because there is a structure with the same code.
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 2 - JARDNEIRO
+ Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - Principal - 15.127.483/0014-81
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 3 - PADRAO
+Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 4 - PORTEIRO

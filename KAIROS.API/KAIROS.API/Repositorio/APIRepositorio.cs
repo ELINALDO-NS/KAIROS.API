@@ -268,7 +268,7 @@ namespace KAIROS.API.Repositorio
                 var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
                 if (!Resposta.Sucesso)
                 {
-                    Log.GravaLog("Desliga Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+                    Log.GravaLog("Desliga Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa);
                 }
 
             }

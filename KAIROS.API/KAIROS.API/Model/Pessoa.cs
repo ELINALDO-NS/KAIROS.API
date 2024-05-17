@@ -44,6 +44,7 @@ namespace KAIROS.API.Model
 
         public Regrascalculo[] RegrasCalculo { get; set; }
         public string CodigoPis { get; set; }
+        public int FlagGerarNumeroPISAutomatico { get; set; }
         public long CodigoPisNumerico { get; set; }
         public int Sexo { get; set; }
         public object Foto { get; set; }

@@ -424,6 +424,7 @@ namespace KAIROS.API.Repositorio
                               int Matricula = Convert.ToInt32(Regex.Replace(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 1].Value), @"[^\d]", ""));
                               string Nome = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 2].Value));
                               string PIS = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 3].Value)).PadLeft(11, '0');
+                              int FuncionarioSemPIS = 0; // 0 = Tem PIS - 1 = Não tem PIS
                               string Cracha =  Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value);
                               string Nascimento = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 5].Value);
                               string Admissao = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 6].Value);
@@ -582,7 +583,7 @@ namespace KAIROS.API.Repositorio
                               #region PIS
                               if (string.IsNullOrEmpty(PIS) || PIS == "00000000000")
                               {
-                                  PIS = CPF.PadLeft(12,'9');
+                                  FuncionarioSemPIS = 1;
                               }
                               #endregion
                               #region DataNascimento
@@ -600,6 +601,7 @@ namespace KAIROS.API.Repositorio
                                       Matricula = Matricula,
                                       Nome = Nome,
                                       CodigoPis = PIS,
+                                      FlagGerarNumeroPISAutomatico = FuncionarioSemPIS,
                                       Cracha = Cracha,
                                       DataNascimento = Nascimento,
                                       DataAdmissao = Admissao,

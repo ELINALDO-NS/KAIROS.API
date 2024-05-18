@@ -1,1 +1,16 @@
- Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 3 - Principal - 33.794.132/0001-91
+Estrutura: SALÃO não encontrada para o funcionario, Matricula: 5
+Cargo: GARCONETE não encontrada para o funcionario, Matricula: 5
+(SEG-SEX-08H00-12H30-14H00-18H00) Horario não encontrado para o funcionario, Matricula: 5
+Estrutura: COZINHA não encontrada para o funcionario, Matricula: 6
+Cargo: COZINHEIRA I não encontrada para o funcionario, Matricula: 6
+(07 as 07) Horario não encontrado para o funcionario, Matricula: 6
+Estrutura: COZINHA não encontrada para o funcionario, Matricula: 7
+Cargo: COZINHEIRA I não encontrada para o funcionario, Matricula: 7
+(22-00 00-00 01-00 07-00) Horario não encontrado para o funcionario, Matricula: 7
+Estrutura: SALÃO não encontrada para o funcionario, Matricula: 8
+Cargo: GARCOM não encontrada para o funcionario, Matricula: 8
+(Livre) Horario não encontrado para o funcionario, Matricula: 8
+Estrutura: COZINHA não encontrada para o funcionario, Matricula: 9
+Cargo: COZINHEIRO II não encontrada para o funcionario, Matricula: 9
+(SEG-SEX-09H00-12H00-14H00-19H00) Horario não encontrado para o funcionario, Matricula: 9
+Salva Pessoa - The Field Cracha is invalid - Matricula : 1568 - ANA PAULA DA SILVA DE SOUZA

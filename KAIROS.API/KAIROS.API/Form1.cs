@@ -2,6 +2,7 @@ using KAIROS.API.Model;
 using KAIROS.API.Repositorio;
 using KAIROS.API.Repositorio.Interface;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using OfficeOpenXml.FormulaParsing.Exceptions;
 using System.Runtime.CompilerServices;
 
@@ -195,7 +196,7 @@ namespace KAIROS.API
                  }));
 
                 SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = true; }));
-                pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
+                pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios, false);
                 await Task.Run(() =>
                 {
                     int Stp = 0;
@@ -347,6 +348,193 @@ namespace KAIROS.API
         private void Btn_Excel_Desligamento_Click(object sender, EventArgs e)
         {
             PathLeitura(Txb_Caminho_Excel_Desligamento);
+        }
+        List<Pessoa> PessoaAPI = new List<Pessoa>();
+        List<Pessoa> PessoaExcel = new List<Pessoa>();
+        private async void btn_Importar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                PessoaAPI.Clear();
+                PessoaExcel.Clear();
+                Grid_Pessoa.Rows.Clear();
+                PessoaAPI = await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
+
+
+                foreach (var item in PessoaAPI)
+                {
+                    string? Estrutura = item.Estrutura.Descricao;
+                    string? cargo = item.Cargo.Descricao;
+                    var Horario = item.Horarios[0]?.Horario?.Descricao;
+                    string nascimento = "";
+                    if (Convert.ToDateTime(item.DataNascimento) != Convert.ToDateTime("01/01/1753 00:00:00"))
+                    {
+                        nascimento = item.DataNascimento;
+                    }
+                    string Sexo = "Masculino";
+                    if (item.Sexo == 2)
+                    {
+                        Sexo = "Feminino";
+                    }
+
+                    Grid_Pessoa.Rows.Add(item.Id,
+                    item.Matricula.ToString(), item.Nome.ToString(), item.CodigoPis.ToString(),
+                    item.Cracha, nascimento, item.DataAdmissao, item.Rg, item.Cpf,
+                    item.TelefoneCelular, item.Email, Estrutura, Horario, cargo, Sexo
+                     );
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void Btn_CaminExcel_Alt_Pessoa_Click(object sender, EventArgs e)
+        {
+            PathLeitura(Txb_Camin_Excel_Altera_Pessoa);
+        }
+
+        private async void Btn_AtualizaDados_Click_1(object sender, EventArgs e)
+        {
+
+            PessoaExcel = await _excel.ListaPessoas(Txb_Camin_Excel_Altera_Pessoa.Text, "", new List<Cargo>(), new List<Estrutura>(), new List<Horarios>(), true);
+
+
+            foreach (var item in PessoaExcel)
+            {
+                int index = 0;
+                if (RB_Matricula.Checked)
+                {
+                    index = PessoaAPI.FindIndex(x => x.Matricula == item.Matricula);
+                }
+                else if (RB_CPF.Checked)
+                {
+                    index = PessoaAPI.FindIndex(x => x.Cpf.Replace("-","").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
+                }
+                else
+                {
+                    if (RB_PIS.Checked)
+                    {
+                        index = PessoaAPI.FindIndex(x => x.CodigoPis.Replace("-", "").Replace(".", "") == item.CodigoPis.Replace("-", "").Replace(".", ""));
+                    }
+                }
+
+                if (index != null)
+                {
+                    if (Check_alt_Matricula.Checked)
+                    {
+                        PessoaAPI[index].Matricula = item.Matricula;
+                    }
+
+                    if (Check_alt_Nome.Checked)
+                    {
+                        PessoaAPI[index].Nome = item.Nome;
+                    }
+
+                    if (Check_alt_PIS.Checked)
+                    {
+                        PessoaAPI[index].CodigoPis = item.CodigoPis;
+                    }
+
+                    if (Check_alt_Crachar.Checked)
+                    {
+                        PessoaAPI[index].Cracha = item.Cracha;
+                    }
+
+                    if (Check_alt_Nascimento.Checked)
+                    {
+                        PessoaAPI[index].DataNascimento = item.DataNascimento;
+                    }
+
+                    if (Check_alt_Admissao.Checked)
+                    {
+                        PessoaAPI[index].DataAdmissao = item.DataAdmissao;
+                    }
+
+                    if (Check_alt_RG.Checked)
+                    {
+                        PessoaAPI[index].Rg = item.Rg;
+                    }
+
+                    if (Check_alt_CPF.Checked)
+                    {
+                        PessoaAPI[index].Cpf = item.Cpf;
+                    }
+
+                    if (Check_alt_Celular.Checked)
+                    {
+                        PessoaAPI[index].TelefoneCelular = item.TelefoneCelular;
+                    }
+
+                    if (Check_alt_Email.Checked)
+                    {
+                        PessoaAPI[index].Email = item.Email;
+                    }
+
+                    if (Check_alt_Departamento.Checked)
+                    {
+                        PessoaAPI[index].Estrutura.Descricao = item.Estrutura.Descricao;
+                    }
+
+                    if (Check_alt_Horario.Checked)
+                    {
+                        PessoaAPI[index].Horarios = item.Horarios;
+                    }
+
+                    if (Check_alt_Cargo.Checked)
+                    {
+                        PessoaAPI[index].Cargo = item.Cargo;
+                    }
+                    if (Check_alt_Sexo.Checked)
+                    {
+                        PessoaAPI[index].Sexo = item.Sexo;
+                    }
+
+                }
+            }
+            Grid_Pessoa.Rows.Clear();
+            foreach (var item in PessoaAPI)
+            {
+                string? Estrutura = item.Estrutura.Descricao;
+                string? cargo = item.Cargo.Descricao;
+                var Horario = item.Horarios[0]?.Horario?.Descricao;
+                string nascimento = "";
+                if (Convert.ToDateTime(item.DataNascimento) != Convert.ToDateTime("01/01/1753 00:00:00"))
+                {
+                    nascimento = item.DataNascimento;
+                }
+                string Sexo = "Masculino";
+                if (item.Sexo == 2)
+                {
+                    Sexo = "Feminino";
+                }
+
+                Grid_Pessoa.Rows.Add(item.Id,
+                item.Matricula.ToString(), item.Nome.ToString(), item.CodigoPis.ToString(),
+                item.Cracha, nascimento, item.DataAdmissao, item.Rg, item.Cpf,
+                item.TelefoneCelular, item.Email, Estrutura, Horario, cargo, Sexo
+                 );
+            }
+        }
+
+        private async void Btn_Iniciar_AlteraPessoa_Click(object sender, EventArgs e)
+        {
+            var p = JsonConvert.SerializeObject(PessoaAPI);
+            var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
+
+            foreach (var item in pessoaatualizada)
+            {
+                await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, item);
+            }
+            MessageBox.Show("Pessoas alteradas com sucesso !");
+
         }
     }
 

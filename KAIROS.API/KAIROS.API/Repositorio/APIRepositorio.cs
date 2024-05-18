@@ -21,6 +21,7 @@ namespace KAIROS.API.Repositorio
         string SalvaCargo_URL = "https://www.dimepkairos.com.br/RestServiceApi/JobPosition/SaveJobPosition";
         string ListaPessoas_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SearchPeople";
         string SalvaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SavePerson";
+        string AlteraPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/ChangePerson";
         string ListaHorario_URL = "https://www.dimepkairos.com.br/RestServiceApi/Schedules/GetSchedulesSummary";
         string DeslihaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/Dismiss/MarkDismiss ";
         private readonly IExcelRepositorio _excel;
@@ -251,6 +252,50 @@ namespace KAIROS.API.Repositorio
 
         }
 
+        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ)
+        {
+            List <Pessoa> pessoa = new List<Pessoa>();
+            await Task.Run(() =>
+            {
+                var client = new RestClient(ListaPessoas_URL);
+                var request = new RestRequest("", Method.Post);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("key", Key);
+                request.AddHeader("identifier", CNPJ);
+                var body = "{}";
+                request.AddParameter("application/json", body, ParameterType.RequestBody);
+                var response = client.Execute(request);
+                Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+            });
+            return pessoa;
+        }
+
+       public async Task AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)
+       {
+            var client = new RestClient(AlteraPessoa_URL);
+            var request = new RestRequest("", Method.Post);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("key", Key);
+            request.AddHeader("identifier", CNPJ);
+            var JPessoa = JsonConvert.SerializeObject(pessoa);
+            request.AddJsonBody(JPessoa);
+            request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
+            var response = client.Execute(request);
+            if (response.ContentType.Equals("application/json"))
+            {
+                var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                if (!Resposta.Sucesso)
+                {
+                    Log.GravaLog("Salva Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+                }
+
+            }
+            else
+            {
+                Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+            }
+        }
         public async Task DesligaPessoa(string Key, string CNPJ, Desligamento pessoa)
         {
 
@@ -278,5 +323,7 @@ namespace KAIROS.API.Repositorio
             }
 
         }
+
+
     }
 }

@@ -69,10 +69,56 @@
             btn_InsereSaldo_Senha = new TextBox();
             label8 = new Label();
             tabPage1 = new TabPage();
+            button1 = new Button();
             Btn_Excel_Desligamento = new Button();
             Txb_Caminho_Excel_Desligamento = new TextBox();
             label3 = new Label();
-            button1 = new Button();
+            tabPage3 = new TabPage();
+            groupBox1 = new GroupBox();
+            RB_PIS = new RadioButton();
+            RB_CPF = new RadioButton();
+            RB_Matricula = new RadioButton();
+            Btn_Iniciar_AlteraPessoa = new Button();
+            label12 = new Label();
+            Check_alt_Sexo = new CheckBox();
+            Check_alt_Departamento = new CheckBox();
+            Check_alt_Cargo = new CheckBox();
+            Check_alt_Email = new CheckBox();
+            Check_alt_Celular = new CheckBox();
+            Check_alt_Horario = new CheckBox();
+            Check_alt_Admissao = new CheckBox();
+            Check_alt_Matricula = new CheckBox();
+            Check_alt_RG = new CheckBox();
+            Check_alt_CPF = new CheckBox();
+            Check_alt_Nascimento = new CheckBox();
+            Check_alt_Crachar = new CheckBox();
+            Check_alt_PIS = new CheckBox();
+            Check_alt_Nome = new CheckBox();
+            btn_Importar = new Button();
+            Txb_Alt_Pessoa_CNPJ = new TextBox();
+            label10 = new Label();
+            Txb_Alt_Pessoa_Key = new TextBox();
+            label11 = new Label();
+            Grid_Pessoa = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Matricula = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            PIS = new DataGridViewTextBoxColumn();
+            Cracha = new DataGridViewTextBoxColumn();
+            DataDeNascimento = new DataGridViewTextBoxColumn();
+            DataDeAdmissao = new DataGridViewTextBoxColumn();
+            RG = new DataGridViewTextBoxColumn();
+            CPF = new DataGridViewTextBoxColumn();
+            CELULAR = new DataGridViewTextBoxColumn();
+            EMAIL = new DataGridViewTextBoxColumn();
+            DEPARTAMENTO = new DataGridViewTextBoxColumn();
+            HORARIO = new DataGridViewTextBoxColumn();
+            CARGO = new DataGridViewTextBoxColumn();
+            SEXO = new DataGridViewTextBoxColumn();
+            Btn_AtualizaDados = new Button();
+            Btn_CaminExcel_Alt_Pessoa = new Button();
+            Txb_Camin_Excel_Altera_Pessoa = new TextBox();
+            label9 = new Label();
             tabControl1.SuspendLayout();
             InsereCadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpinPessoa).BeginInit();
@@ -87,6 +133,9 @@
             ((System.ComponentModel.ISupportInitialize)CheckValidaDados).BeginInit();
             tabPage2.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage3.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Grid_Pessoa).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -94,10 +143,11 @@
             tabControl1.Controls.Add(InsereCadastros);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(1, -2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(618, 407);
+            tabControl1.Size = new Size(1435, 407);
             tabControl1.TabIndex = 0;
             // 
             // InsereCadastros
@@ -133,7 +183,7 @@
             InsereCadastros.Location = new Point(4, 24);
             InsereCadastros.Name = "InsereCadastros";
             InsereCadastros.Padding = new Padding(3);
-            InsereCadastros.Size = new Size(610, 379);
+            InsereCadastros.Size = new Size(1427, 379);
             InsereCadastros.TabIndex = 0;
             InsereCadastros.Text = "Insere Cadastros";
             InsereCadastros.UseVisualStyleBackColor = true;
@@ -446,7 +496,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(610, 379);
+            tabPage2.Size = new Size(1427, 379);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Insere Saldo BH";
             tabPage2.UseVisualStyleBackColor = true;
@@ -537,10 +587,21 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(610, 379);
+            tabPage1.Size = new Size(1427, 379);
             tabPage1.TabIndex = 2;
             tabPage1.Text = "Insere Desligamento";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(200, 68);
+            button1.Name = "button1";
+            button1.Size = new Size(117, 32);
+            button1.TabIndex = 6;
+            button1.Text = "Iniciar";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Btn_Excel_Desligamento
             // 
@@ -573,22 +634,422 @@
             label3.TabIndex = 3;
             label3.Text = "Caminho Excel";
             // 
-            // button1
+            // tabPage3
             // 
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(200, 68);
-            button1.Name = "button1";
-            button1.Size = new Size(117, 32);
-            button1.TabIndex = 6;
-            button1.Text = "Iniciar";
-            button1.UseVisualStyleBackColor = true;
+            tabPage3.Controls.Add(groupBox1);
+            tabPage3.Controls.Add(Btn_Iniciar_AlteraPessoa);
+            tabPage3.Controls.Add(label12);
+            tabPage3.Controls.Add(Check_alt_Sexo);
+            tabPage3.Controls.Add(Check_alt_Departamento);
+            tabPage3.Controls.Add(Check_alt_Cargo);
+            tabPage3.Controls.Add(Check_alt_Email);
+            tabPage3.Controls.Add(Check_alt_Celular);
+            tabPage3.Controls.Add(Check_alt_Horario);
+            tabPage3.Controls.Add(Check_alt_Admissao);
+            tabPage3.Controls.Add(Check_alt_Matricula);
+            tabPage3.Controls.Add(Check_alt_RG);
+            tabPage3.Controls.Add(Check_alt_CPF);
+            tabPage3.Controls.Add(Check_alt_Nascimento);
+            tabPage3.Controls.Add(Check_alt_Crachar);
+            tabPage3.Controls.Add(Check_alt_PIS);
+            tabPage3.Controls.Add(Check_alt_Nome);
+            tabPage3.Controls.Add(btn_Importar);
+            tabPage3.Controls.Add(Txb_Alt_Pessoa_CNPJ);
+            tabPage3.Controls.Add(label10);
+            tabPage3.Controls.Add(Txb_Alt_Pessoa_Key);
+            tabPage3.Controls.Add(label11);
+            tabPage3.Controls.Add(Grid_Pessoa);
+            tabPage3.Controls.Add(Btn_AtualizaDados);
+            tabPage3.Controls.Add(Btn_CaminExcel_Alt_Pessoa);
+            tabPage3.Controls.Add(Txb_Camin_Excel_Altera_Pessoa);
+            tabPage3.Controls.Add(label9);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(1427, 379);
+            tabPage3.TabIndex = 3;
+            tabPage3.Text = "Altera Pessoa";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(RB_PIS);
+            groupBox1.Controls.Add(RB_CPF);
+            groupBox1.Controls.Add(RB_Matricula);
+            groupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox1.Location = new Point(5, 92);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(260, 59);
+            groupBox1.TabIndex = 39;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Campo Chave do Funcionario";
+            // 
+            // RB_PIS
+            // 
+            RB_PIS.AutoSize = true;
+            RB_PIS.Location = new Point(205, 26);
+            RB_PIS.Name = "RB_PIS";
+            RB_PIS.Size = new Size(43, 19);
+            RB_PIS.TabIndex = 41;
+            RB_PIS.TabStop = true;
+            RB_PIS.Text = "PIS";
+            RB_PIS.UseVisualStyleBackColor = true;
+            // 
+            // RB_CPF
+            // 
+            RB_CPF.AutoSize = true;
+            RB_CPF.Location = new Point(125, 26);
+            RB_CPF.Name = "RB_CPF";
+            RB_CPF.Size = new Size(45, 19);
+            RB_CPF.TabIndex = 40;
+            RB_CPF.TabStop = true;
+            RB_CPF.Text = "CPF";
+            RB_CPF.UseVisualStyleBackColor = true;
+            // 
+            // RB_Matricula
+            // 
+            RB_Matricula.AutoSize = true;
+            RB_Matricula.Location = new Point(13, 26);
+            RB_Matricula.Name = "RB_Matricula";
+            RB_Matricula.Size = new Size(77, 19);
+            RB_Matricula.TabIndex = 39;
+            RB_Matricula.TabStop = true;
+            RB_Matricula.Text = "Matricula";
+            RB_Matricula.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Iniciar_AlteraPessoa
+            // 
+            Btn_Iniciar_AlteraPessoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Btn_Iniciar_AlteraPessoa.ImageAlign = ContentAlignment.MiddleRight;
+            Btn_Iniciar_AlteraPessoa.Location = new Point(290, 110);
+            Btn_Iniciar_AlteraPessoa.Name = "Btn_Iniciar_AlteraPessoa";
+            Btn_Iniciar_AlteraPessoa.Size = new Size(122, 27);
+            Btn_Iniciar_AlteraPessoa.TabIndex = 35;
+            Btn_Iniciar_AlteraPessoa.Text = "Iniciar";
+            Btn_Iniciar_AlteraPessoa.UseVisualStyleBackColor = true;
+            Btn_Iniciar_AlteraPessoa.Click += Btn_Iniciar_AlteraPessoa_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label12.ForeColor = Color.Red;
+            label12.Location = new Point(682, 3);
+            label12.Name = "label12";
+            label12.Size = new Size(243, 17);
+            label12.TabIndex = 34;
+            label12.Text = "Selecione os item que serão alterado !";
+            // 
+            // Check_alt_Sexo
+            // 
+            Check_alt_Sexo.AutoSize = true;
+            Check_alt_Sexo.Location = new Point(1343, 154);
+            Check_alt_Sexo.Name = "Check_alt_Sexo";
+            Check_alt_Sexo.Size = new Size(15, 14);
+            Check_alt_Sexo.TabIndex = 33;
+            Check_alt_Sexo.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Departamento
+            // 
+            Check_alt_Departamento.AutoSize = true;
+            Check_alt_Departamento.Location = new Point(1083, 153);
+            Check_alt_Departamento.Name = "Check_alt_Departamento";
+            Check_alt_Departamento.Size = new Size(15, 14);
+            Check_alt_Departamento.TabIndex = 32;
+            Check_alt_Departamento.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Cargo
+            // 
+            Check_alt_Cargo.AutoSize = true;
+            Check_alt_Cargo.Location = new Point(1282, 156);
+            Check_alt_Cargo.Name = "Check_alt_Cargo";
+            Check_alt_Cargo.Size = new Size(15, 14);
+            Check_alt_Cargo.TabIndex = 31;
+            Check_alt_Cargo.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Email
+            // 
+            Check_alt_Email.AutoSize = true;
+            Check_alt_Email.Location = new Point(982, 155);
+            Check_alt_Email.Name = "Check_alt_Email";
+            Check_alt_Email.Size = new Size(15, 14);
+            Check_alt_Email.TabIndex = 30;
+            Check_alt_Email.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Celular
+            // 
+            Check_alt_Celular.AutoSize = true;
+            Check_alt_Celular.Location = new Point(882, 155);
+            Check_alt_Celular.Name = "Check_alt_Celular";
+            Check_alt_Celular.Size = new Size(15, 14);
+            Check_alt_Celular.TabIndex = 29;
+            Check_alt_Celular.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Horario
+            // 
+            Check_alt_Horario.AutoSize = true;
+            Check_alt_Horario.Location = new Point(1180, 157);
+            Check_alt_Horario.Name = "Check_alt_Horario";
+            Check_alt_Horario.Size = new Size(15, 14);
+            Check_alt_Horario.TabIndex = 28;
+            Check_alt_Horario.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Admissao
+            // 
+            Check_alt_Admissao.AutoSize = true;
+            Check_alt_Admissao.Location = new Point(583, 156);
+            Check_alt_Admissao.Name = "Check_alt_Admissao";
+            Check_alt_Admissao.Size = new Size(15, 14);
+            Check_alt_Admissao.TabIndex = 27;
+            Check_alt_Admissao.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Matricula
+            // 
+            Check_alt_Matricula.AutoSize = true;
+            Check_alt_Matricula.Location = new Point(81, 157);
+            Check_alt_Matricula.Name = "Check_alt_Matricula";
+            Check_alt_Matricula.Size = new Size(15, 14);
+            Check_alt_Matricula.TabIndex = 26;
+            Check_alt_Matricula.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_RG
+            // 
+            Check_alt_RG.AutoSize = true;
+            Check_alt_RG.Location = new Point(682, 158);
+            Check_alt_RG.Name = "Check_alt_RG";
+            Check_alt_RG.Size = new Size(15, 14);
+            Check_alt_RG.TabIndex = 25;
+            Check_alt_RG.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_CPF
+            // 
+            Check_alt_CPF.AutoSize = true;
+            Check_alt_CPF.Location = new Point(782, 157);
+            Check_alt_CPF.Name = "Check_alt_CPF";
+            Check_alt_CPF.Size = new Size(15, 14);
+            Check_alt_CPF.TabIndex = 24;
+            Check_alt_CPF.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Nascimento
+            // 
+            Check_alt_Nascimento.AutoSize = true;
+            Check_alt_Nascimento.Location = new Point(484, 158);
+            Check_alt_Nascimento.Name = "Check_alt_Nascimento";
+            Check_alt_Nascimento.Size = new Size(15, 14);
+            Check_alt_Nascimento.TabIndex = 23;
+            Check_alt_Nascimento.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Crachar
+            // 
+            Check_alt_Crachar.AutoSize = true;
+            Check_alt_Crachar.Location = new Point(381, 156);
+            Check_alt_Crachar.Name = "Check_alt_Crachar";
+            Check_alt_Crachar.Size = new Size(15, 14);
+            Check_alt_Crachar.TabIndex = 22;
+            Check_alt_Crachar.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_PIS
+            // 
+            Check_alt_PIS.AutoSize = true;
+            Check_alt_PIS.Location = new Point(281, 157);
+            Check_alt_PIS.Name = "Check_alt_PIS";
+            Check_alt_PIS.Size = new Size(15, 14);
+            Check_alt_PIS.TabIndex = 21;
+            Check_alt_PIS.UseVisualStyleBackColor = true;
+            // 
+            // Check_alt_Nome
+            // 
+            Check_alt_Nome.AutoSize = true;
+            Check_alt_Nome.Location = new Point(181, 157);
+            Check_alt_Nome.Name = "Check_alt_Nome";
+            Check_alt_Nome.Size = new Size(15, 14);
+            Check_alt_Nome.TabIndex = 20;
+            Check_alt_Nome.UseVisualStyleBackColor = true;
+            // 
+            // btn_Importar
+            // 
+            btn_Importar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Importar.ImageAlign = ContentAlignment.MiddleRight;
+            btn_Importar.Location = new Point(538, 17);
+            btn_Importar.Name = "btn_Importar";
+            btn_Importar.Size = new Size(70, 25);
+            btn_Importar.TabIndex = 19;
+            btn_Importar.Text = "Importar";
+            btn_Importar.UseVisualStyleBackColor = true;
+            btn_Importar.Click += btn_Importar_Click;
+            // 
+            // Txb_Alt_Pessoa_CNPJ
+            // 
+            Txb_Alt_Pessoa_CNPJ.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_Alt_Pessoa_CNPJ.Location = new Point(60, 17);
+            Txb_Alt_Pessoa_CNPJ.Name = "Txb_Alt_Pessoa_CNPJ";
+            Txb_Alt_Pessoa_CNPJ.Size = new Size(193, 25);
+            Txb_Alt_Pessoa_CNPJ.TabIndex = 18;
+            Txb_Alt_Pessoa_CNPJ.Text = " 33.794.132/0003-53 \t";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label10.Location = new Point(5, 25);
+            label10.Name = "label10";
+            label10.Size = new Size(39, 17);
+            label10.TabIndex = 17;
+            label10.Text = "CNPJ";
+            // 
+            // Txb_Alt_Pessoa_Key
+            // 
+            Txb_Alt_Pessoa_Key.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_Alt_Pessoa_Key.Location = new Point(326, 17);
+            Txb_Alt_Pessoa_Key.Name = "Txb_Alt_Pessoa_Key";
+            Txb_Alt_Pessoa_Key.Size = new Size(193, 25);
+            Txb_Alt_Pessoa_Key.TabIndex = 16;
+            Txb_Alt_Pessoa_Key.Text = "64d11909-3a4b-4e2b-9742-04d9c85abea4";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label11.Location = new Point(271, 25);
+            label11.Name = "label11";
+            label11.Size = new Size(28, 15);
+            label11.TabIndex = 15;
+            label11.Text = "Key";
+            // 
+            // Grid_Pessoa
+            // 
+            Grid_Pessoa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Grid_Pessoa.Columns.AddRange(new DataGridViewColumn[] { Id, Matricula, Nome, PIS, Cracha, DataDeNascimento, DataDeAdmissao, RG, CPF, CELULAR, EMAIL, DEPARTAMENTO, HORARIO, CARGO, SEXO });
+            Grid_Pessoa.Location = new Point(0, 151);
+            Grid_Pessoa.Name = "Grid_Pessoa";
+            Grid_Pessoa.RowHeadersVisible = false;
+            Grid_Pessoa.Size = new Size(1360, 225);
+            Grid_Pessoa.TabIndex = 10;
+            // 
+            // Id
+            // 
+            Id.HeaderText = "Id";
+            Id.Name = "Id";
+            Id.Visible = false;
+            // 
+            // Matricula
+            // 
+            Matricula.HeaderText = "Matricula";
+            Matricula.Name = "Matricula";
+            // 
+            // Nome
+            // 
+            Nome.HeaderText = "Nome";
+            Nome.Name = "Nome";
+            // 
+            // PIS
+            // 
+            PIS.HeaderText = "PIS";
+            PIS.Name = "PIS";
+            // 
+            // Cracha
+            // 
+            Cracha.HeaderText = "Cracha";
+            Cracha.Name = "Cracha";
+            // 
+            // DataDeNascimento
+            // 
+            DataDeNascimento.HeaderText = "DATA DE NASCIMENTO";
+            DataDeNascimento.Name = "DataDeNascimento";
+            // 
+            // DataDeAdmissao
+            // 
+            DataDeAdmissao.HeaderText = "DATA DE ADMISSÃO";
+            DataDeAdmissao.Name = "DataDeAdmissao";
+            // 
+            // RG
+            // 
+            RG.HeaderText = "RG";
+            RG.Name = "RG";
+            // 
+            // CPF
+            // 
+            CPF.HeaderText = "CPF";
+            CPF.Name = "CPF";
+            // 
+            // CELULAR
+            // 
+            CELULAR.HeaderText = "CELULAR";
+            CELULAR.Name = "CELULAR";
+            // 
+            // EMAIL
+            // 
+            EMAIL.HeaderText = "E-MAIL";
+            EMAIL.Name = "EMAIL";
+            // 
+            // DEPARTAMENTO
+            // 
+            DEPARTAMENTO.HeaderText = "DEPARTAMENTO";
+            DEPARTAMENTO.Name = "DEPARTAMENTO";
+            // 
+            // HORARIO
+            // 
+            HORARIO.HeaderText = "HORARIO";
+            HORARIO.Name = "HORARIO";
+            // 
+            // CARGO
+            // 
+            CARGO.HeaderText = "CARGO";
+            CARGO.Name = "CARGO";
+            // 
+            // SEXO
+            // 
+            SEXO.HeaderText = "SEXO";
+            SEXO.Name = "SEXO";
+            // 
+            // Btn_AtualizaDados
+            // 
+            Btn_AtualizaDados.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Btn_AtualizaDados.ImageAlign = ContentAlignment.MiddleRight;
+            Btn_AtualizaDados.Location = new Point(498, 58);
+            Btn_AtualizaDados.Name = "Btn_AtualizaDados";
+            Btn_AtualizaDados.Size = new Size(122, 27);
+            Btn_AtualizaDados.TabIndex = 9;
+            Btn_AtualizaDados.Text = "Atualizar Dados";
+            Btn_AtualizaDados.UseVisualStyleBackColor = true;
+            Btn_AtualizaDados.Click += Btn_AtualizaDados_Click_1;
+            // 
+            // Btn_CaminExcel_Alt_Pessoa
+            // 
+            Btn_CaminExcel_Alt_Pessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Btn_CaminExcel_Alt_Pessoa.Location = new Point(415, 62);
+            Btn_CaminExcel_Alt_Pessoa.Name = "Btn_CaminExcel_Alt_Pessoa";
+            Btn_CaminExcel_Alt_Pessoa.Size = new Size(58, 23);
+            Btn_CaminExcel_Alt_Pessoa.TabIndex = 8;
+            Btn_CaminExcel_Alt_Pessoa.Text = "...";
+            Btn_CaminExcel_Alt_Pessoa.TextAlign = ContentAlignment.TopCenter;
+            Btn_CaminExcel_Alt_Pessoa.UseVisualStyleBackColor = true;
+            Btn_CaminExcel_Alt_Pessoa.Click += Btn_CaminExcel_Alt_Pessoa_Click;
+            // 
+            // Txb_Camin_Excel_Altera_Pessoa
+            // 
+            Txb_Camin_Excel_Altera_Pessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_Camin_Excel_Altera_Pessoa.Location = new Point(111, 60);
+            Txb_Camin_Excel_Altera_Pessoa.Name = "Txb_Camin_Excel_Altera_Pessoa";
+            Txb_Camin_Excel_Altera_Pessoa.ReadOnly = true;
+            Txb_Camin_Excel_Altera_Pessoa.Size = new Size(287, 25);
+            Txb_Camin_Excel_Altera_Pessoa.TabIndex = 7;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label9.Location = new Point(5, 67);
+            label9.Name = "label9";
+            label9.Size = new Size(98, 17);
+            label9.TabIndex = 6;
+            label9.Text = "Caminho Excel";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(623, 407);
+            ClientSize = new Size(1370, 407);
             Controls.Add(tabControl1);
             MaximizeBox = false;
             Name = "Form1";
@@ -611,6 +1072,11 @@
             tabPage2.PerformLayout();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Grid_Pessoa).EndInit();
             ResumeLayout(false);
         }
 
@@ -660,5 +1126,51 @@
         private TextBox Txb_Caminho_Excel_Desligamento;
         private Label label3;
         private Button button1;
+        private TabPage tabPage3;
+        private Button Btn_AtualizaDados;
+        private Button Btn_CaminExcel_Alt_Pessoa;
+        private TextBox Txb_Camin_Excel_Altera_Pessoa;
+        private Label label9;
+        private DataGridView Grid_Pessoa;
+        private Button btn_Importar;
+        private TextBox Txb_Alt_Pessoa_CNPJ;
+        private Label label10;
+        private TextBox Txb_Alt_Pessoa_Key;
+        private Label label11;
+        private CheckBox Check_alt_Nascimento;
+        private CheckBox Check_alt_Crachar;
+        private CheckBox Check_alt_PIS;
+        private CheckBox Check_alt_Nome;
+        private CheckBox Check_alt_RG;
+        private CheckBox Check_alt_CPF;
+        private CheckBox Check_alt_Matricula;
+        private CheckBox Check_alt_Admissao;
+        private CheckBox Check_alt_Departamento;
+        private CheckBox Check_alt_Cargo;
+        private CheckBox Check_alt_Email;
+        private CheckBox Check_alt_Celular;
+        private CheckBox Check_alt_Horario;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Matricula;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn PIS;
+        private DataGridViewTextBoxColumn Cracha;
+        private DataGridViewTextBoxColumn DataDeNascimento;
+        private DataGridViewTextBoxColumn DataDeAdmissao;
+        private DataGridViewTextBoxColumn RG;
+        private DataGridViewTextBoxColumn CPF;
+        private DataGridViewTextBoxColumn CELULAR;
+        private DataGridViewTextBoxColumn EMAIL;
+        private DataGridViewTextBoxColumn DEPARTAMENTO;
+        private DataGridViewTextBoxColumn HORARIO;
+        private DataGridViewTextBoxColumn CARGO;
+        private DataGridViewTextBoxColumn SEXO;
+        private CheckBox Check_alt_Sexo;
+        private Label label12;
+        private Button Btn_Iniciar_AlteraPessoa;
+        private GroupBox groupBox1;
+        private RadioButton RB_PIS;
+        private RadioButton RB_CPF;
+        private RadioButton RB_Matricula;
     }
 }

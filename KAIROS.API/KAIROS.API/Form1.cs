@@ -410,9 +410,9 @@ namespace KAIROS.API
             foreach (var item in PessoaExcel)
             {
                 int index = 0;
-                if (RB_Matricula.Checked)
+                if (RB_PIS.Checked)
                 {
-                    index = PessoaAPI.FindIndex(x => x.Matricula == item.Matricula);
+                    index = PessoaAPI.FindIndex(x => x.CodigoPis.Replace("-", "").Replace(".", "") == item.CodigoPis.Replace("-", "").Replace(".", ""));
                 }
                 else if (RB_CPF.Checked)
                 {
@@ -528,12 +528,16 @@ namespace KAIROS.API
         {
             var p = JsonConvert.SerializeObject(PessoaAPI);
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
-
-            foreach (var item in pessoaatualizada)
-            {
-                await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, item);
-            }
-            MessageBox.Show("Pessoas alteradas com sucesso !");
+            int total = pessoaatualizada.Count;
+            int status = 0;
+            Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+            Log.GravaBkp(p.ToString(), FormataTexto.SoNumenros(Txb_Alt_Pessoa_CNPJ.Text));
+            //foreach (var item in pessoaatualizada)
+            //{
+            //    await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, item);
+            //    status++;
+            //}
+            MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP","Altera Pessoa",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
         }
     }

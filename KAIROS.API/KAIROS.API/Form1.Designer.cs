@@ -74,6 +74,7 @@
             Txb_Caminho_Excel_Desligamento = new TextBox();
             label3 = new Label();
             tabPage3 = new TabPage();
+            Lbl_StatusAlteraPessoa = new Label();
             groupBox1 = new GroupBox();
             RB_PIS = new RadioButton();
             RB_CPF = new RadioButton();
@@ -636,6 +637,7 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(Lbl_StatusAlteraPessoa);
             tabPage3.Controls.Add(groupBox1);
             tabPage3.Controls.Add(Btn_Iniciar_AlteraPessoa);
             tabPage3.Controls.Add(label12);
@@ -671,6 +673,15 @@
             tabPage3.Text = "Altera Pessoa";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // Lbl_StatusAlteraPessoa
+            // 
+            Lbl_StatusAlteraPessoa.AutoSize = true;
+            Lbl_StatusAlteraPessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Lbl_StatusAlteraPessoa.Location = new Point(434, 118);
+            Lbl_StatusAlteraPessoa.Name = "Lbl_StatusAlteraPessoa";
+            Lbl_StatusAlteraPessoa.Size = new Size(0, 17);
+            Lbl_StatusAlteraPessoa.TabIndex = 40;
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(RB_PIS);
@@ -691,7 +702,6 @@
             RB_PIS.Name = "RB_PIS";
             RB_PIS.Size = new Size(43, 19);
             RB_PIS.TabIndex = 41;
-            RB_PIS.TabStop = true;
             RB_PIS.Text = "PIS";
             RB_PIS.UseVisualStyleBackColor = true;
             // 
@@ -702,13 +712,13 @@
             RB_CPF.Name = "RB_CPF";
             RB_CPF.Size = new Size(45, 19);
             RB_CPF.TabIndex = 40;
-            RB_CPF.TabStop = true;
             RB_CPF.Text = "CPF";
             RB_CPF.UseVisualStyleBackColor = true;
             // 
             // RB_Matricula
             // 
             RB_Matricula.AutoSize = true;
+            RB_Matricula.Checked = true;
             RB_Matricula.Location = new Point(13, 26);
             RB_Matricula.Name = "RB_Matricula";
             RB_Matricula.Size = new Size(77, 19);
@@ -1172,5 +1182,6 @@
         private RadioButton RB_PIS;
         private RadioButton RB_CPF;
         private RadioButton RB_Matricula;
+        private Label Lbl_StatusAlteraPessoa;
     }
 }

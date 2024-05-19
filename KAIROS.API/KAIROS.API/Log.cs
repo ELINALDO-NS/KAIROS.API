@@ -35,6 +35,27 @@ namespace KAIROS.API
             }
 
         }
+        public static void GravaBkp(string Log, string Cliente)
+        {
+
+
+            string diretorio = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
+            Directory.CreateDirectory(diretorio);
+            if (File.Exists(diretorio + $"\\{Cliente}.json"))
+            {
+                File.Delete(diretorio + $"\\{Cliente}.json");
+            }
+            StreamWriter writer;
+            lock (lockObj)
+            {
+                using (writer = File.AppendText(diretorio + $"\\{Cliente}.json"))
+                {
+                    writer.WriteLine(Log);
+                    writer.Close();
+                }
+
+            }
+        }
 
     }
 }

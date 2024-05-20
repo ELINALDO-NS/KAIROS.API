@@ -2360,19 +2360,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ELINALDO\\.nuget\\packages\\": {}
+    "C:\\Users\\SUPORTE\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
+      "projectUniqueName": "C:\\Users\\SUPORTE\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
       "projectName": "KAIROS.API",
-      "projectPath": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
-      "packagesPath": "C:\\Users\\ELINALDO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ELINALDO\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\obj\\",
+      "projectPath": "C:\\Users\\SUPORTE\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
+      "packagesPath": "C:\\Users\\SUPORTE\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SUPORTE\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ELINALDO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SUPORTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

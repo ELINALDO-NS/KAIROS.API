@@ -360,7 +360,7 @@ namespace KAIROS.API
                 PessoaExcel.Clear();
                 Grid_Pessoa.Rows.Clear();
                 PessoaAPI = await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
-
+                Log.GravaBkp(JsonConvert.SerializeObject(PessoaAPI).ToString(), FormataTexto.SoNumenros(Txb_Alt_Pessoa_CNPJ.Text));
 
                 foreach (var item in PessoaAPI)
                 {
@@ -420,13 +420,13 @@ namespace KAIROS.API
                 }
                 else
                 {
-                    if (RB_PIS.Checked)
+                    if (RB_Matricula.Checked)
                     {
-                        index = PessoaAPI.FindIndex(x => x.CodigoPis.Replace("-", "").Replace(".", "") == item.CodigoPis.Replace("-", "").Replace(".", ""));
+                        index = PessoaAPI.FindIndex(x => x.Matricula == item.Matricula);
                     }
                 }
 
-                if (index != null)
+                if (index != -1)
                 {
                     if (Check_alt_Matricula.Checked)
                     {
@@ -530,8 +530,7 @@ namespace KAIROS.API
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
             int total = pessoaatualizada.Count;
             int status = 0;
-            Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-            Log.GravaBkp(p.ToString(), FormataTexto.SoNumenros(Txb_Alt_Pessoa_CNPJ.Text));
+            Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";           
             //foreach (var item in pessoaatualizada)
             //{
             //    await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, item);

@@ -364,8 +364,8 @@ namespace KAIROS.API
 
                 foreach (var item in PessoaAPI)
                 {
-                    string? Estrutura = item.Estrutura.Descricao;
-                    string? cargo = item.Cargo.Descricao;
+                    string? Estrutura = item.Estrutura?.Descricao;
+                    string? cargo = item.Cargo?.Descricao;
                     var Horario = item.Horarios[0]?.Horario?.Descricao;
                     string nascimento = "";
                     if (Convert.ToDateTime(item.DataNascimento) != Convert.ToDateTime("01/01/1753 00:00:00"))
@@ -416,7 +416,7 @@ namespace KAIROS.API
                 }
                 else if (RB_CPF.Checked)
                 {
-                    index = PessoaAPI.FindIndex(x => x.Cpf.Replace("-","").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
+                    index = PessoaAPI.FindIndex(x => x.Cpf.Replace("-", "").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
                 }
                 else
                 {
@@ -503,7 +503,7 @@ namespace KAIROS.API
             foreach (var item in PessoaAPI)
             {
                 string? Estrutura = item.Estrutura.Descricao;
-                string? cargo = item.Cargo.Descricao;
+                string? cargo = item?.Cargo?.Descricao;
                 var Horario = item.Horarios[0]?.Horario?.Descricao;
                 string nascimento = "";
                 if (Convert.ToDateTime(item.DataNascimento) != Convert.ToDateTime("01/01/1753 00:00:00"))
@@ -530,13 +530,26 @@ namespace KAIROS.API
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
             int total = pessoaatualizada.Count;
             int status = 0;
-            Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";           
-            //foreach (var item in pessoaatualizada)
-            //{
-            //    await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, item);
-            //    status++;
-            //}
-            MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP","Altera Pessoa",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+
+
+            foreach (var item in pessoaatualizada)
+            {
+                await Task.Run(async () =>
+                 {
+                     await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, item);
+
+                     status++;
+                     Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
+                     {
+                         Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+                     }));
+
+                 });
+
+
+            }
+            MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP", "Altera Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

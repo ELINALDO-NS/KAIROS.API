@@ -41,16 +41,18 @@ namespace KAIROS.API
 
             string diretorio = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
             Directory.CreateDirectory(diretorio);
-            if (File.Exists(diretorio + $"\\{Cliente}.json"))
+            string data = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
+            string path = diretorio + $"\\{Cliente}_{data}.json";
+            if (File.Exists(path))
             {
-                File.Delete(diretorio + $"\\{Cliente}.json");
+                File.Delete(path);
             }
             StreamWriter writer;
             lock (lockObj)
             {
-                using (writer = File.AppendText(diretorio + $"\\{Cliente}.json"))
+                using (writer = File.AppendText(path))
                 {
-                    writer.WriteLine(Log);
+                    writer.Write(Log);
                     writer.Close();
                 }
 

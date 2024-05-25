@@ -403,7 +403,7 @@ namespace KAIROS.API.Repositorio
             return horario;
 
         }
-        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos , List<Estrutura> Estruturas, List<Horarios> Horarois,bool AltPessoa)
+        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos , List<Estrutura> Estruturas, List<Horarios> Horarois)
         {
             var estruturas = Estruturas;
             var horarios = Horarois;
@@ -456,19 +456,20 @@ namespace KAIROS.API.Repositorio
                               string Sexo = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper();
                               string CNPJ = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 20].Value);
                               var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1 };
-
-                              if (!AltPessoa)
+                              #region Estrutura
+                              if (estruturas.Count > 0)
                               {
-                                  #region Estrutura
+
                                   foreach (var e in estruturas)
                                   {
 
                                       if (FormataTexto.RemoveAcentos(e.Descricao.Replace(" ", "")).Equals(FormataTexto.RemoveAcentos(DepartamentoPessoa).Replace(" ", "")))
                                       {
 
-
-                                          DepartamentoList.Codigo = 0;
                                           DepartamentoList.Id = e.Id;
+                                          DepartamentoList.Codigo = 0;
+                                          DepartamentoList.Descricao = e.Descricao;
+
 
                                           break;
                                       }
@@ -479,19 +480,21 @@ namespace KAIROS.API.Repositorio
                                       Log.GravaLog($"Estrutura: {DepartamentoPessoa} não encontrada para o funcionario, Matricula: " +
                                       MAtricula.ToString());
                                   }
+                              }
 
-
-                                  #endregion
-                                  #region Cargo
-
+                              #endregion
+                              #region Cargo
+                              if (cargos.Count > 0)
+                              {
                                   foreach (var C in cargos)
                                   {
 
                                       if (FormataTexto.RemoveAcentos(C.Descricao.Replace(" ", "")).Equals(CargoPessoa.Replace(" ", "")))
                                       {
-
-                                          Cargo.Codigo = 0;
                                           Cargo.Id = C.Id;
+                                          Cargo.Codigo = 0;
+                                          Cargo.Descricao = C.Descricao;
+
 
                                           break;
                                       }
@@ -503,11 +506,14 @@ namespace KAIROS.API.Repositorio
                                       divergencia = true;
                                       Log.GravaLog($"Cargo: {CargoPessoa} não encontrada para o funcionario, Matricula: " + Matricula);
                                   }
+                              }
 
-                                  #endregion
-                                  #region Horario
 
-                                  foreach (var H in horarios)
+                              #endregion
+
+                              #region Horario
+
+                              foreach (var H in horarios)
                                   {
                                       if (FormataTexto.SoLetrasENumeros(H.Descricao.Replace(" ", "")).Equals(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))))
                                       {
@@ -534,7 +540,7 @@ namespace KAIROS.API.Repositorio
 
 
                                   #endregion
-                              }
+                              
 
                               #region Base de Horas
                               if (!string.IsNullOrEmpty(BaseDeHoras))
@@ -642,7 +648,7 @@ namespace KAIROS.API.Repositorio
                   });
             if (divergencia)
             {
-                throw new Exception("verifique o arquivo de LOG, existem pessoas com dados inconsistentes !");
+               // throw new Exception("verifique o arquivo de LOG, existem pessoas com dados inconsistentes !");
             }
             return Pessoas;
         }

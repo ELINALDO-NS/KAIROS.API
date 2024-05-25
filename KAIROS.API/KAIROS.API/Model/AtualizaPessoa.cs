@@ -19,6 +19,7 @@ namespace KAIROS.API.Model
             public string Email { get; set; }
             public Tiposalario TipoSalario { get; set; }
             public Estrutura Estrutura { get; set; }
+            public Cargo Cargo { get; set; }
             public int FlagGerarNumeroPISAutomatico { get; set; }
             public string CodigoPis { get; set; }
             //public int CodigoPisNumerico { get; set; }

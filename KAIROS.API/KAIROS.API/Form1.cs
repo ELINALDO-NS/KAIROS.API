@@ -354,9 +354,16 @@ namespace KAIROS.API
         List<Cargo> CargosAPI = new List<Cargo>();
         List<Estrutura> EstruturasAPI = new List<Estrutura>();
         string? PessoaBKP = string.Empty;
+        bool Atualizadados = false;
 
         private async void btn_Importar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty( Txb_Alt_Pessoa_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Key.Text.Trim()))
+            {
+                MessageBox.Show("Verifique os campos CNPJ e CHAVE","Importar",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return;
+            }
+
             try
             {
 
@@ -394,7 +401,7 @@ namespace KAIROS.API
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message,"Importar",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Importar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -406,6 +413,21 @@ namespace KAIROS.API
 
         private async void Btn_AtualizaDados_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(Txb_Camin_Excel_Altera_Pessoa.Text))
+            {
+                MessageBox.Show("Informe o caminho da planilha excel", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txb_Alt_Pessoa_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Key.Text.Trim()))
+            {
+                MessageBox.Show("Verifique os campos CNPJ e CHAVE", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (PessoaAPI.Count() == 0)
+            {
+                MessageBox.Show("É necessario impotar os dados da API antes de atualizar", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             if (Check_alt_Cargo.Checked)
             {
                 CargosAPI = await _API.ListaCargosAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
@@ -416,7 +438,7 @@ namespace KAIROS.API
             }
 
 
-            PessoaExcel = await _excel.ListaPessoas(Txb_Camin_Excel_Altera_Pessoa.Text, "", CargosAPI, EstruturasAPI, new List<Horarios>());
+            PessoaExcel = await _excel.ListaPessoas(Txb_Camin_Excel_Altera_Pessoa.Text, "", CargosAPI, EstruturasAPI, new List<Horarios>(),true);
 
 
             foreach (var item in PessoaExcel)
@@ -430,11 +452,11 @@ namespace KAIROS.API
                 {
                     index = PessoaAPI.FindIndex(x => x.Cpf.Replace("-", "").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
                 }
-                else if(RB_Matricula.Checked)
+                else if (RB_Matricula.Checked)
                 {
-    
-                  index = PessoaAPI.FindIndex(x => x.Matricula == item.Matricula);
-                    
+
+                    index = PessoaAPI.FindIndex(x => x.Matricula == item.Matricula);
+
                 }
 
                 if (index != -1)
@@ -503,7 +525,7 @@ namespace KAIROS.API
                     {
 
                         PessoaAPI[index].Cargo = item.Cargo;
-                    } 
+                    }
                     if (Check_alt_Sexo.Checked)
                     {
                         PessoaAPI[index].Sexo = item.Sexo;
@@ -527,6 +549,18 @@ namespace KAIROS.API
                 {
                     Sexo = "Feminino";
                 }
+                if (item.AmbienteTrabalhoPessoa == null)
+                {
+                    var AmbienteDeTrabalho = new List<Ambientetrabalhopessoa>();
+                    AmbienteDeTrabalho.Add(new Ambientetrabalhopessoa
+                    {
+                        Id = 0,
+                        Inicio = DateTime.Now.ToString(),
+                        Fim = "31/12/9999 23:59:59",
+                        TipoAmbienteTrabalho = 6
+                    });
+                    item.AmbienteTrabalhoPessoa = AmbienteDeTrabalho.ToArray();
+                }
 
                 Grid_Pessoa.Rows.Add(item.Id,
                 item.Matricula.ToString(), item.Nome.ToString(), item.CodigoPis.ToString(),
@@ -534,33 +568,40 @@ namespace KAIROS.API
                 item.TelefoneCelular, item.Email, Estrutura, Horario, cargo, Sexo
                  );
             }
-
+            Atualizadados = true;
             MessageBox.Show("Lista Atualizada Com Sucesso ! \nAs celulas em na cor azul, serão atualizados no KAIROS");
 
         }
 
         private async void Btn_Iniciar_AlteraPessoa_Click(object sender, EventArgs e)
         {
+            if ( PessoaAPI.Count() == 0 || Atualizadados == false)
+            {
+                MessageBox.Show("Não existem dados a serem atualizados", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Log.GravaBkp(PessoaBKP, FormataTexto.SoNumenros(Txb_Alt_Pessoa_CNPJ.Text));
             var p = JsonConvert.SerializeObject(PessoaAPI);
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
             int total = pessoaatualizada.Count;
             int status = 0;
             Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-
-            Parallel.ForEach(pessoaatualizada, pessoa =>
+            await Task.Run(() =>
             {
-                Task.Run(async () => { await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa); });
-
-                status++;
+              Parallel.ForEach(pessoaatualizada, pessoa =>
+                {
+                    _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa);
+                    
                 Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
                 {
                     Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
                 }));
+                status++;
 
+              });
             });
 
-
+            Lbl_StatusAlteraPessoa.Text = $"{total}/{total}";
             MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP", "Altera Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }

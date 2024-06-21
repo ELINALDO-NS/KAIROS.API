@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KAIROS.API
-build_property.ProjectDir = C:\Users\ELINALDO\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\
+build_property.ProjectDir = C:\Users\SUPORTE\Documents\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

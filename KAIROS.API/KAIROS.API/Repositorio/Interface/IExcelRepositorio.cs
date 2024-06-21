@@ -15,7 +15,7 @@ namespace KAIROS.API.Repositorio.Interface
         Task<List<Estrutura>> ListaEstruturasNovo(string caminho);
         Task<List<Horarios>> ListaHorarios(string Caminho);
         Task<List<Horarios>> ListaHorariosNovo(string caminho);
-        Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois);
+        Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois,bool AtualizaPessoa =false);
         Task SalvaHorarios(string caminhoLeitura, string SalvarEm);
 
     }

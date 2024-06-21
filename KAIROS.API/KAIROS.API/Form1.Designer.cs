@@ -922,9 +922,9 @@
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label11.Location = new Point(271, 25);
             label11.Name = "label11";
-            label11.Size = new Size(28, 15);
+            label11.Size = new Size(44, 15);
             label11.TabIndex = 15;
-            label11.Text = "Key";
+            label11.Text = "CHAVE";
             // 
             // Grid_Pessoa
             // 
@@ -1020,7 +1020,7 @@
             Btn_AtualizaDados.Name = "Btn_AtualizaDados";
             Btn_AtualizaDados.Size = new Size(122, 27);
             Btn_AtualizaDados.TabIndex = 9;
-            Btn_AtualizaDados.Text = "Atualizar Dados";
+            Btn_AtualizaDados.Text = "Atualizar Lista";
             Btn_AtualizaDados.UseVisualStyleBackColor = true;
             Btn_AtualizaDados.Click += Btn_AtualizaDados_Click_1;
             // 

@@ -403,7 +403,7 @@ namespace KAIROS.API.Repositorio
             return horario;
 
         }
-        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos , List<Estrutura> Estruturas, List<Horarios> Horarois)
+        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos , List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa)
         {
             var estruturas = Estruturas;
             var horarios = Horarois;
@@ -646,9 +646,9 @@ namespace KAIROS.API.Repositorio
                           }
                       }
                   });
-            if (divergencia)
+            if (divergencia && !AtualizaPessoa)
             {
-               // throw new Exception("verifique o arquivo de LOG, existem pessoas com dados inconsistentes !");
+               throw new Exception("verifique o arquivo de LOG, existem pessoas com dados inconsistentes !");
             }
             return Pessoas;
         }

@@ -895,7 +895,7 @@
             Txb_Alt_Pessoa_CNPJ.Name = "Txb_Alt_Pessoa_CNPJ";
             Txb_Alt_Pessoa_CNPJ.Size = new Size(193, 25);
             Txb_Alt_Pessoa_CNPJ.TabIndex = 18;
-            Txb_Alt_Pessoa_CNPJ.Text = " 33.794.132/0003-53 \t";
+            Txb_Alt_Pessoa_CNPJ.Text = "63.227.763/0001-90\t";
             // 
             // label10
             // 
@@ -914,7 +914,7 @@
             Txb_Alt_Pessoa_Key.Name = "Txb_Alt_Pessoa_Key";
             Txb_Alt_Pessoa_Key.Size = new Size(193, 25);
             Txb_Alt_Pessoa_Key.TabIndex = 16;
-            Txb_Alt_Pessoa_Key.Text = "64d11909-3a4b-4e2b-9742-04d9c85abea4";
+            Txb_Alt_Pessoa_Key.Text = "d59c1d0e-f16f-44dd-8811-efc22dbba8d8";
             // 
             // label11
             // 

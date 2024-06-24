@@ -1,6 +1,7 @@
 ﻿using KAIROS.API.Model;
 using KAIROS.API.Repositorio.Interface;
 using Microsoft.Extensions.FileSystemGlobbing.Internal;
+using Microsoft.VisualBasic.ApplicationServices;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System;
@@ -652,7 +653,157 @@ namespace KAIROS.API.Repositorio
             }
             return Pessoas;
         }
-        public async Task SalvaHorarios(string caminhoLeitura, string SalvarEm)
+
+        public async Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ)
+        {
+
+            string data = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
+            string diretorio = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
+            if (!File.Exists(diretorio + $"\\Pessoas_BKP_{data}.xlsx"))
+            {
+                var ExcelHorario = new ExcelPackage(new FileInfo($"{diretorio}\\Pessoas_BKP_{data}.xlsx"));
+                var PlanilhaHoario = ExcelHorario.Workbook.Worksheets.Add("FUNCIONÁRIOS");
+
+                PlanilhaHoario.Cells["A1:T1"].Style.Font.Bold = true;
+                PlanilhaHoario.Cells[$"A1:T1"].Style.Font.Size = 13;
+                PlanilhaHoario.Cells[$"A1:T1"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
+
+                PlanilhaHoario.Cells["A2:T2"].Style.Font.Bold = true;
+                PlanilhaHoario.Cells[$"A2:T2"].Style.Font.Size = 13;
+                PlanilhaHoario.Cells[$"A2:T2"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
+
+                PlanilhaHoario.Cells["A3:T3"].Style.Font.Bold = true;
+                PlanilhaHoario.Cells[$"A3:T3"].Style.Font.Size = 13;
+                PlanilhaHoario.Cells[$"A3:T3"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
+
+                for (int i = 2; i < pessoas.Count() +4; i++)
+                {
+                    PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
+                    PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                    PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Font.Size = 12;
+
+                }
+
+               
+
+                PlanilhaHoario.Cells[2, 1 ].Value = "MATRICULA";
+                PlanilhaHoario.Cells[2, 2 ].Value = "NOME";
+                PlanilhaHoario.Cells[2, 3 ].Value = "PIS";
+                PlanilhaHoario.Cells[2, 4 ].Value = "CRACHA";
+                PlanilhaHoario.Cells[2, 5 ].Value = "DATA DE NASCIMENTO";
+                PlanilhaHoario.Cells[2, 6 ].Value = "DATA DE ADMISSÃO";
+                PlanilhaHoario.Cells[2, 7 ].Value = "RG";
+                PlanilhaHoario.Cells[2, 8 ].Value = "CPF";
+                PlanilhaHoario.Cells[2, 9 ].Value = "TELEFONE";
+                PlanilhaHoario.Cells[2, 10].Value = "CELULAR";
+                PlanilhaHoario.Cells[2, 11].Value = "E-MAIL";
+                PlanilhaHoario.Cells[2, 12].Value = "TIPO DE SALARIO";
+                PlanilhaHoario.Cells[2, 13].Value = "BASE DE HORAS";
+                PlanilhaHoario.Cells[2, 14].Value = "CONTROLA PONTO";
+                PlanilhaHoario.Cells[2, 15].Value = "DEPARTAMENTO";
+                PlanilhaHoario.Cells[2, 16].Value = "HORARIO";
+                PlanilhaHoario.Cells[2, 17].Value = "CARGO";
+                PlanilhaHoario.Cells[2, 18].Value = "ESCALADE FOLGA";
+                PlanilhaHoario.Cells[2, 19].Value = "SEXO";
+                PlanilhaHoario.Cells[2, 20].Value = "CNPJ";
+
+                PlanilhaHoario.Cells["A1:T1"].Merge  = true;
+                PlanilhaHoario.Cells["A1:T1"].Value = "Planilha Backup";
+                PlanilhaHoario.Cells["A1:T1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+
+                PlanilhaHoario.Cells["A2:T2"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                PlanilhaHoario.Cells["A2:T2"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
+                                       
+                PlanilhaHoario.Cells["A3:T3"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                PlanilhaHoario.Cells["A3:T3"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
+                int linha = 4;
+                foreach (var item in pessoas)
+                {
+                    PlanilhaHoario.Cells[linha, 1].Value = item.Matricula.ToString();
+                    PlanilhaHoario.Cells[linha, 2].Value = item.Nome;
+                    PlanilhaHoario.Cells[linha, 3].Value = item.CodigoPis.ToString();
+                    PlanilhaHoario.Cells[linha, 4].Value = item.Cracha;
+                    PlanilhaHoario.Cells[linha, 5].Value = item.DataNascimento.ToString();
+                    PlanilhaHoario.Cells[linha, 6].Value = item.DataAdmissao.ToString();
+                    PlanilhaHoario.Cells[linha, 7].Value = item.Rg.ToString();
+                    PlanilhaHoario.Cells[linha, 8].Value = item.Cpf.ToString();
+                    PlanilhaHoario.Cells[linha, 9].Value = item.Telefone;
+                    PlanilhaHoario.Cells[linha, 10].Value = item.TelefoneCelular;
+                    PlanilhaHoario.Cells[linha, 11].Value = item.Email;                    
+                    PlanilhaHoario.Cells[linha, 13].Value = item.BaseHoras;
+                    PlanilhaHoario.Cells[linha, 15].Value = item.Estrutura.Descricao;
+                    PlanilhaHoario.Cells[linha, 17].Value = item?.Cargo?.Descricao;
+                    PlanilhaHoario.Cells[linha, 18].Value = "";// item.escaladefolga.ToString();
+                    #region Horario
+                    foreach (var Hora in item.Horarios)
+                    {
+                        if (Convert.ToDateTime(Hora.Fim) == Convert.ToDateTime("31/12/9999 23:59:59"))
+                        {
+                            PlanilhaHoario.Cells[linha, 16].Value = Hora?.Horario?.Descricao?.ToString();
+
+                        }
+                    }
+                    #endregion
+                    #region Controla Ponto
+                    if (item.ControlaPonto)
+                    {
+                        PlanilhaHoario.Cells[linha, 14].Value = "SIM";
+                    }
+                    else 
+                    {
+                        PlanilhaHoario.Cells[linha, 14].Value = "NÂO";
+                    }
+                    #endregion
+                    #region Sexo
+                    if (item.Sexo == 2)
+                    {
+                        PlanilhaHoario.Cells[linha, 19].Value = "Feminino";
+                    }
+                    else
+                    {
+                        PlanilhaHoario.Cells[linha, 19].Value = "Masculino";
+                    }
+                    #endregion
+                    #region Tipo de Salario
+                    if (item.TipoSalario.Id == 101)
+                    {
+                        PlanilhaHoario.Cells[linha, 12].Value = "MENSALISTA";
+                    }
+
+                    
+                    #endregion
+
+
+                    PlanilhaHoario.Cells[linha, 20].Value = CNPJ;
+
+                    linha++;
+                }
+
+                PlanilhaHoario.Column(1).AutoFit();
+                PlanilhaHoario.Column(2).AutoFit();
+                PlanilhaHoario.Column(3).AutoFit();
+                PlanilhaHoario.Column(4).AutoFit();
+                PlanilhaHoario.Column(5).AutoFit();
+                PlanilhaHoario.Column(6).AutoFit();
+                PlanilhaHoario.Column(7).AutoFit();
+                PlanilhaHoario.Column(8).AutoFit();
+                PlanilhaHoario.Column(9).AutoFit();
+                PlanilhaHoario.Column(10).AutoFit();
+                PlanilhaHoario.Column(11).AutoFit();
+                PlanilhaHoario.Column(12).AutoFit();
+                PlanilhaHoario.Column(13).AutoFit();
+                PlanilhaHoario.Column(14).AutoFit();
+                PlanilhaHoario.Column(15).AutoFit();
+                PlanilhaHoario.Column(16).AutoFit();
+                PlanilhaHoario.Column(17).AutoFit();
+                PlanilhaHoario.Column(18).AutoFit();
+                PlanilhaHoario.Column(19).AutoFit();
+                PlanilhaHoario.Column(20).AutoFit();
+                ExcelHorario.Save();
+            }
+        }
+
+            public async Task SalvaHorarios(string caminhoLeitura, string SalvarEm)
         {
 
             var horarios = await ListaHorariosNovo(caminhoLeitura);

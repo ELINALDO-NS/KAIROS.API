@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using OfficeOpenXml.FormulaParsing.Exceptions;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 
 namespace KAIROS.API
 {
@@ -25,7 +26,7 @@ namespace KAIROS.API
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -352,8 +353,7 @@ namespace KAIROS.API
         List<Pessoa> PessoaAPI = new List<Pessoa>();
         List<Pessoa> PessoaExcel = new List<Pessoa>();
         List<Cargo> CargosAPI = new List<Cargo>();
-        List<Estrutura> EstruturasAPI = new List<Estrutura>();
-        string? PessoaBKP = string.Empty;
+        List<Estrutura> EstruturasAPI = new List<Estrutura>();        
         bool Atualizadados = false;
 
         private async void btn_Importar_Click(object sender, EventArgs e)
@@ -371,7 +371,7 @@ namespace KAIROS.API
                 PessoaExcel.Clear();
                 Grid_Pessoa.Rows.Clear();
                 PessoaAPI = await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
-                PessoaBKP = JsonConvert.SerializeObject(PessoaAPI);
+                
                 foreach (var item in PessoaAPI)
                 {
                     string? Estrutura = item.Estrutura?.Descricao;
@@ -409,6 +409,11 @@ namespace KAIROS.API
         private void Btn_CaminExcel_Alt_Pessoa_Click(object sender, EventArgs e)
         {
             PathLeitura(Txb_Camin_Excel_Altera_Pessoa);
+        }
+
+        public void BKPExcel()
+        {
+
         }
 
         private async void Btn_AtualizaDados_Click_1(object sender, EventArgs e)
@@ -452,6 +457,7 @@ namespace KAIROS.API
                 {
                     index = PessoaAPI.FindIndex(x => x.Cpf.Replace("-", "").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
                 }
+
                 else if (RB_Matricula.Checked)
                 {
 
@@ -580,7 +586,9 @@ namespace KAIROS.API
                 MessageBox.Show("Não existem dados a serem atualizados", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Log.GravaBkp(PessoaBKP, FormataTexto.SoNumenros(Txb_Alt_Pessoa_CNPJ.Text));
+
+            
+            await _excel.SalvaBKPExcel(PessoaAPI, Txb_Alt_Pessoa_CNPJ.Text);
             var p = JsonConvert.SerializeObject(PessoaAPI);
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
             int total = pessoaatualizada.Count;
@@ -588,17 +596,17 @@ namespace KAIROS.API
             Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
             await Task.Run(() =>
             {
-              Parallel.ForEach(pessoaatualizada, pessoa =>
-                {
-                    _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa);
+              //Parallel.ForEach(pessoaatualizada, pessoa =>
+              //  {
+              //      _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa);
                     
-                Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
-                {
-                    Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-                }));
-                status++;
+              //  Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
+              //  {
+              //      Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+              //  }));
+              //  status++;
 
-              });
+              //});
             });
 
             Lbl_StatusAlteraPessoa.Text = $"{total}/{total}";

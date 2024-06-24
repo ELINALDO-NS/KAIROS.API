@@ -371,9 +371,18 @@ namespace KAIROS.API
                 PessoaExcel.Clear();
                 Grid_Pessoa.Rows.Clear();
                 PessoaAPI = await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
-                
+                foreach (var item in PessoaAPI.ToList())
+                {
+                    if (Convert.ToDateTime(item.DataDemissao) != Convert.ToDateTime("01/01/1753 00:00:00"))
+                    {
+                        PessoaAPI.Remove(item);
+                    }
+                }
+               
                 foreach (var item in PessoaAPI)
                 {
+                   
+
                     string? Estrutura = item.Estrutura?.Descricao;
                     string? cargo = item.Cargo?.Descricao;
                     var Horario = item.Horarios[0]?.Horario?.Descricao;
@@ -387,6 +396,7 @@ namespace KAIROS.API
                     {
                         Sexo = "Feminino";
                     }
+
 
                     Grid_Pessoa.Rows.Add(item.Id,
                     item.Matricula.ToString(), item.Nome.ToString(), item.CodigoPis.ToString(),
@@ -568,6 +578,8 @@ namespace KAIROS.API
                     item.AmbienteTrabalhoPessoa = AmbienteDeTrabalho.ToArray();
                 }
 
+
+
                 Grid_Pessoa.Rows.Add(item.Id,
                 item.Matricula.ToString(), item.Nome.ToString(), item.CodigoPis.ToString(),
                 item.Cracha, nascimento, item.DataAdmissao, item.Rg, item.Cpf,
@@ -596,17 +608,17 @@ namespace KAIROS.API
             Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
             await Task.Run(() =>
             {
-              //Parallel.ForEach(pessoaatualizada, pessoa =>
-              //  {
-              //      _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa);
-                    
-              //  Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
-              //  {
-              //      Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-              //  }));
-              //  status++;
+                Parallel.ForEach(pessoaatualizada, pessoa =>
+                  {
+                      _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa);
 
-              //});
+                      Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
+                    {
+                      Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+                  }));
+                      status++;
+
+                  });
             });
 
             Lbl_StatusAlteraPessoa.Text = $"{total}/{total}";

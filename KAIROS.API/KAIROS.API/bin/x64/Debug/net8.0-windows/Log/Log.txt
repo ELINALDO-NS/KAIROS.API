@@ -1,0 +1,5 @@
+24-06-2024_19-20 - (SEG-SEX-08H00-12H30-14H00-18H00) Horario não encontrado para o funcionario, Matricula: 5
+24-06-2024_19-20 - (07 as 07) Horario não encontrado para o funcionario, Matricula: 6
+24-06-2024_19-20 - (22-00 00-00 01-00 07-00) Horario não encontrado para o funcionario, Matricula: 7
+24-06-2024_19-20 - (Livre) Horario não encontrado para o funcionario, Matricula: 8
+24-06-2024_19-20 - (SEG-SEX-09H00-12H00-14H00-19H00) Horario não encontrado para o funcionario, Matricula: 9

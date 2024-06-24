@@ -26,7 +26,7 @@ namespace KAIROS.API
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
 
@@ -353,14 +353,14 @@ namespace KAIROS.API
         List<Pessoa> PessoaAPI = new List<Pessoa>();
         List<Pessoa> PessoaExcel = new List<Pessoa>();
         List<Cargo> CargosAPI = new List<Cargo>();
-        List<Estrutura> EstruturasAPI = new List<Estrutura>();        
+        List<Estrutura> EstruturasAPI = new List<Estrutura>();
         bool Atualizadados = false;
 
         private async void btn_Importar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty( Txb_Alt_Pessoa_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Key.Text.Trim()))
+            if (string.IsNullOrEmpty(Txb_Alt_Pessoa_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Key.Text.Trim()))
             {
-                MessageBox.Show("Verifique os campos CNPJ e CHAVE","Importar",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Verifique os campos CNPJ e CHAVE", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -370,7 +370,19 @@ namespace KAIROS.API
                 PessoaAPI.Clear();
                 PessoaExcel.Clear();
                 Grid_Pessoa.Rows.Clear();
-                PessoaAPI = await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
+                btn_Importar.Enabled = false;
+                await Task.WhenAll(
+                   Task.Run(async () =>
+                   {
+                       PessoaAPI.AddRange(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, 1));
+                   }),
+                   
+                    Task.Run(async () =>
+                    {
+                        PessoaAPI.AddRange(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, 2));
+                    })
+                );
+
                 foreach (var item in PessoaAPI.ToList())
                 {
                     if (Convert.ToDateTime(item.DataDemissao) != Convert.ToDateTime("01/01/1753 00:00:00"))
@@ -378,10 +390,10 @@ namespace KAIROS.API
                         PessoaAPI.Remove(item);
                     }
                 }
-               
+
                 foreach (var item in PessoaAPI)
                 {
-                   
+
 
                     string? Estrutura = item.Estrutura?.Descricao;
                     string? cargo = item.Cargo?.Descricao;
@@ -404,14 +416,24 @@ namespace KAIROS.API
                     item.TelefoneCelular, item.Email, Estrutura, Horario, cargo, Sexo
                      );
                 }
-                MessageBox.Show("Dados Importados com Sucesso !", "Importar dados API");
+                if (PessoaAPI.Count > 0 )
+                {
+                    MessageBox.Show("Dados Importados com Sucesso !", "Importar dados API");
 
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possivel buscar as pessoas na API \n Verifique o arquivo LOG !", "Importar dados API");
+                }
+               
+                btn_Importar.Enabled = true;
 
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message, "Importar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btn_Importar.Enabled = true;
             }
 
         }
@@ -421,10 +443,6 @@ namespace KAIROS.API
             PathLeitura(Txb_Camin_Excel_Altera_Pessoa);
         }
 
-        public void BKPExcel()
-        {
-
-        }
 
         private async void Btn_AtualizaDados_Click_1(object sender, EventArgs e)
         {
@@ -452,8 +470,8 @@ namespace KAIROS.API
                 EstruturasAPI = await _API.ListaEstruturasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text);
             }
 
-
-            PessoaExcel = await _excel.ListaPessoas(Txb_Camin_Excel_Altera_Pessoa.Text, "", CargosAPI, EstruturasAPI, new List<Horarios>(),true);
+            Btn_AtualizaDados.Enabled = false;
+            PessoaExcel = await _excel.ListaPessoas(Txb_Camin_Excel_Altera_Pessoa.Text, "", CargosAPI, EstruturasAPI, new List<Horarios>(), true);
 
 
             foreach (var item in PessoaExcel)
@@ -587,19 +605,20 @@ namespace KAIROS.API
                  );
             }
             Atualizadados = true;
+            Btn_AtualizaDados.Enabled = true;
             MessageBox.Show("Lista Atualizada Com Sucesso ! \nAs celulas em na cor azul, serão atualizados no KAIROS");
 
         }
 
         private async void Btn_Iniciar_AlteraPessoa_Click(object sender, EventArgs e)
         {
-            if ( PessoaAPI.Count() == 0 || Atualizadados == false)
+            if (PessoaAPI.Count() == 0 || Atualizadados == false)
             {
                 MessageBox.Show("Não existem dados a serem atualizados", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            
+
             await _excel.SalvaBKPExcel(PessoaAPI, Txb_Alt_Pessoa_CNPJ.Text);
             var p = JsonConvert.SerializeObject(PessoaAPI);
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
@@ -614,8 +633,8 @@ namespace KAIROS.API
 
                       Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
                     {
-                      Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-                  }));
+                        Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+                    }));
                       status++;
 
                   });

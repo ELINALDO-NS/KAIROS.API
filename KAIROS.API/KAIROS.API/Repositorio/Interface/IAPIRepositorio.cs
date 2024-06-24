@@ -16,7 +16,7 @@ namespace KAIROS.API.Repositorio.Interface
         Task<List<Horarios>> ListaHorariosAPI(string Key, string CNPJ);
         Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel, List<Pessoa> pessoas);
         Task InserePessoaAPINOVO(string Key, string CNPJ, Pessoa pessoa);
-        Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ);
+        Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ,int pagina =1);
         Task AtualizaPessoasAPI(string Key, string CNPJ,AtualizaPessoa pessoa);
 
 

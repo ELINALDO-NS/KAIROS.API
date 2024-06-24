@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\meu_notebook\\documents\\projetos\\kairos.api\\kairos.api\\kairos.api\\repositorio\\apirepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\repositorio\\apirepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\meu_notebook\\documents\\projetos\\kairos.api\\kairos.api\\kairos.api\\repositorio\\excelrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\repositorio\\excelrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -18,8 +26,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExcelRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "RelativeDocumentMoniker": "KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "ToolTip": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "RelativeToolTip": "KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "ViewState": "AQIAAIsCAAAAAAAAAAAAAJICAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T23:41:24.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "APIRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
+              "RelativeDocumentMoniker": "KAIROS.API\\Repositorio\\APIRepositorio.cs",
+              "ToolTip": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
+              "RelativeToolTip": "KAIROS.API\\Repositorio\\APIRepositorio.cs",
+              "ViewState": "AQIAAAoBAAAAAAAAAAAuwP4AAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T23:38:01.426Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +61,14 @@
               "RelativeDocumentMoniker": "KAIROS.API\\Form1.cs",
               "ToolTip": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeToolTip": "KAIROS.API\\Form1.cs",
-              "ViewState": "AQIAAFsCAAAAAAAAAAAQwGoCAAAfAAAA",
+              "ViewState": "AQIAAFECAAAAAAAAAAAqwF8CAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-20T13:31:03.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeDocumentMoniker": "KAIROS.API\\Form1.cs",

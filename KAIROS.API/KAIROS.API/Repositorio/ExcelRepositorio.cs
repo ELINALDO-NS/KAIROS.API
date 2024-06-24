@@ -656,7 +656,7 @@ namespace KAIROS.API.Repositorio
 
         public async Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ)
         {
-
+            Directory.CreateDirectory(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
             string data = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
             string diretorio = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
             if (!File.Exists(diretorio + $"\\Pessoas_BKP_{data}.xlsx"))

@@ -252,7 +252,7 @@ namespace KAIROS.API.Repositorio
 
         }
 
-        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ)
+        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ,int pagina =1)
         {
             List <Pessoa> pessoa = new List<Pessoa>();
             await Task.Run(() =>
@@ -262,11 +262,27 @@ namespace KAIROS.API.Repositorio
                 request.AddHeader("Content-Type", "application/json");
                 request.AddHeader("key", Key);
                 request.AddHeader("identifier", CNPJ);
-                var body = "{}";
+                var body = @"
+                            " + "\n" +
+                                   @"{
+                            " + "\n" +
+                                   $@"  ""pagina"" : {pagina}
+                            " + "\n" +
+                                   @"}
+                            " + "\n" +
+                               @"";
                 request.AddParameter("application/json", body, ParameterType.RequestBody);
-                var response = client.Execute(request);
-                Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+                var response1 = client.Execute(request);
+                Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response1.Content);
+                if (Resposta.Sucesso)
+                {
+                    pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+                }
+                else
+                {
+                    Log.GravaLog(Resposta.Mensagem.ToString() + $" - Pagina requisitada: {pagina}");
+                }
+
             });
             return pessoa;
         }

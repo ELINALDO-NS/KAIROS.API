@@ -15,11 +15,12 @@ namespace KAIROS.API
             string diretorio = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log");
             Directory.CreateDirectory(diretorio);
             StreamWriter writer;
+            string data = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
             lock (lockObj)
             {
                 using (writer = File.AppendText(diretorio + @"\Log.txt"))
                 {
-                    writer.WriteLine(Log);
+                    writer.WriteLine($"{data} - {Log}");
                     writer.Close();
                 }
 

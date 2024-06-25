@@ -376,7 +376,7 @@ namespace KAIROS.API
                    {
                        PessoaAPI.AddRange(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, 1));
                    }),
-                   
+
                     Task.Run(async () =>
                     {
                         PessoaAPI.AddRange(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, 2));
@@ -416,7 +416,7 @@ namespace KAIROS.API
                     item.TelefoneCelular, item.Email, Estrutura, Horario, cargo, Sexo
                      );
                 }
-                if (PessoaAPI.Count > 0 )
+                if (PessoaAPI.Count > 0)
                 {
                     MessageBox.Show("Dados Importados com Sucesso !", "Importar dados API");
 
@@ -425,7 +425,7 @@ namespace KAIROS.API
                 {
                     MessageBox.Show("Não foi possivel buscar as pessoas na API \n Verifique o arquivo LOG !", "Importar dados API");
                 }
-               
+
                 btn_Importar.Enabled = true;
 
             }
@@ -643,6 +643,24 @@ namespace KAIROS.API
             Lbl_StatusAlteraPessoa.Text = $"{total}/{total}";
             MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP", "Altera Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private async void Btn_BKP_Excel_Click(object sender, EventArgs e)
+        {
+            if (PessoaAPI.Count > 0)
+            {
+                string LocalGravacao = PathGravacao();
+                await _excel.SalvaBKPExcel(PessoaAPI, Txb_Alt_Pessoa_CNPJ.Text, LocalGravacao);
+                MessageBox.Show("BKP dos dados salvo com sucesso !", "BKP Excel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            }
+            else
+            {
+                MessageBox.Show("É necessario importar os dados da API antes de fazer o BKP !", "BKP Excel",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return;
+            }
+           
         }
     }
 

@@ -653,12 +653,17 @@ namespace KAIROS.API.Repositorio
             }
             return Pessoas;
         }
-
-        public async Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ)
+        
+        public async Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ, string SalvarEm = "")
         {
             Directory.CreateDirectory(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
             string data = DateTime.Now.ToString("dd-MM-yyyy_HH-mm");
             string diretorio = Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
+            if (!string.IsNullOrEmpty(SalvarEm))
+            {
+                diretorio = SalvarEm;
+            }
+           
             if (!File.Exists(diretorio + $"\\Pessoas_BKP_{data}.xlsx"))
             {
                 var ExcelHorario = new ExcelPackage(new FileInfo($"{diretorio}\\Pessoas_BKP_{data}.xlsx"));

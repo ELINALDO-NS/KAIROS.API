@@ -74,6 +74,7 @@
             Txb_Caminho_Excel_Desligamento = new TextBox();
             label3 = new Label();
             tabPage3 = new TabPage();
+            Btn_BKP_Excel = new Button();
             Lbl_StatusAlteraPessoa = new Label();
             groupBox1 = new GroupBox();
             RB_PIS = new RadioButton();
@@ -637,6 +638,7 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(Btn_BKP_Excel);
             tabPage3.Controls.Add(Lbl_StatusAlteraPessoa);
             tabPage3.Controls.Add(groupBox1);
             tabPage3.Controls.Add(Btn_Iniciar_AlteraPessoa);
@@ -672,6 +674,18 @@
             tabPage3.TabIndex = 3;
             tabPage3.Text = "Altera Pessoa";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // Btn_BKP_Excel
+            // 
+            Btn_BKP_Excel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Btn_BKP_Excel.ImageAlign = ContentAlignment.MiddleRight;
+            Btn_BKP_Excel.Location = new Point(614, 17);
+            Btn_BKP_Excel.Name = "Btn_BKP_Excel";
+            Btn_BKP_Excel.Size = new Size(70, 25);
+            Btn_BKP_Excel.TabIndex = 41;
+            Btn_BKP_Excel.Text = "BKP Excel";
+            Btn_BKP_Excel.UseVisualStyleBackColor = true;
+            Btn_BKP_Excel.Click += Btn_BKP_Excel_Click;
             // 
             // Lbl_StatusAlteraPessoa
             // 
@@ -744,7 +758,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label12.ForeColor = Color.Red;
-            label12.Location = new Point(682, 3);
+            label12.Location = new Point(484, 114);
             label12.Name = "label12";
             label12.Size = new Size(243, 17);
             label12.TabIndex = 34;
@@ -1183,5 +1197,6 @@
         private RadioButton RB_CPF;
         private RadioButton RB_Matricula;
         private Label Lbl_StatusAlteraPessoa;
+        private Button Btn_BKP_Excel;
     }
 }

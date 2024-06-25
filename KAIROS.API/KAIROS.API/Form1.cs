@@ -445,17 +445,22 @@ namespace KAIROS.API
         {
             if (string.IsNullOrEmpty(Txb_Camin_Excel_Altera_Pessoa.Text))
             {
-                MessageBox.Show("Informe o caminho da planilha excel", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Informe o caminho da planilha excel", "Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (string.IsNullOrEmpty(Txb_Alt_Pessoa_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Key.Text.Trim()))
             {
-                MessageBox.Show("Verifique os campos CNPJ e CHAVE", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Verifique os campos CNPJ e CHAVE", "Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             if (PessoaAPI.Count() == 0)
             {
-                MessageBox.Show("É necessario impotar os dados da API antes de atualizar", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("É necessario impotar os dados da API antes de atualizar", "Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txb_CPF_Resp_Altera_Pessoa.Text))
+            {
+                MessageBox.Show("Informe o CPF do responsavel", "Atualizar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (Check_alt_Cargo.Checked)
@@ -496,6 +501,8 @@ namespace KAIROS.API
                     {
                         PessoaAPI[index].Matricula = item.Matricula;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
 
                     }
 
@@ -503,84 +510,109 @@ namespace KAIROS.API
                     {
                         PessoaAPI[index].Nome = item.Nome;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_PIS.Checked)
                     {
                         PessoaAPI[index].CodigoPis = item.CodigoPis;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Crachar.Checked)
                     {
                         PessoaAPI[index].Cracha = item.Cracha;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Nascimento.Checked)
                     {
                         PessoaAPI[index].DataNascimento = item.DataNascimento;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Admissao.Checked)
                     {
                         PessoaAPI[index].DataAdmissao = item.DataAdmissao;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_RG.Checked)
                     {
                         PessoaAPI[index].Rg = item.Rg;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_CPF.Checked)
                     {
                         PessoaAPI[index].Cpf = item.Cpf;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Celular.Checked)
                     {
                         PessoaAPI[index].TelefoneCelular = item.TelefoneCelular;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Email.Checked)
                     {
                         PessoaAPI[index].Email = item.Email;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Departamento.Checked && !string.IsNullOrEmpty(item.Estrutura.Descricao))
                     {
                         PessoaAPI[index].Estrutura = item.Estrutura;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Horario.Checked)
                     {
                         PessoaAPI[index].Horarios = item.Horarios;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                     if (Check_alt_Cargo.Checked && !string.IsNullOrEmpty(item.Cargo.Descricao))
                     {
-
                         PessoaAPI[index].Cargo = item.Cargo;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
                     if (Check_alt_Sexo.Checked)
                     {
                         PessoaAPI[index].Sexo = item.Sexo;
                         PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = Txb_CPF_Resp_Altera_Pessoa.Text.Trim();
+
                     }
 
                 }
             }
             Grid_Pessoa.Rows.Clear();
-            foreach (var item in PessoaAPI)
+            foreach (var item in PessoaAPI.Where(x => x.Atualiza == true).ToList())
             {
                 string? Estrutura = item.Estrutura.Descricao;
                 string? cargo = item?.Cargo?.Descricao;

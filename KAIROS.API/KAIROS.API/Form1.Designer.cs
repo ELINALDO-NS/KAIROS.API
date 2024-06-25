@@ -121,6 +121,8 @@
             Btn_CaminExcel_Alt_Pessoa = new Button();
             Txb_Camin_Excel_Altera_Pessoa = new TextBox();
             label9 = new Label();
+            Txb_CPF_Resp_Altera_Pessoa = new TextBox();
+            label13 = new Label();
             tabControl1.SuspendLayout();
             InsereCadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpinPessoa).BeginInit();
@@ -638,6 +640,8 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(Txb_CPF_Resp_Altera_Pessoa);
+            tabPage3.Controls.Add(label13);
             tabPage3.Controls.Add(Btn_BKP_Excel);
             tabPage3.Controls.Add(Lbl_StatusAlteraPessoa);
             tabPage3.Controls.Add(groupBox1);
@@ -679,7 +683,7 @@
             // 
             Btn_BKP_Excel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Btn_BKP_Excel.ImageAlign = ContentAlignment.MiddleRight;
-            Btn_BKP_Excel.Location = new Point(614, 17);
+            Btn_BKP_Excel.Location = new Point(772, 17);
             Btn_BKP_Excel.Name = "Btn_BKP_Excel";
             Btn_BKP_Excel.Size = new Size(70, 25);
             Btn_BKP_Excel.TabIndex = 41;
@@ -745,7 +749,7 @@
             // 
             Btn_Iniciar_AlteraPessoa.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Btn_Iniciar_AlteraPessoa.ImageAlign = ContentAlignment.MiddleRight;
-            Btn_Iniciar_AlteraPessoa.Location = new Point(290, 110);
+            Btn_Iniciar_AlteraPessoa.Location = new Point(276, 108);
             Btn_Iniciar_AlteraPessoa.Name = "Btn_Iniciar_AlteraPessoa";
             Btn_Iniciar_AlteraPessoa.Size = new Size(122, 27);
             Btn_Iniciar_AlteraPessoa.TabIndex = 35;
@@ -758,7 +762,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             label12.ForeColor = Color.Red;
-            label12.Location = new Point(484, 114);
+            label12.Location = new Point(604, 92);
             label12.Name = "label12";
             label12.Size = new Size(243, 17);
             label12.TabIndex = 34;
@@ -894,7 +898,7 @@
             // 
             btn_Importar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Importar.ImageAlign = ContentAlignment.MiddleRight;
-            btn_Importar.Location = new Point(538, 17);
+            btn_Importar.Location = new Point(696, 17);
             btn_Importar.Name = "btn_Importar";
             btn_Importar.Size = new Size(70, 25);
             btn_Importar.TabIndex = 19;
@@ -907,7 +911,7 @@
             Txb_Alt_Pessoa_CNPJ.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             Txb_Alt_Pessoa_CNPJ.Location = new Point(60, 17);
             Txb_Alt_Pessoa_CNPJ.Name = "Txb_Alt_Pessoa_CNPJ";
-            Txb_Alt_Pessoa_CNPJ.Size = new Size(193, 25);
+            Txb_Alt_Pessoa_CNPJ.Size = new Size(136, 25);
             Txb_Alt_Pessoa_CNPJ.TabIndex = 18;
             Txb_Alt_Pessoa_CNPJ.Text = "63.227.763/0001-90\t";
             // 
@@ -924,7 +928,7 @@
             // Txb_Alt_Pessoa_Key
             // 
             Txb_Alt_Pessoa_Key.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Txb_Alt_Pessoa_Key.Location = new Point(326, 17);
+            Txb_Alt_Pessoa_Key.Location = new Point(263, 17);
             Txb_Alt_Pessoa_Key.Name = "Txb_Alt_Pessoa_Key";
             Txb_Alt_Pessoa_Key.Size = new Size(193, 25);
             Txb_Alt_Pessoa_Key.TabIndex = 16;
@@ -934,7 +938,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label11.Location = new Point(271, 25);
+            label11.Location = new Point(208, 25);
             label11.Name = "label11";
             label11.Size = new Size(44, 15);
             label11.TabIndex = 15;
@@ -944,10 +948,10 @@
             // 
             Grid_Pessoa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             Grid_Pessoa.Columns.AddRange(new DataGridViewColumn[] { Id, Matricula, Nome, PIS, Cracha, DataDeNascimento, DataDeAdmissao, RG, CPF, CELULAR, EMAIL, DEPARTAMENTO, HORARIO, CARGO, SEXO });
-            Grid_Pessoa.Location = new Point(0, 151);
+            Grid_Pessoa.Location = new Point(0, 153);
             Grid_Pessoa.Name = "Grid_Pessoa";
             Grid_Pessoa.RowHeadersVisible = false;
-            Grid_Pessoa.Size = new Size(1360, 225);
+            Grid_Pessoa.Size = new Size(1360, 223);
             Grid_Pessoa.TabIndex = 10;
             // 
             // Id
@@ -1068,6 +1072,24 @@
             label9.Size = new Size(98, 17);
             label9.TabIndex = 6;
             label9.Text = "Caminho Excel";
+            // 
+            // Txb_CPF_Resp_Altera_Pessoa
+            // 
+            Txb_CPF_Resp_Altera_Pessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_CPF_Resp_Altera_Pessoa.Location = new Point(582, 15);
+            Txb_CPF_Resp_Altera_Pessoa.Name = "Txb_CPF_Resp_Altera_Pessoa";
+            Txb_CPF_Resp_Altera_Pessoa.Size = new Size(108, 25);
+            Txb_CPF_Resp_Altera_Pessoa.TabIndex = 43;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label13.Location = new Point(477, 23);
+            label13.Name = "label13";
+            label13.Size = new Size(99, 15);
+            label13.TabIndex = 42;
+            label13.Text = "CPF Responsavel";
             // 
             // Form1
             // 
@@ -1198,5 +1220,7 @@
         private RadioButton RB_Matricula;
         private Label Lbl_StatusAlteraPessoa;
         private Button Btn_BKP_Excel;
+        private TextBox Txb_CPF_Resp_Altera_Pessoa;
+        private Label label13;
     }
 }

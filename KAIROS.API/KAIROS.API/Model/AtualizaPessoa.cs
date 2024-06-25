@@ -24,6 +24,7 @@ namespace KAIROS.API.Model
         public string CodigoPis { get; set; }
         public bool Atualiza { get; set; } = false;
         public int Sexo { get; set; }
+        public string CpfResponsavel { get; set; }
         public Ambientetrabalhopessoa[] AmbienteTrabalhoPessoa { get; set; }
     }
 

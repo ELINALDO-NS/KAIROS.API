@@ -3,3 +3,32 @@
 25-06-2024_14-20 - Company doesn't have the searched employee - Pagina requisitada: 2
 25-06-2024_14-36 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
 25-06-2024_14-36 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_14-51 - Company not found. Please check the Identifier parameter - Pagina requisitada: 1
+25-06-2024_14-51 - Company not found. Please check the Identifier parameter - Pagina requisitada: 2
+25-06-2024_14-51 - Company not found. Please check the Identifier parameter - Pagina requisitada: 1
+25-06-2024_14-51 - Company not found. Please check the Identifier parameter - Pagina requisitada: 2
+25-06-2024_14-52 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_14-53 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_14-55 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-19 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-20 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-20 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-22 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-23 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-34 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-34 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-34 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-34 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-39 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-40 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-42 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-42 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-43 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-43 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-43 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-44 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-44 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-46 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-46 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456
+25-06-2024_15-49 - Company doesn't have the searched employee - Pagina requisitada: 2
+25-06-2024_15-49 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 123456

@@ -38,6 +38,7 @@ namespace KAIROS.API.Model
         public Tiposalario TipoSalario { get; set; }
         public object TipoSalarioExportacao { get; set; }
         public Horarios[] Horarios { get; set; }
+        public bool Atualiza { get; set; } = false;
 
         [JsonIgnore]
         //public string? HorarioPessoa { get; set; }

@@ -327,10 +327,6 @@ namespace KAIROS.API
                 MessageBox.Show(ex.Message, "Valida Dados");
             }
 
-
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -418,7 +414,8 @@ namespace KAIROS.API
                 }
                 if (PessoaAPI.Count > 0)
                 {
-                    MessageBox.Show("Dados Importados com Sucesso !", "Importar dados API");
+
+                    MessageBox.Show("Dados Importados com Sucesso !", "Importar dados API", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
@@ -498,71 +495,86 @@ namespace KAIROS.API
                     if (Check_alt_Matricula.Checked)
                     {
                         PessoaAPI[index].Matricula = item.Matricula;
+                        PessoaAPI[index].Atualiza = true;
+
                     }
 
                     if (Check_alt_Nome.Checked)
                     {
                         PessoaAPI[index].Nome = item.Nome;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_PIS.Checked)
                     {
                         PessoaAPI[index].CodigoPis = item.CodigoPis;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Crachar.Checked)
                     {
                         PessoaAPI[index].Cracha = item.Cracha;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Nascimento.Checked)
                     {
                         PessoaAPI[index].DataNascimento = item.DataNascimento;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Admissao.Checked)
                     {
                         PessoaAPI[index].DataAdmissao = item.DataAdmissao;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_RG.Checked)
                     {
                         PessoaAPI[index].Rg = item.Rg;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_CPF.Checked)
                     {
                         PessoaAPI[index].Cpf = item.Cpf;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Celular.Checked)
                     {
                         PessoaAPI[index].TelefoneCelular = item.TelefoneCelular;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Email.Checked)
                     {
                         PessoaAPI[index].Email = item.Email;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Departamento.Checked && !string.IsNullOrEmpty(item.Estrutura.Descricao))
                     {
                         PessoaAPI[index].Estrutura = item.Estrutura;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Horario.Checked)
                     {
                         PessoaAPI[index].Horarios = item.Horarios;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                     if (Check_alt_Cargo.Checked && !string.IsNullOrEmpty(item.Cargo.Descricao))
                     {
 
                         PessoaAPI[index].Cargo = item.Cargo;
+                        PessoaAPI[index].Atualiza = true;
                     }
                     if (Check_alt_Sexo.Checked)
                     {
                         PessoaAPI[index].Sexo = item.Sexo;
+                        PessoaAPI[index].Atualiza = true;
                     }
 
                 }
@@ -606,35 +618,39 @@ namespace KAIROS.API
             }
             Atualizadados = true;
             Btn_AtualizaDados.Enabled = true;
-            MessageBox.Show("Lista Atualizada Com Sucesso ! \nAs celulas em na cor azul, serão atualizados no KAIROS");
+            MessageBox.Show("Lista Atualizada Com Sucesso !", "Atulizar dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
         private async void Btn_Iniciar_AlteraPessoa_Click(object sender, EventArgs e)
         {
-            if (PessoaAPI.Count() == 0 || Atualizadados == false)
+
+            if (!PessoaAPI.Any(x => x.Atualiza == true))
             {
-                MessageBox.Show("Não existem dados a serem atualizados", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Não existem dados a serem atualizados", "Importar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+
             }
 
 
             await _excel.SalvaBKPExcel(PessoaAPI, Txb_Alt_Pessoa_CNPJ.Text);
             var p = JsonConvert.SerializeObject(PessoaAPI);
             var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
-            int total = pessoaatualizada.Count;
+            var ListaDeAlteracoes = pessoaatualizada?.Where(x => x.Atualiza == true).ToList();
+            int total = ListaDeAlteracoes.Count();
             int status = 0;
             Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
             await Task.Run(() =>
             {
-                Parallel.ForEach(pessoaatualizada, pessoa =>
+                Parallel.ForEach(ListaDeAlteracoes, pessoa =>
                   {
+
                       _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, pessoa);
 
                       Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
-                    {
+                      {
                         Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-                    }));
+                       }));
                       status++;
 
                   });
@@ -657,10 +673,10 @@ namespace KAIROS.API
             }
             else
             {
-                MessageBox.Show("É necessario importar os dados da API antes de fazer o BKP !", "BKP Excel",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("É necessario importar os dados da API antes de fazer o BKP !", "BKP Excel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-           
+
         }
     }
 

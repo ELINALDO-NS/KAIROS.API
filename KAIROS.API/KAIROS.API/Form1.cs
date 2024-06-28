@@ -130,6 +130,12 @@ namespace KAIROS.API
                 MessageBox.Show("Verifique os Campos: KEY, CNPJ, e CPFResponsavel", "Iniciar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (!Check_Cargos.Checked && !Check_Estruturas.Checked && !Check_Pessoas.Checked)
+            {
+                MessageBox.Show("Selecione os items a serem inseridos!", "Iniciar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (string.IsNullOrEmpty(Txb_Excel.Text))
             {
                 if (!PathLeitura(Txb_Excel))
@@ -151,11 +157,11 @@ namespace KAIROS.API
 
             #region Labels
             Lbl_ValidaDados.Visible = true;
-            Lbl_Horarios.Visible = true;
-            Lbl_Estruturas.Visible = true;
-            Lbl_Cargos.Visible = true;
-            Lbl_Pessoas.Visible = true;
-            Lbl_StatusPessoa.Visible = true;
+            //Lbl_Horarios.Visible = true;
+           
+            //Lbl_Cargos.Visible = true;
+            //Lbl_Pessoas.Visible = true;
+            //Lbl_StatusPessoa.Visible = true;
             #endregion
 
 
@@ -168,55 +174,82 @@ namespace KAIROS.API
                 await Task.WhenAll(
                 Task.Run(async () =>
                 {
-                    AlterarStatus(SpinEstrutura, CheckEstruturas, true);
-                    await _API.InsereEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
+                    if (Check_Estruturas.Checked)
+                    {
+                        Lbl_Estruturas.Invoke(new Action(() => { Lbl_Estruturas.Visible = true; }));
+                        AlterarStatus(SpinEstrutura, CheckEstruturas, true);
+
+                        await _API.InsereEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
+
+                        
+                        AlterarStatus(SpinEstrutura, CheckEstruturas, false);
+
+                    }
+
                 }),
                 Task.Run(async () =>
                 {
-                    AlterarStatus(SpinCargos, CheckCargos, true);
-                    await _API.InsereCargosAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
+                    if (Check_Cargos.Checked)
+                    {
+                        Lbl_Cargos.Invoke(new Action(() => { Lbl_Cargos.Visible = true; }));
+                        AlterarStatus(SpinCargos, CheckCargos, true);
+                        await _API.InsereCargosAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
+                        AlterarStatus(SpinCargos, CheckCargos, false);
+                    }
+
                 })
                 );
-
-                await Task.WhenAll(
-                Task.Run(async () =>
-                 {
-                     Cargos = await _API.ListaCargosAPI(txb_Key.Text, Txb_CNPJ.Text);
-                     AlterarStatus(SpinCargos, CheckCargos, false);
-                 }),
-                Task.Run(async () =>
+                if (Check_Pessoas.Checked)
                 {
-                    AlterarStatus(SpinHorarios, CheckHorarios, true);
-                    Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
-                    AlterarStatus(SpinHorarios, CheckHorarios, false);
-                }),
-                Task.Run(async () =>
-                 {
-                     Estruturas = await _API.ListaEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text);
-                     AlterarStatus(SpinEstrutura, CheckEstruturas, false);
-                 }));
 
-                SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = true; }));
-                pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
-                await Task.Run(() =>
-                {
-                    int Stp = 0;
-                    SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = false; }));
-                    Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
-                    Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Visible = true));
+                    await Task.WhenAll(
+                    Task.Run(async () =>
+                     {
+                        
 
-                    Parallel.ForEach(pessoas, pessoa =>
+                         Lbl_Cargos.Invoke(new Action(() => { Lbl_Cargos.Visible = true; }));
+                         AlterarStatus(SpinCargos, CheckCargos, true);
+
+                         Cargos = await _API.ListaCargosAPI(txb_Key.Text, Txb_CNPJ.Text);
+                         AlterarStatus(SpinCargos, CheckCargos, false);
+                     }),
+                    Task.Run(async () =>
                     {
-                        _API.InserePessoaAPINOVO(txb_Key.Text, Txb_CNPJ.Text, pessoa);
-                        Stp++;
+                        Lbl_Horarios.Invoke(new Action(() => { Lbl_Horarios.Visible = true; }));
+                        AlterarStatus(SpinHorarios, CheckHorarios, true);
+                        Horarios = await _API.ListaHorariosAPI(txb_Key.Text, Txb_CNPJ.Text);
+                        AlterarStatus(SpinHorarios, CheckHorarios, false);
+                    }),
+                    Task.Run(async () =>
+                     {
+                         Lbl_Estruturas.Invoke(new Action(() => { Lbl_Estruturas.Visible = true; }));
+                         AlterarStatus(SpinEstrutura, CheckEstruturas, true);
+                         Estruturas = await _API.ListaEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text);
+                         AlterarStatus(SpinEstrutura, CheckEstruturas, false);
+                     }));
+
+                    Lbl_Pessoas.Invoke(new Action(() => { Lbl_Pessoas.Visible = true; }));
+                    SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = true; }));
+                    pessoas = await _excel.ListaPessoas(Txb_Excel.Text, Txb_CPFResponsavel.Text, Cargos, Estruturas, Horarios);
+                    await Task.Run(() =>
+                    {
+                        int Stp = 0;
+                        SpinPessoa.Invoke(new Action(() => { SpinPessoa.Visible = false; }));
                         Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
+                        Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Visible = true));
 
+                        Parallel.ForEach(pessoas, pessoa =>
+                        {
+                            _API.InserePessoaAPINOVO(txb_Key.Text, Txb_CNPJ.Text, pessoa);
+                            Stp++;
+                            Lbl_StatusPessoa.Invoke(new Action(() => Lbl_StatusPessoa.Text = $"{Stp}/{pessoas.Count}"));
+
+                        });
                     });
-                });
 
-                Lbl_StatusPessoa.Visible = false;
-                AlterarStatus(SpinPessoa, CheckPessoa, false);
-
+                    Lbl_StatusPessoa.Visible = false;
+                    AlterarStatus(SpinPessoa, CheckPessoa, false);
+                }
                 MessageBox.Show("OK");
 
             }
@@ -681,8 +714,8 @@ namespace KAIROS.API
 
                       Lbl_StatusAlteraPessoa.Invoke(new MethodInvoker(delegate
                       {
-                        Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
-                       }));
+                          Lbl_StatusAlteraPessoa.Text = $"{status}/{total}";
+                      }));
                       status++;
 
                   });

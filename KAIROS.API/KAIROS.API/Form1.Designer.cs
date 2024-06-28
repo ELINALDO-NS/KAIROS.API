@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             tabControl1 = new TabControl();
             InsereCadastros = new TabPage();
+            groupBox2 = new GroupBox();
+            Check_Pessoas = new CheckBox();
+            Check_Cargos = new CheckBox();
+            Check_Estruturas = new CheckBox();
             SpinPessoa = new PictureBox();
             SpinCargos = new PictureBox();
             SpinEstrutura = new PictureBox();
@@ -74,6 +78,8 @@
             Txb_Caminho_Excel_Desligamento = new TextBox();
             label3 = new Label();
             tabPage3 = new TabPage();
+            Txb_CPF_Resp_Altera_Pessoa = new TextBox();
+            label13 = new Label();
             Btn_BKP_Excel = new Button();
             Lbl_StatusAlteraPessoa = new Label();
             groupBox1 = new GroupBox();
@@ -121,10 +127,9 @@
             Btn_CaminExcel_Alt_Pessoa = new Button();
             Txb_Camin_Excel_Altera_Pessoa = new TextBox();
             label9 = new Label();
-            Txb_CPF_Resp_Altera_Pessoa = new TextBox();
-            label13 = new Label();
             tabControl1.SuspendLayout();
             InsereCadastros.SuspendLayout();
+            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SpinPessoa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SpinCargos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SpinEstrutura).BeginInit();
@@ -156,6 +161,7 @@
             // 
             // InsereCadastros
             // 
+            InsereCadastros.Controls.Add(groupBox2);
             InsereCadastros.Controls.Add(SpinPessoa);
             InsereCadastros.Controls.Add(SpinCargos);
             InsereCadastros.Controls.Add(SpinEstrutura);
@@ -192,10 +198,53 @@
             InsereCadastros.Text = "Insere Cadastros";
             InsereCadastros.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(Check_Pessoas);
+            groupBox2.Controls.Add(Check_Cargos);
+            groupBox2.Controls.Add(Check_Estruturas);
+            groupBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox2.Location = new Point(7, 185);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(291, 55);
+            groupBox2.TabIndex = 32;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Inserir";
+            // 
+            // Check_Pessoas
+            // 
+            Check_Pessoas.AutoSize = true;
+            Check_Pessoas.Location = new Point(207, 22);
+            Check_Pessoas.Name = "Check_Pessoas";
+            Check_Pessoas.Size = new Size(75, 21);
+            Check_Pessoas.TabIndex = 2;
+            Check_Pessoas.Text = "Pessoas";
+            Check_Pessoas.UseVisualStyleBackColor = true;
+            // 
+            // Check_Cargos
+            // 
+            Check_Cargos.AutoSize = true;
+            Check_Cargos.Location = new Point(117, 22);
+            Check_Cargos.Name = "Check_Cargos";
+            Check_Cargos.Size = new Size(69, 21);
+            Check_Cargos.TabIndex = 1;
+            Check_Cargos.Text = "Cargos";
+            Check_Cargos.UseVisualStyleBackColor = true;
+            // 
+            // Check_Estruturas
+            // 
+            Check_Estruturas.AutoSize = true;
+            Check_Estruturas.Location = new Point(7, 22);
+            Check_Estruturas.Name = "Check_Estruturas";
+            Check_Estruturas.Size = new Size(89, 21);
+            Check_Estruturas.TabIndex = 0;
+            Check_Estruturas.Text = "Estruturas";
+            Check_Estruturas.UseVisualStyleBackColor = true;
+            // 
             // SpinPessoa
             // 
             SpinPessoa.Image = (Image)resources.GetObject("SpinPessoa.Image");
-            SpinPessoa.Location = new Point(522, 193);
+            SpinPessoa.Location = new Point(521, 246);
             SpinPessoa.Name = "SpinPessoa";
             SpinPessoa.Size = new Size(30, 20);
             SpinPessoa.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -206,7 +255,7 @@
             // SpinCargos
             // 
             SpinCargos.Image = (Image)resources.GetObject("SpinCargos.Image");
-            SpinCargos.Location = new Point(324, 193);
+            SpinCargos.Location = new Point(323, 246);
             SpinCargos.Name = "SpinCargos";
             SpinCargos.Size = new Size(30, 20);
             SpinCargos.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -217,7 +266,7 @@
             // SpinEstrutura
             // 
             SpinEstrutura.Image = (Image)resources.GetObject("SpinEstrutura.Image");
-            SpinEstrutura.Location = new Point(235, 193);
+            SpinEstrutura.Location = new Point(234, 246);
             SpinEstrutura.Name = "SpinEstrutura";
             SpinEstrutura.Size = new Size(30, 20);
             SpinEstrutura.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -228,7 +277,7 @@
             // SpinHorarios
             // 
             SpinHorarios.Image = (Image)resources.GetObject("SpinHorarios.Image");
-            SpinHorarios.Location = new Point(424, 193);
+            SpinHorarios.Location = new Point(423, 246);
             SpinHorarios.Name = "SpinHorarios";
             SpinHorarios.Size = new Size(30, 20);
             SpinHorarios.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -239,7 +288,7 @@
             // SpinValidaDados
             // 
             SpinValidaDados.Image = (Image)resources.GetObject("SpinValidaDados.Image");
-            SpinValidaDados.Location = new Point(123, 193);
+            SpinValidaDados.Location = new Point(122, 246);
             SpinValidaDados.Name = "SpinValidaDados";
             SpinValidaDados.Size = new Size(30, 20);
             SpinValidaDados.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -250,7 +299,7 @@
             // CheckPessoa
             // 
             CheckPessoa.Image = (Image)resources.GetObject("CheckPessoa.Image");
-            CheckPessoa.Location = new Point(522, 192);
+            CheckPessoa.Location = new Point(521, 245);
             CheckPessoa.Name = "CheckPessoa";
             CheckPessoa.Size = new Size(30, 20);
             CheckPessoa.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -261,7 +310,7 @@
             // CheckCargos
             // 
             CheckCargos.Image = (Image)resources.GetObject("CheckCargos.Image");
-            CheckCargos.Location = new Point(324, 193);
+            CheckCargos.Location = new Point(323, 246);
             CheckCargos.Name = "CheckCargos";
             CheckCargos.Size = new Size(30, 20);
             CheckCargos.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -272,7 +321,7 @@
             // CheckEstruturas
             // 
             CheckEstruturas.Image = (Image)resources.GetObject("CheckEstruturas.Image");
-            CheckEstruturas.Location = new Point(235, 193);
+            CheckEstruturas.Location = new Point(234, 246);
             CheckEstruturas.Name = "CheckEstruturas";
             CheckEstruturas.Size = new Size(30, 20);
             CheckEstruturas.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -283,7 +332,7 @@
             // CheckHorarios
             // 
             CheckHorarios.Image = (Image)resources.GetObject("CheckHorarios.Image");
-            CheckHorarios.Location = new Point(424, 193);
+            CheckHorarios.Location = new Point(423, 246);
             CheckHorarios.Name = "CheckHorarios";
             CheckHorarios.Size = new Size(30, 20);
             CheckHorarios.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -294,7 +343,7 @@
             // CheckValidaDados
             // 
             CheckValidaDados.Image = (Image)resources.GetObject("CheckValidaDados.Image");
-            CheckValidaDados.Location = new Point(123, 193);
+            CheckValidaDados.Location = new Point(122, 246);
             CheckValidaDados.Name = "CheckValidaDados";
             CheckValidaDados.Size = new Size(30, 20);
             CheckValidaDados.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -306,7 +355,7 @@
             // 
             Lbl_StatusPessoa.AutoSize = true;
             Lbl_StatusPessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_StatusPessoa.Location = new Point(522, 196);
+            Lbl_StatusPessoa.Location = new Point(521, 249);
             Lbl_StatusPessoa.Name = "Lbl_StatusPessoa";
             Lbl_StatusPessoa.Size = new Size(0, 17);
             Lbl_StatusPessoa.TabIndex = 21;
@@ -315,7 +364,7 @@
             // 
             Lbl_Pessoas.AutoSize = true;
             Lbl_Pessoas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Pessoas.Location = new Point(460, 196);
+            Lbl_Pessoas.Location = new Point(459, 249);
             Lbl_Pessoas.Name = "Lbl_Pessoas";
             Lbl_Pessoas.Size = new Size(56, 17);
             Lbl_Pessoas.TabIndex = 20;
@@ -326,7 +375,7 @@
             // 
             Lbl_Cargos.AutoSize = true;
             Lbl_Cargos.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Cargos.Location = new Point(271, 196);
+            Lbl_Cargos.Location = new Point(270, 249);
             Lbl_Cargos.Name = "Lbl_Cargos";
             Lbl_Cargos.Size = new Size(50, 17);
             Lbl_Cargos.TabIndex = 19;
@@ -337,7 +386,7 @@
             // 
             Lbl_Estruturas.AutoSize = true;
             Lbl_Estruturas.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Estruturas.Location = new Point(162, 196);
+            Lbl_Estruturas.Location = new Point(161, 249);
             Lbl_Estruturas.Name = "Lbl_Estruturas";
             Lbl_Estruturas.Size = new Size(70, 17);
             Lbl_Estruturas.TabIndex = 18;
@@ -348,7 +397,7 @@
             // 
             Lbl_Horarios.AutoSize = true;
             Lbl_Horarios.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_Horarios.Location = new Point(360, 196);
+            Lbl_Horarios.Location = new Point(359, 249);
             Lbl_Horarios.Name = "Lbl_Horarios";
             Lbl_Horarios.Size = new Size(61, 17);
             Lbl_Horarios.TabIndex = 17;
@@ -359,7 +408,7 @@
             // 
             Lbl_ValidaDados.AutoSize = true;
             Lbl_ValidaDados.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Lbl_ValidaDados.Location = new Point(7, 196);
+            Lbl_ValidaDados.Location = new Point(6, 249);
             Lbl_ValidaDados.Name = "Lbl_ValidaDados";
             Lbl_ValidaDados.Size = new Size(113, 17);
             Lbl_ValidaDados.TabIndex = 16;
@@ -678,6 +727,24 @@
             tabPage3.TabIndex = 3;
             tabPage3.Text = "Altera Pessoa";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // Txb_CPF_Resp_Altera_Pessoa
+            // 
+            Txb_CPF_Resp_Altera_Pessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_CPF_Resp_Altera_Pessoa.Location = new Point(582, 15);
+            Txb_CPF_Resp_Altera_Pessoa.Name = "Txb_CPF_Resp_Altera_Pessoa";
+            Txb_CPF_Resp_Altera_Pessoa.Size = new Size(108, 25);
+            Txb_CPF_Resp_Altera_Pessoa.TabIndex = 43;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label13.Location = new Point(477, 23);
+            label13.Name = "label13";
+            label13.Size = new Size(99, 15);
+            label13.TabIndex = 42;
+            label13.Text = "CPF Responsavel";
             // 
             // Btn_BKP_Excel
             // 
@@ -1073,24 +1140,6 @@
             label9.TabIndex = 6;
             label9.Text = "Caminho Excel";
             // 
-            // Txb_CPF_Resp_Altera_Pessoa
-            // 
-            Txb_CPF_Resp_Altera_Pessoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Txb_CPF_Resp_Altera_Pessoa.Location = new Point(582, 15);
-            Txb_CPF_Resp_Altera_Pessoa.Name = "Txb_CPF_Resp_Altera_Pessoa";
-            Txb_CPF_Resp_Altera_Pessoa.Size = new Size(108, 25);
-            Txb_CPF_Resp_Altera_Pessoa.TabIndex = 43;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label13.Location = new Point(477, 23);
-            label13.Name = "label13";
-            label13.Size = new Size(99, 15);
-            label13.TabIndex = 42;
-            label13.Text = "CPF Responsavel";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1104,6 +1153,8 @@
             tabControl1.ResumeLayout(false);
             InsereCadastros.ResumeLayout(false);
             InsereCadastros.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SpinPessoa).EndInit();
             ((System.ComponentModel.ISupportInitialize)SpinCargos).EndInit();
             ((System.ComponentModel.ISupportInitialize)SpinEstrutura).EndInit();
@@ -1222,5 +1273,9 @@
         private Button Btn_BKP_Excel;
         private TextBox Txb_CPF_Resp_Altera_Pessoa;
         private Label label13;
+        private GroupBox groupBox2;
+        private CheckBox Check_Pessoas;
+        private CheckBox Check_Cargos;
+        private CheckBox Check_Estruturas;
     }
 }

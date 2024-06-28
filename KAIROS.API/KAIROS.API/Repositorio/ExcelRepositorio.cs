@@ -511,7 +511,6 @@ namespace KAIROS.API.Repositorio
 
 
                               #endregion
-
                               #region Horario
 
                               foreach (var H in horarios)
@@ -540,9 +539,7 @@ namespace KAIROS.API.Repositorio
                                   }
 
 
-                                  #endregion
-                              
-
+                                  #endregion                            
                               #region Base de Horas
                               if (!string.IsNullOrEmpty(BaseDeHoras))
                               {
@@ -653,7 +650,6 @@ namespace KAIROS.API.Repositorio
             }
             return Pessoas;
         }
-        
         public async Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ, string SalvarEm = "")
         {
             Directory.CreateDirectory(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
@@ -807,8 +803,7 @@ namespace KAIROS.API.Repositorio
                 ExcelHorario.Save();
             }
         }
-
-            public async Task SalvaHorarios(string caminhoLeitura, string SalvarEm)
+        public async Task SalvaHorarios(string caminhoLeitura, string SalvarEm)
         {
 
             var horarios = await ListaHorariosNovo(caminhoLeitura);
@@ -864,6 +859,60 @@ namespace KAIROS.API.Repositorio
 
             });
         }
+        public async Task<List<SaldoBH>> InsereSaldoBH(string caminho)
+        {
+            var Saldo = new List<SaldoBH>();            
+            var excel = new Excel(caminho);
+            await Task.Run(() =>
+            {
+
+                int Linha = 5;
+                while (true)
+                {
+                    string Matricula = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 1);
+
+                    if (!string.IsNullOrEmpty(Matricula))
+                    {
+                        if (!Saldo.Any(a => a.Matricula.Replace(" ", "").Equals(Matricula.Replace(" ", ""))))
+                        {
+                            if (!string.IsNullOrEmpty(excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2)))
+                            {
+                                bool Pos_Neg = false;
+
+                                if (excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 3) == "POSITIVO")
+                                {
+                                    Pos_Neg = true;
+                                }
+                                string[] Saldo1 = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2).Split(":");
+                                Saldo.Add(new SaldoBH
+                                {
+                                    Matricula = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 1),
+                                    Saldo = Saldo1[0].PadLeft(4, '0') + Saldo1[1],
+                                    Posito_Negativo = Pos_Neg,                                    
+                                    Data = Convert.ToDateTime(excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 4)),
+                                    
+
+                                });
+
+                            }
+
+                        }
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+             
+                
+
+            });
+
+            return Saldo;
+
+        }
+
 
     }
 }

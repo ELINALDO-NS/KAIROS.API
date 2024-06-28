@@ -26,7 +26,7 @@ namespace KAIROS.API
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
 
@@ -367,12 +367,23 @@ namespace KAIROS.API
             PathLeitura(txb_InsereSaldo_CaminhoExcel);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txb_Historico.Text) || string.IsNullOrEmpty(txb_Usuario.Text) || string.IsNullOrEmpty(txb_Senha.Text))
+            {
+                MessageBox.Show("Preencha os campos: Usuario, Senha e Historico","Insere Saldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+
             if (string.IsNullOrEmpty(txb_InsereSaldo_CaminhoExcel.Text))
             {
                 PathLeitura(txb_InsereSaldo_CaminhoExcel);
             }
+
+            var saldo = await _excel.InsereSaldoBH(txb_InsereSaldo_CaminhoExcel.Text);
+            var bot = new Bot();
+            bot.InsereSaldo(Kairos.Login(txb_Usuario.Text.Trim(),txb_Senha.Text.Trim()),saldo,txb_Historico.Text.Trim());
+
         }
 
         private void Btn_Excel_Desligamento_Click(object sender, EventArgs e)

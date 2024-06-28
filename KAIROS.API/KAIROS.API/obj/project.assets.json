@@ -690,6 +690,25 @@
           }
         }
       },
+      "Selenium.WebDriver/4.22.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Selenium.WebDriver.targets": {}
+        }
+      },
       "System.ComponentModel.Annotations/5.0.0": {
         "type": "package",
         "compile": {
@@ -1939,6 +1958,26 @@
         "restsharp.png"
       ]
     },
+    "Selenium.WebDriver/4.22.0": {
+      "sha512": "t2ZzGjpA85tIfk820howgg4r0bkelA4MiulUdqIcewgKPlznHenp4MczaX0tXXmjbRRTbMcRPA+JfnxFoE47AQ==",
+      "type": "package",
+      "path": "selenium.webdriver/4.22.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Selenium.WebDriver.targets",
+        "buildTransitive/Selenium.WebDriver.targets",
+        "icon.png",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
+        "manager/linux/selenium-manager",
+        "manager/macos/selenium-manager",
+        "manager/windows/selenium-manager.exe",
+        "selenium.webdriver.4.22.0.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
     "System.ComponentModel.Annotations/5.0.0": {
       "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
       "type": "package",
@@ -2356,23 +2395,24 @@
       "EPPlus >= 7.0.4",
       "Microsoft.Extensions.Hosting >= 8.0.0",
       "Newtonsoft.Json >= 13.0.3",
-      "RestSharp >= 110.2.0"
+      "RestSharp >= 110.2.0",
+      "Selenium.WebDriver >= 4.22.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Meu_Notebook\\.nuget\\packages\\": {}
+    "C:\\Users\\SUPORTE\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
+      "projectUniqueName": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
       "projectName": "KAIROS.API",
-      "projectPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
-      "packagesPath": "C:\\Users\\Meu_Notebook\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\obj\\",
+      "projectPath": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
+      "packagesPath": "C:\\Users\\SUPORTE\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Meu_Notebook\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SUPORTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2380,7 +2420,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2419,6 +2458,10 @@
           "RestSharp": {
             "target": "Package",
             "version": "[110.2.0, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.22.0, )"
           }
         },
         "imports": [
@@ -2440,7 +2483,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

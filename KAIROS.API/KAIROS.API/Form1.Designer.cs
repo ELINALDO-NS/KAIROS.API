@@ -64,13 +64,15 @@
             Txb_Excel = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
+            txb_Historico = new TextBox();
+            label14 = new Label();
             button2 = new Button();
             Btn_IsenreSaldo_Iniciar = new Button();
             txb_InsereSaldo_CaminhoExcel = new TextBox();
             label2 = new Label();
-            btn_InsereSaldo_Usuario = new TextBox();
+            txb_Usuario = new TextBox();
             label7 = new Label();
-            btn_InsereSaldo_Senha = new TextBox();
+            txb_Senha = new TextBox();
             label8 = new Label();
             tabPage1 = new TabPage();
             button1 = new Button();
@@ -538,13 +540,15 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(txb_Historico);
+            tabPage2.Controls.Add(label14);
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(Btn_IsenreSaldo_Iniciar);
             tabPage2.Controls.Add(txb_InsereSaldo_CaminhoExcel);
             tabPage2.Controls.Add(label2);
-            tabPage2.Controls.Add(btn_InsereSaldo_Usuario);
+            tabPage2.Controls.Add(txb_Usuario);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(btn_InsereSaldo_Senha);
+            tabPage2.Controls.Add(txb_Senha);
             tabPage2.Controls.Add(label8);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
@@ -553,6 +557,24 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Insere Saldo BH";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txb_Historico
+            // 
+            txb_Historico.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txb_Historico.Location = new Point(79, 135);
+            txb_Historico.Name = "txb_Historico";
+            txb_Historico.Size = new Size(175, 25);
+            txb_Historico.TabIndex = 25;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label14.Location = new Point(9, 143);
+            label14.Name = "label14";
+            label14.Size = new Size(64, 17);
+            label14.TabIndex = 24;
+            label14.Text = "Historico";
             // 
             // button2
             // 
@@ -568,7 +590,7 @@
             // Btn_IsenreSaldo_Iniciar
             // 
             Btn_IsenreSaldo_Iniciar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Btn_IsenreSaldo_Iniciar.Location = new Point(102, 109);
+            Btn_IsenreSaldo_Iniciar.Location = new Point(115, 248);
             Btn_IsenreSaldo_Iniciar.Name = "Btn_IsenreSaldo_Iniciar";
             Btn_IsenreSaldo_Iniciar.Size = new Size(152, 27);
             Btn_IsenreSaldo_Iniciar.TabIndex = 23;
@@ -595,13 +617,13 @@
             label2.TabIndex = 3;
             label2.Text = "Caminho Excel";
             // 
-            // btn_InsereSaldo_Usuario
+            // txb_Usuario
             // 
-            btn_InsereSaldo_Usuario.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            btn_InsereSaldo_Usuario.Location = new Point(61, 51);
-            btn_InsereSaldo_Usuario.Name = "btn_InsereSaldo_Usuario";
-            btn_InsereSaldo_Usuario.Size = new Size(193, 25);
-            btn_InsereSaldo_Usuario.TabIndex = 22;
+            txb_Usuario.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txb_Usuario.Location = new Point(61, 51);
+            txb_Usuario.Name = "txb_Usuario";
+            txb_Usuario.Size = new Size(193, 25);
+            txb_Usuario.TabIndex = 22;
             // 
             // label7
             // 
@@ -613,19 +635,19 @@
             label7.TabIndex = 21;
             label7.Text = "Usuario";
             // 
-            // btn_InsereSaldo_Senha
+            // txb_Senha
             // 
-            btn_InsereSaldo_Senha.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            btn_InsereSaldo_Senha.Location = new Point(314, 51);
-            btn_InsereSaldo_Senha.Name = "btn_InsereSaldo_Senha";
-            btn_InsereSaldo_Senha.Size = new Size(97, 25);
-            btn_InsereSaldo_Senha.TabIndex = 20;
+            txb_Senha.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            txb_Senha.Location = new Point(61, 91);
+            txb_Senha.Name = "txb_Senha";
+            txb_Senha.Size = new Size(97, 25);
+            txb_Senha.TabIndex = 20;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label8.Location = new Point(267, 59);
+            label8.Location = new Point(9, 99);
             label8.Name = "label8";
             label8.Size = new Size(45, 17);
             label8.TabIndex = 19;
@@ -1195,9 +1217,9 @@
         private TextBox Txb_CNPJ;
         private Label label5;
         private Button Btn_IsenreSaldo_Iniciar;
-        private TextBox btn_InsereSaldo_Usuario;
+        private TextBox txb_Usuario;
         private Label label7;
-        private TextBox btn_InsereSaldo_Senha;
+        private TextBox txb_Senha;
         private Label label8;
         private PictureBox CheckValidaDados;
         private Label Lbl_StatusPessoa;
@@ -1277,5 +1299,7 @@
         private CheckBox Check_Pessoas;
         private CheckBox Check_Cargos;
         private CheckBox Check_Estruturas;
+        private TextBox txb_Historico;
+        private Label label14;
     }
 }

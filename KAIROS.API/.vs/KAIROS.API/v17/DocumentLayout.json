@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\",
+  "WorkspaceRootPath": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\meu_notebook\\documents\\projetos\\kairos.api\\kairos.api\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\csharp\\kairos.api\\kairos.api\\kairos.api\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\csharp\\kairos.api\\kairos.api\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\meu_notebook\\documents\\projetos\\kairos.api\\kairos.api\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\csharp\\kairos.api\\kairos.api\\kairos.api\\kairos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\kairos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,37 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Kairos.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Kairos.cs",
+              "RelativeDocumentMoniker": "KAIROS.API\\Kairos.cs",
+              "ToolTip": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Kairos.cs",
+              "RelativeToolTip": "KAIROS.API\\Kairos.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T19:28:58.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bot.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Bot.cs",
+              "RelativeDocumentMoniker": "KAIROS.API\\Bot.cs",
+              "ToolTip": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Bot.cs",
+              "RelativeToolTip": "KAIROS.API\\Bot.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAjwCkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T16:21:05.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeDocumentMoniker": "KAIROS.API\\Form1.cs",
-              "ToolTip": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs [Projeto]",
+              "ToolTip": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs [Projeto]",
               "RelativeToolTip": "KAIROS.API\\Form1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T23:28:33.534Z",
@@ -34,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeDocumentMoniker": "KAIROS.API\\Form1.cs",
-              "ToolTip": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
+              "ToolTip": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeToolTip": "KAIROS.API\\Form1.cs",
-              "ViewState": "AQIAANsAAAAAAAAAAAAewOUAAAAAAAAA",
+              "ViewState": "AQIAAHkBAAAAAAAAAAArwIABAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T23:24:53.632Z",
               "EditorCaption": ""

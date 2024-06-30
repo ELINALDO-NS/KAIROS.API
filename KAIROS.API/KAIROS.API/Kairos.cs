@@ -14,7 +14,12 @@ namespace KAIROS.API
         public static ChromeDriver Login(string usuario, string senha, string url = "https://www.dimepkairos.com.br")
         {
 
-            ChromeDriver Driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();           
+            //options.AddArgument("-headless");            
+            var driverService = ChromeDriverService.CreateDefaultService();
+            driverService.HideCommandPromptWindow = true;
+
+            ChromeDriver Driver = new ChromeDriver(driverService,options);
             Driver.Manage().Window.Maximize();
             Driver.Navigate().GoToUrl(url);
             var Usuario = Driver.FindElement(By.Id("LogOnModel_UserName"));

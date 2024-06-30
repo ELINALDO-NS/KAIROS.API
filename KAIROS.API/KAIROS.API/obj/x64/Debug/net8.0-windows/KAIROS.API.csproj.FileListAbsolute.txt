@@ -320,3 +320,7 @@ C:\Users\SUPORTE\Documents\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug
 C:\Users\SUPORTE\Documents\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\macos\selenium-manager
 C:\Users\SUPORTE\Documents\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\windows\selenium-manager.exe
 C:\Users\SUPORTE\Documents\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\WebDriver.dll
+C:\Users\Meu_Notebook\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\linux\selenium-manager
+C:\Users\Meu_Notebook\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\macos\selenium-manager
+C:\Users\Meu_Notebook\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\windows\selenium-manager.exe
+C:\Users\Meu_Notebook\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\WebDriver.dll

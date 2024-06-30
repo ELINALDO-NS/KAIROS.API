@@ -13,7 +13,8 @@ namespace KAIROS.API.Model
         public string? Saldo { get; set; }
         public Boolean Posito_Negativo { get; set; }
         public DateTime? Data { get; set; }
+        public string? OK { get; set; } = string.Empty;
 
-        
+
     }
 }

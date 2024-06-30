@@ -564,7 +564,8 @@
             txb_Historico.Location = new Point(79, 135);
             txb_Historico.Name = "txb_Historico";
             txb_Historico.Size = new Size(175, 25);
-            txb_Historico.TabIndex = 25;
+            txb_Historico.TabIndex = 3;
+            txb_Historico.Text = "teste";
             // 
             // label14
             // 
@@ -623,7 +624,8 @@
             txb_Usuario.Location = new Point(61, 51);
             txb_Usuario.Name = "txb_Usuario";
             txb_Usuario.Size = new Size(193, 25);
-            txb_Usuario.TabIndex = 22;
+            txb_Usuario.TabIndex = 1;
+            txb_Usuario.Text = "supdmp@relopoint.com.br";
             // 
             // label7
             // 
@@ -641,7 +643,8 @@
             txb_Senha.Location = new Point(61, 91);
             txb_Senha.Name = "txb_Senha";
             txb_Senha.Size = new Size(97, 25);
-            txb_Senha.TabIndex = 20;
+            txb_Senha.TabIndex = 2;
+            txb_Senha.Text = "dimep";
             // 
             // label8
             // 
@@ -677,6 +680,7 @@
             button1.TabIndex = 6;
             button1.Text = "Iniciar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Btn_Excel_Desligamento
             // 

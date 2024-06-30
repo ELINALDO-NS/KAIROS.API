@@ -1,4 +1,5 @@
 ﻿using KAIROS.API.Model;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace KAIROS.API.Repositorio.Interface
         Task InserePessoaAPINOVO(string Key, string CNPJ, Pessoa pessoa);
         Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ,int pagina =1);
         Task AtualizaPessoasAPI(string Key, string CNPJ,AtualizaPessoa pessoa);
+        Task<bool> InsereSaldo(ChromeDriver bot, string Historico,string caminho);
 
 
     }

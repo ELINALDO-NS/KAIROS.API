@@ -4,8 +4,10 @@ using KAIROS.API.Repositorio.Interface;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using OfficeOpenXml.FormulaParsing.Exceptions;
+using OpenQA.Selenium.DevTools.V124.Page;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
+using static System.Windows.Forms.LinkLabel;
 
 namespace KAIROS.API
 {
@@ -26,7 +28,7 @@ namespace KAIROS.API
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
 
@@ -158,7 +160,7 @@ namespace KAIROS.API
             #region Labels
             Lbl_ValidaDados.Visible = true;
             //Lbl_Horarios.Visible = true;
-           
+
             //Lbl_Cargos.Visible = true;
             //Lbl_Pessoas.Visible = true;
             //Lbl_StatusPessoa.Visible = true;
@@ -181,7 +183,7 @@ namespace KAIROS.API
 
                         await _API.InsereEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
 
-                        
+
                         AlterarStatus(SpinEstrutura, CheckEstruturas, false);
 
                     }
@@ -205,7 +207,7 @@ namespace KAIROS.API
                     await Task.WhenAll(
                     Task.Run(async () =>
                      {
-                        
+
 
                          Lbl_Cargos.Invoke(new Action(() => { Lbl_Cargos.Visible = true; }));
                          AlterarStatus(SpinCargos, CheckCargos, true);
@@ -371,7 +373,7 @@ namespace KAIROS.API
         {
             if (string.IsNullOrEmpty(txb_Historico.Text) || string.IsNullOrEmpty(txb_Usuario.Text) || string.IsNullOrEmpty(txb_Senha.Text))
             {
-                MessageBox.Show("Preencha os campos: Usuario, Senha e Historico","Insere Saldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Preencha os campos: Usuario, Senha e Historico", "Insere Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -379,10 +381,29 @@ namespace KAIROS.API
             {
                 PathLeitura(txb_InsereSaldo_CaminhoExcel);
             }
+            try
+            {
 
-            var saldo = await _excel.InsereSaldoBH(txb_InsereSaldo_CaminhoExcel.Text);
-            var bot = new Bot();
-            bot.InsereSaldo(Kairos.Login(txb_Usuario.Text.Trim(),txb_Senha.Text.Trim()),saldo,txb_Historico.Text.Trim());
+                bool erro = await _API.InsereSaldo(Kairos.Login(txb_Usuario.Text.Trim(), txb_Senha.Text.Trim()), txb_Historico.Text.Trim(), txb_InsereSaldo_CaminhoExcel.Text);
+
+                if (erro)
+                {
+                    MessageBox.Show("Ocorreram erros no lançameto do saldo, verifique o arquivo LOG", "Insere Saldo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
+                    MessageBox.Show("Saldo inserido com sucesso !", "Insere Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreram erros \n" + ex.Message, "Insere Saldo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
 
         }
 
@@ -752,6 +773,11 @@ namespace KAIROS.API
                 MessageBox.Show("É necessario importar os dados da API antes de fazer o BKP !", "BKP Excel", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

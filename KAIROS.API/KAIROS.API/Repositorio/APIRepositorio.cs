@@ -1,6 +1,9 @@
 ﻿using KAIROS.API.Model;
 using KAIROS.API.Repositorio.Interface;
 using Newtonsoft.Json;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using RestSharp;
 using System;
 using System.Collections;
@@ -10,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.LinkLabel;
 
 namespace KAIROS.API.Repositorio
 {
@@ -35,9 +40,9 @@ namespace KAIROS.API.Repositorio
         public async Task InsereCargosAPI(string Key, string CNPJ, string caminho)
         {
             var cargos = await _excel.ListaCargosNovo(caminho);
-            foreach( var cargo in cargos ) 
-            { 
-     
+            foreach (var cargo in cargos)
+            {
+
                 using (var client = new RestClient(SalvaCargo_URL))
                 {
                     var request = new RestRequest("", Method.Post);
@@ -74,7 +79,7 @@ namespace KAIROS.API.Repositorio
         public async Task InsereEstruturasAPI(string Key, string CNPJ, string Caminho)
         {
             var estruturas = await _excel.ListaEstruturasNovo(Caminho);
-            foreach( var estrutura in estruturas)
+            foreach (var estrutura in estruturas)
             {
                 using (var client = new RestClient(SalvaEstrutura_URL))
                 {
@@ -233,7 +238,7 @@ namespace KAIROS.API.Repositorio
             var JPessoa = JsonConvert.SerializeObject(pessoa);
             request.AddJsonBody(JPessoa);
             request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
-            var response =  client.Execute(request);
+            var response = client.Execute(request);
             if (response.ContentType.Equals("application/json"))
             {
                 var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
@@ -252,9 +257,9 @@ namespace KAIROS.API.Repositorio
 
         }
 
-        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ,int pagina =1)
+        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ, int pagina = 1)
         {
-            List <Pessoa> pessoa = new List<Pessoa>();
+            List<Pessoa> pessoa = new List<Pessoa>();
             await Task.Run(() =>
             {
                 var client = new RestClient(ListaPessoas_URL);
@@ -287,8 +292,8 @@ namespace KAIROS.API.Repositorio
             return pessoa;
         }
 
-       public async Task AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)
-       {
+        public async Task AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)
+        {
             var client = new RestClient(AlteraPessoa_URL);
             var request = new RestRequest("", Method.Post);
             request.AddHeader("Content-Type", "application/json");
@@ -338,6 +343,150 @@ namespace KAIROS.API.Repositorio
                 Log.GravaLog("Desliga Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula);
             }
 
+        }
+
+        private bool PessoaExiste(ChromeDriver chromeDriver)
+        {
+
+            bool existe = chromeDriver.FindElements(By.ClassName("funcionarioName")).Count() > 0;
+            return existe;
+        }
+
+        private string ErroLancamento(ChromeDriver chromeDriver)
+        {
+            string existe = string.Empty;
+            if (chromeDriver.FindElements(By.ClassName("field-validation-error-Popups")).Count() > 0)
+            {
+                existe = chromeDriver.FindElement(By.ClassName("field-validation-error-Popups")).Text;
+                return existe;
+            }
+            else
+            {
+                return existe;
+            }
+        }
+
+        public async Task<bool> InsereSaldo(ChromeDriver bot, string Historico, string caminho)
+        {
+            using (bot)
+            {
+                int Linha = 5;
+                Excel excel = new Excel(caminho);
+                string Planilha = "Lanç. Saldo de Banco Residual";
+                bool erro = false;
+                await Task.Run(async () =>
+                {
+                    TimeSpan t = new TimeSpan(10);
+                    WebDriverWait wait = new WebDriverWait(bot, t);
+                    // WebElement element = wait.Until(ExpectedConditions.elementToBeClickable(By.id("someid")));
+                    MessageBox.Show("Selecione a Empresa !","Lança Saldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    bot.FindElement(By.Id("Tab6")).Click();
+                    bot.FindElement(By.Id("userAutocomplete")).SendKeys("teste");
+                    bot.FindElement(By.Id("SearchButtonPessoa")).Click();
+
+                    while (true)
+                    {
+                        string Matricula = excel.LeExcel(Planilha, Linha, 1);
+
+                        if (!string.IsNullOrEmpty(Matricula))
+                        {
+
+                            if (!string.IsNullOrEmpty(excel.LeExcel(Planilha, Linha, 2)))
+                            {
+                                bool Pos_Neg = false;
+
+                                if (excel.LeExcel(Planilha, Linha, 3) == "POSITIVO")
+                                {
+                                    Pos_Neg = true;
+                                }
+
+                                string[] Saldo1 = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2).Split(":");
+                                DateTime Data = Convert.ToDateTime(excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 4));
+                                string Saldo = $"{Saldo1[0].PadLeft(4, '0')}:{Saldo1[1]}";
+                                if (!(excel.LeExcel(Planilha, Linha, 5) == "OK".ToUpper()))
+                                {
+                                     erro = await InsereSaldoBot(bot, Matricula, Historico, Data.ToString(), Pos_Neg, Saldo);
+                                    if (erro)
+                                    {
+                                        excel.EscreveExcel(Planilha, Linha, 5, "NOK");
+                                    }
+                                    else
+                                    {
+                                        excel.EscreveExcel(Planilha, Linha, 5, "OK");
+                                    }
+                                }
+
+
+                            }
+
+
+                            Linha++;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                });
+                if (erro)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+
+        }
+
+        private async Task<bool> InsereSaldoBot(ChromeDriver bot, string Matricula, string Historico, string Data, bool Posito_Negativo, string Saldo)
+        {
+            Thread.Sleep(2000);
+            bot.FindElement(By.Id("filterResumeMessagesButton")).Click();
+            bot.FindElement(By.Id("userAutocomplete")).SendKeys($"{Matricula}");
+            bot.FindElement(By.Id("SearchButtonPessoa")).Click();
+            bot.FindElement(By.XPath("//*/text()[normalize-space(.)='Lançamento de Banco de Horas']/parent::*")).Click();
+            if (PessoaExiste(bot))
+            {
+
+                bot.FindElement(By.ClassName("checkboxCustom")).Click();
+                bot.FindElement(By.Id("LancarBancoHoras")).Click();
+                Thread.Sleep(3000);
+                if (Posito_Negativo)
+                {
+                    Thread.Sleep(1000);
+                    bot.ExecuteScript($"document.getElementById('credito').value = '{Saldo}'");
+                }
+                else
+                {
+                    Thread.Sleep(1000);
+                    bot.ExecuteScript($"document.getElementById('debito').value = '{Saldo}'");
+                }
+                bot.FindElement(By.Id("dataLancarBancoHoras")).Clear();
+                // bot.FindElement(By.Id("dataLancarBancoHoras")).SendKeys($"{saldo.Data}");
+
+                bot.ExecuteScript($"document.getElementById('dataLancarBancoHoras').value = '{Data?.Replace("00:00:00", "")}'");
+                bot.FindElement(By.Id("historico")).SendKeys(Historico);
+                bot.FindElement(By.Id("SaveLancarBancoHoras")).Click();
+                Thread.Sleep(3000);
+                if (!string.IsNullOrWhiteSpace(ErroLancamento(bot)))
+                {
+                    Log.GravaLog($"Funcionario de Matricula: {Matricula} - " + ErroLancamento(bot));
+                    Thread.Sleep(3000);
+                    bot.FindElement(By.XPath("//button/span")).Click();
+                    return true;
+                    // bot.FindElement(By.ClassName("ui-button-icon-primary")).Click();
+                }
+
+            }
+            else
+            {
+                Log.GravaLog($"Funcionario de Matricula: {Matricula} não encontrado no KAIROS !");
+                return true;
+            }
+            return false;
         }
 
 

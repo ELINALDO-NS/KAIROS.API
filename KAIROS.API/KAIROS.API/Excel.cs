@@ -29,5 +29,21 @@ namespace KAIROS.API
             return DadoLido;
         }
 
+        public void EscreveExcel(string Planilha, int Linha, int Celula,string valor)
+        {
+
+            ExcelWorksheet PlanilaSelecionada = Planila.Workbook.Worksheets.First(a => a.Name == Planilha);
+            if (PlanilaSelecionada == null)
+            {
+                throw new Exception("Planilha não encontrada !");
+            }
+            
+            
+            PlanilaSelecionada.Cells[Linha, Celula].Value = valor;
+            Planila.Save();
+           
+            
+        }
+
     }
 }

@@ -314,9 +314,10 @@ namespace KAIROS.API.Repositorio
                     {
 
                         DateTime Admissao;
-                        bool AdmissaoValido = DateTime.TryParseExact(DTAdmissao, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out Admissao);
+                        bool AdmissaoValido  = DateTime.TryParseExact(DTAdmissao, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out Admissao);
+                        bool AdmissaoValido1 = DateTime.TryParseExact(DTAdmissao, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out Admissao);
 
-                        if (!AdmissaoValido)
+                        if (!AdmissaoValido && !AdmissaoValido1)
                         {
                             DataValida = false;
                             Log.GravaLog($"Funcionario sem data de Admissão, ou data Invalida para o Funcionario -  {Pessoa}");

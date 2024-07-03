@@ -1,8 +1,1 @@
-30-06-2024_12-10 - Funcionario de Matricula: 88888666 não encontrado no KAIROS !
-30-06-2024_12-10 - Funcionario de Matricula: 44444 - O(s) lançamento(s) do(s) funcionário(s) de matrícula 44444 não foram salvos devido a data de lançamento ser menor que a data de abertura.
-30-06-2024_12-14 - Funcionario de Matricula: 88888666 não encontrado no KAIROS !
-30-06-2024_12-14 - Funcionario de Matricula: 44444 - O(s) lançamento(s) do(s) funcionário(s) de matrícula 44444 não foram salvos devido a data de lançamento ser menor que a data de abertura.
-30-06-2024_12-30 - Funcionario de Matricula: 88888666 não encontrado no KAIROS !
-30-06-2024_12-30 - Funcionario de Matricula: 44444 - O(s) lançamento(s) do(s) funcionário(s) de matrícula 44444 não foram salvos devido a data de lançamento ser menor que a data de abertura.
-30-06-2024_12-33 - Funcionario de Matricula: 88888666 não encontrado no KAIROS !
-30-06-2024_12-33 - Funcionario de Matricula: 44444 - O(s) lançamento(s) do(s) funcionário(s) de matrícula 44444 não foram salvos devido a data de lançamento ser menor que a data de abertura.
+03-07-2024_15-30 - Funcionario sem data de Admissão, ou data Invalida para o Funcionario -  ABIGAIL RODRIGUES DE SOUSA

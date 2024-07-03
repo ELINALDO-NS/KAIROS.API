@@ -327,9 +327,6 @@ namespace KAIROS.API
                 return true;
             }
 
-
-
-
         }
 
         private async void btn_Valida_Dados_Click(object sender, EventArgs e)

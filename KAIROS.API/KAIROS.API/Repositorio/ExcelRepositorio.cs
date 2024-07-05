@@ -99,7 +99,8 @@ namespace KAIROS.API.Repositorio
                 int Linha = 4;
                 while (true)
                 {
-                    string DescricaoPlCargo = excel.LeExcel( "CARGOS", Linha, 2);
+                    
+                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("CARGOS", Linha, 2));
                     if (!string.IsNullOrEmpty(DescricaoPlCargo))
                     {
                         if (!cargos.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlCargo.Replace(" ", ""))))
@@ -120,7 +121,7 @@ namespace KAIROS.API.Repositorio
                 Linha = 4;
                 while (true)
                 {
-                    string DescricaoPlCargo = excel.LeExcel("FUNCIONÁRIOS", Linha, 17);
+                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("FUNCIONÁRIOS", Linha, 17));
                     if (!string.IsNullOrEmpty(DescricaoPlCargo))
                     {
                         if (!cargos.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlCargo.Replace(" ", ""))))
@@ -223,15 +224,14 @@ namespace KAIROS.API.Repositorio
 
                 while (true)
                 {
-                    string DescricaoPlDepartamento = excel.LeExcel( "DEPARTAMENTOS", Linha, 2);
+                    string DescricaoPlDepartamento = FormataTexto.RemoveAcentos(excel.LeExcel( "DEPARTAMENTOS", Linha, 2));
                     if (!string.IsNullOrEmpty(DescricaoPlDepartamento))
                     {
                         if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlDepartamento.Replace(" ", ""))))
                         {
                             estrutura.Add(new Estrutura
                             {
-
-                                Descricao = DescricaoPlDepartamento
+                                 Descricao = DescricaoPlDepartamento
                             });
 
                         }
@@ -246,7 +246,7 @@ namespace KAIROS.API.Repositorio
                 Linha = 4;
                 while (true)
                 {
-                    string DescricaoPlFuncionario = excel.LeExcel("FUNCIONÁRIOS", Linha, 15);
+                    string DescricaoPlFuncionario = FormataTexto.RemoveAcentos(excel.LeExcel("FUNCIONÁRIOS", Linha, 15));
 
                     if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
                     {

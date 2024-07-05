@@ -68,6 +68,7 @@ namespace KAIROS.API.Model
     {
         public int Id { get; set; }
         public int Codigo { get; set; }
+        public object StructureParent { get; set; }
         public object CentroCusto { get; set; }
         public string Descricao { get; set; }
         public object DescricaoEstruturaPai { get; set; }

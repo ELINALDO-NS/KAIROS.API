@@ -150,12 +150,7 @@ namespace KAIROS.API
             {
                 File.Delete(log);
             }
-            if (await ValidaDados(Txb_Excel.Text) == false)
-            {
-                AlterarStatus(SpinValidaDados, CheckValidaDados, false);
-                return;
-            }
-            AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+
 
             #region Labels
             Lbl_ValidaDados.Visible = true;
@@ -207,7 +202,12 @@ namespace KAIROS.API
                     await Task.WhenAll(
                     Task.Run(async () =>
                      {
-
+                         if (await ValidaDados(Txb_Excel.Text) == false)
+                         {
+                             AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                             return;
+                         }
+                         AlterarStatus(SpinValidaDados, CheckValidaDados, false);
 
                          Lbl_Cargos.Invoke(new Action(() => { Lbl_Cargos.Visible = true; }));
                          AlterarStatus(SpinCargos, CheckCargos, true);

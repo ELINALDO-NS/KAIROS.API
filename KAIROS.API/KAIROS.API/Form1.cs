@@ -118,6 +118,28 @@ namespace KAIROS.API
 
         }
 
+        public void ResetaStatus()
+        {
+            Lbl_ValidaDados.Visible = false;
+            Lbl_Estruturas.Visible = false;
+            Lbl_Cargos.Visible = false;
+            Lbl_Horarios.Visible = false;
+            Lbl_Pessoas.Visible = false;
+
+            SpinValidaDados.Visible = false;
+            SpinEstrutura.Visible = false;
+            SpinCargos.Visible = false;
+            SpinHorarios.Visible = false;
+            SpinPessoa.Visible = false;
+
+            CheckValidaDados.Visible = false;
+            CheckEstruturas.Visible = false;
+            CheckCargos.Visible = false;
+            CheckPessoa.Visible = false;
+
+
+        }
+
         private void btn_LocalExcel_Click(object sender, EventArgs e)
         {
             PathLeitura(Txb_Excel);
@@ -126,6 +148,7 @@ namespace KAIROS.API
 
         private async void btn_Iniciar_Click(object sender, EventArgs e)
         {
+            ResetaStatus();
 
             if (string.IsNullOrEmpty(txb_Key.Text.Trim()) || string.IsNullOrEmpty(Txb_CNPJ.Text.Trim()) || string.IsNullOrEmpty(Txb_CPFResponsavel.Text))
             {
@@ -198,9 +221,7 @@ namespace KAIROS.API
                 );
                 if (Check_Pessoas.Checked)
                 {
-
-                    await Task.WhenAll(
-                    Task.Run(async () =>
+                    await Task.Run(async () =>
                      {
                          if (await ValidaDados(Txb_Excel.Text) == false)
                          {
@@ -214,7 +235,9 @@ namespace KAIROS.API
 
                          Cargos = await _API.ListaCargosAPI(txb_Key.Text, Txb_CNPJ.Text);
                          AlterarStatus(SpinCargos, CheckCargos, false);
-                     }),
+                     });
+                    await Task.WhenAll(
+
                     Task.Run(async () =>
                     {
                         Lbl_Horarios.Invoke(new Action(() => { Lbl_Horarios.Visible = true; }));
@@ -281,6 +304,7 @@ namespace KAIROS.API
 
         public async Task<bool> ValidaDados(string Caminho)
         {
+           
             bool CPF = true;
             var CPFDuplicado = true;
             var PIS = true;
@@ -291,7 +315,8 @@ namespace KAIROS.API
             var EmailDuplicado = true;
             var DataInvalida = true;
             var PessoaSemCPF = true;
-            Lbl_ValidaDados.Visible = true;
+            Lbl_ValidaDados.Invoke(new Action(() => { Lbl_ValidaDados.Visible = true; }));
+            
             AlterarStatus(SpinValidaDados, CheckValidaDados, true);
 
             await Task.WhenAll(
@@ -347,6 +372,7 @@ namespace KAIROS.API
                     }
 
                 }
+                ResetaStatus();
                 if (await ValidaDados(Txb_Excel.Text) == true)
                 {
                     AlterarStatus(SpinValidaDados, CheckValidaDados, false);

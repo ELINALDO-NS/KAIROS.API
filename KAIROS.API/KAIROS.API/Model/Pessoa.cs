@@ -68,14 +68,12 @@ namespace KAIROS.API.Model
     {
         public int Id { get; set; }
         public int Codigo { get; set; }
-        public object StructureParent { get; set; }
         public object CentroCusto { get; set; }
         public string Descricao { get; set; }
-        public object DescricaoEstruturaPai { get; set; }
+        public object EstruturaPai { get; set; }
         public string CNPJ { get; set; }
         public string EmpresaCNPJ { get; set; }
-        public object Extra1 { get; set; }
-        public object Extra2 { get; set; }
+
     }
 
     public class Tipofuncionario

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -351,6 +352,43 @@ namespace KAIROS.API.Repositorio
             bool existe = chromeDriver.FindElements(By.ClassName("funcionarioName")).Count() > 0;
             return existe;
         }
+        public async Task<bool> ValidaSaldo(string caminho)
+        {
+            int Linha = 5;
+            Excel excel = new Excel(caminho);
+            bool ValidaSaldo = true;
+            string Planilha = "Lanç. Saldo de Banco Residual";
+            while (true)
+            {
+                string Matricula = excel.LeExcel(Planilha, Linha, 1);
+
+                if (!string.IsNullOrEmpty(Matricula))
+                {
+                    if (!string.IsNullOrEmpty(excel.LeExcel(Planilha, Linha, 2)))
+                    {
+                        string[] Saldo1 = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2).Split(":");
+
+                        string Saldo = $"{Saldo1[0].PadLeft(4, '0')}:{Saldo1[1]}";
+
+                        if (Convert.ToInt32(Saldo1[1]) > 59)
+                        {
+                            ValidaSaldo = false;
+                            Log.GravaLog($"Saldo invalido - matricula: {Matricula}");
+                        }
+
+
+                    }
+                }
+                else
+                {
+                    break;
+                   
+                   
+                }
+                Linha++;
+            }
+            return ValidaSaldo;
+        }
 
         private string ErroLancamento(ChromeDriver chromeDriver)
         {
@@ -365,82 +403,6 @@ namespace KAIROS.API.Repositorio
                 return existe;
             }
         }
-
-        public async Task<bool> InsereSaldo(ChromeDriver bot, string Historico, string caminho)
-        {
-            using (bot)
-            {
-                int Linha = 5;
-                Excel excel = new Excel(caminho);
-                string Planilha = "Lanç. Saldo de Banco Residual";
-                bool erro = false;
-                await Task.Run(async () =>
-                {
-                    TimeSpan t = new TimeSpan(10);
-                    WebDriverWait wait = new WebDriverWait(bot, t);
-                    // WebElement element = wait.Until(ExpectedConditions.elementToBeClickable(By.id("someid")));
-                    MessageBox.Show("Selecione a Empresa !","Lança Saldo",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    bot.FindElement(By.Id("Tab6")).Click();
-                    bot.FindElement(By.Id("userAutocomplete")).SendKeys("teste");
-                    bot.FindElement(By.Id("SearchButtonPessoa")).Click();
-
-                    while (true)
-                    {
-                        string Matricula = excel.LeExcel(Planilha, Linha, 1);
-
-                        if (!string.IsNullOrEmpty(Matricula))
-                        {
-
-                            if (!string.IsNullOrEmpty(excel.LeExcel(Planilha, Linha, 2)))
-                            {
-                                bool Pos_Neg = false;
-
-                                if (excel.LeExcel(Planilha, Linha, 3) == "POSITIVO")
-                                {
-                                    Pos_Neg = true;
-                                }
-
-                                string[] Saldo1 = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2).Split(":");
-                                DateTime Data = Convert.ToDateTime(excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 4));
-                                string Saldo = $"{Saldo1[0].PadLeft(4, '0')}:{Saldo1[1]}";
-                                if (!(excel.LeExcel(Planilha, Linha, 5) == "OK".ToUpper()))
-                                {
-                                     erro = await InsereSaldoBot(bot, Matricula, Historico, Data.ToString(), Pos_Neg, Saldo);
-                                    if (erro)
-                                    {
-                                        excel.EscreveExcel(Planilha, Linha, 5, "NOK");
-                                    }
-                                    else
-                                    {
-                                        excel.EscreveExcel(Planilha, Linha, 5, "OK");
-                                    }
-                                }
-
-
-                            }
-
-
-                            Linha++;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                });
-                if (erro)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            }
-
-        }
-
         private async Task<bool> InsereSaldoBot(ChromeDriver bot, string Matricula, string Historico, string Data, bool Posito_Negativo, string Saldo)
         {
             Thread.Sleep(2000);
@@ -488,6 +450,82 @@ namespace KAIROS.API.Repositorio
             }
             return false;
         }
+
+        public async Task<bool> InsereSaldo(ChromeDriver bot, string Historico, string caminho)
+        {
+            using (bot)
+            {
+                int Linha = 5;
+                Excel excel = new Excel(caminho);
+                string Planilha = "Lanç. Saldo de Banco Residual";
+                bool erro = false;
+                await Task.Run(async () =>
+                {
+                    TimeSpan t = new TimeSpan(10);
+                    WebDriverWait wait = new WebDriverWait(bot, t);
+                    // WebElement element = wait.Until(ExpectedConditions.elementToBeClickable(By.id("someid")));
+                    MessageBox.Show("Selecione a Empresa !", "Lança Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bot.FindElement(By.Id("Tab6")).Click();
+                    bot.FindElement(By.Id("userAutocomplete")).SendKeys("teste");
+                    bot.FindElement(By.Id("SearchButtonPessoa")).Click();
+
+                    while (true)
+                    {
+                        string Matricula = excel.LeExcel(Planilha, Linha, 1);
+
+                        if (!string.IsNullOrEmpty(Matricula))
+                        {
+
+                            if (!string.IsNullOrEmpty(excel.LeExcel(Planilha, Linha, 2)))
+                            {
+                                bool Pos_Neg = false;
+
+                                if (excel.LeExcel(Planilha, Linha, 3) == "POSITIVO")
+                                {
+                                    Pos_Neg = true;
+                                }
+
+                                string[] Saldo1 = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2).Split(":");
+                                DateTime Data = Convert.ToDateTime(excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 4));
+                                string Saldo = $"{Saldo1[0].PadLeft(4, '0')}:{Saldo1[1]}";
+                                if (!(excel.LeExcel(Planilha, Linha, 5) == "OK".ToUpper()))
+                                {
+                                    erro = await InsereSaldoBot(bot, Matricula, Historico, Data.ToString(), Pos_Neg, Saldo);
+                                    if (erro)
+                                    {
+                                        excel.EscreveExcel(Planilha, Linha, 5, "NOK");
+                                    }
+                                    else
+                                    {
+                                        excel.EscreveExcel(Planilha, Linha, 5, "OK");
+                                    }
+                                }
+
+
+                            }
+
+
+                            Linha++;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                });
+                if (erro)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+
+        }
+
 
 
     }

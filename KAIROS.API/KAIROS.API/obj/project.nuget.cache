@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AL5n1r/dDyM=",
+  "dgSpecHash": "jCmPpoUGLmg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\SUPORTE\\Documents\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
+  "projectFilePath": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SUPORTE\\.nuget\\packages\\epplus\\7.0.4\\epplus.7.0.4.nupkg.sha512",
     "C:\\Users\\SUPORTE\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",

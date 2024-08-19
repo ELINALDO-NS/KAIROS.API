@@ -64,6 +64,7 @@
             Txb_Excel = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
+            btn_ValidaSaldo = new Button();
             txb_Historico = new TextBox();
             label14 = new Label();
             button2 = new Button();
@@ -540,6 +541,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(btn_ValidaSaldo);
             tabPage2.Controls.Add(txb_Historico);
             tabPage2.Controls.Add(label14);
             tabPage2.Controls.Add(button2);
@@ -558,6 +560,17 @@
             tabPage2.Text = "Insere Saldo BH";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btn_ValidaSaldo
+            // 
+            btn_ValidaSaldo.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btn_ValidaSaldo.Location = new Point(25, 213);
+            btn_ValidaSaldo.Name = "btn_ValidaSaldo";
+            btn_ValidaSaldo.Size = new Size(152, 27);
+            btn_ValidaSaldo.TabIndex = 25;
+            btn_ValidaSaldo.Text = "Verificar Saldo";
+            btn_ValidaSaldo.UseVisualStyleBackColor = true;
+            btn_ValidaSaldo.Click += btn_ValidaSaldo_Click;
+            // 
             // txb_Historico
             // 
             txb_Historico.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
@@ -565,7 +578,7 @@
             txb_Historico.Name = "txb_Historico";
             txb_Historico.Size = new Size(175, 25);
             txb_Historico.TabIndex = 3;
-            txb_Historico.Text = "teste";
+            txb_Historico.Text = "Saldo Sistema Anterior";
             // 
             // label14
             // 
@@ -590,8 +603,9 @@
             // 
             // Btn_IsenreSaldo_Iniciar
             // 
+            Btn_IsenreSaldo_Iniciar.Enabled = false;
             Btn_IsenreSaldo_Iniciar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            Btn_IsenreSaldo_Iniciar.Location = new Point(115, 248);
+            Btn_IsenreSaldo_Iniciar.Location = new Point(206, 213);
             Btn_IsenreSaldo_Iniciar.Name = "Btn_IsenreSaldo_Iniciar";
             Btn_IsenreSaldo_Iniciar.Size = new Size(152, 27);
             Btn_IsenreSaldo_Iniciar.TabIndex = 23;
@@ -1305,5 +1319,6 @@
         private CheckBox Check_Estruturas;
         private TextBox txb_Historico;
         private Label label14;
+        private Button btn_ValidaSaldo;
     }
 }

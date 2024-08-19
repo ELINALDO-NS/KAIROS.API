@@ -20,6 +20,7 @@ namespace KAIROS.API.Repositorio.Interface
         Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ,int pagina =1);
         Task AtualizaPessoasAPI(string Key, string CNPJ,AtualizaPessoa pessoa);
         Task<bool> InsereSaldo(ChromeDriver bot, string Historico,string caminho);
+        Task<bool> ValidaSaldo(string caminho);
 
 
     }

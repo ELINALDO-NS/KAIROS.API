@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using OfficeOpenXml.FormulaParsing.Exceptions;
 using OpenQA.Selenium.DevTools.V124.Page;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using static System.Windows.Forms.LinkLabel;
@@ -304,7 +305,7 @@ namespace KAIROS.API
 
         public async Task<bool> ValidaDados(string Caminho)
         {
-           
+
             bool CPF = true;
             var CPFDuplicado = true;
             var PIS = true;
@@ -316,7 +317,7 @@ namespace KAIROS.API
             var DataInvalida = true;
             var PessoaSemCPF = true;
             Lbl_ValidaDados.Invoke(new Action(() => { Lbl_ValidaDados.Visible = true; }));
-            
+
             AlterarStatus(SpinValidaDados, CheckValidaDados, true);
 
             await Task.WhenAll(
@@ -801,6 +802,39 @@ namespace KAIROS.API
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private async void btn_ValidaSaldo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txb_InsereSaldo_CaminhoExcel.Text))
+                {
+                    if (!PathLeitura(txb_InsereSaldo_CaminhoExcel))
+                    {
+                        return;
+                    }
+                   
+                }
+                var valido = await _API.ValidaSaldo(txb_InsereSaldo_CaminhoExcel.Text);
+                if (!valido)
+                {
+                    MessageBox.Show("Existem funcionarios com saldos invalidos, verifique o arquivo LOG!", "Insere Saldo BH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                else
+                {
+                    Btn_IsenreSaldo_Iniciar.Enabled = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Insere Saldo BH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
     }

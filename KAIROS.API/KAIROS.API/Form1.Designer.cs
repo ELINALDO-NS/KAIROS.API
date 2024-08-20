@@ -603,7 +603,6 @@
             // 
             // Btn_IsenreSaldo_Iniciar
             // 
-            Btn_IsenreSaldo_Iniciar.Enabled = false;
             Btn_IsenreSaldo_Iniciar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             Btn_IsenreSaldo_Iniciar.Location = new Point(206, 213);
             Btn_IsenreSaldo_Iniciar.Name = "Btn_IsenreSaldo_Iniciar";

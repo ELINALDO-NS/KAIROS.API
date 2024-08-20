@@ -825,6 +825,8 @@ namespace KAIROS.API
                 }
                 else
                 {
+                    MessageBox.Show("Saldo OK !", "Insere Saldo BH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     Btn_IsenreSaldo_Iniciar.Enabled = true;
                 }
 

@@ -383,7 +383,6 @@ namespace KAIROS.API.Repositorio
                 {
                     break;
                    
-                   
                 }
                 Linha++;
             }
@@ -415,7 +414,7 @@ namespace KAIROS.API.Repositorio
 
                 bot.FindElement(By.ClassName("checkboxCustom")).Click();
                 bot.FindElement(By.Id("LancarBancoHoras")).Click();
-                Thread.Sleep(3000);
+                Thread.Sleep(1000);
                 if (Posito_Negativo)
                 {
                     Thread.Sleep(1000);
@@ -432,11 +431,11 @@ namespace KAIROS.API.Repositorio
                 bot.ExecuteScript($"document.getElementById('dataLancarBancoHoras').value = '{Data?.Replace("00:00:00", "")}'");
                 bot.FindElement(By.Id("historico")).SendKeys(Historico);
                 bot.FindElement(By.Id("SaveLancarBancoHoras")).Click();
-                Thread.Sleep(3000);
+                Thread.Sleep(1000);
                 if (!string.IsNullOrWhiteSpace(ErroLancamento(bot)))
                 {
                     Log.GravaLog($"Funcionario de Matricula: {Matricula} - " + ErroLancamento(bot));
-                    Thread.Sleep(3000);
+                    Thread.Sleep(1000);
                     bot.FindElement(By.XPath("//button/span")).Click();
                     return true;
                     // bot.FindElement(By.ClassName("ui-button-icon-primary")).Click();
@@ -488,7 +487,7 @@ namespace KAIROS.API.Repositorio
                                 string[] Saldo1 = excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 2).Split(":");
                                 DateTime Data = Convert.ToDateTime(excel.LeExcel("Lanç. Saldo de Banco Residual", Linha, 4));
                                 string Saldo = $"{Saldo1[0].PadLeft(4, '0')}:{Saldo1[1]}";
-                                if (!(excel.LeExcel(Planilha, Linha, 5) == "OK".ToUpper()))
+                                if (!(excel.LeExcel(Planilha, Linha, 5) == "OK".ToUpper()) || !(Saldo == "0000:00"))
                                 {
                                     erro = await InsereSaldoBot(bot, Matricula, Historico, Data.ToString(), Pos_Neg, Saldo);
                                     if (erro)

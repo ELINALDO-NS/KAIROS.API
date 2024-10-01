@@ -147,6 +147,44 @@ namespace KAIROS.API.Repositorio
             return cargosOrdenados;
 
         }
+        public async Task<List<Desligamento>> ListaDesligamento(string caminho)
+        {
+            var desligamento = new List<Desligamento>();            
+            var excel = new Excel(caminho);
+            await Task.Run(() =>
+            {
+
+                int Linha = 2;
+                while (true)
+                {
+
+                    string matricula = FormataTexto.RemoveAcentos(excel.LeExcel("Desligamento", Linha, 1));
+                    if (!string.IsNullOrEmpty(matricula))
+                    {
+                        if (!desligamento.Any(a => a.Matricula.Equals(matricula)))
+                        {
+                            desligamento.Add(new Desligamento
+                            {
+                                Matricula = Convert.ToInt32( FormataTexto.RemoveAcentos(excel.LeExcel("Desligamento", Linha, 1))),
+                                DATA = Convert.ToDateTime(FormataTexto.RemoveAcentos(excel.LeExcel("Desligamento", Linha, 2))),
+
+                            });
+
+                        }
+                        Linha++;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                
+
+            });
+            
+            return desligamento;
+
+        }
         public async Task<List<Estrutura>> ListaEstruturas(string caminho)
         {
             var estrutura = new List<Estrutura>();

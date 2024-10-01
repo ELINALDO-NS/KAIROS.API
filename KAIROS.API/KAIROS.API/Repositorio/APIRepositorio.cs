@@ -9,7 +9,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
+using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -30,6 +32,7 @@ namespace KAIROS.API.Repositorio
         string AlteraPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/ChangePerson";
         string ListaHorario_URL = "https://www.dimepkairos.com.br/RestServiceApi/Schedules/GetSchedulesSummary";
         string DeslihaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/Dismiss/MarkDismiss ";
+        string ListaPessoaPorId_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SearchPerson ";
         private readonly IExcelRepositorio _excel;
 
         public APIRepositorio(IExcelRepositorio excel)
@@ -140,6 +143,53 @@ namespace KAIROS.API.Repositorio
                       cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()));
                   });
             return cargos;
+        }
+        public async Task<Pessoa> ListaPessoaPorMatriculaAPI(string Key, string CNPJ, int Matricula)
+        {
+
+            try
+            {
+                List<Pessoa> pess = new();
+
+                var client = new RestClient(ListaPessoaPorId_URL);
+                var request = new RestRequest("", Method.Post);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("key", Key);
+                request.AddHeader("identifier", CNPJ);
+                var body = @"
+                            " + "\n" +
+                            @"{
+                            " + "\n" +
+                            $@"  ""Matricula"" :{Matricula}
+                            " + "\n" +
+                            @"}
+                            " + "\n" +
+                        @"";
+                request.AddParameter("application/json", body, ParameterType.RequestBody);
+                var response = await client.ExecuteAsync(request);
+                if (response != null)
+                {
+                    Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                    if (Resposta.Sucesso)
+                    {
+                        pess = JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString());
+                    }
+                    else
+                    {
+                        return null;
+                    }
+
+                }
+                return pess[0];
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+
         }
 
         public async Task<List<Estrutura>> ListaEstruturasAPI(string Key, string CNPJ)
@@ -258,10 +308,45 @@ namespace KAIROS.API.Repositorio
 
         }
 
+        public async Task<List<Pessoa>> ListaTodasPaginasPessoasAPI(string Key, string CNPJ, int totalPage)
+        {
+            List<Pessoa> pessoas = new List<Pessoa>();
+
+            for (int pagina = 1; pagina <= totalPage; pagina++)
+            {
+                var client = new RestClient(ListaPessoas_URL);
+                var request = new RestRequest("", Method.Post);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("key", Key);
+                request.AddHeader("identifier", CNPJ);
+                var body = @"
+                            " + "\n" +
+                                   @"{
+                            " + "\n" +
+                                   $@"  ""pagina"" : {pagina}
+                            " + "\n" +
+                                   @"}
+                            " + "\n" +
+                               @"";
+                request.AddParameter("application/json", body, ParameterType.RequestBody);
+                var response1 =  client.Execute(request);
+                Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response1.Content);
+                if (Resposta.Sucesso)
+                {
+                    pessoas.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+                }
+                else
+                {
+                    Log.GravaLog(Resposta.Mensagem.ToString() + $" - Pagina requisitada: {pagina}");
+                }
+            }
+            return pessoas;
+        }
+
         public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ, int pagina = 1)
         {
             List<Pessoa> pessoa = new List<Pessoa>();
-            await Task.Run(() =>
+            await Task.Run(async () =>
             {
                 var client = new RestClient(ListaPessoas_URL);
                 var request = new RestRequest("", Method.Post);
@@ -282,7 +367,15 @@ namespace KAIROS.API.Repositorio
                 Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response1.Content);
                 if (Resposta.Sucesso)
                 {
-                    pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+                    if (Resposta.TotalPagina > 1)
+                    {
+                        pessoa = await ListaTodasPaginasPessoasAPI(Key,CNPJ, Resposta.TotalPagina);
+                    }
+                    else
+                    {
+                        pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+
+                    }
                 }
                 else
                 {
@@ -318,7 +411,7 @@ namespace KAIROS.API.Repositorio
                 Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
             }
         }
-        public async Task DesligaPessoa(string Key, string CNPJ, Desligamento pessoa)
+        public async Task DesligaPessoa(string Key, string CNPJ, List<Desligamento> desligamento)
         {
 
             var client = new RestClient(DeslihaPessoa_URL);
@@ -326,25 +419,77 @@ namespace KAIROS.API.Repositorio
             request.AddHeader("Content-Type", "application/json");
             request.AddHeader("key", Key);
             request.AddHeader("identifier", CNPJ);
-            var JPessoa = JsonConvert.SerializeObject(pessoa);
-            request.AddJsonBody(JPessoa);
-            request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
-            var response = client.Execute(request);
-            if (response.ContentType.Equals("application/json"))
+            string diretorio = @"C:\Users\SUPORTE\Desktop\Desligamento.txt";
+            StreamWriter writer = new StreamWriter(diretorio, true);
+            int i = 0;
+            foreach (var item in desligamento)
             {
-                var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                if (!Resposta.Sucesso)
+                var IdPessoa = await ListaPessoaPorMatriculaAPI(Key, CNPJ, item.Matricula);
+
+                if (IdPessoa != null)
                 {
-                    Log.GravaLog("Desliga Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa);
+                    writer.WriteLine("902" + IdPessoa.CodigoPis.ToString().PadLeft(12, '0') +
+                   IdPessoa.Matricula.ToString().PadLeft(9, '0') + item.DATA.Date);
                 }
+                Console.WriteLine(i);
+                i++;
+
+
+                //var JPessoa = JsonConvert.SerializeObject(item);
+                //request.AddJsonBody(JPessoa);
+                //request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
+                //var response = client.Execute(request);
+                //if (response.ContentType.Equals("application/json"))
+                //{
+                //    var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                //    if (!Resposta.Sucesso)
+                //    {
+                //        Log.GravaLog("Desliga Pessoa - " + Resposta.Mensagem + " - Matricula : " + item.Matricula);
+                //    }
+
+                //}
+                //else
+                //{
+                //    Log.GravaLog("Desliga Pessoa - " + response.Content + " - Matricula : " + item.Matricula);
+                //}
 
             }
-            else
-            {
-                Log.GravaLog("Desliga Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula);
-            }
+            writer.Flush();
+            writer.Close();
 
         }
+        public async Task DesligaPessoaTxt(string Key, string CNPJ, List<Desligamento> desligamento, string localDeGravacao)
+        {
+
+            var client = new RestClient(DeslihaPessoa_URL);
+            var request = new RestRequest("", Method.Post);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("key", Key);
+            request.AddHeader("identifier", CNPJ);
+            string diretorio = @$"{localDeGravacao}\Desligamento.txt";
+
+            int i = 0;
+            using (StreamWriter writer = new StreamWriter(diretorio, true))
+            {
+
+                foreach (var item in desligamento)
+                {
+                    var IdPessoa = await ListaPessoaPorMatriculaAPI(Key, CNPJ, item.Matricula);
+
+                    if (IdPessoa != null)
+                    {
+                        writer.WriteLine("902" + IdPessoa.CodigoPis.ToString().PadLeft(12, '0') +
+                       IdPessoa.Matricula.ToString().PadLeft(9, '0') + item.DATA.Date);
+                    }
+                    Console.WriteLine(i);
+                    i++;
+
+                }
+            }
+           
+
+        }
+
 
         private bool PessoaExiste(ChromeDriver chromeDriver)
         {
@@ -382,7 +527,7 @@ namespace KAIROS.API.Repositorio
                 else
                 {
                     break;
-                   
+
                 }
                 Linha++;
             }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jCmPpoUGLmg=",
+  "dgSpecHash": "ktRJI6czRDg=",
   "success": true,
   "projectFilePath": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj",
   "expectedPackageFiles": [
@@ -49,5 +49,16 @@
     "C:\\Users\\SUPORTE\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\SUPORTE\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'RestSharp' 110.2.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-4rr6-2v9v-wcpc",
+      "libraryId": "RestSharp",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

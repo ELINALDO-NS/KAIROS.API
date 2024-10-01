@@ -456,17 +456,13 @@ namespace KAIROS.API
                 PessoaExcel.Clear();
                 Grid_Pessoa.Rows.Clear();
                 btn_Importar.Enabled = false;
-                await Task.WhenAll(
-                   Task.Run(async () =>
+                
+                 await  Task.Run(async () =>
                    {
                        PessoaAPI.AddRange(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, 1));
-                   }),
+                   });
 
-                    Task.Run(async () =>
-                    {
-                        PessoaAPI.AddRange(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Key.Text, Txb_Alt_Pessoa_CNPJ.Text, 2));
-                    })
-                );
+
 
                 foreach (var item in PessoaAPI.ToList())
                 {
@@ -800,9 +796,13 @@ namespace KAIROS.API
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
+            List<Desligamento> deligamento = new();
+            deligamento = await _excel.ListaDesligamento(Txb_Caminho_Excel_Desligamento.Text);
 
+            await _API.DesligaPessoa(Txb_Key_Desligamento.Text, Txb_CNPJ_Desligamento.Text, deligamento);
+            MessageBox.Show("Desligamentos Concluidos !");
         }
 
         private async void btn_ValidaSaldo_Click(object sender, EventArgs e)
@@ -815,7 +815,7 @@ namespace KAIROS.API
                     {
                         return;
                     }
-                   
+
                 }
                 var valido = await _API.ValidaSaldo(txb_InsereSaldo_CaminhoExcel.Text);
                 if (!valido)
@@ -837,6 +837,20 @@ namespace KAIROS.API
                 MessageBox.Show(ex.Message, "Insere Saldo BH", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+        }
+
+        private async void Btn_Gera_txt_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
+            folderBrowser.ShowDialog();
+            string gravacao = folderBrowser.SelectedPath;
+            var desligamento = await _excel.ListaDesligamento(Txb_Caminho_Excel_Desligamento.Text);
+            if (!string.IsNullOrEmpty(gravacao))
+            {
+               await _API.DesligaPessoaTxt(Txb_Key_Desligamento.Text, Txb_CNPJ_Desligamento.Text, desligamento, gravacao);
+            }
+           
 
         }
     }

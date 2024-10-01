@@ -21,7 +21,8 @@ namespace KAIROS.API.Repositorio.Interface
         Task AtualizaPessoasAPI(string Key, string CNPJ,AtualizaPessoa pessoa);
         Task<bool> InsereSaldo(ChromeDriver bot, string Historico,string caminho);
         Task<bool> ValidaSaldo(string caminho);
-
-
+        Task DesligaPessoa(string Key, string CNPJ, List<Desligamento> pessoa);
+        Task DesligaPessoaTxt(string Key, string CNPJ, List<Desligamento> desligamento, string localDeGravacao);
+        Task<Pessoa> ListaPessoaPorMatriculaAPI(string Key, string CNPJ, int Matricula);
     }
 }

@@ -76,6 +76,11 @@
             txb_Senha = new TextBox();
             label8 = new Label();
             tabPage1 = new TabPage();
+            Btn_Gera_txt = new Button();
+            Txb_CNPJ_Desligamento = new TextBox();
+            label15 = new Label();
+            Txb_Key_Desligamento = new TextBox();
+            label16 = new Label();
             button1 = new Button();
             Btn_Excel_Desligamento = new Button();
             Txb_Caminho_Excel_Desligamento = new TextBox();
@@ -671,6 +676,11 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(Btn_Gera_txt);
+            tabPage1.Controls.Add(Txb_CNPJ_Desligamento);
+            tabPage1.Controls.Add(label15);
+            tabPage1.Controls.Add(Txb_Key_Desligamento);
+            tabPage1.Controls.Add(label16);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(Btn_Excel_Desligamento);
             tabPage1.Controls.Add(Txb_Caminho_Excel_Desligamento);
@@ -683,13 +693,61 @@
             tabPage1.Text = "Insere Desligamento";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // Btn_Gera_txt
+            // 
+            Btn_Gera_txt.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Btn_Gera_txt.ImageAlign = ContentAlignment.MiddleRight;
+            Btn_Gera_txt.Location = new Point(282, 114);
+            Btn_Gera_txt.Name = "Btn_Gera_txt";
+            Btn_Gera_txt.Size = new Size(193, 32);
+            Btn_Gera_txt.TabIndex = 15;
+            Btn_Gera_txt.Text = "Gerar txt";
+            Btn_Gera_txt.UseVisualStyleBackColor = true;
+            Btn_Gera_txt.Click += Btn_Gera_txt_Click;
+            // 
+            // Txb_CNPJ_Desligamento
+            // 
+            Txb_CNPJ_Desligamento.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_CNPJ_Desligamento.Location = new Point(62, 83);
+            Txb_CNPJ_Desligamento.Name = "Txb_CNPJ_Desligamento";
+            Txb_CNPJ_Desligamento.Size = new Size(193, 25);
+            Txb_CNPJ_Desligamento.TabIndex = 14;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            label15.Location = new Point(7, 91);
+            label15.Name = "label15";
+            label15.Size = new Size(39, 17);
+            label15.TabIndex = 13;
+            label15.Text = "CNPJ";
+            // 
+            // Txb_Key_Desligamento
+            // 
+            Txb_Key_Desligamento.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            Txb_Key_Desligamento.Location = new Point(62, 45);
+            Txb_Key_Desligamento.Name = "Txb_Key_Desligamento";
+            Txb_Key_Desligamento.Size = new Size(193, 25);
+            Txb_Key_Desligamento.TabIndex = 12;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label16.Location = new Point(7, 53);
+            label16.Name = "label16";
+            label16.Size = new Size(28, 15);
+            label16.TabIndex = 11;
+            label16.Text = "Key";
+            // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(200, 68);
+            button1.Location = new Point(62, 114);
             button1.Name = "button1";
-            button1.Size = new Size(117, 32);
+            button1.Size = new Size(193, 32);
             button1.TabIndex = 6;
             button1.Text = "Iniciar";
             button1.UseVisualStyleBackColor = true;
@@ -1319,5 +1377,10 @@
         private TextBox txb_Historico;
         private Label label14;
         private Button btn_ValidaSaldo;
+        private TextBox Txb_CNPJ_Desligamento;
+        private Label label15;
+        private TextBox Txb_Key_Desligamento;
+        private Label label16;
+        private Button Btn_Gera_txt;
     }
 }

@@ -10,6 +10,7 @@ namespace KAIROS.API.Model
     {
         public int Matricula { get; set; }
         public int PessoaId { get; set; }
+        public DateTime DATA { get; set; }
         public string Motivo { get; set; } = "11-Rescisão sem justa causa por iniciativa do empregador";
     }
 }

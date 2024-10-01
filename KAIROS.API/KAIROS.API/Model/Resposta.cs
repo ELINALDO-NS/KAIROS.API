@@ -9,6 +9,8 @@ namespace KAIROS.API.Model
     public class Resposta
     {
         public bool Sucesso { get; set; }
+        public int TotalPagina { get; set; }
+        public int PaginaAtual { get; set; }
         public object? Obj { get; set; }
         public string? Mensagem { get; set; }
     }

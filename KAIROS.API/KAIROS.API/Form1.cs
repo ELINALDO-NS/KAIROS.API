@@ -199,14 +199,9 @@ namespace KAIROS.API
                     {
                         Lbl_Estruturas.Invoke(new Action(() => { Lbl_Estruturas.Visible = true; }));
                         AlterarStatus(SpinEstrutura, CheckEstruturas, true);
-
                         await _API.InsereEstruturasAPI(txb_Key.Text, Txb_CNPJ.Text, Txb_Excel.Text);
-
-
                         AlterarStatus(SpinEstrutura, CheckEstruturas, false);
-
                     }
-
                 }),
                 Task.Run(async () =>
                 {
@@ -233,7 +228,6 @@ namespace KAIROS.API
 
                          Lbl_Cargos.Invoke(new Action(() => { Lbl_Cargos.Visible = true; }));
                          AlterarStatus(SpinCargos, CheckCargos, true);
-
                          Cargos = await _API.ListaCargosAPI(txb_Key.Text, Txb_CNPJ.Text);
                          AlterarStatus(SpinCargos, CheckCargos, false);
                      });

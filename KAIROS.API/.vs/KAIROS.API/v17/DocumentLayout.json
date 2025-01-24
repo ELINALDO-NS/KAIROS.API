@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,8 +22,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "KAIROS.API\\Form1.cs",
               "ToolTip": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeToolTip": "KAIROS.API\\Form1.cs",
-              "ViewState": "AgIAAMcBAAAAAAAAAAAowMsBAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADYBAAAAAAAAAAAkwOUAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T12:34:02.997Z",
               "EditorCaption": ""
@@ -57,7 +61,7 @@
               "RelativeDocumentMoniker": "KAIROS.API\\Repositorio\\APIRepositorio.cs",
               "ToolTip": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
               "RelativeToolTip": "KAIROS.API\\Repositorio\\APIRepositorio.cs",
-              "ViewState": "AgIAAHcBAAAAAAAAAAAowIEBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAowP4AAAB/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T13:27:25.221Z",
               "EditorCaption": ""

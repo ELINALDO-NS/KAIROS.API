@@ -222,25 +222,37 @@ namespace KAIROS.API.Repositorio
         public async Task<List<Horarios>> ListaHorariosAPI(string Key, string CNPJ)
         {
             var horario = new List<Horarios>();
+            int TotalPagina = 1;
             await Task.Run(() =>
             {
-                var client = new RestClient(ListaHorario_URL);
-                var request = new RestRequest("", Method.Post);
-                request.AddHeader("Content-Type", "application/json");
-                request.AddHeader("key", Key);
-                request.AddHeader("identifier", CNPJ);
-                var body = "{}";
-                request.AddParameter("application/json", body, ParameterType.RequestBody);
-                var response = client.Execute(request);
-                Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                horario.AddRange(JsonConvert.DeserializeObject<List<Horarios>>(Resposta.Obj.ToString()));
+                for (int pagina = 1; pagina <= TotalPagina; pagina++)
+                {
+                    var client = new RestClient(ListaHorario_URL);
+                    var request = new RestRequest("", Method.Post);
+                    request.AddHeader("Content-Type", "application/json");
+                    request.AddHeader("key", Key);
+                    request.AddHeader("identifier", CNPJ);
+                    var body  = $@"
+                            " + "\n" +
+                                   @"{
+                            " + "\n" +
+                                   $@"  ""pagina"" : {pagina}
+                            " + "\n" +
+                                   @"}
+                            " + "\n" +
+                               @"";
+                    request.AddParameter("application/json", body, ParameterType.RequestBody);
+                    var response = client.Execute(request);
+                    Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                    TotalPagina = Resposta.TotalPagina;
+                    horario.AddRange(JsonConvert.DeserializeObject<List<Horarios>>(Resposta.Obj.ToString()));
+                }
             });
             return horario;
         }
         public int status;
         public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel, List<Pessoa> pessoas)
         {
-
             try
             {
 
@@ -271,7 +283,7 @@ namespace KAIROS.API.Repositorio
                     }
 
                 });
-            }
+                            }
             catch (Exception ex)
             {
                 string a = ex.Message;

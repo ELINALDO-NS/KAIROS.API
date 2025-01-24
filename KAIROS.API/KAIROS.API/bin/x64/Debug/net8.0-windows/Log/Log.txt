@@ -1,7 +1,1 @@
-17-09-2024_10-45 - Desliga Pessoa - Valor não pode ser nulo.
-Nome do parâmetro: source - Matricula : 44444
-17-09-2024_15-27 - Desliga Pessoa - Valor não pode ser nulo.
-Nome do parâmetro: source - Matricula : 44444
-17-09-2024_16-15 - Desliga Pessoa - Employee is already on the date indicated. - Matricula : 11251
-17-09-2024_16-21 - Desliga Pessoa - Employee is already on the date indicated. - Matricula : 11251
-01-10-2024_09-58 - Company doesn't have the searched employee - Pagina requisitada: 2
+24-01-2025_14-26 - Salva Pessoa - Register number already exists in employee MARCIA BATISTA DE OLIVEIRA - Matricula : 9170 - MARCIA BATISTA DE OLIVEIRA

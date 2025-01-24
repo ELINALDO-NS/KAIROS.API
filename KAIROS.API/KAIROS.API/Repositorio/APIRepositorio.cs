@@ -490,7 +490,6 @@ namespace KAIROS.API.Repositorio
 
         }
 
-
         private bool PessoaExiste(ChromeDriver chromeDriver)
         {
 

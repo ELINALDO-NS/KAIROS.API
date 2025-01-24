@@ -99,7 +99,7 @@ namespace KAIROS.API.Repositorio
                 int Linha = 4;
                 while (true)
                 {
-                    
+
                     string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("CARGOS", Linha, 2));
                     if (!string.IsNullOrEmpty(DescricaoPlCargo))
                     {
@@ -149,7 +149,7 @@ namespace KAIROS.API.Repositorio
         }
         public async Task<List<Desligamento>> ListaDesligamento(string caminho)
         {
-            var desligamento = new List<Desligamento>();            
+            var desligamento = new List<Desligamento>();
             var excel = new Excel(caminho);
             await Task.Run(() =>
             {
@@ -165,7 +165,7 @@ namespace KAIROS.API.Repositorio
                         {
                             desligamento.Add(new Desligamento
                             {
-                                Matricula = Convert.ToInt32( FormataTexto.RemoveAcentos(excel.LeExcel("Desligamento", Linha, 1))),
+                                Matricula = Convert.ToInt32(FormataTexto.RemoveAcentos(excel.LeExcel("Desligamento", Linha, 1))),
                                 DATA = Convert.ToDateTime(FormataTexto.RemoveAcentos(excel.LeExcel("Desligamento", Linha, 2))),
 
                             });
@@ -178,10 +178,10 @@ namespace KAIROS.API.Repositorio
                         break;
                     }
                 }
-                
+
 
             });
-            
+
             return desligamento;
 
         }
@@ -262,14 +262,14 @@ namespace KAIROS.API.Repositorio
 
                 while (true)
                 {
-                    string DescricaoPlDepartamento = FormataTexto.RemoveAcentos(excel.LeExcel( "DEPARTAMENTOS", Linha, 2));
+                    string DescricaoPlDepartamento = FormataTexto.RemoveAcentos(excel.LeExcel("DEPARTAMENTOS", Linha, 2));
                     if (!string.IsNullOrEmpty(DescricaoPlDepartamento))
                     {
                         if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlDepartamento.Replace(" ", ""))))
                         {
                             estrutura.Add(new Estrutura
                             {
-                                 Descricao = DescricaoPlDepartamento
+                                Descricao = DescricaoPlDepartamento
                             });
 
                         }
@@ -416,7 +416,7 @@ namespace KAIROS.API.Repositorio
                 while (true)
                 {
 
-                    string DescricaoPFuncionario = excel.LeExcel( "FUNCIONÁRIOS", Linha, 16);
+                    string DescricaoPFuncionario = excel.LeExcel("FUNCIONÁRIOS", Linha, 16);
                     if (!string.IsNullOrEmpty(DescricaoPFuncionario))
                     {
                         if (!horario.Any(a => FormataTexto.SoLetrasENumeros(a.Descricao).Replace(" ", "").Equals(FormataTexto.SoLetrasENumeros(DescricaoPFuncionario).Replace(" ", ""))))
@@ -442,7 +442,7 @@ namespace KAIROS.API.Repositorio
             return horario;
 
         }
-        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos , List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa)
+        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa)
         {
             var estruturas = Estruturas;
             var horarios = Horarois;
@@ -464,7 +464,7 @@ namespace KAIROS.API.Repositorio
                               string Nome = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 2].Value));
                               string PIS = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 3].Value)).PadLeft(11, '0');
                               int FuncionarioSemPIS = 0; // 0 = Tem PIS - 1 = Não tem PIS
-                              string Cracha =  Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value);
+                              string Cracha = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value);
                               string Nascimento = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 5].Value);
                               string Admissao = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 6].Value);
                               string RG = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 7].Value));
@@ -552,32 +552,32 @@ namespace KAIROS.API.Repositorio
                               #region Horario
 
                               foreach (var H in horarios)
+                              {
+                                  if (FormataTexto.SoLetrasENumeros(H.Descricao.Replace(" ", "")).Equals(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))))
                                   {
-                                      if (FormataTexto.SoLetrasENumeros(H.Descricao.Replace(" ", "")).Equals(FormataTexto.SoLetrasENumeros(HorarioPessoa.Replace(" ", ""))))
+
+                                      Horario.Add(new Horarios()
                                       {
+                                          //Codigo = H.Codigo,
+                                          Inicio = DateTime.Now.ToString(),
+                                          Fim = "31/12/9999 23:59:59",
+                                          Horario = new Horario() { Id = H.Id }
+                                      });
 
-                                          Horario.Add(new Horarios()
-                                          {
-                                              //Codigo = H.Codigo,
-                                              Inicio = DateTime.Now.ToString(),
-                                              Fim = "31/12/9999 23:59:59",
-                                              Horario = new Horario() { Id = H.Id }
-                                          });
-
-                                          break;
-                                      }
-
-
-                                  }
-                                  if (Horario.Count <= 0)
-                                  {
-                                      divergencia = true;
-                                      Log.GravaLog($"({HorarioPessoa}) Horario não encontrado para o funcionario, Matricula: " + MAtricula);
-
+                                      break;
                                   }
 
 
-                                  #endregion                            
+                              }
+                              if (Horario.Count <= 0)
+                              {
+                                  divergencia = true;
+                                  Log.GravaLog($"({HorarioPessoa}) Horario não encontrado para o funcionario, Matricula: " + MAtricula);
+
+                              }
+
+
+                              #endregion
                               #region Base de Horas
                               if (!string.IsNullOrEmpty(BaseDeHoras))
                               {
@@ -633,7 +633,7 @@ namespace KAIROS.API.Repositorio
                               }
                               #endregion
                               #region DataNascimento
-                              if (string.IsNullOrEmpty( Nascimento))
+                              if (string.IsNullOrEmpty(Nascimento))
                               {
                                   Nascimento = "01/01/1753";
                               }
@@ -652,7 +652,7 @@ namespace KAIROS.API.Repositorio
                                       DataNascimento = Nascimento,
                                       DataAdmissao = Admissao,
                                       Rg = RG,
-                                      Cpf = CPF,
+                                      Cpf = Convert.ToUInt64(CPF).ToString(@"000\.000\.000\-00"),
                                       Email = Email,
                                       TelefoneCelular = Celular,
                                       TipoSalario = TipoDeSalario,
@@ -684,7 +684,7 @@ namespace KAIROS.API.Repositorio
                   });
             if (divergencia && !AtualizaPessoa)
             {
-               throw new Exception("verifique o arquivo de LOG, existem pessoas com dados inconsistentes !");
+                throw new Exception("verifique o arquivo de LOG, existem pessoas com dados inconsistentes !");
             }
             return Pessoas;
         }
@@ -697,7 +697,7 @@ namespace KAIROS.API.Repositorio
             {
                 diretorio = SalvarEm;
             }
-           
+
             if (!File.Exists(diretorio + $"\\Pessoas_BKP_{data}.xlsx"))
             {
                 var ExcelHorario = new ExcelPackage(new FileInfo($"{diretorio}\\Pessoas_BKP_{data}.xlsx"));
@@ -715,7 +715,7 @@ namespace KAIROS.API.Repositorio
                 PlanilhaHoario.Cells[$"A3:T3"].Style.Font.Size = 13;
                 PlanilhaHoario.Cells[$"A3:T3"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
 
-                for (int i = 2; i < pessoas.Count() +4; i++)
+                for (int i = 2; i < pessoas.Count() + 4; i++)
                 {
                     PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
                     PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Border.Right.Style = ExcelBorderStyle.Thin;
@@ -723,17 +723,17 @@ namespace KAIROS.API.Repositorio
 
                 }
 
-               
 
-                PlanilhaHoario.Cells[2, 1 ].Value = "MATRICULA";
-                PlanilhaHoario.Cells[2, 2 ].Value = "NOME";
-                PlanilhaHoario.Cells[2, 3 ].Value = "PIS";
-                PlanilhaHoario.Cells[2, 4 ].Value = "CRACHA";
-                PlanilhaHoario.Cells[2, 5 ].Value = "DATA DE NASCIMENTO";
-                PlanilhaHoario.Cells[2, 6 ].Value = "DATA DE ADMISSÃO";
-                PlanilhaHoario.Cells[2, 7 ].Value = "RG";
-                PlanilhaHoario.Cells[2, 8 ].Value = "CPF";
-                PlanilhaHoario.Cells[2, 9 ].Value = "TELEFONE";
+
+                PlanilhaHoario.Cells[2, 1].Value = "MATRICULA";
+                PlanilhaHoario.Cells[2, 2].Value = "NOME";
+                PlanilhaHoario.Cells[2, 3].Value = "PIS";
+                PlanilhaHoario.Cells[2, 4].Value = "CRACHA";
+                PlanilhaHoario.Cells[2, 5].Value = "DATA DE NASCIMENTO";
+                PlanilhaHoario.Cells[2, 6].Value = "DATA DE ADMISSÃO";
+                PlanilhaHoario.Cells[2, 7].Value = "RG";
+                PlanilhaHoario.Cells[2, 8].Value = "CPF";
+                PlanilhaHoario.Cells[2, 9].Value = "TELEFONE";
                 PlanilhaHoario.Cells[2, 10].Value = "CELULAR";
                 PlanilhaHoario.Cells[2, 11].Value = "E-MAIL";
                 PlanilhaHoario.Cells[2, 12].Value = "TIPO DE SALARIO";
@@ -746,13 +746,13 @@ namespace KAIROS.API.Repositorio
                 PlanilhaHoario.Cells[2, 19].Value = "SEXO";
                 PlanilhaHoario.Cells[2, 20].Value = "CNPJ";
 
-                PlanilhaHoario.Cells["A1:T1"].Merge  = true;
+                PlanilhaHoario.Cells["A1:T1"].Merge = true;
                 PlanilhaHoario.Cells["A1:T1"].Value = "Planilha Backup";
                 PlanilhaHoario.Cells["A1:T1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
 
                 PlanilhaHoario.Cells["A2:T2"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                 PlanilhaHoario.Cells["A2:T2"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
-                                       
+
                 PlanilhaHoario.Cells["A3:T3"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                 PlanilhaHoario.Cells["A3:T3"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
                 int linha = 4;
@@ -768,7 +768,7 @@ namespace KAIROS.API.Repositorio
                     PlanilhaHoario.Cells[linha, 8].Value = item.Cpf.ToString();
                     PlanilhaHoario.Cells[linha, 9].Value = item.Telefone;
                     PlanilhaHoario.Cells[linha, 10].Value = item.TelefoneCelular;
-                    PlanilhaHoario.Cells[linha, 11].Value = item.Email;                    
+                    PlanilhaHoario.Cells[linha, 11].Value = item.Email;
                     PlanilhaHoario.Cells[linha, 13].Value = item.BaseHoras;
                     PlanilhaHoario.Cells[linha, 15].Value = item.Estrutura.Descricao;
                     PlanilhaHoario.Cells[linha, 17].Value = item?.Cargo?.Descricao;
@@ -788,7 +788,7 @@ namespace KAIROS.API.Repositorio
                     {
                         PlanilhaHoario.Cells[linha, 14].Value = "SIM";
                     }
-                    else 
+                    else
                     {
                         PlanilhaHoario.Cells[linha, 14].Value = "NÂO";
                     }
@@ -809,7 +809,7 @@ namespace KAIROS.API.Repositorio
                         PlanilhaHoario.Cells[linha, 12].Value = "MENSALISTA";
                     }
 
-                    
+
                     #endregion
 
 
@@ -897,7 +897,7 @@ namespace KAIROS.API.Repositorio
 
             });
         }
-       
+
 
 
     }

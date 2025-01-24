@@ -60,7 +60,7 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[110.2.0, )"
+              "version": "[112.1.0, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",

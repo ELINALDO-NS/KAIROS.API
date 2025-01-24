@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\repositorio\\apirepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\repositorio\\apirepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\repositorio\\excelrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|solutionrelative:kairos.api\\repositorio\\excelrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3442A655-07EC-4377-AE48-EA908E00C336}|KAIROS.API\\KAIROS.API.csproj|c:\\users\\suporte\\documents\\projetos\\csharp\\kairos.api\\kairos.api\\kairos.api\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExcelRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "RelativeDocumentMoniker": "KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "ToolTip": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "RelativeToolTip": "KAIROS.API\\Repositorio\\ExcelRepositorio.cs",
+              "ViewState": "AgIAAIYCAAAAAAAAAAAowIMCAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T17:43:45.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,7 +49,7 @@
               "RelativeDocumentMoniker": "KAIROS.API\\Form1.cs",
               "ToolTip": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs",
               "RelativeToolTip": "KAIROS.API\\Form1.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAkwOUAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOUAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T12:34:02.997Z",
               "EditorCaption": ""
@@ -50,21 +63,7 @@
               "ToolTip": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Form1.cs [Projeto]",
               "RelativeToolTip": "KAIROS.API\\Form1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T12:32:49.357Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "APIRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
-              "RelativeDocumentMoniker": "KAIROS.API\\Repositorio\\APIRepositorio.cs",
-              "ToolTip": "C:\\Users\\SUPORTE\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\Repositorio\\APIRepositorio.cs",
-              "RelativeToolTip": "KAIROS.API\\Repositorio\\APIRepositorio.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAowP4AAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T13:27:25.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T12:32:49.357Z"
             }
           ]
         }

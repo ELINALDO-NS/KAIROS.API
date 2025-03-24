@@ -58,7 +58,7 @@ namespace KAIROS.API.Model
         public object HorariosAlternativos { get; set; }
         public Grupo Grupo { get; set; }
         // public object LocalizacaoAlternativaGPS { get; set; }
-        public Cargo Cargo { get; set; }
+        public Cargo? Cargo { get; set; }
 
         [JsonIgnore]
         public string CNPJ { get; set; }

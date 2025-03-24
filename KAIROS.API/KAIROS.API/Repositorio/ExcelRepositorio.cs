@@ -481,7 +481,7 @@ namespace KAIROS.API.Repositorio
                               var Horario = new List<Horarios>();
                               var RegraDeCaldulo = new List<Regrascalculo>();
                               string CargoPessoa = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value));
-                              var Cargo = new Cargo();
+                              Cargo? Cargo = null;
                               string EscalaDeFOlga = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 18].Value);
                               var AmbienteDeTrabalho = new List<Ambientetrabalhopessoa>();
                               AmbienteDeTrabalho.Add(new Ambientetrabalhopessoa

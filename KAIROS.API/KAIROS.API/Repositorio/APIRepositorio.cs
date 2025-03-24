@@ -139,8 +139,12 @@ namespace KAIROS.API.Repositorio
                               @"";
                       request.AddParameter("application/json", body, ParameterType.RequestBody);
                       var response = client.Execute(request);
-                      Resposta Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                      cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()));
+                      Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
+                      if (Resposta.Obj is not null)
+                      {
+                          cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()));
+                      }
+                      
                   });
             return cargos;
         }

@@ -481,7 +481,7 @@ namespace KAIROS.API.Repositorio
                               var Horario = new List<Horarios>();
                               var RegraDeCaldulo = new List<Regrascalculo>();
                               string CargoPessoa = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value));
-                              Cargo? Cargo = null;
+                              Cargo? Cargo = new();
                               string EscalaDeFOlga = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 18].Value);
                               var AmbienteDeTrabalho = new List<Ambientetrabalhopessoa>();
                               AmbienteDeTrabalho.Add(new Ambientetrabalhopessoa
@@ -491,8 +491,11 @@ namespace KAIROS.API.Repositorio
                                   Fim = "31/12/9999 23:59:59",
                                   TipoAmbienteTrabalho = 6
                               });
-
-                              string Sexo = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper();
+                              if (CPF == "00000000000")
+                              {
+                                  CPF = null!;
+                              }
+                              string Sexo = FormataTexto.SoLetrasENumeros( Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper());
                               string CNPJ = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 20].Value);
                               var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1 };
                               #region Estrutura
@@ -606,7 +609,7 @@ namespace KAIROS.API.Repositorio
                               #endregion
                               #region Sexo
 
-                              if (Sexo == "F" || Sexo == "FEMININO" || Sexo == "FEMENINO" || Sexo == "FEMININA")
+                              if (Sexo == "F" || Sexo == "FEMININO" || Sexo == "FEMENINO" || Sexo == "FEMININA" || Sexo == "FEM")
                               {
                                   Sexo = "2";
                               }
@@ -652,7 +655,7 @@ namespace KAIROS.API.Repositorio
                                       DataNascimento = Nascimento,
                                       DataAdmissao = Admissao,
                                       Rg = RG,
-                                      Cpf = CPF != "00000000000" ? Convert.ToUInt64(CPF).ToString(@"000\.000\.000\-00") : "",
+                                      Cpf = (CPF != "00000000000" && CPF != null) ? Convert.ToUInt64(CPF).ToString(@"000\.000\.000\-00") : null!,
                                       Email = Email,
                                       TelefoneCelular = Celular != "" ? Celular : "",
                                       TipoSalario = TipoDeSalario,

@@ -1,4 +1,50 @@
-06-06-2025_11-45 - Salva Pessoa - The Field Pis is invalid - Matricula : 27 - LAIS FIGUEIREDO DA SILVA
-06-06-2025_11-45 - Salva Pessoa - The Field Pis is invalid - Matricula : 45 - JULIO CESAR APARECIDO DE SOUZA
-06-06-2025_11-45 - Salva Pessoa - The Field Pis is invalid - Matricula : 39 - EDIVAN FERREIRA ALENCAR NOVAES
-06-06-2025_11-45 - Salva Pessoa - The Field Pis is invalid - Matricula : 47 - INGRID KAROLLINY MENDES DE LIMA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee VANESSA SILVA ROGERIO - Matricula : 26 - VANESSA SILVA ROGERIO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ROSALVO DOS SANTOS ALENCAR - Matricula : 65 - ROSALVO DOS SANTOS ALENCAR
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee EDMILSON JUNIO OLIVEIRA DO ESPIRITO SANTO - Matricula : 57 - EDMILSON JUNIO OLIVEIRA DO ESPIRITO SANTO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee GLEIDSON FERREIRA DOS SANTOS - Matricula : 44 - GLEIDSON FERREIRA DOS SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee SIDNEI CARVALHO DA SILVA - Matricula : 9 - SIDNEI CARVALHO DA SILVA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee SUELEN DO CARMO NEREU BARBOSA - Matricula : 69 - SUELEN DO CARMO NEREU BARBOSA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee LUAN FERREIRA SILVA - Matricula : 24 - LUAN FERREIRA SILVA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JAQUELINE MARIA BRANDAO REIS - Matricula : 68 - JAQUELINE MARIA BRANDAO REIS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ELIANE SOUZA DA CONCEICAO - Matricula : 37 - ELIANE SOUZA DA CONCEICAO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee EDILENE DA MATA BARRETO - Matricula : 58 - EDILENE DA MATA BARRETO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee LUCAS OLIVEIRA ALVES - Matricula : 74 - LUCAS OLIVEIRA ALVES
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ERON DO NASCIMENTO PEREIRA - Matricula : 28 - ERON DO NASCIMENTO PEREIRA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee PATRICIA RIBEIRO SILVA DE SOUZA - Matricula : 52 - PATRICIA RIBEIRO SILVA DE SOUZA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JOAO GUILHERME BORGES BARBOSA - Matricula : 63 - JOAO GUILHERME BORGES BARBOSA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee HEIDER DE SOUSA SANTANA - Matricula : 30 - HEIDER DE SOUSA SANTANA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ANA CLAUDIA DO NASCIMENTO - Matricula : 38 - ANA CLAUDIA DO NASCIMENTO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee NATALIA DA SILVA NEVES - Matricula : 8 - NATALIA DA SILVA NEVES
+06-06-2025_16-14 - Salva Pessoa - The Field Pis is invalid - Matricula : 27 - LAIS FIGUEIREDO DA SILVA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee SAMANTHA MEDEIROS - Matricula : 15 - SAMANTHA MEDEIROS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JANACI DOS REIS CONCEICAO - Matricula : 35 - JANACI DOS REIS CONCEICAO
+06-06-2025_16-14 - Salva Pessoa - The Field Pis is invalid - Matricula : 45 - JULIO CESAR APARECIDO DE SOUZA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ANA GISELE DE JESUS SANTOS - Matricula : 54 - ANA GISELE DE JESUS SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JOSE LUIS ARAUJO SOUSA - Matricula : 34 - JOSE LUIS ARAUJO SOUSA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee RONE IVO DE FREITAS HORTA - Matricula : 17 - RONE IVO DE FREITAS HORTA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ALINE SANTOS COSTA - Matricula : 13 - ALINE SANTOS COSTA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JEFFERSON RAMOS DOS SANTOS - Matricula : 64 - JEFFERSON RAMOS DOS SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ANGELICA SANTOS RAMOS PEREIRA - Matricula : 43 - ANGELICA SANTOS RAMOS PEREIRA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JOSE MARIA DOS SANTOS COSTA - Matricula : 25 - JOSE MARIA DOS SANTOS COSTA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee DENILSON MATOS DA SILVA SANTOS - Matricula : 14 - DENILSON MATOS DA SILVA SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee WESLEI SANTANA FERREIRA - Matricula : 12 - WESLEI SANTANA FERREIRA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee CARLOS SOUSA DOS SANTOS JUNIOR - Matricula : 49 - CARLOS SOUSA DOS SANTOS JUNIOR
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee JAILTON SILVA CRUZ - Matricula : 4 - JAILTON SILVA CRUZ
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee WESLEY SANTOS FONSECA - Matricula : 73 - WESLEY SANTOS FONSECA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee WILLIAM OLIVEIRA SANTOS - Matricula : 67 - WILLIAM OLIVEIRA SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ALLEF PAIXAO DE SOUSA - Matricula : 56 - ALLEF PAIXAO DE SOUSA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee MARCUS VINICIUS FERREIRA GOMES - Matricula : 72 - MARCUS VINICIUS FERREIRA GOMES
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee LEILIANE OLIVEIRA DOS REIS SANTOS - Matricula : 41 - LEILIANE OLIVEIRA DOS REIS SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ADISSON DOS SANTOS CERQUEIRA - Matricula : 51 - ADISSON DOS SANTOS CERQUEIRA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee FILIPE REIS VIEIRA - Matricula : 3 - FILIPE REIS VIEIRA
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee AGNES VITORIA SANTOS DO CARMO - Matricula : 40 - AGNES VITORIA SANTOS DO CARMO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee CICERO ANDRE DE SOUSA TELES - Matricula : 6 - CICERO ANDRE DE SOUSA TELES
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee MARCUS VINICIUS DOS SANTOS MACHADO - Matricula : 53 - MARCUS VINICIUS DOS SANTOS MACHADO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ANGELINA DA SILVA SANTOS - Matricula : 22 - ANGELINA DA SILVA SANTOS
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee ISRAEL DE SENA MACHADO - Matricula : 1 - ISRAEL DE SENA MACHADO
+06-06-2025_16-14 - Salva Pessoa - Register number already exists in employee LUIZ ALBERTO MENDES DOS SANTOS - Matricula : 42 - LUIZ ALBERTO MENDES DOS SANTOS
+06-06-2025_16-15 - Salva Pessoa - Register number already exists in employee JOAO VICTOR OLIVEIRA LEAL - Matricula : 61 - JOAO VICTOR OLIVEIRA LEAL
+06-06-2025_16-15 - Salva Pessoa - The Field Pis is invalid - Matricula : 39 - EDIVAN FERREIRA ALENCAR NOVAES
+06-06-2025_16-15 - Salva Pessoa - Register number already exists in employee LILIAN OLIVEIRA SILVA - Matricula : 60 - LILIAN OLIVEIRA SILVA
+06-06-2025_16-15 - Salva Pessoa - Register number already exists in employee NOILSON FREITAS DE SOUZA - Matricula : 18 - NOILSON FREITAS DE SOUZA
+06-06-2025_16-15 - Salva Pessoa - The Field Pis is invalid - Matricula : 47 - INGRID KAROLLINY MENDES DE LIMA

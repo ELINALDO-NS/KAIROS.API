@@ -1043,7 +1043,7 @@
             // Check_alt_PIS
             // 
             Check_alt_PIS.AutoSize = true;
-            Check_alt_PIS.Location = new Point(281, 157);
+            Check_alt_PIS.Location = new Point(282, 157);
             Check_alt_PIS.Name = "Check_alt_PIS";
             Check_alt_PIS.Size = new Size(15, 14);
             Check_alt_PIS.TabIndex = 21;

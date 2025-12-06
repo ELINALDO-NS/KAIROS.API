@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Kairos_Sync</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="check.png" />
+    <None Remove="Spin.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KAIROS.API\KAIROS.API.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="check.png" />
+    <Resource Include="Spin.gif" />
+  </ItemGroup>
+
+</Project>

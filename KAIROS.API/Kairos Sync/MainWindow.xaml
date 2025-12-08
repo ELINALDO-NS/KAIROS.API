@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"         
     Title="Kairos Sync" Height="489" Width="826">
+    <Window.Resources>
+        <local:ConverterSexo x:Key="ConverterSexo"/>
+
+    </Window.Resources>
+    
     <Grid>
         <TabControl>
             <TabItem Header="Insere Cadastros">
@@ -16,20 +21,20 @@
                         <ColumnDefinition Width="451*"/>
                     </Grid.ColumnDefinitions>
                     <Label Content="Caminho Excel" HorizontalAlignment="Left" Margin="2,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
-                    <TextBox  x:Name="TxbCaminhoExcel" IsEnabled="False" MaxLines="1" HorizontalAlignment="Left" Margin="112,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="14"/>
-                    <Button x:Name="BtnCaminhoExcel" Content="..." HorizontalAlignment="Left" Margin="4,13,0,0" VerticalAlignment="Top" Width="48" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+                    <TextBox Text="{Binding CaminhoExcel,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCaminhoExcel" IsEnabled="False" MaxLines="1" HorizontalAlignment="Left" Margin="112,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="14"/>
+                    <Button x:Name="BtnCaminhoExcel" Content="..." HorizontalAlignment="Left" Margin="4,13,0,0" VerticalAlignment="Top" Width="48" FontWeight="Bold" FontSize="14" Grid.Column="1" Click="BtnCaminhoExcel_Click"/>
                     <Label Content="Key" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14"/>
                     <Label Content="CNP" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14"/>
                     <Label Content="CPF Resp." HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14"/>
                     <TextBox x:Name="TxbKey" MaxLines="1" HorizontalAlignment="Left" Margin="59,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontWeight="Bold" FontSize="14"/>
                     <TextBox x:Name="TxbCNPJ" MaxLines="1" HorizontalAlignment="Left" Margin="59,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185" FontWeight="Bold" FontSize="14"/>
                     <TextBox x:Name="TxbCPFResponsavel" MaxLines="1" HorizontalAlignment="Left" Margin="83,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" FontWeight="Bold" FontSize="14"/>
-                    <Button Content="Lista Horarios" HorizontalAlignment="Left" Margin="262,59,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Grid.ColumnSpan="2"/>
-                    <Button Content="Valida Dados" HorizontalAlignment="Left" Margin="262,109,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Grid.ColumnSpan="2"/>
-                    <Button Content="Sync" HorizontalAlignment="Left" Margin="262,165,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Grid.ColumnSpan="2"/>
+                    <Button x:Name="BtnListaorario" Content="Lista Horarios" HorizontalAlignment="Left" Margin="262,59,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Grid.ColumnSpan="2" Click="BtnListaorario_Click" />
+                    <Button x:Name="BtnValidaDados"  Content="Valida Dados" HorizontalAlignment="Left" Margin="262,109,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Grid.ColumnSpan="2" Click="BtnValidaDados_Click"/>
+                    <Button x:Name="BtnSync" Content="Sync" HorizontalAlignment="Left" Margin="262,165,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Grid.ColumnSpan="2" Click="BtnSync_Click" />
                     <GroupBox Header="Inserir" FontWeight="Bold" FontSize="14" Height="80" Margin="0,203,50,123">
                         <StackPanel Orientation="Horizontal" Margin="10">
-                            <CheckBox x:Name="CjkEstruturas" Content="Estruturas" Margin="5" FontWeight="Bold" FontSize="14"/>
+                            <CheckBox x:Name="ChkEstruturas" Content="Estruturas" Margin="5" FontWeight="Bold" FontSize="14"/>
                             <CheckBox x:Name="ChkCargos" Content="Cargos" Margin="5" FontWeight="Bold" FontSize="14"/>
                             <CheckBox x:Name="ChkPessoas" Content="Pessoas" Margin="5" FontWeight="Bold" FontSize="14"/>
                         </StackPanel>
@@ -54,6 +59,7 @@
             </TabItem>
 
             <TabItem Header="Altera Pessoa">
+                
                 <Grid Background="#FFE5E5E5">
                     <Label Content="CNPJ" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
                     <TextBox MaxLines="1" HorizontalAlignment="Left" Margin="51,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" FontWeight="Bold" FontSize="14"/>
@@ -75,171 +81,210 @@
                         </StackPanel>
                     </GroupBox>
                     <Button Content="Iniciar" HorizontalAlignment="Center" Margin="0,119,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="40" Width="152"/>
+                    <ListView ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="4,203,10,10" ItemsSource="{Binding Pessoas}" FontWeight="Bold" FontSize="14" AlternationCount="2" >
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Property="Background" Value="#F0F8FF" />
 
-                    <DataGrid
-                  Margin="4,203,10,10"
-                  ColumnWidth="SizeToHeader">">>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, 
+                                          Path=(ItemsControl.AlternationIndex)}"  Value="1">
+                                        <Setter Property="Background" Value="White" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.View>
+                            
+                            <GridView>
 
-                        <DataGrid.Columns >
-
-                            <DataGridTextColumn Binding="{Binding Matricula}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Matricula}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="Matricula" Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
+                                            <CheckBox Content="Matrícula"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Nome}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Nome}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="Nome        " Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
+                                            <CheckBox Content="Nome" />
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding PIS}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding PIS}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="PIS" Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
+                                            <CheckBox Content="PIS         " Margin="0,0,5,0"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Cracha}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Cracha}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="Cracha" Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
+                                            <CheckBox Content="Crachá        " Margin="0,0,5,0"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding DataDeNascimento}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding DataDeNascimento, StringFormat='dd/MM/yyyy'}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <CheckBox Content="Data de Nascimento" Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding DataDeAdminisao}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding DataDeAdminisao, StringFormat='dd/MM/yyyy'}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <CheckBox Content="Data de Admissão" Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding RG}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding RG}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="RG     " Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
+                                            <CheckBox Content="RG               " Margin="0,0,5,0"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding CPF}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Cpf}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="CPF     " Margin="0,0,5,0"/>
-                                            <TextBlock Text=""/>
+                                            <CheckBox Content="CPF             " Margin="0,0,5,0"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Celular}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Celular}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <CheckBox Content="Celular" Margin="0,0,5,0"/>
-
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Email}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Email}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <CheckBox Content="E-mail" Margin="0,0,5,0"/>
-
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Deparamento}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Departamento}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <CheckBox Content="Departamento" Margin="0,0,5,0"/>
-
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Horario}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Horario}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="Horario" Margin="0,0,5,0"/>
-
+                                            <CheckBox Content="Horário" Margin="0,0,5,0"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Cargo}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Cargo}">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                             <CheckBox Content="Cargo" Margin="0,0,5,0"/>
-
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                            <DataGridTextColumn Binding="{Binding Sexo}">
-                                <DataGridTextColumn.HeaderTemplate>
-                                    <DataTemplate>
+                                <GridViewColumn DisplayMemberBinding="{Binding Converter={StaticResource ConverterSexo},Path=Sexo }">
+                                    <GridViewColumn.Header>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                            <CheckBox Content="Sexo   " Margin="0,0,5,0"/>
-
+                                            <CheckBox Content="Sexo" Margin="0,0,5,0"/>
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTextColumn.HeaderTemplate>
-                            </DataGridTextColumn>
+                                    </GridViewColumn.Header>
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                </GridViewColumn>
 
-                        </DataGrid.Columns>
-                    </DataGrid>
-
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </Grid>
+                
             </TabItem>
 
         </TabControl>

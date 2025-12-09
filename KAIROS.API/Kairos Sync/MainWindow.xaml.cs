@@ -10,7 +10,6 @@ using System.Windows;
 
 
 
-
 namespace Kairos_Sync
 {
     /// <summary>
@@ -179,14 +178,14 @@ namespace Kairos_Sync
             {
                 if (string.IsNullOrEmpty(CaminhoExcel))
                 {
-                    MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario");
+                    MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario",MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
                 string LocalGravacao = PathGravacao();
                 if (!string.IsNullOrEmpty(LocalGravacao))
                 {
                     await _excel.SalvaHorarios(CaminhoExcel, LocalGravacao);
-                    MessageBox.Show("Ok","Lista Horarios");
+                    MessageBox.Show("Lista de Horarios Salva Com Sucesso !","Lista Horarios",MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -198,8 +197,55 @@ namespace Kairos_Sync
                 MessageBox.Show(ex.Message);
             }
         }
+        public async Task<bool> ValidaDados(string Caminho)
+        {
+            bool CPF = true;
+            var CPFDuplicado = true;
+            var PIS = true;
+            var PISDuplicado = true;
+            var MatriculaDuplicada = true;
+            var PessoaSemMatricula = true;
+            var DescricaoHorario = true;
+            var EmailDuplicado = true;
+            var DataInvalida = true;
+            var PessoaSemCPF = true;
+           // Lbl_ValidaDados.Invoke(new Action(() => { Lbl_ValidaDados.Visible = true; }));
+           //AlterarStatus(SpinValidaDados, CheckValidaDados, true);
 
-        private void BtnValidaDados_Click(object sender, RoutedEventArgs e)
+            await Task.WhenAll(
+               Task.Run(async () => { CPF = await _validaDados.ValidaCPF(Caminho); }),
+               Task.Run(async () => { CPFDuplicado = await _validaDados.ValidaCPFDuplicado(Caminho); }),
+               Task.Run(async () => { PIS = await _validaDados.ValidaPIS(Caminho); }),
+               Task.Run(async () => { PISDuplicado = await _validaDados.ValidaPISDuplicado(Caminho); }),
+               Task.Run(async () => { MatriculaDuplicada = await _validaDados.ValidaMatriculaDuplicada(Caminho); }),
+               Task.Run(async () => { PessoaSemMatricula = await _validaDados.ValidaPessoaSemMatricula(Caminho); }),
+               Task.Run(async () => { DescricaoHorario = await _validaDados.ValidaDescricaoHorario(Caminho); }),
+               Task.Run(async () => { EmailDuplicado = await _validaDados.ValidaEmailDuplicado(Caminho); }),
+               Task.Run(async () => { DataInvalida = await _validaDados.ValidaDatas(Caminho); }),
+               Task.Run(async () => { PessoaSemCPF = await _validaDados.ValidaPessoaSemCNPJ(Caminho); })
+
+               );
+
+
+            if (!CPF || !CPFDuplicado || !PIS || !PISDuplicado || !MatriculaDuplicada || !PessoaSemMatricula ||
+                 !DescricaoHorario || !EmailDuplicado || !DataInvalida || !PessoaSemCPF)
+            {
+               // AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                var confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    System.Diagnostics.Process.Start("notepad.exe", Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log\Log.txt"));
+                }
+
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+        private async void BtnValidaDados_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -217,10 +263,10 @@ namespace Kairos_Sync
 
                 }
                 //ResetaStatus();
-                if (/*await ValidaDados(Txb_Excel.Text) ==*/ true)
+                if (await ValidaDados(CaminhoExcel) == true)
                 {
                     //AlterarStatus(SpinValidaDados, CheckValidaDados, false);
-                    MessageBox.Show("Dados OK, NÃO existem dados invalidos ou duplicados !");
+                    MessageBox.Show("NÃO existem dados invalidos ou duplicados !");
                 }
             }
             catch (Exception ex)

@@ -2423,23 +2423,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Meu_Notebook\\.nuget\\packages\\": {},
+    "C:\\Users\\Suporte\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\Kairos Sync.csproj",
+      "projectUniqueName": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\Kairos Sync.csproj",
       "projectName": "Kairos Sync",
-      "projectPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\Kairos Sync.csproj",
-      "packagesPath": "C:\\Users\\Meu_Notebook\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\obj\\",
+      "projectPath": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\Kairos Sync.csproj",
+      "packagesPath": "C:\\Users\\Suporte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Meu_Notebook\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2454,8 +2454,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj": {
-              "projectPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj"
+            "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj": {
+              "projectPath": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\KAIROS.API\\KAIROS.API.csproj"
             }
           }
         }

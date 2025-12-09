@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11222.15 d18.0
+VisualStudioVersion = 18.0.11222.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KAIROS.API", "KAIROS.API\KAIROS.API.csproj", "{3442A655-07EC-4377-AE48-EA908E00C336}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos Sync", "Kairos Sync\Kairos Sync.csproj", "{134E06B7-7485-4B1A-B796-77458BBEE1BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{134E06B7-7485-4B1A-B796-77458BBEE1BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{134E06B7-7485-4B1A-B796-77458BBEE1BB}.Release|x64.ActiveCfg = Release|Any CPU
 		{134E06B7-7485-4B1A-B796-77458BBEE1BB}.Release|x64.Build.0 = Release|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Debug|x64.Build.0 = Debug|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Release|x64.ActiveCfg = Release|Any CPU
+		{A8E97363-54F7-44D6-AD47-CE2DB4F7F76D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

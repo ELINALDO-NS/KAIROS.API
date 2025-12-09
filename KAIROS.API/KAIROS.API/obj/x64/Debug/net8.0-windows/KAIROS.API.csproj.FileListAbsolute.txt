@@ -438,3 +438,7 @@ C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API
 C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\KAIROS.API.pdb
 C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\KAIROS.API.genruntimeconfig.cache
 C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\KAIROS.API\obj\x64\Debug\net8.0-windows\ref\KAIROS.API.dll
+C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\linux\selenium-manager
+C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\macos\selenium-manager
+C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\selenium-manager\windows\selenium-manager.exe
+C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\KAIROS.API\bin\x64\Debug\net8.0-windows\WebDriver.dll

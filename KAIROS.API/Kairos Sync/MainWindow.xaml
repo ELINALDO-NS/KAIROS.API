@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kairos_Sync"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"         
-    Title="Kairos Sync" Height="489" Width="826">
+    Title="Kairos Sync" Height="490" Width="830">
     <Window.Resources>
         <local:ConverterSexo x:Key="ConverterSexo"/>
 
@@ -81,7 +81,7 @@
                         </StackPanel>
                     </GroupBox>
                     <Button Content="Iniciar" HorizontalAlignment="Center" Margin="0,119,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="40" Width="152"/>
-                    <ListView ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="4,203,10,10" ItemsSource="{Binding Pessoas}" FontWeight="Bold" FontSize="14" AlternationCount="2" >
+                    <ListView ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="0,203,0,0" ItemsSource="{Binding Pessoas}" FontWeight="Bold" FontSize="14" AlternationCount="2" >
                         <ListView.ItemContainerStyle>
                             <Style TargetType="{x:Type ListViewItem}">
                                 <Setter Property="Background" Value="#F0F8FF" />

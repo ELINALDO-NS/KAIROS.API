@@ -1,14 +1,5 @@
 ﻿using KAIROS.API.Repositorio.Interface;
-using Microsoft.Extensions.FileSystemGlobbing.Internal;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace KAIROS.API.Repositorio
 {

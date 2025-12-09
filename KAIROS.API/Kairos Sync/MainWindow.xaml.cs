@@ -6,6 +6,7 @@ using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Windows;
 
 
@@ -17,7 +18,7 @@ namespace Kairos_Sync
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        public ObservableCollection<Pessoa> Pessoas { get; set; }
+        public ObservableCollection<Pessoa> ListaDePessoas { get; set; }
         static string log = Convert.ToString(AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
         private readonly IExcelRepositorio _excel;
         private readonly IAPIRepositorio _API;
@@ -29,7 +30,7 @@ namespace Kairos_Sync
             _excel = new ExcelRepositorio();
             _API = new APIRepositorio();
             _validaDados = new ValidaDadosRepositorio();
-            Pessoas = new()
+            ListaDePessoas = new()
         {
             new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001",Sexo = 0 },
             new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002", Sexo =1},
@@ -108,9 +109,31 @@ namespace Kairos_Sync
 
         #endregion
 
+        #region Inserir
+        private bool _ChkEstrutura;
+        public bool ChkEstrutura
+        {
+            get { return _ChkEstrutura; }
+            set { _ChkEstrutura = value; OnPropertyChanged(); }
+        }
+        private bool _ChkCargo;
+        public bool ChkCargo
+        {
+            get { return _ChkCargo; }
+            set { _ChkCargo = value; OnPropertyChanged(); }
+        }
+        private bool _ChkPessoa;
+        public bool ChkPessoa
+        {
+            get { return _ChkPessoa; }
+            set { _ChkPessoa = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        private void OnPropertyChanged(string propertyName)
+        private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
@@ -135,7 +158,7 @@ namespace Kairos_Sync
                     return false;
 
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -162,7 +185,7 @@ namespace Kairos_Sync
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Local de Gravação Excel",MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Local de Gravação Excel", MessageBoxButton.OK, MessageBoxImage.Error);
                 return "";
             }
 
@@ -171,21 +194,20 @@ namespace Kairos_Sync
         {
             PathLeitura();
         }
-
         private async void BtnListaHorarios_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 if (string.IsNullOrEmpty(CaminhoExcel))
                 {
-                    MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario",MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
                 string LocalGravacao = PathGravacao();
                 if (!string.IsNullOrEmpty(LocalGravacao))
                 {
                     await _excel.SalvaHorarios(CaminhoExcel, LocalGravacao);
-                    MessageBox.Show("Lista de Horarios Salva Com Sucesso !","Lista Horarios",MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Lista de Horarios Salva Com Sucesso !", "Lista Horarios", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -209,8 +231,8 @@ namespace Kairos_Sync
             var EmailDuplicado = true;
             var DataInvalida = true;
             var PessoaSemCPF = true;
-           // Lbl_ValidaDados.Invoke(new Action(() => { Lbl_ValidaDados.Visible = true; }));
-           //AlterarStatus(SpinValidaDados, CheckValidaDados, true);
+            // Lbl_ValidaDados.Invoke(new Action(() => { Lbl_ValidaDados.Visible = true; }));
+            //AlterarStatus(SpinValidaDados, CheckValidaDados, true);
 
             await Task.WhenAll(
                Task.Run(async () => { CPF = await _validaDados.ValidaCPF(Caminho); }),
@@ -230,7 +252,7 @@ namespace Kairos_Sync
             if (!CPF || !CPFDuplicado || !PIS || !PISDuplicado || !MatriculaDuplicada || !PessoaSemMatricula ||
                  !DescricaoHorario || !EmailDuplicado || !DataInvalida || !PessoaSemCPF)
             {
-               // AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                // AlterarStatus(SpinValidaDados, CheckValidaDados, false);
                 var confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (confirm.ToString().ToUpper() == "YES")
                 {
@@ -276,13 +298,38 @@ namespace Kairos_Sync
             }
 
         }
-
         private void BtnSync_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("SYNC");
         }
 
+        #region ChkInserir  
 
+        private void ChkEstruturas_Checked(object sender, RoutedEventArgs e)
+        {
+            ChkEstrutura = true;
+        }
+        private void ChkEstruturas_UnChecked(object sender, RoutedEventArgs e)
+        {
+            ChkEstrutura = false;
+        }
+        private void ChkCargos_Checked(object sender, RoutedEventArgs e)
+        {
+            ChkCargo = true;
+        }
+        private void ChkCargos_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ChkCargo = false;
+        }
+        private void ChkPessoas_Checked(object sender, RoutedEventArgs e)
+        {
+            ChkPessoa = true;
+        }
+        private void ChkPessoas_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ChkPessoa = false;
+        }
+        #endregion
     }
     public class Pessoa
     {

@@ -11,7 +11,6 @@
         <local:ConverterSexo x:Key="ConverterSexo"/>
 
     </Window.Resources>
-
     <Grid>
         <TabControl>
             <TabItem Header="Insere Cadastros">
@@ -29,10 +28,10 @@
                     <Button x:Name="BtnValidaDados"  Content="Valida Dados" HorizontalAlignment="Left" Margin="294,109,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnValidaDados_Click" Height="23"/>
                     <Button x:Name="BtnSync" Content="Sync" HorizontalAlignment="Left" Margin="294,165,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnSync_Click" Height="23" />
                     <GroupBox Header="Inserir" FontWeight="Bold" FontSize="14" Margin="0,208,50,141">
-                        <StackPanel Orientation="Horizontal" Margin="10">
-                            <CheckBox x:Name="ChkEstruturas" Content="Estruturas" Margin="5" FontWeight="Bold" FontSize="14"/>
-                            <CheckBox x:Name="ChkCargos" Content="Cargos" Margin="5" FontWeight="Bold" FontSize="14"/>
-                            <CheckBox x:Name="ChkPessoas" Content="Pessoas" Margin="5" FontWeight="Bold" FontSize="14"/>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <CheckBox x:Name="ChkEstruturas" Content="Estruturas" Margin="12" FontWeight="Bold" FontSize="14" Checked="ChkEstruturas_Checked" Unchecked="ChkEstruturas_UnChecked"/>
+                            <CheckBox x:Name="ChkCargos" Content="Cargos" Margin="10" FontWeight="Bold" FontSize="14" Checked="ChkCargos_Checked" Unchecked="ChkCargos_Unchecked"/>
+                            <CheckBox x:Name="ChkPessoas" Content="Pessoas" Margin="10" FontWeight="Bold" FontSize="14" Checked="ChkPessoas_Checked" Unchecked="ChkPessoas_Unchecked"/>
                         </StackPanel>
                     </GroupBox>
                     <Label Content="Validando Dados" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="121"/>

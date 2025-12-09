@@ -35,7 +35,7 @@ namespace KAIROS.API.Repositorio
         string ListaPessoaPorId_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SearchPerson ";
         private readonly IExcelRepositorio _excel;
 
-        public APIRepositorio(IExcelRepositorio excel)
+        public APIRepositorio(IExcelRepositorio excel = null)
         {
             _excel = excel;
         }

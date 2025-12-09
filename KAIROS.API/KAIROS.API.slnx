@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="API/API.csproj" />
+  <Project Path="Kairos Sync/Kairos Sync.csproj" />
+  <Project Path="KAIROS.API/KAIROS.API.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>

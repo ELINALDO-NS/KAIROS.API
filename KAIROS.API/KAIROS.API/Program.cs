@@ -21,7 +21,7 @@ namespace KAIROS.API
            .AddScoped<IExcelRepositorio, ExcelRepositorio>()
            .AddScoped<IAPIRepositorio, APIRepositorio>()
            .AddScoped<IValidaDadosRepositorio, ValidaDadosRepositorio>()
-            .BuildServiceProvider();
+           .BuildServiceProvider();
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1(serviceProvider));
             

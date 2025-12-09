@@ -1,16 +1,15 @@
-﻿using KAIROS.API.Model;
+﻿using KAIROS.API;
+using KAIROS.API.Model;
+using KAIROS.API.Repositorio;
+using KAIROS.API.Repositorio.Interface;
+using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Text;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+
+
 
 namespace Kairos_Sync
 {
@@ -20,10 +19,17 @@ namespace Kairos_Sync
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public ObservableCollection<Pessoa> Pessoas { get; set; }
+        static string log = Convert.ToString(AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
+        private readonly IExcelRepositorio _excel;
+        private readonly IAPIRepositorio _API;
+        private readonly IValidaDadosRepositorio _validaDados;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = this;
+            _excel = new ExcelRepositorio();
+            _API = new APIRepositorio();
+            _validaDados = new ValidaDadosRepositorio();
             Pessoas = new()
         {
             new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001",Sexo = 0 },
@@ -108,29 +114,130 @@ namespace Kairos_Sync
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
         }
 
-        private void BtnCaminhoExcel_Click(object sender, RoutedEventArgs e)
+        public bool PathLeitura()
         {
-            CaminhoExcel = "Caminho do Excel selecionado";
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+
+                openFileDialog.Filter = "Text files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    CaminhoExcel = openFileDialog.FileName;
+
+                    return true;
+                }
+                else
+                {
+
+                    return false;
+
+                }
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Modelo Excel", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+        }
+        public string PathGravacao()
+        {
+            try
+            {
+
+                var dialog = new OpenFolderDialog
+                {
+                    Title = "Selecione uma pasta"
+                };
+
+                if (dialog.ShowDialog() == true)
+                {
+                    return dialog.FolderName;
+                }
+                return "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Local de Gravação Excel",MessageBoxButton.OK, MessageBoxImage.Error);
+                return "";
+            }
+
+        }
+        private void BtnCaminhoExcel_Click_1(object sender, RoutedEventArgs e)
+        {
+            PathLeitura();
         }
 
-        private void BtnListaorario_Click(object sender, RoutedEventArgs e)
+        private async void BtnListaHorarios_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("Lista Horarios");
+            try
+            {
+                if (string.IsNullOrEmpty(CaminhoExcel))
+                {
+                    MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario");
+                    return;
+                }
+                string LocalGravacao = PathGravacao();
+                if (!string.IsNullOrEmpty(LocalGravacao))
+                {
+                    await _excel.SalvaHorarios(CaminhoExcel, LocalGravacao);
+                    MessageBox.Show("Ok","Lista Horarios");
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnValidaDados_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("Valida dados");
+            try
+            {
+                if (File.Exists(log))
+                {
+                    File.Delete(log);
+                }
+
+                if (string.IsNullOrEmpty(CaminhoExcel))
+                {
+                    if (!PathLeitura())
+                    {
+                        return;
+                    }
+
+                }
+                //ResetaStatus();
+                if (/*await ValidaDados(Txb_Excel.Text) ==*/ true)
+                {
+                    //AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                    MessageBox.Show("Dados OK, NÃO existem dados invalidos ou duplicados !");
+                }
+            }
+            catch (Exception ex)
+            {
+                //(SpinValidaDados, CheckValidaDados, false);
+                MessageBox.Show(ex.Message, "Valida Dados");
+            }
+
         }
 
         private void BtnSync_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("SYNC");
+            MessageBox.Show("SYNC");
         }
-    }
 
+
+    }
     public class Pessoa
     {
         public int Id { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KAIROS.API.Repositorio.Interface
 {
-    interface IAPIRepositorio
+   public interface IAPIRepositorio
     {
         Task InsereCargosAPI(string Key, string CNPJ, string caminho);
         Task<List<Cargo>> ListaCargosAPI(string Key, string CNPJ);

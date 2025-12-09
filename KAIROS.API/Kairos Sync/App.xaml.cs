@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Kairos_Sync
 {
@@ -9,6 +7,6 @@ namespace Kairos_Sync
     /// </summary>
     public partial class App : Application
     {
-    }
 
+    }
 }

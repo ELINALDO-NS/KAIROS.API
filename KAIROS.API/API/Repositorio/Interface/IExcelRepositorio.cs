@@ -11,7 +11,8 @@ namespace API.Repositorio.Interface
     {
         Task<List<Cargo>> ListaCargos(string CaminhoExcel);
         Task<List<Estrutura>> ListaEstruturas(string CaminhoExcel);
-        Task<List<Horarios>> ListaHorarios(string CaminhoExcel);
+        Task<List<Horarios>> ListaHorariosAssociados(string CaminhoExcel);
+        Task<List<Horarios>> ListaHorariosNaoAssociados(string CaminhoExcel);
         Task<List<Pessoa>> ListaPessoas(string CaminhoExcel, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa = false);
         Task SalvaHorarios(string caminhoLeitura, string SalvarEm);
         Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ, string SalvarEm = "");

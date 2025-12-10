@@ -6,7 +6,7 @@ using OfficeOpenXml.Style;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
-namespace KAIROS.API.Repositorio
+namespace API.Repositorio
 {
     public class ExcelRepositorio : IExcelRepositorio
     {
@@ -15,76 +15,11 @@ namespace KAIROS.API.Repositorio
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         }
-        public async Task<List<Cargo>> ListaCargos(string caminho)
+        public async Task<List<Cargo>> ListaCargos(string CaminhoExcel)
         {
             var cargos = new List<Cargo>();
             var cargosOrdenados = new List<Cargo>();
-            await Task.Run(() =>
-            {
-                var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
-                ExcelWorksheet PlanilhaCargos = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "CARGOS");
-                ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
-
-
-                int Linha = 4;
-
-                while (true)
-                {
-                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaCargos.Cells[Linha, 2].Value));
-                    if (!string.IsNullOrEmpty(DescricaoPlCargo))
-                    {
-                        if (!cargos.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlCargo.Replace(" ", ""))))
-                        {
-                            cargos.Add(new Cargo
-                            {
-
-                                Descricao = DescricaoPlCargo
-                            });
-
-                        }
-                        Linha++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-                Linha = 4;
-                while (true)
-                {
-                    string DescricaoPlFuncionario = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value));
-                    if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
-                    {
-
-                        if (!cargos.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlFuncionario.Replace(" ", ""))))
-                        {
-                            cargos.Add(new Cargo
-                            {
-
-                                Descricao = DescricaoPlFuncionario
-                            });
-
-                        }
-
-                        Linha++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            });
-            int codigo = 1;
-            cargosOrdenados = cargos.OrderBy(c => c.Descricao).ToList();
-            cargosOrdenados.ForEach(c => { c.Codigo = codigo; codigo++; });
-            return cargosOrdenados;
-
-        }
-        public async Task<List<Cargo>> ListaCargosNovo(string caminho)
-        {
-            var cargos = new List<Cargo>();
-            var cargosOrdenados = new List<Cargo>();
-            var excel = new Excel(caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -139,10 +74,10 @@ namespace KAIROS.API.Repositorio
             return cargosOrdenados;
 
         }
-        public async Task<List<Desligamento>> ListaDesligamento(string caminho)
+        public async Task<List<Desligamento>> ListaDesligamento(string CaminhoExcel)
         {
             var desligamento = new List<Desligamento>();
-            var excel = new Excel(caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -177,77 +112,11 @@ namespace KAIROS.API.Repositorio
             return desligamento;
 
         }
-        public async Task<List<Estrutura>> ListaEstruturas(string caminho)
+        public async Task<List<Estrutura>> ListaEstruturas(string CaminhoExcel)
         {
             var estrutura = new List<Estrutura>();
             var estruturaOrdenada = new List<Estrutura>();
-            await Task.Run(() =>
-            {
-                var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
-                ExcelWorksheet PlanilhaDepartamentos = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "DEPARTAMENTOS");
-                ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
-
-                int Linha = 4;
-
-                while (true)
-                {
-                    string DescricaoPlDepartamento = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaDepartamentos.Cells[Linha, 2].Value));
-                    if (!string.IsNullOrEmpty(DescricaoPlDepartamento))
-                    {
-                        if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlDepartamento.Replace(" ", ""))))
-                        {
-                            estrutura.Add(new Estrutura
-                            {
-
-                                Descricao = DescricaoPlDepartamento
-                            });
-
-                        }
-
-                        Linha++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-                Linha = 4;
-                while (true)
-                {
-                    string DescricaoPlFuncionario = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 15].Value));
-
-                    if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
-                    {
-                        if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlFuncionario.Replace(" ", ""))))
-                        {
-                            estrutura.Add(new Estrutura
-                            {
-
-                                Descricao = DescricaoPlFuncionario
-                            });
-
-                        }
-
-                        Linha++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            });
-            int codigo = 1;
-            estruturaOrdenada = estrutura.OrderBy(c => c.Descricao).ToList();
-            estruturaOrdenada.ForEach(c => { c.Codigo = codigo; codigo++; });
-            return estruturaOrdenada;
-
-
-        }
-        public async Task<List<Estrutura>> ListaEstruturasNovo(string caminho)
-        {
-            var estrutura = new List<Estrutura>();
-            var estruturaOrdenada = new List<Estrutura>();
-            var excel = new Excel(caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
                 int Linha = 4;
@@ -305,74 +174,10 @@ namespace KAIROS.API.Repositorio
 
 
         }
-        public async Task<List<Horarios>> ListaHorarios(string caminho)
+        public async Task<List<Horarios>> ListaHorarios(string CaminhoExcel)
         {
             var horario = new List<Horarios>();
-            await Task.Run(() =>
-            {
-                var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
-
-                ExcelWorksheet PlanilhaHorario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "HORÁRIOS");
-                ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
-
-                int Linha = 5;
-                int Codigo = 1;
-
-                while (true)
-                {
-
-                    string DescricaoPHorario = Convert.ToString(PlanilhaHorario.Cells[Linha, 2].Value);
-                    if (!string.IsNullOrEmpty(DescricaoPHorario))
-                    {
-                        if (!horario.Any(a => FormataTexto.SoLetrasENumeros(a.Descricao).Replace(" ", "").Equals(FormataTexto.SoLetrasENumeros(DescricaoPHorario).Replace(" ", ""))))
-                        {
-                            horario.Add(new Horarios
-                            {
-                                Codigo = Codigo.ToString(),
-                                Descricao = DescricaoPHorario,
-
-                            });
-                            Codigo++;
-                        }
-
-                        Linha++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-                Linha = 4;
-                while (true)
-                {
-                    string DescricaoPFuncionario = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 16].Value);
-                    if (!string.IsNullOrEmpty(DescricaoPFuncionario))
-                    {
-                        if (!horario.Any(a => FormataTexto.SoLetrasENumeros(a.Descricao).Replace(" ", "").Equals(FormataTexto.SoLetrasENumeros(DescricaoPFuncionario).Replace(" ", ""))))
-                        {
-                            horario.Add(new Horarios
-                            {
-                                Codigo = Codigo.ToString(),
-                                Descricao = DescricaoPFuncionario
-                            });
-                            Codigo++;
-                        }
-
-                        Linha++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            });
-            return horario;
-
-        }
-        public async Task<List<Horarios>> ListaHorariosNovo(string caminho)
-        {
-            var horario = new List<Horarios>();
-            var excel = new Excel(caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -434,14 +239,14 @@ namespace KAIROS.API.Repositorio
             return horario;
 
         }
-        public async Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa)
+        public async Task<List<Pessoa>> ListaPessoas(string CaminhoExcel, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa)
         {
             var estruturas = Estruturas;
             var horarios = Horarois;
             var cargos = Cargos;
             var Pessoas = new List<Pessoa>();
             bool divergencia = false;
-            var PlanilhaImplantacao = new ExcelPackage(new FileInfo(caminho));
+            var PlanilhaImplantacao = new ExcelPackage(new FileInfo(CaminhoExcel));
             ExcelWorksheet PlanilhaFuncionario = PlanilhaImplantacao.Workbook.Worksheets.First(a => a.Name == "FUNCIONÁRIOS");
             int Linha = 4;
             await Task.Run(() =>
@@ -836,10 +641,9 @@ namespace KAIROS.API.Repositorio
                 ExcelHorario.Save();
             }
         }
-        public async Task SalvaHorarios(string caminhoLeitura, string SalvarEm)
+        public async Task SalvaHorarios(string CaminhoExcelLeitura, string SalvarEm)
         {
-
-            var horarios = await ListaHorariosNovo(caminhoLeitura);
+            var horarios = await ListaHorarios(CaminhoExcelLeitura);
             await Task.Run(() =>
             {
 

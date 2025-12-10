@@ -1,15 +1,12 @@
-﻿using KAIROS.API;
-using KAIROS.API.Model;
-using KAIROS.API.Repositorio;
-using KAIROS.API.Repositorio.Interface;
+﻿using API.Model;
+using API.Repositorio;
+using API.Repositorio.Interface;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows;
-
-
 
 namespace Kairos_Sync
 {
@@ -28,7 +25,7 @@ namespace Kairos_Sync
             InitializeComponent();
             DataContext = this;
             _excel = new ExcelRepositorio();
-            _API = new APIRepositorio();
+            _API = new APIRepositorio(_excel);
             _validaDados = new ValidaDadosRepositorio();
             ListaDePessoas = new()
         {
@@ -62,51 +59,29 @@ namespace Kairos_Sync
         public string CaminhoExcel
         {
             get { return _CaminhoExcel; }
-            set { _CaminhoExcel = value; OnPropertyChanged(nameof(CaminhoExcel)); }
+            set { _CaminhoExcel = value; OnPropertyChanged(); }
         }
 
         private string _Key = string.Empty;
-
         public string Key
         {
             get { return _Key; }
-            set { _Key = value; OnPropertyChanged(nameof(CaminhoExcel)); }
+            set { _Key = value; OnPropertyChanged(); }
+        }
+
+        private string _CNPJ = string.Empty;
+        public string CNPJ
+        {
+            get { return _CNPJ; }
+            set { _CNPJ = value; OnPropertyChanged(); }
         }
 
         private string _CPFRESP = string.Empty;
-
         public string CPFRESP
         {
             get { return _CPFRESP; }
-            set { _CPFRESP = value; OnPropertyChanged(nameof(CPFRESP)); }
+            set { _CPFRESP = value; OnPropertyChanged(); }
         }
-
-        private bool _InsereEstrutura;
-
-        public bool InsereEstrutura
-        {
-            get { return _InsereEstrutura; }
-            set { _InsereEstrutura = value; OnPropertyChanged(nameof(InsereEstrutura)); }
-        }
-
-        private bool _InsereCargos;
-
-        public bool InsereCargos
-        {
-            get { return _InsereCargos; }
-            set { _InsereCargos = value; OnPropertyChanged(nameof(InsereCargos)); }
-        }
-
-        private bool _InserePessos;
-
-        public bool InserePessoas
-        {
-            get { return _InserePessos; }
-            set { _InserePessos = value; OnPropertyChanged(nameof(InserePessoas)); }
-        }
-
-
-
         #endregion
 
         #region Inserir
@@ -132,13 +107,11 @@ namespace Kairos_Sync
         #endregion
 
         public event PropertyChangedEventHandler? PropertyChanged;
-
         private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         }
-
         public bool PathLeitura()
         {
             try
@@ -298,9 +271,95 @@ namespace Kairos_Sync
             }
 
         }
-        private void BtnSync_Click(object sender, RoutedEventArgs e)
+        private async void BtnSync_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("SYNC");
+            if (string.IsNullOrEmpty(Key.Trim()) || string.IsNullOrEmpty(CNPJ.Trim()) || string.IsNullOrEmpty(CPFRESP.Trim()))
+            {
+                MessageBox.Show("Verifique os Campos: KEY, CNPJ, e CPFResponsavel", "Iniciar", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (!ChkCargo && !ChkEstrutura && !ChkPessoa)
+            {
+                MessageBox.Show("Selecione os items a serem inseridos!", "Iniciar", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(CaminhoExcel))
+            {
+                if (!PathLeitura())
+                {
+                    return;
+                }
+            }
+            if (File.Exists(log))
+            {
+                File.Delete(log);
+            }
+
+            List<Cargo> Cargos = new();
+            List<Estrutura> Estruturas = new();
+            List<Horarios> Horarios = new();
+            List<Pessoa> Pessoas = new();
+            try
+            {
+                var tasks1 = new List<Task>();
+                if (ChkEstrutura)
+                {
+                    tasks1.Add(_API.InsereEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim(), CaminhoExcel: CaminhoExcel.Trim()));
+                }
+                if (ChkCargo)
+                {
+                    tasks1.Add(_API.InsereCargosAPI(Key: Key, CNPJ: CNPJ, CaminhoExcel: CaminhoExcel));
+                }
+
+                await Task.WhenAll(tasks1);
+
+                if (ChkPessoa)
+                {
+                    if (await ValidaDados(CaminhoExcel) == false)
+                    {
+                        return;
+                    }
+
+                    var cargosTask = _API.ListaCargosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
+                    var horariosTask = _API.ListaHorariosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
+                    var estruturasTask = _API.ListaEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
+                    await Task.WhenAll(cargosTask, horariosTask, estruturasTask);
+
+                    Cargos = await cargosTask;
+                    Horarios = await horariosTask;
+                    Estruturas = await estruturasTask;
+                }
+
+                Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios);
+
+                int Stp = 0;
+
+                using (var semaphore = new SemaphoreSlim(20))
+                {
+                    var tasks = Pessoas.Select(async pessoa =>
+                    {
+                        await semaphore.WaitAsync();
+                        try
+                        {
+                            await _API.InserePessoaAPI(Key: Key, CNPJ: CNPJ, Pessoa: pessoa);
+                            Interlocked.Increment(ref Stp);
+                        }
+                        finally { semaphore.Release(); }
+                    });
+                    await Task.WhenAll(tasks);
+                }
+
+
+                MessageBox.Show("OK");
+            }
+            catch (Exception ex)
+            {
+                var confirm = MessageBox.Show(ex.Message + Environment.NewLine + " Verifique o arquivo de Logs! \n Deseja Abrir o arquivo de LOG ?", "Iniciar", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+                if (confirm.ToString().ToUpper() == "YES")
+                {
+                    System.Diagnostics.Process.Start("notepad.exe", Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log\Log.txt"));
+                }
+            }
         }
 
         #region ChkInserir  
@@ -330,55 +389,5 @@ namespace Kairos_Sync
             ChkPessoa = false;
         }
         #endregion
-    }
-    public class Pessoa
-    {
-        public int Id { get; set; }
-        public int Matricula { get; set; }
-        public string Cracha { get; set; }
-        public string Nome { get; set; }
-        public string DataNascimento { get; set; }
-        public object Endereco { get; set; }
-        public string DataAdmissao { get; set; }
-        public string DataDemissao { get; set; }
-        public string Rg { get; set; }
-        public string Cpf { get; set; }
-        public string CpfResponsavel { get; set; }
-        public object Telefone { get; set; }
-        public object TelefoneCelular { get; set; }
-        public string Email { get; set; }
-        public bool ControlaPonto { get; set; }
-        public string DataControlaPonto { get; set; }
-        public bool EhResponsavel { get; set; }
-        public float BaseHoras { get; set; }
-        public float ValorHora { get; set; }
-        public int CodCrachaProv { get; set; }
-        public string DataInicioCrachaProv { get; set; }
-        public string DataFimCrachaProv { get; set; }
-        public Estrutura Estrutura { get; set; }
-        public Tipofuncionario TipoFuncionario { get; set; }
-        public Tiposalario TipoSalario { get; set; }
-        public object TipoSalarioExportacao { get; set; }
-        public Horarios[] Horarios { get; set; }
-        public bool Atualiza { get; set; } = false;
-
-        public Regrascalculo[] RegrasCalculo { get; set; }
-        public string CodigoPis { get; set; }
-        public int FlagGerarNumeroPISAutomatico { get; set; }
-        public long CodigoPisNumerico { get; set; }
-        public int Sexo { get; set; }
-        public object Foto { get; set; }
-        public object FotoUpload { get; set; }
-        public object MiniFoto { get; set; }
-        public int PessoaStatus { get; set; }
-        public int IdStatusObjeto { get; set; }
-        public Ambientetrabalhopessoa[] AmbienteTrabalhoPessoa { get; set; }
-        //public object PessoaEmpresaTemporaria { get; set; }
-        public object HorariosAlternativos { get; set; }
-        public Grupo Grupo { get; set; }
-        // public object LocalizacaoAlternativaGPS { get; set; }
-        public Cargo? Cargo { get; set; }
-
-        public string CNPJ { get; set; }
     }
 }

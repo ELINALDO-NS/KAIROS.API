@@ -21,20 +21,18 @@ namespace API.Repositorio
         string ListaHorario_URL = "https://www.dimepkairos.com.br/RestServiceApi/Schedules/GetSchedulesSummary";
         string DeslihaPessoa_URL = "https://www.dimepkairos.com.br/RestServiceApi/Dismiss/MarkDismiss ";
         string ListaPessoaPorId_URL = "https://www.dimepkairos.com.br/RestServiceApi/People/SearchPerson ";
+        public int status;
         private readonly IExcelRepositorio _excel;
-
         public APIRepositorio(IExcelRepositorio excel)
         {
             _excel = excel;
         }
-
-
-        public async Task InsereCargosAPI(string Key, string CNPJ, string caminho)
+        public async Task InsereCargosAPI(string Key, string CNPJ, string CaminhoExcel)
         {
-            var cargos = await _excel.ListaCargosNovo(caminho);
+            var cargos = await _excel.ListaCargos(CaminhoExcel);
+            
             foreach (var cargo in cargos)
             {
-
                 using (var client = new RestClient(SalvaCargo_URL))
                 {
                     var request = new RestRequest("", Method.Post);
@@ -67,10 +65,9 @@ namespace API.Repositorio
 
             };
         }
-
-        public async Task InsereEstruturasAPI(string Key, string CNPJ, string Caminho)
+        public async Task InsereEstruturasAPI(string Key, string CNPJ, string CaminhoExcel)
         {
-            var estruturas = await _excel.ListaEstruturasNovo(Caminho);
+            var estruturas = await _excel.ListaEstruturas(CaminhoExcel);
             foreach (var estrutura in estruturas)
             {
                 using (var client = new RestClient(SalvaEstrutura_URL))
@@ -105,7 +102,6 @@ namespace API.Repositorio
 
             };
         }
-
         public async Task<List<Cargo>> ListaCargosAPI(string Key, string CNPJ)
         {
             var cargos = new List<Cargo>();
@@ -183,7 +179,6 @@ namespace API.Repositorio
 
 
         }
-
         public async Task<List<Estrutura>> ListaEstruturasAPI(string Key, string CNPJ)
         {
             var estruturas = new List<Estrutura>();
@@ -210,7 +205,6 @@ namespace API.Repositorio
             });
             return estruturas;
         }
-
         public async Task<List<Horarios>> ListaHorariosAPI(string Key, string CNPJ)
         {
             var horario = new List<Horarios>();
@@ -241,48 +235,8 @@ namespace API.Repositorio
                 }
             });
             return horario;
-        }
-        public int status;
-        public async Task InserePessoaAPI(string Key, string CNPJ, string caminho, string CPFResponsavel, List<Pessoa> pessoas)
-        {
-            try
-            {
-
-                Parallel.ForEach(pessoas, Pessoa =>
-                {
-
-                    var client = new RestClient(SalvaPessoa_URL);
-                    var request = new RestRequest("", Method.Post);
-                    request.AddHeader("Content-Type", "application/json");
-                    request.AddHeader("key", Key);
-                    request.AddHeader("identifier", CNPJ);
-                    var JPessoa = JsonConvert.SerializeObject(Pessoa);
-                    request.AddJsonBody(JPessoa);
-                    request.AddParameter("application/json; charset=utf-8", JPessoa, ParameterType.RequestBody);
-                    var response = client.Execute(request);
-                    if (response.ContentType.Equals("application/json"))
-                    {
-                        var Resposta = JsonConvert.DeserializeObject<Resposta>(response.Content);
-                        if (!Resposta.Sucesso)
-                        {
-                            Log.GravaLog("Salva Pessoa - " + Resposta.Mensagem + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
-                        }
-
-                    }
-                    else
-                    {
-                        Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + Pessoa.Matricula + " - " + Pessoa.Nome);
-                    }
-
-                });
-                            }
-            catch (Exception ex)
-            {
-                string a = ex.Message;
-            }
-        }
-
-        public async Task InserePessoaAPINOVO(string Key, string CNPJ, Pessoa pessoa)
+        }        
+        public async Task InserePessoaAPI(string Key, string CNPJ, Pessoa pessoa)
         {
 
             var client = new RestClient(SalvaPessoa_URL);
@@ -311,8 +265,7 @@ namespace API.Repositorio
 
 
         }
-
-        public async Task<List<Pessoa>> ListaTodasPaginasPessoasAPI(string Key, string CNPJ, int totalPage)
+        public async Task<List<Pessoa>> ListaPessoasPaginadaAPI(string Key, string CNPJ, int totalPage)
         {
             List<Pessoa> pessoas = new List<Pessoa>();
 
@@ -346,50 +299,6 @@ namespace API.Repositorio
             }
             return pessoas;
         }
-
-        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ, int pagina = 1)
-        {
-            List<Pessoa> pessoa = new List<Pessoa>();
-            await Task.Run(async () =>
-            {
-                var client = new RestClient(ListaPessoas_URL);
-                var request = new RestRequest("", Method.Post);
-                request.AddHeader("Content-Type", "application/json");
-                request.AddHeader("key", Key);
-                request.AddHeader("identifier", CNPJ);
-                var body = @"
-                            " + "\n" +
-                                   @"{
-                            " + "\n" +
-                                   $@"  ""pagina"" : {pagina}
-                            " + "\n" +
-                                   @"}
-                            " + "\n" +
-                               @"";
-                request.AddParameter("application/json", body, ParameterType.RequestBody);
-                var response1 = client.Execute(request);
-                Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response1.Content);
-                if (Resposta.Sucesso)
-                {
-                    if (Resposta.TotalPagina > 1)
-                    {
-                        pessoa = await ListaTodasPaginasPessoasAPI(Key,CNPJ, Resposta.TotalPagina);
-                    }
-                    else
-                    {
-                        pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
-
-                    }
-                }
-                else
-                {
-                    Log.GravaLog(Resposta.Mensagem.ToString() + $" - Pagina requisitada: {pagina}");
-                }
-
-            });
-            return pessoa;
-        }
-
         public async Task AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)
         {
             var client = new RestClient(AlteraPessoa_URL);
@@ -493,17 +402,16 @@ namespace API.Repositorio
            
 
         }
-
         private bool PessoaExiste(ChromeDriver chromeDriver)
         {
 
             bool existe = chromeDriver.FindElements(By.ClassName("funcionarioName")).Count() > 0;
             return existe;
         }
-        public async Task<bool> ValidaSaldo(string caminho)
+        public async Task<bool> ValidaSaldo(string CaminhoExcel)
         {
             int Linha = 5;
-            Excel excel = new Excel(caminho);
+            Excel excel = new Excel(CaminhoExcel);
             bool ValidaSaldo = true;
             string Planilha = "Lanç. Saldo de Banco Residual";
             while (true)
@@ -536,7 +444,6 @@ namespace API.Repositorio
             }
             return ValidaSaldo;
         }
-
         private string ErroLancamento(ChromeDriver chromeDriver)
         {
             string existe = string.Empty;
@@ -597,13 +504,12 @@ namespace API.Repositorio
             }
             return false;
         }
-
-        public async Task<bool> InsereSaldo(ChromeDriver bot, string Historico, string caminho)
+        public async Task<bool> InsereSaldo(ChromeDriver bot, string Historico, string CaminhoExcel)
         {
             using (bot)
             {
                 int Linha = 5;
-                Excel excel = new Excel(caminho);
+                Excel excel = new Excel(CaminhoExcel);
                 string Planilha = "Lanç. Saldo de Banco Residual";
                 bool erro = false;
                 await Task.Run(async () =>

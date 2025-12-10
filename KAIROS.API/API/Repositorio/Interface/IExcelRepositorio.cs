@@ -9,15 +9,12 @@ namespace API.Repositorio.Interface
 {
     public interface IExcelRepositorio
     {
-        Task<List<Cargo>> ListaCargos(string Caminho);
-        Task<List<Cargo>> ListaCargosNovo(string Caminho);        
-        Task<List<Estrutura>> ListaEstruturas(string Caminho);
-        Task<List<Estrutura>> ListaEstruturasNovo(string caminho);
-        Task<List<Horarios>> ListaHorarios(string Caminho);
-        Task<List<Horarios>> ListaHorariosNovo(string caminho);
-        Task<List<Pessoa>> ListaPessoas(string caminho, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois,bool AtualizaPessoa =false);
+        Task<List<Cargo>> ListaCargos(string CaminhoExcel);
+        Task<List<Estrutura>> ListaEstruturas(string CaminhoExcel);
+        Task<List<Horarios>> ListaHorarios(string CaminhoExcel);
+        Task<List<Pessoa>> ListaPessoas(string CaminhoExcel, string CPFResponsavel, List<Cargo> Cargos, List<Estrutura> Estruturas, List<Horarios> Horarois, bool AtualizaPessoa = false);
         Task SalvaHorarios(string caminhoLeitura, string SalvarEm);
-        Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ,string SalvarEm = "");
+        Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ, string SalvarEm = "");
         Task<List<Desligamento>> ListaDesligamento(string caminho);
     }
 }

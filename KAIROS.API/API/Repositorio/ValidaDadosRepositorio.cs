@@ -11,16 +11,16 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace KAIROS.API.Repositorio
+namespace API.Repositorio
 {
     public class ValidaDadosRepositorio : IValidaDadosRepositorio
     {
-        public async Task<bool> ValidaCPF(string Caminho)
+        public async Task<bool> ValidaCPF(string CaminhoExcel)
         {
 
             bool CPFValido = true;
             int Linha = 4;
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -45,12 +45,12 @@ namespace KAIROS.API.Repositorio
             });
             return CPFValido;
         }
-        public async Task<bool> ValidaCPFDuplicado(string Caminho)
+        public async Task<bool> ValidaCPFDuplicado(string CaminhoExcel)
         {
             bool CPFDupplic = true;
             int Linha = 4;
             var CPFs = new List<string>();
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -82,12 +82,12 @@ namespace KAIROS.API.Repositorio
             return CPFDupplic;
 
         }
-        public async Task<bool> ValidaDescricaoHorario(string Caminho)
+        public async Task<bool> ValidaDescricaoHorario(string CaminhoExcel)
         {
 
             bool DescricaoValido = true;
             int Linha = 4;
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -129,12 +129,12 @@ namespace KAIROS.API.Repositorio
             });
             return DescricaoValido;
         }
-        public async Task<bool> ValidaEmailDuplicado(string Caminho)
+        public async Task<bool> ValidaEmailDuplicado(string CaminhoExcel)
         {
             bool EmailDupplic = true;
             int Linha = 4;
             var Emails = new List<string>();
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -166,12 +166,12 @@ namespace KAIROS.API.Repositorio
             return EmailDupplic;
 
         }
-        public async Task<bool> ValidaMatriculaDuplicada(string Caminho)
+        public async Task<bool> ValidaMatriculaDuplicada(string CaminhoExcel)
         {
             bool MatriculaDupplic = true;
             int Linha = 4;
             var Matriculas = new List<string>();
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -202,11 +202,11 @@ namespace KAIROS.API.Repositorio
             });
             return MatriculaDupplic;
         }
-        public async Task<bool> ValidaPessoaSemMatricula(string Caminho)
+        public async Task<bool> ValidaPessoaSemMatricula(string CaminhoExcel)
         {
 
             int Linha = 4;
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             bool MatriculaValida = true;
             await Task.Run(() =>
             {
@@ -234,12 +234,12 @@ namespace KAIROS.API.Repositorio
             });
             return MatriculaValida;
         }
-        public async Task<bool> ValidaPIS(string Caminho)
+        public async Task<bool> ValidaPIS(string CaminhoExcel)
         {
 
             bool PISValido = true;
             int Linha = 4;
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -270,12 +270,12 @@ namespace KAIROS.API.Repositorio
 
             return PISValido;
         }
-        public async Task<bool> ValidaPISDuplicado(string Caminho)
+        public async Task<bool> ValidaPISDuplicado(string CaminhoExcel)
         {
             bool PISDupplic = true;
             int Linha = 4;
             var PIS = new List<string>();
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
@@ -306,10 +306,10 @@ namespace KAIROS.API.Repositorio
             });
             return PISDupplic;
         }
-        public async Task<bool> ValidaDatas(string Caminho)
+        public async Task<bool> ValidaDatas(string CaminhoExcel)
         {
             int Linha = 4;
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             bool DataValida = true;
             await Task.Run(() =>
             {
@@ -370,10 +370,10 @@ namespace KAIROS.API.Repositorio
             return DataValida;
 
         }
-        public async Task<bool> ValidaPessoaSemCNPJ(string Caminho)
+        public async Task<bool> ValidaPessoaSemCNPJ(string CaminhoExcel)
         {
             int Linha = 4;
-            var excel = new Excel(Caminho);
+            var excel = new Excel(CaminhoExcel);
             bool PessoaSemCNPJ = true;
             await Task.Run(() =>
             {

@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KAIROS.API\KAIROS.API.csproj" />
+    <ProjectReference Include="..\API\API.csproj" />
   </ItemGroup>
 
   <ItemGroup>

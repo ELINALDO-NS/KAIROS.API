@@ -3,6 +3,7 @@ using API.Model;
 using API.Repositorio.Interface;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
+using OpenQA.Selenium.DevTools.V141.Extensions;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
@@ -181,7 +182,7 @@ namespace API.Repositorio
             await Task.Run(() =>
             {
                 Codigo = 2;
-                int Linha = 4;               
+                int Linha = 4;
 
                 while (true)
                 {
@@ -220,7 +221,7 @@ namespace API.Repositorio
             {
 
                 int Linha = 5;
-                
+
                 while (true)
                 {
 
@@ -245,7 +246,7 @@ namespace API.Repositorio
                         break;
                     }
                 }
-                
+
 
 
             });
@@ -305,7 +306,7 @@ namespace API.Repositorio
                               {
                                   CPF = null!;
                               }
-                              string Sexo = FormataTexto.SoLetrasENumeros( Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper());
+                              string Sexo = FormataTexto.SoLetrasENumeros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 19].Value).ToUpper());
                               string CNPJ = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 20].Value);
                               var TipoDeFuncionario = new Tipofuncionario() { IdTipoFuncionario = 1 };
                               #region Estrutura
@@ -656,56 +657,72 @@ namespace API.Repositorio
         }
         public async Task SalvaHorarios(string CaminhoExcelLeitura, string SalvarEm)
         {
-            var HorariosAssociados = await ListaHorariosAssociados(CaminhoExcelLeitura);
-            var HorariosNaoAssociados = await ListaHorariosNaoAssociados(CaminhoExcelLeitura);
+            List<Horarios> HorariosAssociados = await ListaHorariosAssociados(CaminhoExcelLeitura);
+            List<Horarios> HorariosNaoAssociados = await ListaHorariosNaoAssociados(CaminhoExcelLeitura);
             await Task.Run(() =>
             {
+                string caminho = SalvarEm + "\\HORARIOS.xlsx";
 
-                if (File.Exists(SalvarEm + "\\HORARIOS.xlsx"))
+                if (File.Exists(caminho))
                 {
-                    File.Delete(SalvarEm + "\\HORARIOS.xlsx");
+                    File.Delete(caminho);
                 }
-                    #region Horarios Associados
-                    var ExcelHorario = new ExcelPackage(new FileInfo(SalvarEm + "\\HORARIOS.xlsx"));
-                    var PlanilhaHoario = ExcelHorario.Workbook.Worksheets.Add("HORARIOS ASSOCIADOS");
-                    PlanilhaHoario.Cells["A1:B1"].Style.Font.Bold = true;
-                    PlanilhaHoario.Cells[1, 1].Style.Font.Size = 14;
-                    PlanilhaHoario.Cells[1, 2].Style.Font.Size = 14;
-                    PlanilhaHoario.Cells[1, 1].Value = "CODIGO";
-                    PlanilhaHoario.Cells[1, 2].Value = "DESCRICÃO";
-                    PlanilhaHoario.Cells["A1:B1"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                    PlanilhaHoario.Cells["A1:B1"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
-                    int linha = 2;
-                    foreach (var item in HorariosAssociados)
-                    {
-                        PlanilhaHoario.Cells[linha, 1].Value = item.Codigo.ToString();
-                        PlanilhaHoario.Cells[linha, 2].Value = item.Descricao;
-                        linha++;
-                    }
-                    PlanilhaHoario.Column(1).AutoFit();
-                    PlanilhaHoario.Column(2).AutoFit();
-                    #endregion
+                #region Horarios Associados
+                var ExcelHorario = new ExcelPackage(new FileInfo(SalvarEm + "\\HORARIOS.xlsx"));
+                var PlanilhaHoario = ExcelHorario.Workbook.Worksheets.Add("HORARIOS ASSOCIADOS");
+                PlanilhaHoario.Cells["A1:B1"].Style.Font.Bold = true;
+                PlanilhaHoario.Cells[1, 1].Style.Font.Size = 14;
+                PlanilhaHoario.Cells[1, 2].Style.Font.Size = 14;
+                PlanilhaHoario.Cells[1, 1].Value = "CODIGO";
+                PlanilhaHoario.Cells[1, 2].Value = "DESCRICÃO";
+                PlanilhaHoario.Cells["A1:B1"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                PlanilhaHoario.Cells["A1:B1"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
+                int linha = 2;
+                foreach (var item in HorariosAssociados)
+                {
+                    PlanilhaHoario.Cells[linha, 1].Value = item.Codigo.ToString();
+                    PlanilhaHoario.Cells[linha, 2].Value = item.Descricao;
+                    linha++;
+                }
+                PlanilhaHoario.Column(1).AutoFit();
+                PlanilhaHoario.Column(2).AutoFit();
+                #endregion
 
-                    #region Horarios não associado
-                    var PlanilhaHoario1 = ExcelHorario.Workbook.Worksheets.Add("HORARIOS NÃO ASSOCIADOS");
-                    PlanilhaHoario1.Cells["A1:B1"].Style.Font.Bold = true;
-                    PlanilhaHoario1.Cells[1, 1].Style.Font.Size = 14;
-                    PlanilhaHoario1.Cells[1, 2].Style.Font.Size = 14;
-                    PlanilhaHoario1.Cells[1, 1].Value = "CODIGO";
-                    PlanilhaHoario1.Cells[1, 2].Value = "DESCRICÃO";
-                    PlanilhaHoario1.Cells["A1:B1"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                    PlanilhaHoario1.Cells["A1:B1"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
-                    int linha1 = 2;
-                    foreach (var item in HorariosNaoAssociados)
+                #region Horarios não associado
+                var PlanilhaHoario1 = ExcelHorario.Workbook.Worksheets.Add("HORARIOS NÃO ASSOCIADOS");
+                PlanilhaHoario1.Cells["A1:B1"].Style.Font.Bold = true;
+                PlanilhaHoario1.Cells[1, 1].Style.Font.Size = 14;
+                PlanilhaHoario1.Cells[1, 2].Style.Font.Size = 14;
+                PlanilhaHoario1.Cells[1, 1].Value = "CODIGO";
+                PlanilhaHoario1.Cells[1, 2].Value = "DESCRICÃO";
+                PlanilhaHoario1.Cells["A1:B1"].Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                PlanilhaHoario1.Cells["A1:B1"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(0, 165, 80));
+                int linha1 = 2;
+
+                List<Horarios> horarios = new List<Horarios>();
+                int codigo = Convert.ToInt32(HorariosAssociados.Max(x => int.Parse(x.Codigo))) + 1;
+
+                foreach (var item in HorariosNaoAssociados)
+                {
+                    if (!HorariosAssociados.Exists(x => x.Descricao == item.Descricao))
                     {
-                        PlanilhaHoario1.Cells[linha1, 1].Value = item.Codigo.ToString();
-                        PlanilhaHoario1.Cells[linha1, 2].Value = item.Descricao;
-                        linha1++;
-                    }                    
-                    PlanilhaHoario1.Column(1).AutoFit();
-                    PlanilhaHoario1.Column(2).AutoFit();
-                    #endregion
-                    ExcelHorario.Save();
+                        item.Codigo = codigo.ToString();
+                        horarios.Add(item);
+                        codigo++;
+                    }
+                }
+
+                foreach (var item in horarios)
+                {
+                    PlanilhaHoario1.Cells[linha1, 1].Value = item.Codigo.ToString();
+                    PlanilhaHoario1.Cells[linha1, 2].Value = item.Descricao;
+                    linha1++;
+                }
+
+                PlanilhaHoario1.Column(1).AutoFit();
+                PlanilhaHoario1.Column(2).AutoFit();
+                #endregion
+                ExcelHorario.Save();
             });
         }
 

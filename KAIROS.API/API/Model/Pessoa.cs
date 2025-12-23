@@ -92,7 +92,7 @@ namespace API.Model
         public object Nome { get; set; }
     }
 
-    public class Horarios:IEquatable<Horarios>
+    public class Horarios
     {
         public int Id { get; set; }
         [JsonIgnore]
@@ -105,22 +105,7 @@ namespace API.Model
         public string Inicio { get; set; }
         public string Fim { get; set; }
         public string CNPJ { get; set; }
-        public bool Equals(Horarios? other)
-        {
-            if (ReferenceEquals(this, other)) return true;
-
-            if (other is null)
-                return false;
-
-
-            return Horario?.Descricao == other.Descricao;
-        }
-        public override int GetHashCode()
-        {            
-            return HashCode.Combine(
-               Horario?.Descricao
-            );
-        }
+        
     }
 
 

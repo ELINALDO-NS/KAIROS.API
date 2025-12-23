@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\suporte\\documents\\projetos\\kairos.api\\kairos.api\\api\\repositorio\\excelrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\repositorio\\excelrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\suporte\\documents\\projetos\\kairos.api\\kairos.api\\api\\model\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\model\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32B1AE75-BB64-73BD-C4D3-5EEC2DC7D287}|Kairos Sync\\Kairos Sync.csproj|c:\\users\\suporte\\documents\\projetos\\kairos.api\\kairos.api\\kairos sync\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{32B1AE75-BB64-73BD-C4D3-5EEC2DC7D287}|Kairos Sync\\Kairos Sync.csproj|solutionrelative:kairos sync\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{32B1AE75-BB64-73BD-C4D3-5EEC2DC7D287}|Kairos Sync\\Kairos Sync.csproj|c:\\users\\suporte\\documents\\projetos\\kairos.api\\kairos.api\\kairos sync\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{32B1AE75-BB64-73BD-C4D3-5EEC2DC7D287}|Kairos Sync\\Kairos Sync.csproj|solutionrelative:kairos sync\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32B1AE75-BB64-73BD-C4D3-5EEC2DC7D287}|Kairos Sync\\Kairos Sync.csproj|c:\\users\\suporte\\documents\\projetos\\kairos.api\\kairos.api\\kairos sync\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B1AE75-BB64-73BD-C4D3-5EEC2DC7D287}|Kairos Sync\\Kairos Sync.csproj|solutionrelative:kairos sync\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,51 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Pessoa.cs",
-              "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\Model\\Pessoa.cs",
-              "RelativeDocumentMoniker": "API\\Model\\Pessoa.cs",
-              "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\Model\\Pessoa.cs",
-              "RelativeToolTip": "API\\Model\\Pessoa.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAYwGgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T12:18:05.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExcelRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\Repositorio\\ExcelRepositorio.cs",
-              "RelativeDocumentMoniker": "API\\Repositorio\\ExcelRepositorio.cs",
-              "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\Repositorio\\ExcelRepositorio.cs",
-              "RelativeToolTip": "API\\Repositorio\\ExcelRepositorio.cs",
-              "ViewState": "AgIAALgCAAAAAAAAAAAcwL4CAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T17:45:00.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Kairos Sync\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml.cs",
               "RelativeToolTip": "Kairos Sync\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAA/wDYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABIBAAAAAAAAAAArwEgBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T12:50:03.588Z"
+              "WhenOpened": "2025-12-22T16:39:32.025Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Kairos Sync\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml",
               "RelativeToolTip": "Kairos Sync\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-09T19:42:04.384Z"
+              "WhenOpened": "2025-12-09T19:42:04.384Z",
+              "EditorCaption": ""
             }
           ]
         }

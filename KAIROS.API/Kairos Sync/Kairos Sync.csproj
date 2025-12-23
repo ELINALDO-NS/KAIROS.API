@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="check.png" />
+    <None Remove="Erro.png" />
     <None Remove="Spin.gif" />
   </ItemGroup>
 
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <Resource Include="check.png" />
+    <Resource Include="Erro.png" />
     <Resource Include="Spin.gif" />
   </ItemGroup>
 

@@ -54,6 +54,7 @@ namespace Kairos_Sync
             new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
         };
         }
+
         #region Propriedades
         private string _CaminhoExcel = string.Empty;
         public string CaminhoExcel
@@ -82,6 +83,165 @@ namespace Kairos_Sync
             get { return _CPFRESP; }
             set { _CPFRESP = value; OnPropertyChanged(); }
         }
+
+        private string _SpinValidaDados = "Hidden";
+        public string SpinValidaDados
+        {
+            get => _SpinValidaDados;            
+            set{
+                _SpinValidaDados = value ; OnPropertyChanged();
+            }
+        }
+
+        private string _SpinEstruturas = "Hidden";
+        public string SpinEstruturas
+        {
+            get => _SpinEstruturas;
+            set
+            {
+                _SpinEstruturas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _SpinHorarios = "Hidden";
+        public string SpinHoarios
+        {
+            get => _SpinHorarios;
+            set
+            {
+                _SpinHorarios = value; OnPropertyChanged();
+            }
+        }
+
+        private string _SpinCargos = "Hidden";
+        public string SpinCargos
+        {
+            get => _SpinCargos;
+            set
+            {
+                _SpinCargos = value; OnPropertyChanged();
+            }
+        }
+
+        private string _CheckValidaDados = "Hidden";
+        public string CheckValidaDados
+        {
+            get => _CheckValidaDados;
+            set
+            {
+                _CheckValidaDados = value; OnPropertyChanged();
+            }
+        }
+
+        private string _ErroValidaDados = "Hidden";
+        public string ErroValidaDados
+        {
+            get => _ErroValidaDados;
+            set
+            {
+                _ErroValidaDados = value; OnPropertyChanged();
+            }
+        }
+
+        private string _CheckEstruturas = "Hidden";
+        public string CheckEstruturas
+        {
+            get => _CheckEstruturas;
+            set
+            {
+                _CheckEstruturas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _CheckHorarios = "Hidden";
+        public string CheckHorarios
+        {
+            get => _CheckHorarios;
+            set
+            {
+                _CheckHorarios = value; OnPropertyChanged();
+            }
+        }
+
+        private string _CheckCargos = "Hidden";
+        public string CheckCargos
+        {
+            get => _CheckCargos;
+            set
+            {
+                _CheckCargos = value; OnPropertyChanged();
+            }
+        }
+
+        private string _CheckPessoas = "Hidden";
+        public string CheckPessoas
+        {
+            get => _CheckPessoas;
+            set
+            {
+                _CheckPessoas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _LblValidaDados = "Hidden";
+        public string LblValidaDados
+        {
+            get => _LblValidaDados;
+            set
+            {
+                _LblValidaDados = value; OnPropertyChanged();
+            }
+        }
+
+        private string _LblEstruturas = "Hidden";
+        public string LblEstruturas
+        {
+            get => _LblEstruturas;
+            set
+            {
+                _LblEstruturas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _LblHorarios = "Hidden";
+        public string LblHorarios
+        {
+            get => _LblHorarios;
+            set
+            {
+                _LblHorarios = value; OnPropertyChanged();
+            }
+        }
+
+        private string _LblCargos = "Hidden";
+        public string LblCargos
+        {
+            get => _LblCargos;
+            set
+            {
+                _LblCargos = value; OnPropertyChanged();
+            }
+        }
+        private string _LblPessoas = "Hidden";
+        public string LblPessoas
+        {
+            get => _LblPessoas;
+            set
+            {
+                _LblPessoas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _StatusPessoas = "Hidden";
+        public string StatusPessoas
+        {
+            get => _StatusPessoas;
+            set
+            {
+                _StatusPessoas = value; OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Inserir
@@ -163,7 +323,7 @@ namespace Kairos_Sync
             }
 
         }
-        private void BtnCaminhoExcel_Click_1(object sender, RoutedEventArgs e)
+        private async void BtnCaminhoExcel_Click_1(object sender, RoutedEventArgs e)
         {
             PathLeitura();
         }
@@ -194,44 +354,26 @@ namespace Kairos_Sync
         }
         public async Task<bool> ValidaDados(string Caminho)
         {
-            bool CPF = true;
-            var CPFDuplicado = true;
-            var PIS = true;
-            var PISDuplicado = true;
-            var MatriculaDuplicada = true;
-            var PessoaSemMatricula = true;
-            var DescricaoHorario = true;
-            var EmailDuplicado = true;
-            var DataInvalida = true;
-            var PessoaSemCPF = true;
-            // Lbl_ValidaDados.Invoke(new Action(() => { Lbl_ValidaDados.Visible = true; }));
-            //AlterarStatus(SpinValidaDados, CheckValidaDados, true);
-
-            await Task.WhenAll(
-               Task.Run(async () => { CPF = await _validaDados.ValidaCPF(Caminho); }),
-               Task.Run(async () => { CPFDuplicado = await _validaDados.ValidaCPFDuplicado(Caminho); }),
-               Task.Run(async () => { PIS = await _validaDados.ValidaPIS(Caminho); }),
-               Task.Run(async () => { PISDuplicado = await _validaDados.ValidaPISDuplicado(Caminho); }),
-               Task.Run(async () => { MatriculaDuplicada = await _validaDados.ValidaMatriculaDuplicada(Caminho); }),
-               Task.Run(async () => { PessoaSemMatricula = await _validaDados.ValidaPessoaSemMatricula(Caminho); }),
-               Task.Run(async () => { DescricaoHorario = await _validaDados.ValidaDescricaoHorario(Caminho); }),
-               Task.Run(async () => { EmailDuplicado = await _validaDados.ValidaEmailDuplicado(Caminho); }),
-               Task.Run(async () => { DataInvalida = await _validaDados.ValidaDatas(Caminho); }),
-               Task.Run(async () => { PessoaSemCPF = await _validaDados.ValidaPessoaSemCNPJ(Caminho); })
-
-               );
-
-
-            if (!CPF || !CPFDuplicado || !PIS || !PISDuplicado || !MatriculaDuplicada || !PessoaSemMatricula ||
-                 !DescricaoHorario || !EmailDuplicado || !DataInvalida || !PessoaSemCPF)
+            await Task.Delay(1000*5);
+            var tarefas = new Dictionary<string, Task<bool>>
             {
-                // AlterarStatus(SpinValidaDados, CheckValidaDados, false);
-                var confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
-                if (confirm.ToString().ToUpper() == "YES")
-                {
-                    System.Diagnostics.Process.Start("notepad.exe", Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log\Log.txt"));
-                }
+                ["CPF"] = _validaDados.ValidaCPF(Caminho),
+                ["CPFDuplicado"] = _validaDados.ValidaCPFDuplicado(Caminho),
+                ["PIS"] = _validaDados.ValidaPIS(Caminho),
+                ["PISDuplicado"] = _validaDados.ValidaPISDuplicado(Caminho),
+                ["MatriculaDuplicada"] = _validaDados.ValidaMatriculaDuplicada(Caminho),
+                ["PessoaSemMatricula"] = _validaDados.ValidaPessoaSemMatricula(Caminho),
+                ["DescricaoHorario"] = _validaDados.ValidaDescricaoHorario(Caminho),
+                ["EmailDuplicado"] = _validaDados.ValidaEmailDuplicado(Caminho),
+                ["DataInvalida"] = _validaDados.ValidaDatas(Caminho),
+                ["PessoaSemCPF"] = _validaDados.ValidaPessoaSemCNPJ(Caminho)
+            };
 
+            await Task.WhenAll(tarefas.Values);
+            bool dadosValidos = tarefas.Values.All(t => t.Result);
+
+            if (!dadosValidos)
+            {       
                 return false;
             }
             else
@@ -255,18 +397,31 @@ namespace Kairos_Sync
                     {
                         return;
                     }
-
                 }
-                //ResetaStatus();
+                CheckValidaDados = "Hidden";
+                ErroValidaDados = "Hidden";
+                LblValidaDados = "Visivle";
+                SpinValidaDados = "Visivle";
                 if (await ValidaDados(CaminhoExcel) == true)
-                {
-                    //AlterarStatus(SpinValidaDados, CheckValidaDados, false);
+                {                    
+                    SpinValidaDados = "Hidden";
+                    CheckValidaDados = "Visivle";
                     MessageBox.Show("NÃO existem dados invalidos ou duplicados !");
+                }
+                else
+                {
+                    SpinValidaDados = "Hidden";
+                    ErroValidaDados = "Visivle";
+                    var confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+                    if (confirm.ToString().ToUpper() == "YES")
+                    {
+                        System.Diagnostics.Process.Start("notepad.exe", Convert.ToString(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\Log\Log.txt"));
+                    }
                 }
             }
             catch (Exception ex)
             {
-                //(SpinValidaDados, CheckValidaDados, false);
+                ErroValidaDados = "Visivle";
                 MessageBox.Show(ex.Message, "Valida Dados");
             }
 

@@ -4,13 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kairos_Sync"
-        mc:Ignorable="d"
+        xmlns:controls="clr-namespace:Kairos_Sync.Controls"       
+        mc:Ignorable="d"      
         WindowStartupLocation="CenterScreen"         
     Title="Kairos Sync" Height="490" Width="830">
     <Window.Resources>
         <local:ConverterSexo x:Key="ConverterSexo"/>
-
     </Window.Resources>
+
+
     <Grid>
         <TabControl>
             <TabItem Header="Insere Cadastros">
@@ -34,16 +36,23 @@
                             <CheckBox x:Name="ChkPessoas" Content="Pessoas" Margin="10" FontWeight="Bold" FontSize="14" Checked="ChkPessoas_Checked" Unchecked="ChkPessoas_Unchecked" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </StackPanel>
                     </GroupBox>
-                    <Label Content="Validando Dados" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="121"/>
-                    <Label Content="Estruturas" HorizontalAlignment="Left" Margin="163,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="76"/>
-                    <Label Content="Cargos" HorizontalAlignment="Left" Margin="366,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="56"/>
-                    <Label Content="Horarios" HorizontalAlignment="Left" Margin="267,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="67"/>
-                    <Label Content="Pessoas" HorizontalAlignment="Left" Margin="457,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="60"/>
-                    <Image x:Name="ImgValidaDados" Source="/Spin.gif" HorizontalAlignment="Left" Height="25" Margin="134,302,0,0" VerticalAlignment="Top" Width="25" Stretch="Fill"/>
-                    <Image x:Name="ImgEstruturas" Source="/Spin.gif" HorizontalAlignment="Left" Height="25" Margin="244,302,0,0" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.45,-1.596"/>
-                    <Image x:Name="ImgCargos" Source="/Spin.gif" HorizontalAlignment="Left" Height="20" Margin="336,302,0,0" VerticalAlignment="Top" Width="25"/>
-                    <Image x:Name="ImgHorarios" HorizontalAlignment="Left" Height="25" Margin="426,302,0,0" VerticalAlignment="Top" Width="25" Source="/check.png"/>
-                    <Image x:Name="ImgPessoas" Source="/Spin.gif" HorizontalAlignment="Left" Height="25" Margin="519,302,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.45,1.954"/>
+                    <Label  Visibility="{Binding LblValidaDados,UpdateSourceTrigger=PropertyChanged}" Content="Validando Dados" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="121"/>
+                    <Label Visibility="{Binding LblEstruturas,UpdateSourceTrigger=PropertyChanged}" Content="Estruturas" HorizontalAlignment="Left" Margin="163,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="76"/>
+                    <Label Visibility="{Binding LblCargos,UpdateSourceTrigger=PropertyChanged}" Content="Cargos" HorizontalAlignment="Left" Margin="366,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="56"/>
+                    <Label Visibility="{Binding LblHorarios,UpdateSourceTrigger=PropertyChanged}" Content="Horarios" HorizontalAlignment="Left" Margin="267,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="67"/>
+                    <Label Visibility="{Binding LblPessoas,UpdateSourceTrigger=PropertyChanged}" Content="Pessoas" HorizontalAlignment="Left" Margin="457,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="60"/>
+                    <Label Visibility="{Binding StatusPessoas,UpdateSourceTrigger=PropertyChanged}" Content="089/1000" HorizontalAlignment="Left" Margin="513,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="75"/>
+                    <controls:Spinner Width="20" Height="20"  Visibility= "{Binding SpinValidaDados,UpdateSourceTrigger=PropertyChanged}" Margin="132,299,664,123"/>
+                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinEstruturas,UpdateSourceTrigger=PropertyChanged}" Margin="240,301,556,121" />
+                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinCargos,UpdateSourceTrigger=PropertyChanged}" Margin="426,301,370,121" />
+                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinHoarios,UpdateSourceTrigger=PropertyChanged}" Margin="336,301,460,121" />
+                    <Image Visibility="{Binding CheckValidaDados,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="132,299,664,123" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding CheckEstruturas,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="240,301,556,121" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding CheckHorarios,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="336,301,460,121" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding CheckCargos,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="426,301,370,121" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding CheckPessoas,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="520,301,0,0" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding ErroValidaDados, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="132,299,0,0" VerticalAlignment="Top" Source="/Erro.png"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Insere Saldo">

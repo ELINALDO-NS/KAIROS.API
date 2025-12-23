@@ -109,3 +109,5 @@ C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\
 C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\runtimes\win\native\selenium-manager.exe
 C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\API.dll
 C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\API.pdb
+C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Spinner.baml
+C:\Users\Suporte\Documents\Projetos\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Spinner.g.cs

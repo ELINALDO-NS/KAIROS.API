@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace Kairos_Sync
@@ -87,9 +88,10 @@ namespace Kairos_Sync
         private string _SpinValidaDados = "Hidden";
         public string SpinValidaDados
         {
-            get => _SpinValidaDados;            
-            set{
-                _SpinValidaDados = value ; OnPropertyChanged();
+            get => _SpinValidaDados;
+            set
+            {
+                _SpinValidaDados = value; OnPropertyChanged();
             }
         }
 
@@ -232,7 +234,16 @@ namespace Kairos_Sync
             }
         }
 
-        private string _StatusPessoas = "Hidden";
+        private string _LblStatusPessoas = "Hidden";
+        public string LblStatusPessoas
+        {
+            get => _LblStatusPessoas;
+            set
+            {
+                _LblStatusPessoas = value; OnPropertyChanged();
+            }
+        }
+        private string _StatusPessoas = string.Empty;
         public string StatusPessoas
         {
             get => _StatusPessoas;
@@ -354,7 +365,10 @@ namespace Kairos_Sync
         }
         public async Task<bool> ValidaDados(string Caminho)
         {
-            await Task.Delay(1000*5);
+            CheckValidaDados = "Hidden";
+            ErroValidaDados = "Hidden";
+            LblValidaDados = "Visivle";
+            SpinValidaDados = "Visivle";
             var tarefas = new Dictionary<string, Task<bool>>
             {
                 ["CPF"] = _validaDados.ValidaCPF(Caminho),
@@ -373,11 +387,16 @@ namespace Kairos_Sync
             bool dadosValidos = tarefas.Values.All(t => t.Result);
 
             if (!dadosValidos)
-            {       
+            {
+                SpinValidaDados = "Hidden";
+                ErroValidaDados = "Visivle";
                 return false;
+
             }
             else
             {
+                SpinValidaDados = "Hidden";
+                CheckValidaDados = "Visivle";
                 return true;
             }
 
@@ -398,20 +417,13 @@ namespace Kairos_Sync
                         return;
                     }
                 }
-                CheckValidaDados = "Hidden";
-                ErroValidaDados = "Hidden";
-                LblValidaDados = "Visivle";
-                SpinValidaDados = "Visivle";
                 if (await ValidaDados(CaminhoExcel) == true)
-                {                    
-                    SpinValidaDados = "Hidden";
-                    CheckValidaDados = "Visivle";
+                {
+
                     MessageBox.Show("NÃO existem dados invalidos ou duplicados !");
                 }
                 else
                 {
-                    SpinValidaDados = "Hidden";
-                    ErroValidaDados = "Visivle";
                     var confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                     if (confirm.ToString().ToUpper() == "YES")
                     {
@@ -426,6 +438,7 @@ namespace Kairos_Sync
             }
 
         }
+
         private async void BtnSync_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(Key.Trim()) || string.IsNullOrEmpty(CNPJ.Trim()) || string.IsNullOrEmpty(CPFRESP.Trim()))
@@ -454,16 +467,52 @@ namespace Kairos_Sync
             List<Estrutura> Estruturas = new();
             List<Horarios> Horarios = new();
             List<Pessoa> Pessoas = new();
+            var tasks1 = new List<Task>();
             try
             {
-                var tasks1 = new List<Task>();
+                CheckEstruturas = "Hidden";
+                LblEstruturas = "Hidden";
+                SpinEstruturas = "Hidden";
+
+                LblCargos = "Hidden";
+                SpinCargos = "Hidden";
+                CheckCargos = "Hidden";
+
+                LblHorarios = "Hidden";
+                SpinHoarios = "Hidden";
+                CheckHorarios = "Hidden";
+
+
                 if (ChkEstrutura)
                 {
-                    tasks1.Add(_API.InsereEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim(), CaminhoExcel: CaminhoExcel.Trim()));
+                    tasks1.Add(Task.Run(async () =>
+                    {
+                        LblEstruturas = "Visible";
+                        SpinEstruturas = "Visible";
+                        await _API.InsereEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim(), CaminhoExcel: CaminhoExcel.Trim());
+                        if (!ChkPessoa)
+                        {
+                            SpinEstruturas = "Hidden";
+                            CheckEstruturas = "Visible";
+                        }
+
+                    }));
                 }
+
                 if (ChkCargo)
                 {
-                    tasks1.Add(_API.InsereCargosAPI(Key: Key, CNPJ: CNPJ, CaminhoExcel: CaminhoExcel));
+                    tasks1.Add(Task.Run(async () =>
+                    {
+                        LblCargos = "Visible";
+                        SpinCargos = "Visible";
+                        await _API.InsereCargosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim(), CaminhoExcel: CaminhoExcel.Trim());
+                        if (!ChkPessoa)
+                        {
+                            SpinCargos = "Hidden";
+                            CheckCargos = "Visible";
+                        }
+
+                    }));
                 }
 
                 await Task.WhenAll(tasks1);
@@ -474,36 +523,60 @@ namespace Kairos_Sync
                     {
                         return;
                     }
+                    var tasks2 = new List<Task>();
 
-                    var cargosTask = _API.ListaCargosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
-                    var horariosTask = _API.ListaHorariosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
-                    var estruturasTask = _API.ListaEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
-                    await Task.WhenAll(cargosTask, horariosTask, estruturasTask);
-
-                    Cargos = await cargosTask;
-                    Horarios = await horariosTask;
-                    Estruturas = await estruturasTask;
-                }
-
-                Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios);
-
-                int Stp = 0;
-
-                using (var semaphore = new SemaphoreSlim(20))
-                {
-                    var tasks = Pessoas.Select(async pessoa =>
+                    tasks2.Add(Task.Run(async () =>
                     {
-                        await semaphore.WaitAsync();
-                        try
-                        {
-                            await _API.InserePessoaAPI(Key: Key, CNPJ: CNPJ, Pessoa: pessoa);
-                            Interlocked.Increment(ref Stp);
-                        }
-                        finally { semaphore.Release(); }
-                    });
-                    await Task.WhenAll(tasks);
-                }
+                        LblEstruturas = "Visible";
+                        SpinEstruturas = "Visible";
+                        Estruturas = await _API.ListaEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
+                        SpinEstruturas = "Hidden";
+                        CheckEstruturas = "Visible";
+                    }));
 
+                    tasks2.Add(Task.Run(async () =>
+                    {
+                        LblCargos = "Visible";
+                        SpinCargos = "Visible";
+                        Cargos = await _API.ListaCargosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
+                        SpinCargos = "Hidden";
+                        CheckCargos = "Visible";
+                    }));
+
+                    tasks2.Add(Task.Run(async () =>
+                    {
+                        LblHorarios = "Visible";
+                        Horarios = await _API.ListaHorariosAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim());
+                        SpinHoarios = "Hidden";
+                        CheckHorarios = "Visible";
+                    }));
+
+                    await Task.WhenAll(tasks2);
+                    int Stp = 0;
+                    LblPessoas = "Visible";
+                    LblStatusPessoas = "Visible";
+                    Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios);
+                    StatusPessoas = $"{Stp}/{Pessoas.Count}";
+
+                    using (var semaphore = new SemaphoreSlim(20))
+                    {
+                        var tasks = Pessoas.Select(async pessoa =>
+                        {
+                            await semaphore.WaitAsync();
+                            try
+                            {
+                                await _API.InserePessoaAPI(Key: Key, CNPJ: CNPJ, Pessoa: pessoa);
+                                Interlocked.Increment(ref Stp);
+                            }
+                            finally { semaphore.Release(); }
+                        });
+                        await Task.WhenAll(tasks);
+                    }
+
+                    await Task.Delay(1000 * 2);
+                    LblStatusPessoas = "Hidden";
+                    CheckPessoas = "Visible";
+                }
 
                 MessageBox.Show("OK");
             }

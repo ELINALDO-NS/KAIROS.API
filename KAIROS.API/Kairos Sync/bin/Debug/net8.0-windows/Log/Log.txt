@@ -1,0 +1,2 @@
+27-12-2025_15-18 - Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - PROFESSOR CAPOEIRA
+27-12-2025_15-18 -  Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - PRINCIPAL - 63227763000190

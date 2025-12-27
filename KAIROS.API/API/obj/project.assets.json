@@ -1233,23 +1233,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Suporte\\.nuget\\packages\\": {},
+    "C:\\Users\\Meu_Notebook\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Suporte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Suporte\\Documents\\Projetos\\KAIROS.API\\KAIROS.API\\API\\obj\\",
+      "projectPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Meu_Notebook\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Meu_Notebook\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Meu_Notebook\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1315,7 +1315,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

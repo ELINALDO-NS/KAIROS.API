@@ -17,19 +17,19 @@
         <TabControl>
             <TabItem Header="Insere Cadastros">
                 <Grid Background="#FFE5E5E5" VerticalAlignment="Center" HorizontalAlignment="Left" Width="822" Height="447">
-                    <Label Content="Caminho Excel" HorizontalAlignment="Left" Margin="2,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="106"/>
-                    <TextBox Text="{Binding CaminhoExcel,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCaminhoExcel" IsEnabled="False" MaxLines="1" HorizontalAlignment="Left" Margin="112,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontWeight="Bold" FontSize="14" Height="21"/>
-                    <Button x:Name="BtnCaminhoExcel" Content="..." Width="48" HorizontalAlignment="Left" Margin="372,14,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="BtnCaminhoExcel_Click_1"/>
-                    <Label Content="Key" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="34"/>
-                    <Label Content="CNPJ" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="45"/>
-                    <Label Content="CPF Resp." HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="73"/>
-                    <TextBox  Text="{Binding Key,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbKey" MaxLines="1" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" FontWeight="Bold" FontSize="14" Height="21"/>
-                    <TextBox Text="{Binding CNPJ,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCNPJ" MaxLines="1" HorizontalAlignment="Left" Margin="57,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="14" Height="21"/>
-                    <TextBox  Text="{Binding CPFRESP,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCPFResponsavel" MaxLines="1" HorizontalAlignment="Left" Margin="83,167,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" FontWeight="Bold" FontSize="14" Height="21"/>
-                    <Button x:Name="BtnListaHorarios" Content="Lista Horarios" HorizontalAlignment="Left" Margin="292,59,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnListaHorarios_Click" Height="23" />
-                    <Button x:Name="BtnValidaDados"  Content="Valida Dados" HorizontalAlignment="Left" Margin="294,109,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnValidaDados_Click" Height="23"/>
-                    <Button x:Name="BtnSync" Content="Sync" HorizontalAlignment="Left" Margin="294,165,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnSync_Click" Height="23" VerticalContentAlignment="Center" />
-                    <GroupBox Header="Inserir" FontWeight="Bold" FontSize="14" Margin="0,208,398,141">
+                    <Label Content="Caminho Excel" HorizontalAlignment="Left" Margin="2,16,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="106"/>
+                    <TextBox Text="{Binding CaminhoExcel,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCaminhoExcel" IsEnabled="False" MaxLines="1" HorizontalAlignment="Left" Margin="112,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontWeight="Bold" FontSize="14" Height="21"/>
+                    <Button x:Name="BtnCaminhoExcel" Content="..." Width="48" HorizontalAlignment="Left" Margin="372,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="BtnCaminhoExcel_Click_1"/>
+                    <Label Content="Key" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="34"/>
+                    <Label Content="CNPJ" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="45"/>
+                    <Label Content="CPF Resp." HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="73"/>
+                    <TextBox  Text="{Binding Key,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbKey" MaxLines="1" HorizontalAlignment="Left" Margin="49,67,0,0"  VerticalAlignment="Top" Width="236" FontWeight="Bold" FontSize="14" Height="21"/>
+                    <TextBox Text="{Binding CNPJ,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCNPJ" MaxLines="1" HorizontalAlignment="Left" Margin="57,117,0,0"  VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="14" Height="21"/>
+                    <TextBox  Text="{Binding CPFRESP,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCPFResponsavel" MaxLines="1" HorizontalAlignment="Left" Margin="83,173,0,0"  VerticalAlignment="Top" Width="204" FontWeight="Bold" FontSize="14" Height="21"/>
+                    <Button x:Name="BtnListaHorarios" Content="Lista Horarios" HorizontalAlignment="Left" Margin="292,65,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnListaHorarios_Click" Height="23" />
+                    <Button x:Name="BtnValidaDados"  Content="Valida Dados" HorizontalAlignment="Left" Margin="294,115,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnValidaDados_Click" Height="23"/>
+                    <Button x:Name="BtnSync" Content="Sync" HorizontalAlignment="Left" Margin="294,171,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="129" FontSize="14" Click="BtnSync_Click" Height="23" VerticalContentAlignment="Center" />
+                    <GroupBox Header="Inserir" FontWeight="Bold" FontSize="14" RenderTransformOrigin="0.79,0.453" Margin="10,207,399,154">
                         <StackPanel Orientation="Horizontal" Margin="5">
                             <CheckBox x:Name="ChkEstruturas" Content="Estruturas" Margin="12" FontWeight="Bold" FontSize="14" Checked="ChkEstruturas_Checked" Unchecked="ChkEstruturas_UnChecked" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <CheckBox x:Name="ChkCargos" Content="Cargos" Margin="10" FontWeight="Bold" FontSize="14" Checked="ChkCargos_Checked" Unchecked="ChkCargos_Unchecked" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -38,18 +38,18 @@
                     </GroupBox>
                     <Label  Visibility="{Binding LblValidaDados,UpdateSourceTrigger=PropertyChanged}" Content="Validando Dados" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="121"/>
                     <Label Visibility="{Binding LblEstruturas,UpdateSourceTrigger=PropertyChanged}" Content="Estruturas" HorizontalAlignment="Left" Margin="163,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="76"/>
-                    <Label Visibility="{Binding LblCargos,UpdateSourceTrigger=PropertyChanged}" Content="Cargos" HorizontalAlignment="Left" Margin="366,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="56"/>
-                    <Label Visibility="{Binding LblHorarios,UpdateSourceTrigger=PropertyChanged}" Content="Horarios" HorizontalAlignment="Left" Margin="267,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="67"/>
+                    <Label Visibility="{Binding LblCargos,UpdateSourceTrigger=PropertyChanged}" Content="Cargos" HorizontalAlignment="Left" Margin="276,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="56"/>
+                    <Label Visibility="{Binding LblHorarios,UpdateSourceTrigger=PropertyChanged}" Content="Horarios" HorizontalAlignment="Left" Margin="365,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="67"/>
                     <Label Visibility="{Binding LblPessoas,UpdateSourceTrigger=PropertyChanged}" Content="Pessoas" HorizontalAlignment="Left" Margin="457,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="60"/>
-                    <Label Visibility="{Binding StatusPessoas,UpdateSourceTrigger=PropertyChanged}" Content="089/1000" HorizontalAlignment="Left" Margin="513,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="75"/>
+                    <Label Visibility="{Binding LblStatusPessoas,UpdateSourceTrigger=PropertyChanged}" Content="{Binding LblStatusPessoas,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="513,298,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="75"/>
                     <controls:Spinner Width="20" Height="20"  Visibility= "{Binding SpinValidaDados,UpdateSourceTrigger=PropertyChanged}" Margin="132,299,664,123"/>
                     <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinEstruturas,UpdateSourceTrigger=PropertyChanged}" Margin="240,301,556,121" />
-                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinCargos,UpdateSourceTrigger=PropertyChanged}" Margin="426,301,370,121" />
-                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinHoarios,UpdateSourceTrigger=PropertyChanged}" Margin="336,301,460,121" />
+                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinCargos,UpdateSourceTrigger=PropertyChanged}" Margin="339,304,463,123" />
+                    <controls:Spinner  Width="20" Height="20" Visibility= "{Binding SpinHoarios,UpdateSourceTrigger=PropertyChanged}" Margin="432,303,370,124" />
                     <Image Visibility="{Binding CheckValidaDados,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="132,299,664,123" VerticalAlignment="Top" Source="/check.png"/>
                     <Image Visibility="{Binding CheckEstruturas,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="240,301,556,121" VerticalAlignment="Top" Source="/check.png"/>
-                    <Image Visibility="{Binding CheckHorarios,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="336,301,460,121" VerticalAlignment="Top" Source="/check.png"/>
-                    <Image Visibility="{Binding CheckCargos,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="426,301,370,121" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding CheckHorarios,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="434,301,0,0" VerticalAlignment="Top" Source="/check.png"/>
+                    <Image Visibility="{Binding CheckCargos,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="336,301,0,0" VerticalAlignment="Top" Source="/check.png"/>
                     <Image Visibility="{Binding CheckPessoas,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="520,301,0,0" VerticalAlignment="Top" Source="/check.png"/>
                     <Image Visibility="{Binding ErroValidaDados, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="132,299,0,0" VerticalAlignment="Top" Source="/Erro.png"/>
 

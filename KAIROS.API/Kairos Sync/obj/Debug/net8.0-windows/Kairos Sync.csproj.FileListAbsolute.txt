@@ -90,3 +90,49 @@ C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Syn
 C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\API.pdb
 C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Spinner.baml
 C:\Users\Meu_Notebook\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Spinner.g.cs
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Kairos Sync.exe
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Kairos Sync.deps.json
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Kairos Sync.runtimeconfig.json
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Kairos Sync.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Kairos Sync.pdb
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\RestSharp.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\WebDriver.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\runtimes\linux\native\selenium-manager
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\runtimes\osx\native\selenium-manager
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\runtimes\win\native\selenium-manager.exe
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\API.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\bin\Debug\net8.0-windows\API.pdb
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.csproj.AssemblyReference.cache
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Spinner.baml
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Spinner.g.cs
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync_MarkupCompile.cache
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync_MarkupCompile.lref
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.g.resources
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.AssemblyInfoInputs.cache
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.AssemblyInfo.cs
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.csproj.CoreCompileInputs.cache
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.sourcelink.json
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos S.1928CA5E.Up2Date
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\refint\Kairos Sync.dll
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.pdb
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\Kairos Sync.genruntimeconfig.cache
+C:\Users\Suporte\Documents\Projetos\CSHARP\KAIROS.API\KAIROS.API\Kairos Sync\obj\Debug\net8.0-windows\ref\Kairos Sync.dll

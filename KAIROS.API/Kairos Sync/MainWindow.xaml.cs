@@ -556,22 +556,17 @@ namespace Kairos_Sync
                     LblPessoas = "Visible";
                     LblStatusPessoas = "Visible";
                     Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios);
-                    StatusPessoas = $"{Stp}/{Pessoas.Count}";
-
-                    using (var semaphore = new SemaphoreSlim(20))
+                    int TotalPessoa = Pessoas.Count;
+                    StatusPessoas = $"{Stp}/{TotalPessoa}";
+                    
+                    CancellationToken cancellationToken = new CancellationToken();
+                    await Parallel.ForEachAsync(Pessoas, async (pessoa, cancellationToken) =>
                     {
-                        var tasks = Pessoas.Select(async pessoa =>
-                        {
-                            await semaphore.WaitAsync();
-                            try
-                            {
-                                await _API.InserePessoaAPI(Key: Key, CNPJ: CNPJ, Pessoa: pessoa);
-                                Interlocked.Increment(ref Stp);
-                            }
-                            finally { semaphore.Release(); }
-                        });
-                        await Task.WhenAll(tasks);
-                    }
+                        await _API.InserePessoaAPI(Key: Key, CNPJ: CNPJ, Pessoa: pessoa);
+                        Stp++;
+                        StatusPessoas = $"{Stp}/{TotalPessoa}";
+
+                    });
 
                     await Task.Delay(1000 * 2);
                     LblStatusPessoas = "Hidden";

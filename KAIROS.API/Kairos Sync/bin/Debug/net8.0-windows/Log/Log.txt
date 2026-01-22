@@ -1,2 +1,192 @@
-27-12-2025_15-18 - Salva Cargos - Não foi possível concluir a ação porque existe um cargo com o mesmo código. : 1 - PROFESSOR CAPOEIRA
-27-12-2025_15-18 -  Não foi possível concluir a ação porque existe uma estrutura com o mesmo codigo/descrição. : 1 - PRINCIPAL - 63227763000190
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 127 - ADRIANO DA SILVA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 144 - ALEX FABIANO DO NASCIMENTO DIAS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 101 - ALINE DOS SANTOS SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 128 - ALEXNALDO DE ARAUJO SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 140 - ANDERSON MARQUES DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 193 - ALEXSANDRO ALVES DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 176 - BRUNO DE LIMA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 120 - ALMIRO CEZIMBRA TAVARES JUNIOR
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 48 - CAIC MACHADO BARBOSA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 19 - DIOGENES SANTOS DE JESUS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 159 - EDLAM SOUZA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 132 - EDVALDO BISPO DE FREITAS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 79 - CAIO DOUGLAS DE JESUS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 2 - COSME DA SILVA SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 21 - EDEJHONNATT FERREIRA BRITO CORREA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 86 - DANIELA DIAS SILVA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 75 - ITALO SANTANA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 195 - ISAQUE EMANOEL SANTOS DE SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 172 - GILMAR RODRIGUES DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 106 - FRANCINEY NASCIMENTO COSTA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 168 - JAILTON CAETANO SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 170 - EVERTON SANTANA DE ARAUJO SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 142 - HENRIQUE DA CONCEICAO CORREIA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 91 - GEANDERSON DE OLIVEIRA LIMA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 87 - JOSE AILTON SANTOS FILHO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 186 - JEFERSON SANTOS DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 198 - JOSE DOS SANTOS BATISTA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 184 - LEONALDO CARLOS DE SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 118 - LUAN SANTANA DE SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 61 - LUAN FILPESANTANA ARAUJO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 66 - LUCIANO BARRETO DE JESUS JUNIOR
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 88 - LUIS CARLOS SOARES DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 145 - LUIZ CESAR SOARES DO NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 37 - MARCIO ROBERTO SUTERO BISPO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 116 - MARCOS ANTONIO ALVES DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 185 - MARCELO DOS SANTOS CLEMENTINO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 146 - MOACYR SILVA RIBEIRO JUNIOR
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 175 - MARCOS PAULO NASCIMENTO DA SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 177 - NILSON VIEIRA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 123 - REINALDO DA SILVA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 141 - MAICON MACEDO DE ALMEIDA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 143 - REGINALDO DO NASCIMENTO SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 169 - RODRIGO SOUZA GOMES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 5 - SERGIO LUIS BISPO DE SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 161 - UENDELL DA HORA CRUZ
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 192 - THALES PINTO COSTA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 124 - VALNEI SILVA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 158 - WILTON NASCIMENTO GOMES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 139 - ZENIVALDO DA SILVA BISPO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 178 -  MARIA OLIVEIRA FIAES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 44 - ADRIANA CONCEICAO DE OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 41 - ADRIANA SOUSA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 105 - ALAISE DE LIMA SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 94 - ALANA DE BRITO LIMA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 110 - ALANE DA COSTA DE LAUREANO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 15 - ALESSANDRA MOREIRA SOBRAL
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 165 - ANA CARINA DA SILVA RIBEIRO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 29 - ANA CAROLINA CHAGAS SILVA OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 64 - ALINE DA CONCEICAO CRUZ
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 100 - ALINE NOGUEIRA DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 157 - ANA LICIA FERREIRA DOS SANTOS MOREIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 56 - ANA DANIELA OLIVEIRA FALCAO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 46 - ANA LUCIA DE JESUS MOREIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 197 - ANA PAULA ROSA DE SENA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 57 - ANA PAULA DOS SANTOS SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 60 - ANALI OLIVEIRA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 89 - AQUILA KELLY SILVA DA SILVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 107 - ARLENE GONCALVES NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 82 - ARTEMIS MICHELE MARINHO SILVA YACALOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 6 - AURENI REGIS SANTOS LOPES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 109 - AURORA MARIA DA SILVA NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 115 - BIANCA FERREIRA PURIDADE MARTINS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 196 - BIANCA ARIADNE SILVA DE SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 187 - BIANCA SANTANA DE ANDRADE
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 50 - CARINA SANTANA LEAL
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 174 - CARLA MENEZES DA SILVA 
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 153 - CARLA NAJARA CARDOSO COSTA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 93 - CASSIA ALVES DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 99 - CASSIA CARDOSO CAPINAM
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 81 - CINTIA DA CRUZ DANTAS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 85 - CLAUDENICE DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 190 - CLAUDIA MASCARENHAS DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 182 - DAIANA SANTANA DIAS RIBEIRO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 166 - DANIELA APARECIDA DO CARMO SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 28 - DALILA INES DE JESUS LOPES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 59 - DANIELE SANTOS VILAS BOAS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 102 - DEISE RIBEIRO MENDES JESUS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 32 - DIENE HELLEN DOS SANTOS SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 149 - DENISE SOUZA DOS SANTOS NERES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 43 - DOMINIQUE DA SILVA LIMA DE JESUS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 164 - EDSON JOSE DE SANTANA 
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 30 - EDNEIA CARDOSO SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 173 - EDVANIA MATIAS DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 137 - ELANE DOS REIS DE JESUS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 83 - DURCIELIA ALMEIDA DE MENEZES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 138 - ELIABA SOARES SIMAO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 136 - ELENICE MARIA DE JESUS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 129 - ELICIA SANTOS DO NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 199 - ELION DOS SANTOS SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 69 - ELISANGELA DOS SANTOS FERNANDO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 25 - ELINALVA SANTOS SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 152 - ERICA MARQUES DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 154 - EVANILDA DA SILVA MOREIRA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 58 - EURILAIANE ARAUJO DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 148 - FABIANA SANTOS ALVES SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 167 - GABRIELA SOUZA CHAVES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 125 - GILVANEIDE SANTANA DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 80 - GIVANILDA DOS SANTOS GOES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 181 - GLEICE NASCIMENTO DA CONCEICAO MENDONCA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 12 - GLEICE SIMOES MORAES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 20 - INGRYD FAGUNDES DE SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 65 - GLEISEQUELE MAGALHAES REIS DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 39 - IRAN AUREA LIMA DE SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 47 - ISABEL CRISTINA PORTUGAL DA FONSECA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 171 - ITAICARA SANTOS DE CAMPOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 202 - IVANA REIS DOS SANTOS SOUSA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 156 - ITANA MIRANDA COELHO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 112 - JAQUELINE DA CONCEICAO RIBEIRO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 95 - JAQUELINE DA SILVA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 11 - JEANE CORREIA DE OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 49 - JAQUELINE DE OLIVEIRA BARBOSA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 22 - JEANE DE SOUZA SANTOS DE OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 135 - JEANE DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 90 - JENIFER CAROLINE DE CARVALHO GUIMARAES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 200 - JESSICA FAGUNDES DA ANUNCIACAO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 34 - JOILMA TELES DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 180 - JULIANA DE SOUSA DA CRUZ
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 114 - JULIANA LOPES DE MELO SANTIAGO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 84 - JULIANA SILVA MARTINS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 126 - KELLY SENA DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 54 - LARISSA LIMA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 163 - LEIA COSTA DA ASSUNCAO ENCARNACAO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 17 - LEIDIANE DE SANTANA ARAUJO SOUZA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 38 - LILIANE LIMA SAMPAIO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 70 - LORENA DE SANTANA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 23 - LORENA ISABEL ARAUJO DE ALMEIDA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 119 - LUANDA DA SILVA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 9 - LUANA SANTOS SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 121 - LUCIANA SANTOS DA LUZ
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 188 - LUCIENE DOS SANTOS TEIXEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 191 - LUDIMILA ARAUJO SILVA DE OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 151 - LUISA CARVALHO BOTINI
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 122 - LUMA DE LIMA MAGALHAES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 74 - LUZIA LIGIA SOARES NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 103 - MAGDA NAZARE NASCIMENTO DA CRUZ
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 42 - MAICSAN MORAES LIMA VELOSO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 45 - MARCIA DE JESUS SANTOS FIGUEIREDO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 31 - MANUELA OLIVEIRA DE ARAUJO SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 147 - MARCIA MARIA SANTOS DE JESUS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 73 - MARIA CLARICE VIEIRA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 78 - MARIA IVONETE SANTOS PIRES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 16 - MARIA CRISTIANA JESUS DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 76 - MARIANA PRADO CHAMUSCA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 3 - MARILIA REIS DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 201 - MARILIAN GABRIELA JESUS DE PINHO DOS REIS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 7 - MARLUZE SOUZA SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 113 - NAARA SANTOS DE JESUS CALDEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 13 - MAYALE CRUZ ARGOLO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 4 - NADJA MARCIA OLIVEIRA DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 150 - NAIARA CAROLINE DA SILVA BARRETO 
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 160 - NATHALIA KOLI SANTOS DE CARVALHO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 97 - NAIRZILDA FERREIRA PEREIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 98 - NIVIA MARIA DOS SANTOS NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 68 - PALOMA CALDAS DE FARIA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 133 - PATRICIA ADRIELE MENDES DE MENEZES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 183 - RENILDES PEREIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 108 - ROBERTA ARGOLO SALES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 33 - RITA DE CASSIA ALVES PRAXEDES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 189 - ROSENE DA SILVA SALES DE SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 36 - ROBERTA MARIA CARNEIRO DA CUNHA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 26 - ROSILANE DOS SANTOS NUNES SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 10 - ROSINETE MIRANDA SANTOS LEMOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 131 - SANDRA DANTAS DA CRUZ
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 104 - ROSIMEIRE SANTOS DO NASCIMENTO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 67 - SARA OLIVEIRA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 51 - SHIRLEN SUELE SILVA DE LIMA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 77 - SHEILA CARVALHO LOPES
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 35 - SILVANIA SANTOS DA SILVA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 117 - SUEIDE SANTOS ARAUJO
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 92 - TAMARA DO NASCIMENTO SANTANA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 194 - TAIRIS DA CRUZ SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 14 - TAMARA SILVA DE OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 52 - TAMIRES DE JESUS BATISTA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 203 - THAIS ORNELLAS PRADO OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 24 - THALITA DOS SANTOS REIS DE OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 71 - TIAN CRISTIANE DOS SANTOS DANTAS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 27 - VALDINEA BISPO DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 96 - VALDINEIA DE JESUS BARBOSA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 63 - VIVIANE SANTANA DOS SANTOS
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 1 - VANIA DE CARVALHO CORREIA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 8 - VIVIANE SANTOS DE CARVALHO OLIVEIRA
+22-01-2026_16-24 - Salva Pessoa - CpfResponsavel is invalid - Matricula : 162 - YASMIM DE SOUSA SENA

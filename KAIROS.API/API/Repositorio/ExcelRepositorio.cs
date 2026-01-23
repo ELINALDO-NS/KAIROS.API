@@ -347,18 +347,12 @@ namespace API.Repositorio
                                           Cargo.Id = C.Id;
                                           Cargo.Codigo = 0;
                                           Cargo.Descricao = C.Descricao;
-
-
                                           break;
                                       }
 
 
                                   }
-                                  if (Cargo.Id == 0)
-                                  {
-                                      divergencia = true;
-                                      Log.GravaLog($"Cargo: {CargoPessoa} não encontrada para o funcionario, Matricula: " + Matricula);
-                                  }
+
                               }
 
 
@@ -476,7 +470,7 @@ namespace API.Repositorio
                                       //HorarioPessoa = HorarioPessoa,
                                       Horarios = Horario.ToArray(),
                                       RegrasCalculo = RegraDeCaldulo.ToArray(),
-                                      Cargo = Cargo,
+                                      Cargo = Cargo.Id == 0 ? null : Cargo,
                                       //EscalaFolga = EscalaDeFOlga,
                                       Sexo = Convert.ToInt32(Sexo),
                                       TipoFuncionario = TipoDeFuncionario,

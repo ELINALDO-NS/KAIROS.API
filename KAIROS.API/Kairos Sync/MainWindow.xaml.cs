@@ -342,24 +342,30 @@ namespace Kairos_Sync
         {
             try
             {
+
                 if (string.IsNullOrEmpty(CaminhoExcel))
                 {
                     MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario", MessageBoxButton.OK, MessageBoxImage.Information);
                     return;
                 }
+                BtnListaHorarios.IsEnabled = false;
                 string LocalGravacao = PathGravacao();
                 if (!string.IsNullOrEmpty(LocalGravacao))
                 {
                     await _excel.SalvaHorarios(CaminhoExcel, LocalGravacao);
+                    BtnListaHorarios.IsEnabled = true;
                     MessageBox.Show("Lista de Horarios Salva Com Sucesso !", "Lista Horarios", MessageBoxButton.OK, MessageBoxImage.Information);
+
                 }
                 else
                 {
+                    BtnListaHorarios.IsEnabled = true;
                     return;
                 }
             }
             catch (Exception ex)
             {
+                BtnListaHorarios.IsEnabled = true;
                 MessageBox.Show(ex.Message);
             }
         }
@@ -417,13 +423,15 @@ namespace Kairos_Sync
                         return;
                     }
                 }
+                BtnValidaDados.IsEnabled = false;
                 if (await ValidaDados(CaminhoExcel) == true)
                 {
-
+                    BtnValidaDados.IsEnabled = true;
                     MessageBox.Show("NÃO existem dados invalidos ou duplicados !");
                 }
                 else
                 {
+                    BtnValidaDados.IsEnabled = true;
                     var confirm = MessageBox.Show("Verifique o arquivo de Logs Existem dados invalidos ou duplicados ! \n Deseja Abrir o arquivo de LOG ?", "Operação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                     if (confirm.ToString().ToUpper() == "YES")
                     {
@@ -433,6 +441,7 @@ namespace Kairos_Sync
             }
             catch (Exception ex)
             {
+                BtnValidaDados.IsEnabled = true;
                 ErroValidaDados = "Visivle";
                 MessageBox.Show(ex.Message, "Valida Dados");
             }
@@ -446,11 +455,13 @@ namespace Kairos_Sync
                 MessageBox.Show("Verifique os Campos: KEY, CNPJ, e CPFResponsavel", "Iniciar", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+
             if (!ChkCargo && !ChkEstrutura && !ChkPessoa)
             {
                 MessageBox.Show("Selecione os items a serem inseridos!", "Iniciar", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+
             if (string.IsNullOrEmpty(CaminhoExcel))
             {
                 if (!PathLeitura())
@@ -462,7 +473,7 @@ namespace Kairos_Sync
             {
                 File.Delete(log);
             }
-
+            BtnSync.IsEnabled = false;
             List<Cargo> Cargos = new();
             List<Estrutura> Estruturas = new();
             List<Horarios> Horarios = new();
@@ -558,7 +569,7 @@ namespace Kairos_Sync
                     Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios);
                     int TotalPessoa = Pessoas.Count;
                     StatusPessoas = $"{Stp}/{TotalPessoa}";
-                    
+
                     CancellationToken cancellationToken = new CancellationToken();
                     await Parallel.ForEachAsync(Pessoas, async (pessoa, cancellationToken) =>
                     {
@@ -572,11 +583,12 @@ namespace Kairos_Sync
                     LblStatusPessoas = "Hidden";
                     CheckPessoas = "Visible";
                 }
-
+                BtnSync.IsEnabled = true;
                 MessageBox.Show("OK");
             }
             catch (Exception ex)
             {
+                BtnSync.IsEnabled = true;
                 var confirm = MessageBox.Show(ex.Message + Environment.NewLine + " Verifique o arquivo de Logs! \n Deseja Abrir o arquivo de LOG ?", "Iniciar", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (confirm.ToString().ToUpper() == "YES")
                 {

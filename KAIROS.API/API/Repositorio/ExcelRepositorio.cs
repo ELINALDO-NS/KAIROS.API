@@ -698,7 +698,7 @@ namespace API.Repositorio
 
                 foreach (var item in HorariosNaoAssociados)
                 {
-                    if (!HorariosAssociados.Exists(x => x.Descricao == item.Descricao))
+                    if (!HorariosAssociados.Exists(x => x.Descricao.SoLetrasENumeros() == item.Descricao.SoLetrasENumeros()))
                     {
                         item.Codigo = codigo.ToString();
                         horarios.Add(item);
@@ -709,7 +709,7 @@ namespace API.Repositorio
                 foreach (var item in horarios)
                 {
                     PlanilhaHoario1.Cells[linha1, 1].Value = item.Codigo.ToString();
-                    PlanilhaHoario1.Cells[linha1, 2].Value = item.Descricao;
+                    PlanilhaHoario1.Cells[linha1, 2].Value = item.Descricao.RemoveAcentos();
                     linha1++;
                 }
 

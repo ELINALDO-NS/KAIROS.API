@@ -270,6 +270,38 @@ namespace API.Repositorio
 
             return PISValido;
         }
+        public async Task<bool> ValidaBaseDeHoras(string CaminhoExcel)
+        {
+
+            bool BaseDeHoras = true;
+            int Linha = 4;
+            var excel = new Excel(CaminhoExcel);
+            await Task.Run(() =>
+            {
+
+                while (true)
+                {
+                    string Base = excel.LeExcel("FUNCIONÁRIOS", Linha, 13);
+                    string Matricula = excel.LeExcel("FUNCIONÁRIOS", Linha, 1);
+
+                    if (!string.IsNullOrWhiteSpace(Matricula) && !string.IsNullOrEmpty(Base))
+                    {                        
+                        if (!float.TryParse(Base, out float valor))
+                        {                            
+                            BaseDeHoras = false;
+                            Log.GravaLog($"Base de Horas ({Base}) Invalida Para o Funcionario de Matricula: {Matricula}");
+                        }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    Linha++;
+                }
+            });
+
+            return BaseDeHoras;
+        }
         public async Task<bool> ValidaPISDuplicado(string CaminhoExcel)
         {
             bool PISDupplic = true;

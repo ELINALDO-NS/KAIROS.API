@@ -1,7 +1,9 @@
-﻿using API.Model;
+﻿using API;
+using API.Model;
 using API.Repositorio;
 using API.Repositorio.Interface;
 using Microsoft.Win32;
+using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
@@ -21,6 +23,7 @@ namespace Kairos_Sync
         private readonly IExcelRepositorio _excel;
         private readonly IAPIRepositorio _API;
         private readonly IValidaDadosRepositorio _validaDados;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -57,6 +60,7 @@ namespace Kairos_Sync
         }
 
         #region Propriedades
+        private CancellationTokenSource? _cts;
         private string _CaminhoExcel = string.Empty;
         public string CaminhoExcel
         {
@@ -386,7 +390,8 @@ namespace Kairos_Sync
                 ["DescricaoHorario"] = _validaDados.ValidaDescricaoHorario(Caminho),
                 ["EmailDuplicado"] = _validaDados.ValidaEmailDuplicado(Caminho),
                 ["DataInvalida"] = _validaDados.ValidaDatas(Caminho),
-                ["PessoaSemCPF"] = _validaDados.ValidaPessoaSemCNPJ(Caminho)
+                ["PessoaSemCPF"] = _validaDados.ValidaPessoaSemCNPJ(Caminho),
+                ["BaseDeHorasInvalida"] = _validaDados.ValidaBaseDeHoras(Caminho)
             };
 
             await Task.WhenAll(tarefas.Values);
@@ -570,9 +575,10 @@ namespace Kairos_Sync
                     int TotalPessoa = Pessoas.Count;
                     StatusPessoas = $"{Stp}/{TotalPessoa}";
 
-                    CancellationToken cancellationToken = new CancellationToken();
-                    await Parallel.ForEachAsync(Pessoas, async (pessoa, cancellationToken) =>
+                    _cts = new CancellationTokenSource();
+                    await Parallel.ForEachAsync(Pessoas, _cts.Token, async (pessoa, token) =>
                     {
+                        token.ThrowIfCancellationRequested();
                         await _API.InserePessoaAPI(Key: Key, CNPJ: CNPJ, Pessoa: pessoa);
                         Stp++;
                         StatusPessoas = $"{Stp}/{TotalPessoa}";
@@ -585,6 +591,10 @@ namespace Kairos_Sync
                 }
                 BtnSync.IsEnabled = true;
                 MessageBox.Show("OK");
+            }
+            catch (OperationCanceledException)
+            {
+                Log.GravaLog("Aperação cancelada !");
             }
             catch (Exception ex)
             {

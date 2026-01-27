@@ -18,6 +18,6 @@ namespace API.Repositorio.Interface
         Task<bool> ValidaDescricaoHorario(string Caminho);
         Task<bool> ValidaDatas(string Caminho);
         Task<bool> ValidaPessoaSemCNPJ(string Caminho);
-
+        Task<bool> ValidaBaseDeHoras(string CaminhoExcel);
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kairos Sync")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d86799c70b6348a6a879b235c8c04206f3ba7e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78b15dce1f69f0d3988ee6a01a9f896c8224a1ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kairos Sync")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kairos Sync")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

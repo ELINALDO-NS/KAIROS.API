@@ -311,7 +311,7 @@ namespace Kairos_Sync
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message, "Modelo Excel", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Path de Leitura", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
         }
@@ -370,7 +370,9 @@ namespace Kairos_Sync
             catch (Exception ex)
             {
                 BtnListaHorarios.IsEnabled = true;
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Lista Horarios", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                
             }
         }
         public async Task<bool> ValidaDados(string Caminho)
@@ -432,7 +434,7 @@ namespace Kairos_Sync
                 if (await ValidaDados(CaminhoExcel) == true)
                 {
                     BtnValidaDados.IsEnabled = true;
-                    MessageBox.Show("NÃO existem dados invalidos ou duplicados !");
+                    MessageBox.Show("Nâo existem dados invalidos ou duplicados !","Valida Dados",MessageBoxButton.OK);
                 }
                 else
                 {
@@ -448,7 +450,7 @@ namespace Kairos_Sync
             {
                 BtnValidaDados.IsEnabled = true;
                 ErroValidaDados = "Visivle";
-                MessageBox.Show(ex.Message, "Valida Dados");
+                MessageBox.Show(ex.Message, "Valida Dados",MessageBoxButton.OK,MessageBoxImage.Error);
             }
 
         }
@@ -590,7 +592,8 @@ namespace Kairos_Sync
                     CheckPessoas = "Visible";
                 }
                 BtnSync.IsEnabled = true;
-                MessageBox.Show("OK");
+                MessageBox.Show("Pessoas Inseridas Com Sucesso!", "Sync", MessageBoxButton.OK);
+
             }
             catch (OperationCanceledException)
             {

@@ -1,15 +1,6 @@
-﻿using API;
-using API.Repositorio.Interface;
-using Microsoft.Extensions.FileSystemGlobbing.Internal;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using API.Repositorio.Interface;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 
 namespace API.Repositorio
 {

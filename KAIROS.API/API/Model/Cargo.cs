@@ -11,7 +11,16 @@ namespace API.Model
     {
         public int Id { get; set; }
         public int Codigo { get; set; }
-        public string? Descricao { get; set; }
+        
+
+        private string _Descricao = string.Empty;
+
+        public string Descricao
+        {
+            get { return _Descricao; }
+            set { _Descricao = value.ToTitleCase(); }
+        }
+
         [JsonIgnore]
         public string? CNPJ { get; set; }
     }

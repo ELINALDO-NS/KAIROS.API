@@ -34,7 +34,14 @@ namespace API
         }
         public static string SoNumenros(string Numero)
         {
-            return Regex.Replace(Numero,@"[^\d]", "");
+            return Regex.Replace(Numero, @"[^\d]", "");
+        }
+
+        public static string ToTitleCase(this string Texto)
+        {
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+            string resultado = textInfo.ToTitleCase(Texto.ToLower());
+            return resultado;
         }
     }
 }

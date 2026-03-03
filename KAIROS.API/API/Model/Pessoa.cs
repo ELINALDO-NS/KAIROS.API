@@ -15,7 +15,14 @@ namespace API.Model
         public int Id { get; set; }
         public int Matricula { get; set; }
         public string Cracha { get; set; }
-        public string Nome { get; set; }
+
+        private string _Nome = string.Empty;    
+        public string Nome
+        {
+            get { return _Nome; }
+            set { _Nome = value.ToTitleCase(); }
+        }
+
         public string DataNascimento { get; set; }
         public object Endereco { get; set; }
         public string DataAdmissao { get; set; }
@@ -70,7 +77,15 @@ namespace API.Model
         public int Id { get; set; }
         public int Codigo { get; set; }
         public object CentroCusto { get; set; }
-        public string Descricao { get; set; }
+        
+        private string _Descricao = string.Empty;
+
+        public string Descricao
+        {
+            get { return _Descricao; }
+            set { _Descricao = value.ToTitleCase(); }
+        }
+
         public object EstruturaPai { get; set; }
         public string CNPJ { get; set; }
         public string EmpresaCNPJ { get; set; }

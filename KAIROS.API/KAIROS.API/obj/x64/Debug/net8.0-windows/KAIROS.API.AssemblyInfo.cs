@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KAIROS.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96534a3953c68e3c40bc62083a8db2475044e760")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6361a758eb1704bf6ebb09822be3999aed52a37f")]
 [assembly: System.Reflection.AssemblyProductAttribute("KAIROS.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KAIROS.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

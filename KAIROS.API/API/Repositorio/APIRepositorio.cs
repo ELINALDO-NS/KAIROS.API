@@ -30,7 +30,7 @@ namespace API.Repositorio
         public async Task InsereCargosAPI(string Key, string CNPJ, string CaminhoExcel)
         {
             var cargos = await _excel.ListaCargos(CaminhoExcel);
-            
+
             foreach (var cargo in cargos)
             {
                 using (var client = new RestClient(SalvaCargo_URL))
@@ -63,7 +63,8 @@ namespace API.Repositorio
 
                 }
 
-            };
+            }
+            ;
         }
         public async Task InsereEstruturasAPI(string Key, string CNPJ, string CaminhoExcel)
         {
@@ -100,7 +101,8 @@ namespace API.Repositorio
 
                 }
 
-            };
+            }
+            ;
         }
         public async Task<List<Cargo>> ListaCargosAPI(string Key, string CNPJ)
         {
@@ -128,7 +130,7 @@ namespace API.Repositorio
                       {
                           cargos.AddRange(JsonConvert.DeserializeObject<List<Cargo>>(Resposta.Obj.ToString()));
                       }
-                      
+
                   });
             return cargos;
         }
@@ -175,9 +177,6 @@ namespace API.Repositorio
 
                 throw new Exception(ex.Message);
             }
-
-
-
         }
         public async Task<List<Estrutura>> ListaEstruturasAPI(string Key, string CNPJ)
         {
@@ -218,7 +217,7 @@ namespace API.Repositorio
                     request.AddHeader("Content-Type", "application/json");
                     request.AddHeader("key", Key);
                     request.AddHeader("identifier", CNPJ);
-                    var body  = $@"
+                    var body = $@"
                             " + "\n" +
                                    @"{
                             " + "\n" +
@@ -235,7 +234,7 @@ namespace API.Repositorio
                 }
             });
             return horario;
-        }        
+        }
         public async Task InserePessoaAPI(string Key, string CNPJ, Pessoa pessoa)
         {
 
@@ -265,10 +264,10 @@ namespace API.Repositorio
 
 
         }
-        public async Task<List<Pessoa>> ListaPessoasPaginadaAPI(string Key, string CNPJ, int totalPage)
+        public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ)
         {
             List<Pessoa> pessoas = new List<Pessoa>();
-
+            int totalPage = 1;
             for (int pagina = 1; pagina <= totalPage; pagina++)
             {
                 var client = new RestClient(ListaPessoas_URL);
@@ -286,20 +285,32 @@ namespace API.Repositorio
                             " + "\n" +
                                @"";
                 request.AddParameter("application/json", body, ParameterType.RequestBody);
-                var response1 =  client.Execute(request);
+                var response1 = client.Execute(request);
                 Resposta? Resposta = JsonConvert.DeserializeObject<Resposta>(response1.Content);
                 if (Resposta.Sucesso)
                 {
+                    totalPage = (int)Resposta.TotalPagina;
                     pessoas.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
                 }
                 else
                 {
                     Log.GravaLog(Resposta.Mensagem.ToString() + $" - Pagina requisitada: {pagina}");
+                    break;
                 }
             }
+
+            foreach (var pessoa in pessoas)
+            {
+
+                if (pessoa.CodigoPis.Substring(1) == pessoa.Cpf.SoLetrasENumeros())
+                {
+                    pessoa.FlagGerarNumeroPISAutomatico = 1;
+                }
+            }
+
             return pessoas;
         }
-        public async Task AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)
+        public async Task<bool> AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)
         {
             var client = new RestClient(AlteraPessoa_URL);
             var request = new RestRequest("", Method.Post);
@@ -316,13 +327,14 @@ namespace API.Repositorio
                 if (!Resposta.Sucesso)
                 {
                     Log.GravaLog("Salva Pessoa - " + Resposta.Mensagem + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
+                    return false;
                 }
-
             }
             else
             {
                 Log.GravaLog("Salva Pessoa - " + response.Content + " - Matricula : " + pessoa.Matricula + " - " + pessoa.Nome);
             }
+            return true;
         }
         public async Task DesligaPessoa(string Key, string CNPJ, List<Desligamento> desligamento)
         {
@@ -399,7 +411,7 @@ namespace API.Repositorio
 
                 }
             }
-           
+
 
         }
         private bool PessoaExiste(ChromeDriver chromeDriver)
@@ -517,7 +529,7 @@ namespace API.Repositorio
                     TimeSpan t = new TimeSpan(10);
                     WebDriverWait wait = new WebDriverWait(bot, t);
                     // WebElement element = wait.Until(ExpectedConditions.elementToBeClickable(By.id("someid")));
-                   // MessageBox.Show("Selecione a Empresa !", "Lança Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // MessageBox.Show("Selecione a Empresa !", "Lança Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     bot.FindElement(By.Id("Tab6")).Click();
                     bot.FindElement(By.Id("userAutocomplete")).SendKeys("teste");
                     bot.FindElement(By.Id("SearchButtonPessoa")).Click();

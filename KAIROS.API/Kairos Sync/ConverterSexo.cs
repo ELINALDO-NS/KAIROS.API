@@ -7,7 +7,7 @@ using System.Windows.Data;
 
 namespace Kairos_Sync
 {
-    public class ConverterSexo:IValueConverter
+    public class ConverterSexo : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
@@ -15,8 +15,8 @@ namespace Kairos_Sync
             {
                 return sexo switch
                 {
-                    0 => "Masculino",
-                   1 => "Feminino",
+                    1 => "Masculino",
+                    2 => "Feminino",
                     _ => "Outro"
                 };
             }
@@ -26,6 +26,6 @@ namespace Kairos_Sync
         {
             throw new NotImplementedException();
         }
-    
+
     }
 }

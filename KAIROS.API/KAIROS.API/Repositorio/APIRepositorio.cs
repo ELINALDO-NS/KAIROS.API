@@ -356,12 +356,20 @@ namespace KAIROS.API.Repositorio
                     Log.GravaLog(Resposta.Mensagem.ToString() + $" - Pagina requisitada: {pagina}");
                 }
             }
+            foreach (var pessoa in pessoas)
+            {
+
+                if (pessoa.CodigoPis.Substring(1) == pessoa.Cpf.SoLetrasENumeros())
+                {
+                    pessoa.FlagGerarNumeroPISAutomatico = 1;
+                }
+            }
             return pessoas;
         }
 
         public async Task<List<Pessoa>> ListaPessoasAPI(string Key, string CNPJ, int pagina = 1)
         {
-            List<Pessoa> pessoa = new List<Pessoa>();
+            List<Pessoa> pessoas = new List<Pessoa>();
             await Task.Run(async () =>
             {
                 var client = new RestClient(ListaPessoas_URL);
@@ -385,11 +393,11 @@ namespace KAIROS.API.Repositorio
                 {
                     if (Resposta.TotalPagina > 1)
                     {
-                        pessoa = await ListaTodasPaginasPessoasAPI(Key,CNPJ, Resposta.TotalPagina);
+                        pessoas = await ListaTodasPaginasPessoasAPI(Key,CNPJ, Resposta.TotalPagina);
                     }
                     else
                     {
-                        pessoa.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
+                        pessoas.AddRange(JsonConvert.DeserializeObject<List<Pessoa>>(Resposta.Obj.ToString()));
 
                     }
                 }
@@ -399,7 +407,15 @@ namespace KAIROS.API.Repositorio
                 }
 
             });
-            return pessoa;
+            foreach (var pessoa in pessoas)
+            {
+
+                if (pessoa.CodigoPis.Substring(1) == pessoa.Cpf.SoLetrasENumeros())
+                {
+                    pessoa.FlagGerarNumeroPISAutomatico = 1;
+                }
+            }
+            return pessoas;
         }
 
         public async Task AtualizaPessoasAPI(string Key, string CNPJ, AtualizaPessoa pessoa)

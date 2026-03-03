@@ -338,8 +338,8 @@ namespace API.Repositorio
             {
                 while (true)
                 {
-                    string Pessoa = excel.LeExcel("FUNCIONÁRIOS", Linha, 2);
-                    string DTAdmissao = excel.LeExcel("FUNCIONÁRIOS", Linha, 6);
+                    string Pessoa = excel.LeExcel("FUNCIONÁRIOS", Linha, 2).Trim();
+                    string DTAdmissao = excel.LeExcel("FUNCIONÁRIOS", Linha, 6).Trim();
                     if (!string.IsNullOrEmpty(Pessoa))
                     {
 
@@ -361,33 +361,6 @@ namespace API.Repositorio
                     }
                     Linha++;
                 }
-                //    Linha = 4;
-                //    while (true)
-                //    {
-                //        string Pessoa = excel.LeExcel("FUNCIONÁRIOS", Linha, 2);
-                //        string DTnascimento = excel.LeExcel("FUNCIONÁRIOS", Linha, 5);
-                //        if (!string.IsNullOrEmpty(Pessoa))
-                //        {
-                //            DateTime nascimento;
-                //            bool nascimentoValido = DateTime.TryParseExact(DTnascimento, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out nascimento);
-
-                //            if (string.IsNullOrEmpty(DTnascimento))
-                //            {
-                //                Log.GravaLog($"Funcionario sem Data de Nascimento, ou Data Invalida para o Funcionario -   {Pessoa}");
-
-                //            }
-                //            else if (!nascimentoValido)
-                //            {
-                //                DataValida = false;
-                //                Log.GravaLog($"Funcionario sem Data de Nascimento, ou Data Invalida para o Funcionario -   {Pessoa}");
-                //            }
-                //        }
-                //        else
-                //        {
-                //            break;
-                //        }
-                //        Linha++;
-                //    }
 
             });
             return DataValida;

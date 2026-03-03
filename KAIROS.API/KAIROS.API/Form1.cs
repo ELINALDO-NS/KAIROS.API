@@ -29,6 +29,9 @@ namespace KAIROS.API
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Lbl_StatusAlteraPessoa.Visible = true;
+            Lbl_StatusAlteraPessoa.Enabled = true;
+            Lbl_StatusAlteraPessoa.Text = "00/01";
 
         }
 

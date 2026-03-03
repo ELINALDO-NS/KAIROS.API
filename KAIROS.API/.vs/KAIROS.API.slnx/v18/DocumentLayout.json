@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,19 +30,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Kairos Sync\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Kairos Sync\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFICAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T16:39:32.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml",
@@ -50,7 +37,21 @@
               "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml",
               "RelativeToolTip": "Kairos Sync\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-09T19:42:04.384Z"
+              "WhenOpened": "2025-12-09T19:42:04.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Suporte\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Kairos Sync\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Suporte\\Documents\\Projetos\\CSHARP\\KAIROS.API\\KAIROS.API\\Kairos Sync\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Kairos Sync\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAL4BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T16:39:32.025Z",
+              "EditorCaption": ""
             }
           ]
         }

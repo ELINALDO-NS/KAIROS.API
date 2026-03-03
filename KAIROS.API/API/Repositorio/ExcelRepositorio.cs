@@ -276,19 +276,19 @@ namespace API.Repositorio
                               string PIS = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 3].Value)).PadLeft(11, '0');
                               int FuncionarioSemPIS = 0; // 0 = Tem PIS - 1 = Não tem PIS
                               string Cracha = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 4].Value);
-                              string Nascimento = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 5].Value);
-                              string Admissao = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 6].Value);
+                              string Nascimento = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 5].Value).Trim();
+                              string Admissao = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 6].Value).Trim();
                               string RG = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 7].Value));
                               string CPF = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 8].Value)).PadLeft(11, '0');
                               string Telefone = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 9].Value));
                               string Celular = FormataTexto.SoNumenros(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 10].Value));
-                              string Email = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 11].Value);
+                              string Email = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 11].Value).Trim();
                               var TipoDeSalario = new Tiposalario() { Id = 101 }; // Convert.ToString(PlanilhaFuncionario.Cells[Linha, 12].Value);
                               string BaseDeHoras = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 13].Value);
                               string controlaPonto = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 14].Value).ToUpper();
                               var DepartamentoList = new Estrutura();
                               string DepartamentoPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 15].Value);
-                              string HorarioPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 16].Value);
+                              string HorarioPessoa = Convert.ToString(PlanilhaFuncionario.Cells[Linha, 16].Value).Trim();
                               var Horario = new List<Horarios>();
                               var RegraDeCaldulo = new List<Regrascalculo>();
                               string CargoPessoa = FormataTexto.RemoveAcentos(Convert.ToString(PlanilhaFuncionario.Cells[Linha, 17].Value));
@@ -522,8 +522,8 @@ namespace API.Repositorio
                 PlanilhaHoario.Cells["A3:T3"].Style.Font.Bold = true;
                 PlanilhaHoario.Cells[$"A3:T3"].Style.Font.Size = 13;
                 PlanilhaHoario.Cells[$"A3:T3"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
-
-                for (int i = 2; i < pessoas.Count() + 4; i++)
+                pessoas.Sort((a, b) => a.Nome.CompareTo(b.Nome));
+                for (int i = 2; i < pessoas.Count + 4; i++)
                 {
                     PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Border.BorderAround(ExcelBorderStyle.Thin);
                     PlanilhaHoario.Cells[$"A{i}:T{i}"].Style.Border.Right.Style = ExcelBorderStyle.Thin;

@@ -3,13 +3,17 @@ using API.Model;
 using API.Repositorio;
 using API.Repositorio.Interface;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using static System.Net.WebRequestMethods;
 
 namespace Kairos_Sync
 {
@@ -18,7 +22,10 @@ namespace Kairos_Sync
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        public ObservableCollection<Pessoa> ListaDePessoas { get; set; }
+        public ObservableCollection<Pessoa> PessoaAPI { get; set; }
+        public List<Pessoa> PessoaExcel { get; set; }
+        public List<Cargo> CargosAPI { get; set; }
+        public List<Estrutura> EstruturasAPI { get; set; }
         static string log = Convert.ToString(AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
         private readonly IExcelRepositorio _excel;
         private readonly IAPIRepositorio _API;
@@ -31,32 +38,10 @@ namespace Kairos_Sync
             _excel = new ExcelRepositorio();
             _API = new APIRepositorio(_excel);
             _validaDados = new ValidaDadosRepositorio();
-            ListaDePessoas = new()
-        {
-            new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001",Sexo = 0 },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002", Sexo =1},
-            new Pessoa { Id = 3, Nome = "Carlos Souza", Cpf = "456.789.123-00", Matricula = 1234567890, Cracha = "A003" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-            new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-                        new Pessoa { Id = 1, Nome = "João Silva", Cpf = "123.456.789-00", Matricula = 1234567890, Cracha = "A001" },
-            new Pessoa { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Matricula = 1234567890, Cracha = "A002" },
-        };
+            PessoaAPI = new ObservableCollection<Pessoa>();
+            PessoaExcel = new();
+            CargosAPI = new();
+            EstruturasAPI = new();
         }
 
         #region Propriedades
@@ -247,6 +232,7 @@ namespace Kairos_Sync
                 _LblStatusPessoas = value; OnPropertyChanged();
             }
         }
+
         private string _StatusPessoas = string.Empty;
         public string StatusPessoas
         {
@@ -254,6 +240,73 @@ namespace Kairos_Sync
             set
             {
                 _StatusPessoas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _StatusAltPessoas = string.Empty;
+        public string StatusAltPessoas
+        {
+            get => _StatusAltPessoas;
+            set
+            {
+                _StatusAltPessoas = value; OnPropertyChanged();
+            }
+        }
+
+        private string _Txb_Alt_Pessoa_CNPJ = string.Empty;
+        public string Txb_Alt_Pessoa_CNPJ
+        {
+            get => _Txb_Alt_Pessoa_CNPJ;
+            set
+            {
+                _Txb_Alt_Pessoa_CNPJ = value; OnPropertyChanged();
+            }
+        }
+
+        private string _Txb_Alt_Pessoa_Chave = string.Empty;
+        public string Txb_Alt_Pessoa_Chave
+        {
+            get => _Txb_Alt_Pessoa_Chave;
+            set
+            {
+                _Txb_Alt_Pessoa_Chave = value; OnPropertyChanged();
+            }
+        }
+        private string _Txb_Alt_Pessoa_CPFResp = string.Empty;
+        public string Txb_Alt_Pessoa_CPFResp
+        {
+            get => _Txb_Alt_Pessoa_CPFResp;
+            set
+            {
+                _Txb_Alt_Pessoa_CPFResp = value; OnPropertyChanged();
+            }
+        }
+
+        private bool _Chave_Func_Matricula;
+        public bool Chave_Func_Matricula
+        {
+            get => _Chave_Func_Matricula;
+            set
+            {
+                _Chave_Func_Matricula = value; OnPropertyChanged();
+            }
+        }
+        private bool _Chave_Func_CPF;
+        public bool Chave_Func_CPF
+        {
+            get => _Chave_Func_CPF;
+            set
+            {
+                _Chave_Func_CPF = value; OnPropertyChanged();
+            }
+        }
+        private bool _Chave_Func_PIS;
+        public bool Chave_Func_PIS
+        {
+            get => _Chave_Func_PIS;
+            set
+            {
+                _Chave_Func_PIS = value; OnPropertyChanged();
             }
         }
 
@@ -281,13 +334,114 @@ namespace Kairos_Sync
 
         #endregion
 
+        #region AlteraPessoa
+
+        private bool _ChkMatricula;
+        public bool ChkMatricula
+        {
+            get => _ChkMatricula;
+            set { _ChkMatricula = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkNome;
+        public bool ChkNome
+        {
+            get => _ChkNome;
+            set { _ChkNome = value; OnPropertyChanged(); }
+        }
+
+
+        private bool _ChkPIS;
+        public bool ChkPIS
+        {
+            get => _ChkPIS;
+            set { _ChkPIS = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkCracha;
+        public bool ChkCracha
+        {
+            get => _ChkCracha;
+            set { _ChkCracha = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkDataNascimento;
+        public bool ChkDataNascimento
+        {
+            get => _ChkDataNascimento;
+            set { _ChkDataNascimento = value; OnPropertyChanged(); }
+        }
+        private bool _ChkDataAdmissao;
+        public bool ChkDataAdmissao
+        {
+            get => _ChkDataAdmissao;
+            set { _ChkDataAdmissao = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkRG;
+        public bool ChkRG
+        {
+            get => _ChkRG;
+            set { _ChkRG = value; OnPropertyChanged(); }
+        }
+        private bool _ChkCPF;
+        public bool ChkCPF
+        {
+            get => _ChkCPF;
+            set { _ChkCPF = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkCelular;
+        public bool ChkCelular
+        {
+            get => _ChkCelular;
+            set { _ChkCelular = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkEmail;
+        public bool ChkEmail
+        {
+            get => _ChkEmail;
+            set { _ChkEmail = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkDepartamento;
+        public bool ChkDepartamento
+        {
+            get => _ChkDepartamento;
+            set { _ChkDepartamento = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkHorario;
+        public bool ChkHorario
+        {
+            get => _ChkHorario;
+            set { _ChkHorario = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkCargo_AltPess;
+        public bool ChkCargo_AltPess
+        {
+            get => _ChkCargo_AltPess;
+            set { _ChkCargo_AltPess = value; OnPropertyChanged(); }
+        }
+
+        private bool _ChkSexo;
+        public bool ChkSexo
+        {
+            get => _ChkSexo;
+            set { _ChkSexo = value; OnPropertyChanged(); }
+        }
+
+        #endregion
+
         public event PropertyChangedEventHandler? PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         }
-        public bool PathLeitura()
+        public bool PathLeitura(TextBox textBox)
         {
             try
             {
@@ -296,7 +450,9 @@ namespace Kairos_Sync
                 openFileDialog.Filter = "Text files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
                 if (openFileDialog.ShowDialog() == true)
                 {
-                    CaminhoExcel = openFileDialog.FileName;
+                    textBox.Text = openFileDialog.FileName;
+                    textBox.Focus();
+                    textBox.Select(textBox.Text.Length, 0);
 
                     return true;
                 }
@@ -340,7 +496,7 @@ namespace Kairos_Sync
         }
         private async void BtnCaminhoExcel_Click_1(object sender, RoutedEventArgs e)
         {
-            PathLeitura();
+            PathLeitura(TxbCaminhoExcel);
         }
         private async void BtnListaHorarios_Click(object sender, RoutedEventArgs e)
         {
@@ -372,7 +528,7 @@ namespace Kairos_Sync
                 BtnListaHorarios.IsEnabled = true;
                 MessageBox.Show(ex.Message, "Lista Horarios", MessageBoxButton.OK, MessageBoxImage.Error);
 
-                
+
             }
         }
         public async Task<bool> ValidaDados(string Caminho)
@@ -418,14 +574,14 @@ namespace Kairos_Sync
         {
             try
             {
-                if (File.Exists(log))
+                if (System.IO.File.Exists(log))
                 {
-                    File.Delete(log);
+                    System.IO.File.Delete(log);
                 }
 
                 if (string.IsNullOrEmpty(CaminhoExcel))
                 {
-                    if (!PathLeitura())
+                    if (!PathLeitura(CaminhoExcelAltPessoa))
                     {
                         return;
                     }
@@ -434,7 +590,7 @@ namespace Kairos_Sync
                 if (await ValidaDados(CaminhoExcel) == true)
                 {
                     BtnValidaDados.IsEnabled = true;
-                    MessageBox.Show("Nâo existem dados invalidos ou duplicados !","Valida Dados",MessageBoxButton.OK);
+                    MessageBox.Show("Nâo existem dados invalidos ou duplicados !", "Valida Dados", MessageBoxButton.OK);
                 }
                 else
                 {
@@ -450,7 +606,7 @@ namespace Kairos_Sync
             {
                 BtnValidaDados.IsEnabled = true;
                 ErroValidaDados = "Visivle";
-                MessageBox.Show(ex.Message, "Valida Dados",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Valida Dados", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
@@ -471,14 +627,14 @@ namespace Kairos_Sync
 
             if (string.IsNullOrEmpty(CaminhoExcel))
             {
-                if (!PathLeitura())
+                if (!PathLeitura(CaminhoExcelAltPessoa))
                 {
                     return;
                 }
             }
-            if (File.Exists(log))
+            if (System.IO.File.Exists(log))
             {
-                File.Delete(log);
+                System.IO.File.Delete(log);
             }
             BtnSync.IsEnabled = false;
             List<Cargo> Cargos = new();
@@ -636,6 +792,578 @@ namespace Kairos_Sync
         {
             ChkPessoa = false;
         }
+
+
         #endregion
+
+        #region ChkChaveFuncionario
+        private void RbMatricula_Checked(object sender, RoutedEventArgs e)
+        {
+            Chave_Func_Matricula = true;
+        }
+        private void RbMatricula_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Chave_Func_Matricula = false;
+        }
+
+        private void RBCPF_Checked(object sender, RoutedEventArgs e)
+        {
+            Chave_Func_CPF = true;
+        }
+
+        private void RBCPF_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Chave_Func_CPF = false;
+        }
+
+        private void RBPIS_Checked(object sender, RoutedEventArgs e)
+        {
+            Chave_Func_PIS = true;
+        }
+        private void RBPIS_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Chave_Func_PIS = false;
+        }
+        #endregion
+
+        #region ChkAltPessoa
+
+        private void Chk_Alt_Pess_Matricula_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Matricula.IsChecked == true)
+            {
+                ChkMatricula = true;
+            }
+            else
+            {
+                ChkMatricula = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Nome_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Nome.IsChecked == true)
+            {
+                ChkNome = true;
+            }
+            else
+            {
+                ChkNome = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_PIS_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_PIS.IsChecked == true)
+            {
+                ChkPIS = true;
+            }
+            else
+            {
+                ChkPIS = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Cracha_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_PIS.IsChecked == true)
+            {
+                ChkCracha = true;
+            }
+            else
+            {
+                ChkCracha = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_DataDeNascimento_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_DataDeNascimento.IsChecked == true)
+            {
+                ChkDataNascimento = true;
+            }
+            else
+            {
+                ChkDataNascimento = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_DataDeAdmissao_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_DataDeAdmissao.IsChecked == true)
+            {
+                ChkDataAdmissao = true;
+            }
+            else
+            {
+                ChkDataAdmissao = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_RG_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_RG.IsChecked == true)
+            {
+                ChkRG = true;
+            }
+            else
+            {
+                ChkRG = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_CPF_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_CPF.IsChecked == true)
+            {
+                ChkCPF = true;
+            }
+            else
+            {
+                ChkCPF = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_TelefoneCelular_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_TelefoneCelular.IsChecked == true)
+            {
+                ChkCelular = true;
+            }
+            else
+            {
+                ChkCelular = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Email_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Email.IsChecked == true)
+            {
+                ChkEmail = true;
+            }
+            else
+            {
+                ChkEmail = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Estrutura_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Estrutura.IsChecked == true)
+            {
+                ChkEstrutura = true;
+            }
+            else
+            {
+                ChkEstrutura = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Horario_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Horario.IsChecked == true)
+            {
+                ChkHorario = true;
+            }
+            else
+            {
+                ChkHorario = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Cargo_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Cargo.IsChecked == true)
+            {
+                ChkCargo = true;
+            }
+            else
+            {
+                ChkCargo = false;
+            }
+
+        }
+        private void Chk_Alt_Pess_Sexo_Click(object sender, RoutedEventArgs e)
+        {
+            if (Chk_Alt_Pess_Sexo.IsChecked == true)
+            {
+                ChkSexo = true;
+            }
+            else
+            {
+                ChkSexo = false;
+            }
+
+        }
+
+        #endregion
+
+        private async void BtnImportar_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(Txb_Alt_Pessoa_CNPJ) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Chave))
+            {
+                MessageBox.Show("Verifique os campos CNPJ e CHAVE", "Importar", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }
+
+            try
+            {
+                PessoaAPI.Clear();
+                PessoaExcel.Clear();
+                GridPessoas.Items.Clear();
+                BtnImportar.IsEnabled = false;
+
+                await Task.Run(async () =>
+                {
+                    PessoaAPI = new ObservableCollection<Pessoa>(await _API.ListaPessoasAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ));
+                });
+
+
+
+                foreach (var item in PessoaAPI.ToList())
+                {
+                    if (Convert.ToDateTime(item.DataDemissao) != Convert.ToDateTime("01/01/1753 00:00:00"))
+                    {
+                        PessoaAPI.Remove(item);
+                    }
+                }
+
+                foreach (var item in PessoaAPI)
+                {
+
+
+                    string? Estrutura = item.Estrutura?.Descricao;
+                    string? cargo = item.Cargo?.Descricao;
+                    var Horario = item.Horarios[0]?.Horario?.Descricao;
+                    string nascimento = "";
+                    if (Convert.ToDateTime(item.DataNascimento) != Convert.ToDateTime("01/01/1753 00:00:00"))
+                    {
+                        nascimento = item.DataNascimento.Replace(" 00:00:00", "");
+                    }
+                    var estruturaOrg = new Estrutura();
+                    estruturaOrg.Descricao = item.Estrutura.Descricao;
+                    GridPessoas.Items.Add(new Pessoa()
+                    {
+                        Id = item.Id,
+                        Matricula = item.Matricula,
+                        Nome = item.Nome,
+                        CodigoPis = item.CodigoPis.ToString(),
+                        Cracha = item.Cracha,
+                        DataNascimento = nascimento,
+                        DataAdmissao = item.DataAdmissao.Replace(" 00:00:00", ""),
+                        Rg = item.Rg,
+                        Cpf = item.Cpf,
+                        TelefoneCelular = item.TelefoneCelular,
+                        Email = item.Email,
+                        Estrutura = item.Estrutura,
+                        Horarios = item.Horarios,
+                        Cargo = item.Cargo,
+                        Sexo = item.Sexo
+                    });
+                }
+                if (PessoaAPI.Count > 0)
+                {
+
+                    MessageBox.Show("Dados Importados com Sucesso !", "Importar dados API", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possivel buscar as pessoas na API \n Verifique o arquivo LOG !", "Importar dados API");
+                }
+
+                BtnImportar.IsEnabled = true;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Importar", MessageBoxButton.OK, MessageBoxImage.Error);
+                BtnImportar.IsEnabled = true;
+            }
+        }
+
+        private void BtnCaminhoExcelAltPessoa_Click(object sender, RoutedEventArgs e)
+        {
+            PathLeitura(CaminhoExcelAltPessoa);
+        }
+
+        private async void BtnAltPessoaIniciar_Click(object sender, RoutedEventArgs e)
+        {
+            if (!PessoaAPI.Any(x => x.Atualiza == true))
+            {
+                MessageBox.Show("Não existem dados a serem atualizados", "Importar", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+
+            }
+
+
+            await _excel.SalvaBKPExcel(PessoaAPI.ToList(), Txb_Alt_Pessoa_CNPJ);
+            var p = JsonConvert.SerializeObject(PessoaAPI);
+            var pessoaatualizada = JsonConvert.DeserializeObject<List<AtualizaPessoa>>(p.ToString());
+            var ListaDeAlteracoes = pessoaatualizada?.Where(x => x.Atualiza == true).ToList();
+            int total = ListaDeAlteracoes.Count;
+            int status = 0;
+            StatusAltPessoas = $"{status}/{total}";
+
+                _cts = new CancellationTokenSource();
+                await Parallel.ForEachAsync(ListaDeAlteracoes, _cts.Token, async (pessoa, token) =>
+                {
+                    token.ThrowIfCancellationRequested();
+                   await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ, pessoa);
+                    status++;
+                    StatusAltPessoas = $"{status}/{total}";
+
+                });
+
+            Lbl_StatusAlteraPessoa.Content = $"{total}/{total}";
+            MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP", "Altera Pessoa", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+        }
+
+        private async void BtnAtualizaDados_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(CaminhoExcelAltPessoa.Text))
+            {
+                MessageBox.Show("Informe o caminho da planilha excel", "Atualizar", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txb_Alt_Pessoa_CNPJ.Trim()) || string.IsNullOrEmpty(Txb_Alt_Pessoa_Chave.Trim()))
+            {
+                MessageBox.Show("Verifique os campos CNPJ e CHAVE", "Atualizar", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }
+            if (PessoaAPI.Count() == 0)
+            {
+                MessageBox.Show("É necessario impotar os dados da API antes de atualizar", "Atualizar", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }
+            if (string.IsNullOrEmpty(Txb_Alt_Pessoa_CPFResp))
+            {
+                MessageBox.Show("Informe o CPF do responsavel", "Atualizar", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+            if (ChkCargo)
+            {
+                CargosAPI = await _API.ListaCargosAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ);
+            }
+            if (ChkEstrutura)
+            {
+                EstruturasAPI = await _API.ListaEstruturasAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ);
+            }
+
+            BtnAltPessoaIniciar.IsEnabled = false;
+            PessoaExcel = await _excel.ListaPessoas(CaminhoExcelAltPessoa.Text, "", CargosAPI, EstruturasAPI, new List<Horarios>(), true);
+
+
+            foreach (var item in PessoaExcel)
+            {
+                int index = 0;
+                if (Chave_Func_PIS)
+                {
+                    index = PessoaAPI.ToList().FindIndex(x => x.CodigoPis.Replace("-", "").Replace(".", "") == item.CodigoPis.Replace("-", "").Replace(".", ""));
+                }
+                else if (Chave_Func_CPF)
+                {
+                    index = PessoaAPI.ToList().FindIndex(x => x.Cpf.Replace("-", "").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
+                }
+
+                else if (Chave_Func_Matricula)
+                {
+
+                    index = PessoaAPI.ToList().FindIndex(x => x.Matricula == item.Matricula);
+
+                }
+                string CPFResponsavel = Txb_Alt_Pessoa_CPFResp.Trim();
+
+                if (index != -1)
+                {
+                    if (ChkMatricula)
+                    {
+                        PessoaAPI[index].Matricula = item.Matricula;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+
+                    }
+
+                    if (ChkNome)
+                    {
+                        PessoaAPI[index].Nome = item.Nome;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkPIS)
+                    {
+                        PessoaAPI[index].CodigoPis = item.CodigoPis;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkCracha)
+                    {
+                        PessoaAPI[index].Cracha = item.Cracha;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkDataNascimento)
+                    {
+                        PessoaAPI[index].DataNascimento = item.DataNascimento;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkDataAdmissao)
+                    {
+                        PessoaAPI[index].DataAdmissao = item.DataAdmissao;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkRG)
+                    {
+                        PessoaAPI[index].Rg = item.Rg;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkCPF)
+                    {
+                        PessoaAPI[index].Cpf = item.Cpf;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkCelular)
+                    {
+                        PessoaAPI[index].TelefoneCelular = item.TelefoneCelular;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkEmail)
+                    {
+                        PessoaAPI[index].Email = item.Email;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkDepartamento && !string.IsNullOrEmpty(item.Estrutura.Descricao))
+                    {
+                        PessoaAPI[index].Estrutura = item.Estrutura;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkHorario)
+                    {
+                        PessoaAPI[index].Horarios = item.Horarios;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                    if (ChkCargo && !string.IsNullOrEmpty(item.Cargo.Descricao))
+                    {
+                        PessoaAPI[index].Cargo = item.Cargo;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+                    if (ChkSexo)
+                    {
+                        PessoaAPI[index].Sexo = item.Sexo;
+                        PessoaAPI[index].Atualiza = true;
+                        PessoaAPI[index].CpfResponsavel = CPFResponsavel;
+
+                    }
+
+                }
+            }
+            GridPessoas.Items.Clear();
+            foreach (var item in PessoaAPI.Where(x => x.Atualiza == true).ToList())
+            {
+                string? Estrutura = item.Estrutura.Descricao;
+                string? cargo = item?.Cargo?.Descricao;
+                var Horario = item.Horarios[0]?.Horario?.Descricao;
+                string nascimento = "";
+                if (Convert.ToDateTime(item.DataNascimento) != Convert.ToDateTime("01/01/1753 00:00:00"))
+                {
+                    nascimento = item.DataNascimento;
+                }
+                string Sexo = "Masculino";
+                if (item.Sexo == 2)
+                {
+                    Sexo = "Feminino";
+                }
+                if (item.AmbienteTrabalhoPessoa == null)
+                {
+                    var AmbienteDeTrabalho = new List<Ambientetrabalhopessoa>();
+                    AmbienteDeTrabalho.Add(new Ambientetrabalhopessoa
+                    {
+                        Id = 0,
+                        Inicio = DateTime.Now.ToString(),
+                        Fim = "31/12/9999 23:59:59",
+                        TipoAmbienteTrabalho = 6
+                    });
+                    item.AmbienteTrabalhoPessoa = AmbienteDeTrabalho.ToArray();
+                }
+
+
+                GridPessoas.Items.Add(new Pessoa()
+                {
+                    Id = item.Id,
+                    Matricula = item.Matricula,
+                    Nome = item.Nome,
+                    CodigoPis = item.CodigoPis.ToString(),
+                    Cracha = item.Cracha,
+                    DataNascimento = nascimento,
+                    DataAdmissao = item.DataAdmissao.Replace(" 00:00:00", ""),
+                    Rg = item.Rg,
+                    Cpf = item.Cpf,
+                    TelefoneCelular = item.TelefoneCelular,
+                    Email = item.Email,
+                    Estrutura = item.Estrutura,
+                    Horarios = item.Horarios,
+                    Cargo = item.Cargo,
+                    Sexo = item.Sexo
+                });
+
+                
+                BtnAltPessoaIniciar.IsEnabled = true;
+                MessageBox.Show("Lista Atualizada Com Sucesso !", "Atulizar dados", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private async void BtnBKPExcel_Click(object sender, RoutedEventArgs e)
+        {
+            if (PessoaAPI.Count > 0)
+            {
+                string LocalGravacao = PathGravacao();
+                await _excel.SalvaBKPExcel(PessoaAPI.ToList(), Txb_Alt_Pessoa_CNPJ, LocalGravacao);
+                MessageBox.Show("BKP dos dados salvo com sucesso !", "BKP Excel", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+
+            }
+            else
+            {
+                MessageBox.Show("É necessario importar os dados da API antes de fazer o BKP !", "BKP Excel", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }
+
+        }
     }
 }

@@ -11,6 +11,7 @@
         public string DataAdmissao { get; set; }
         public string BaseHoras { get; set; }
         public string Email { get; set; }
+        public Horarios[] Horarios { get; set; }
         public Tiposalario TipoSalario { get; set; }
         public Estrutura Estrutura { get; set; }
         public Cargo Cargo { get; set; }

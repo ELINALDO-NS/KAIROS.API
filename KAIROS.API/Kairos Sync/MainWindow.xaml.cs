@@ -4,17 +4,11 @@ using API.Repositorio;
 using API.Repositorio.Interface;
 using Microsoft.Win32;
 using Newtonsoft.Json;
-using OfficeOpenXml.FormulaParsing.LexicalAnalysis;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Globalization;
-using System.IO;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using static System.Net.WebRequestMethods;
 
 namespace Kairos_Sync
 {
@@ -27,6 +21,7 @@ namespace Kairos_Sync
         public List<Pessoa> PessoaExcel { get; set; }
         public List<Cargo> CargosAPI { get; set; }
         public List<Estrutura> EstruturasAPI { get; set; }
+        public List<Horarios> HorariosAPI { get; set; }
         static string log = Convert.ToString(AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
         private readonly IExcelRepositorio _excel;
         private readonly IAPIRepositorio _API;
@@ -694,6 +689,7 @@ namespace Kairos_Sync
 
                 if (ChkPessoa)
                 {
+                    //LblValidaDados = "Visible"; 
                     if (await ValidaDados(CaminhoExcel) == false)
                     {
                         return;
@@ -953,10 +949,12 @@ namespace Kairos_Sync
         {
             if (Chk_Alt_Pess_Estrutura.IsChecked == true)
             {
+                ChkDepartamento = true;
                 ChkEstrutura = true;
             }
             else
             {
+                ChkDepartamento = false;
                 ChkEstrutura = false;
             }
 
@@ -1154,9 +1152,13 @@ namespace Kairos_Sync
             {
                 EstruturasAPI = await _API.ListaEstruturasAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ);
             }
+            if (_ChkHorario)
+            {
+                HorariosAPI = await _API.ListaHorariosAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ);
+            }
 
             BtnAltPessoaIniciar.IsEnabled = false;
-            PessoaExcel = await _excel.ListaPessoas(CaminhoExcelAltPessoa.Text, "", CargosAPI, EstruturasAPI, new List<Horarios>(), true);
+            PessoaExcel = await _excel.ListaPessoas(CaminhoExcelAltPessoa.Text, "", CargosAPI, EstruturasAPI,HorariosAPI, true);
 
 
             foreach (var item in PessoaExcel)
@@ -1272,6 +1274,7 @@ namespace Kairos_Sync
 
                     if (ChkHorario)
                     {
+
                         PessoaAPI[index].Horarios = item.Horarios;
                         PessoaAPI[index].Atualiza = true;
                         PessoaAPI[index].CpfResponsavel = CPFResponsavel;
@@ -1346,8 +1349,9 @@ namespace Kairos_Sync
 
                 
                 BtnAltPessoaIniciar.IsEnabled = true;
-                MessageBox.Show("Lista Atualizada Com Sucesso !", "Atulizar dados", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+            MessageBox.Show("Lista Atualizada Com Sucesso !", "Atulizar dados", MessageBoxButton.OK, MessageBoxImage.Information);
+
         }
 
         private async void BtnBKPExcel_Click(object sender, RoutedEventArgs e)

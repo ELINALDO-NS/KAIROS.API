@@ -19,7 +19,7 @@
             <TabItem Header="Insere Cadastros">
                 <Grid Background="#FFE5E5E5" VerticalAlignment="Center" HorizontalAlignment="Left" Width="822" Height="535">
                     <Label Content="Caminho Excel" HorizontalAlignment="Left" Margin="2,16,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Height="29" Width="106"/>
-                    <TextBox Text="{Binding CaminhoExcel,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCaminhoExcel" IsReadOnly="True" MaxLines="1" HorizontalAlignment="Left" Margin="112,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontWeight="Bold" FontSize="14" Height="21"/>
+                    <TextBox Text="{Binding CaminhoExcel,UpdateSourceTrigger=PropertyChanged}" x:Name="TxbCaminhoExcel" IsReadOnly="True" MaxLines="1" HorizontalAlignment="Left" Margin="112,20,0,0" VerticalAlignment="Top" Width="255" FontWeight="Bold" FontSize="14" Height="21"/>
                     <Button x:Name="BtnCaminhoExcel" Content="..." Width="48" HorizontalAlignment="Left" Margin="372,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="BtnCaminhoExcel_Click_1"/>
                     <Label Content="Key" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="34"/>
                     <Label Content="CNPJ" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-7.633,-0.228" FontWeight="Bold" FontSize="14" Height="29" Width="45"/>

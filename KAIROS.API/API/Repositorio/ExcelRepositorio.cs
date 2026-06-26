@@ -3,7 +3,6 @@ using API.Model;
 using API.Repositorio.Interface;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
-using OpenQA.Selenium.DevTools.V141.Extensions;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
@@ -367,9 +366,11 @@ namespace API.Repositorio
                                       Horario.Add(new Horarios()
                                       {
                                           //Codigo = H.Codigo,
+                                          
                                           Inicio = DateTime.Now.ToString(),
                                           Fim = "31/12/9999 23:59:59",
-                                          Horario = new Horario() { Id = H.Id }
+                                          Horario = new Horario() { Id = H.Id,Descricao = H.Descricao },
+                                          Descricao = H.Descricao
                                       });
 
                                       break;

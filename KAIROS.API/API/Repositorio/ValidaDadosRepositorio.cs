@@ -350,7 +350,7 @@ namespace API.Repositorio
                         if (!AdmissaoValido && !AdmissaoValido1)
                         {
                             DataValida = false;
-                            Log.GravaLog($"Funcionario sem data de Admissão, ou data Invalida para o Funcionario -  {Pessoa}");
+                            Log.GravaLog($"Funcionario sem data de Admissão, ou data Invalida -  {Pessoa}");
 
                         }
 

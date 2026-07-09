@@ -82,7 +82,6 @@ namespace API
             DadoLido = Convert.ToString(PlanilaSelecionada.Cells[Linha, Celula].Value);
             return DadoLido;
         }
-
         public void EscreveExcel(string Planilha, int Linha, int Celula, string valor)
         {
 

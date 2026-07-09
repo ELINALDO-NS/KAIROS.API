@@ -1,5 +1,6 @@
 ﻿using API.Repositorio.Interface;
 using System.Globalization;
+using System.Net.Http.Headers;
 
 
 namespace API.Repositorio
@@ -11,12 +12,14 @@ namespace API.Repositorio
 
             bool CPFValido = true;
             int Linha = 4;
+            int coluna = Comunicacao ? 7 : 8;
             var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
             {
 
                 while (true)
                 {
+
                     string CPF = excel.LeExcel("FUNCIONÁRIOS", Linha, 8);
                     if (!string.IsNullOrEmpty(CPF))
                     {
@@ -40,6 +43,7 @@ namespace API.Repositorio
         {
             bool CPFDupplic = true;
             int Linha = 4;
+            int coluna = Comunicacao ? 7 : 8;
             var CPFs = new List<string>();
             var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
@@ -47,7 +51,7 @@ namespace API.Repositorio
 
                 while (true)
                 {
-                    string CPF = excel.LeExcel("FUNCIONÁRIOS", Linha, 8);
+                    string CPF = excel.LeExcel("FUNCIONÁRIOS", Linha, coluna);
                     if (!string.IsNullOrEmpty(CPF))
                     {
                         CPFs.Add(CPF);
@@ -75,6 +79,8 @@ namespace API.Repositorio
         }
         public async Task<bool> ValidaDescricaoHorario(string CaminhoExcel, bool Comunicacao)
         {
+            if (Comunicacao)
+                return true;
 
             bool DescricaoValido = true;
             int Linha = 4;
@@ -124,6 +130,7 @@ namespace API.Repositorio
         {
             bool EmailDupplic = true;
             int Linha = 4;
+            int coluna = Comunicacao ? 8 : 11;
             var Emails = new List<string>();
             var excel = new Excel(CaminhoExcel);
             await Task.Run(() =>
@@ -131,7 +138,7 @@ namespace API.Repositorio
 
                 while (true)
                 {
-                    string Email = excel.LeExcel("FUNCIONÁRIOS", Linha, 11);
+                    string Email = excel.LeExcel("FUNCIONÁRIOS", Linha, coluna);
                     if (!string.IsNullOrEmpty(Email))
                     {
                         Emails.Add(Email);
@@ -263,7 +270,9 @@ namespace API.Repositorio
         }
         public async Task<bool> ValidaBaseDeHoras(string CaminhoExcel, bool Comunicacao)
         {
-
+            if (Comunicacao)
+                return true;
+            
             bool BaseDeHoras = true;
             int Linha = 4;
             var excel = new Excel(CaminhoExcel);
@@ -332,6 +341,7 @@ namespace API.Repositorio
         public async Task<bool> ValidaDatas(string CaminhoExcel, bool Comunicacao)
         {
             int Linha = 4;
+            int coluna = Comunicacao ? 5 : 6;
             var excel = new Excel(CaminhoExcel);
             bool DataValida = true;
             await Task.Run(() =>
@@ -339,7 +349,7 @@ namespace API.Repositorio
                 while (true)
                 {
                     string Pessoa = excel.LeExcel("FUNCIONÁRIOS", Linha, 2).Trim();
-                    string DTAdmissao = excel.LeExcel("FUNCIONÁRIOS", Linha, 6).Trim();
+                    string DTAdmissao = excel.LeExcel("FUNCIONÁRIOS", Linha, coluna).Trim();
                     if (!string.IsNullOrEmpty(Pessoa))
                     {
 
@@ -369,6 +379,7 @@ namespace API.Repositorio
         public async Task<bool> ValidaPessoaSemCNPJ(string CaminhoExcel, bool Comunicacao)
         {
             int Linha = 4;
+            int coluna = Comunicacao ? 11 : 20;
             var excel = new Excel(CaminhoExcel);
             bool PessoaSemCNPJ = true;
             await Task.Run(() =>
@@ -377,7 +388,7 @@ namespace API.Repositorio
                 while (true)
                 {
                     string Pessoa = excel.LeExcel("FUNCIONÁRIOS", Linha, 2);
-                    string CNPJ = excel.LeExcel("FUNCIONÁRIOS", Linha, 20);
+                    string CNPJ = excel.LeExcel("FUNCIONÁRIOS", Linha, coluna);
                     if (!string.IsNullOrEmpty(Pessoa))
                     {
                         if (string.IsNullOrEmpty(CNPJ))

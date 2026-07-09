@@ -3,6 +3,7 @@ using API.Model;
 using API.Repositorio.Interface;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
+using System.ComponentModel;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
@@ -13,7 +14,8 @@ namespace API.Repositorio
         public int Codigo { get; set; } = 2;
         public ExcelRepositorio()
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            ExcelPackage.License.SetNonCommercialPersonal("Jubileu");
+
         }
         public async Task<List<Cargo>> ListaCargos(string CaminhoExcel)
         {

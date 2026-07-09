@@ -60,7 +60,7 @@ namespace Kairos_Sync.Controls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Kairos Sync;component/spinner.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Kairos Sync;V1.0.0.0;component/spinner.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Spinner.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

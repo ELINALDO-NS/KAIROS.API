@@ -80,6 +80,9 @@ namespace Kairos_Sync
             }
         }
 
+
+ 
+
         private string _SpinEstruturas = "Hidden";
         public string SpinEstruturas
         {
@@ -533,21 +536,29 @@ namespace Kairos_Sync
             ErroValidaDados = "Hidden";
             LblValidaDados = "Visivle";
             SpinValidaDados = "Visivle";
+            bool comunica = Rb_Comunica.IsChecked ?? false;
+            
+            if (!await _validaDados.ValidaColunas(Caminho, comunica))
+            {
+                SpinValidaDados = "Hidden";
+                ErroValidaDados = "Visivle";
+                return false;
+            }
             var tarefas = new Dictionary<string, Task<bool>>
             {
-                ["CPF"] = _validaDados.ValidaCPF(Caminho),
-                ["CPFDuplicado"] = _validaDados.ValidaCPFDuplicado(Caminho),
-                ["PIS"] = _validaDados.ValidaPIS(Caminho),
-                ["PISDuplicado"] = _validaDados.ValidaPISDuplicado(Caminho),
-                ["MatriculaDuplicada"] = _validaDados.ValidaMatriculaDuplicada(Caminho),
-                ["PessoaSemMatricula"] = _validaDados.ValidaPessoaSemMatricula(Caminho),
-                ["DescricaoHorario"] = _validaDados.ValidaDescricaoHorario(Caminho),
-                ["EmailDuplicado"] = _validaDados.ValidaEmailDuplicado(Caminho),
-                ["DataInvalida"] = _validaDados.ValidaDatas(Caminho),
-                ["PessoaSemCPF"] = _validaDados.ValidaPessoaSemCNPJ(Caminho),
-                ["BaseDeHorasInvalida"] = _validaDados.ValidaBaseDeHoras(Caminho)
+                ["CPF"] = _validaDados.ValidaCPF(Caminho, comunica),
+                ["CPFDuplicado"] = _validaDados.ValidaCPFDuplicado(Caminho, comunica),
+                ["PIS"] = _validaDados.ValidaPIS(Caminho, comunica),
+                ["PISDuplicado"] = _validaDados.ValidaPISDuplicado(Caminho, comunica),
+                ["MatriculaDuplicada"] = _validaDados.ValidaMatriculaDuplicada(Caminho, comunica),
+                ["PessoaSemMatricula"] = _validaDados.ValidaPessoaSemMatricula(Caminho, comunica),
+                ["DescricaoHorario"] = _validaDados.ValidaDescricaoHorario(Caminho, comunica),
+                ["EmailDuplicado"] = _validaDados.ValidaEmailDuplicado(Caminho, comunica),
+                ["DataInvalida"] = _validaDados.ValidaDatas(Caminho, comunica),
+                ["PessoaSemCPF"] = _validaDados.ValidaPessoaSemCNPJ(Caminho, comunica),
+                ["BaseDeHorasInvalida"] = _validaDados.ValidaBaseDeHoras(Caminho, comunica)                
             };
-
+ 
             await Task.WhenAll(tarefas.Values);
             bool dadosValidos = tarefas.Values.All(t => t.Result);
 

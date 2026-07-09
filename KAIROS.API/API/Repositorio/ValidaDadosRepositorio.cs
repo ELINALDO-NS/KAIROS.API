@@ -6,7 +6,7 @@ namespace API.Repositorio
 {
     public class ValidaDadosRepositorio : IValidaDadosRepositorio
     {
-        public async Task<bool> ValidaCPF(string CaminhoExcel)
+        public async Task<bool> ValidaCPF(string CaminhoExcel, bool Comunicacao)
         {
 
             bool CPFValido = true;
@@ -36,7 +36,7 @@ namespace API.Repositorio
             });
             return CPFValido;
         }
-        public async Task<bool> ValidaCPFDuplicado(string CaminhoExcel)
+        public async Task<bool> ValidaCPFDuplicado(string CaminhoExcel, bool Comunicacao)
         {
             bool CPFDupplic = true;
             int Linha = 4;
@@ -73,7 +73,7 @@ namespace API.Repositorio
             return CPFDupplic;
 
         }
-        public async Task<bool> ValidaDescricaoHorario(string CaminhoExcel)
+        public async Task<bool> ValidaDescricaoHorario(string CaminhoExcel, bool Comunicacao)
         {
 
             bool DescricaoValido = true;
@@ -120,7 +120,7 @@ namespace API.Repositorio
             });
             return DescricaoValido;
         }
-        public async Task<bool> ValidaEmailDuplicado(string CaminhoExcel)
+        public async Task<bool> ValidaEmailDuplicado(string CaminhoExcel, bool Comunicacao)
         {
             bool EmailDupplic = true;
             int Linha = 4;
@@ -157,7 +157,7 @@ namespace API.Repositorio
             return EmailDupplic;
 
         }
-        public async Task<bool> ValidaMatriculaDuplicada(string CaminhoExcel)
+        public async Task<bool> ValidaMatriculaDuplicada(string CaminhoExcel, bool Comunicacao)
         {
             bool MatriculaDupplic = true;
             int Linha = 4;
@@ -193,7 +193,7 @@ namespace API.Repositorio
             });
             return MatriculaDupplic;
         }
-        public async Task<bool> ValidaPessoaSemMatricula(string CaminhoExcel)
+        public async Task<bool> ValidaPessoaSemMatricula(string CaminhoExcel, bool Comunicacao)
         {
 
             int Linha = 4;
@@ -225,7 +225,7 @@ namespace API.Repositorio
             });
             return MatriculaValida;
         }
-        public async Task<bool> ValidaPIS(string CaminhoExcel)
+        public async Task<bool> ValidaPIS(string CaminhoExcel, bool Comunicacao)
         {
 
             bool PISValido = true;
@@ -261,7 +261,7 @@ namespace API.Repositorio
 
             return PISValido;
         }
-        public async Task<bool> ValidaBaseDeHoras(string CaminhoExcel)
+        public async Task<bool> ValidaBaseDeHoras(string CaminhoExcel, bool Comunicacao)
         {
 
             bool BaseDeHoras = true;
@@ -293,7 +293,7 @@ namespace API.Repositorio
 
             return BaseDeHoras;
         }
-        public async Task<bool> ValidaPISDuplicado(string CaminhoExcel)
+        public async Task<bool> ValidaPISDuplicado(string CaminhoExcel, bool Comunicacao)
         {
             bool PISDupplic = true;
             int Linha = 4;
@@ -329,7 +329,7 @@ namespace API.Repositorio
             });
             return PISDupplic;
         }
-        public async Task<bool> ValidaDatas(string CaminhoExcel)
+        public async Task<bool> ValidaDatas(string CaminhoExcel, bool Comunicacao)
         {
             int Linha = 4;
             var excel = new Excel(CaminhoExcel);
@@ -366,7 +366,7 @@ namespace API.Repositorio
             return DataValida;
 
         }
-        public async Task<bool> ValidaPessoaSemCNPJ(string CaminhoExcel)
+        public async Task<bool> ValidaPessoaSemCNPJ(string CaminhoExcel, bool Comunicacao)
         {
             int Linha = 4;
             var excel = new Excel(CaminhoExcel);
@@ -396,6 +396,33 @@ namespace API.Repositorio
 
             });
             return PessoaSemCNPJ;
+        }
+        public async Task<bool> ValidaColunas(string CaminhoExcel, bool Comunicacao)
+        {
+           
+            var excel = new Excel(CaminhoExcel);
+            bool ColunasNãoEncontradas = true;
+            await Task.Run(() =>
+            {
+
+                while (true)
+                {                    
+                    var Colunas = excel.ValidaColunasExcel("FUNCIONÁRIOS", Comunicacao);
+                    if (Colunas.Count > 0)
+                    {
+                       ColunasNãoEncontradas = false;
+                       Log.GravaLog($"Colunas não encontradas na planilha: {string.Join(", ", Colunas)}");
+                       break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    
+                }
+
+            });
+            return ColunasNãoEncontradas;
         }
     }
 }

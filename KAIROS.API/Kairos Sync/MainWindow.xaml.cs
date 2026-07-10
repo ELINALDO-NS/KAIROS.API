@@ -81,7 +81,7 @@ namespace Kairos_Sync
         }
 
 
- 
+
 
         private string _SpinEstruturas = "Hidden";
         public string SpinEstruturas
@@ -501,7 +501,7 @@ namespace Kairos_Sync
         {
             try
             {
-
+                var comunica = Convert.ToBoolean(Rb_Comunica.IsChecked);
                 if (string.IsNullOrEmpty(CaminhoExcel))
                 {
                     MessageBox.Show("Informe o Local da Planilha de Implantação !", "Listar Horario", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -511,7 +511,7 @@ namespace Kairos_Sync
                 string LocalGravacao = PathGravacao();
                 if (!string.IsNullOrEmpty(LocalGravacao))
                 {
-                    await _excel.SalvaHorarios(CaminhoExcel, LocalGravacao);
+                    await _excel.SalvaHorarios(CaminhoExcel, LocalGravacao, comunica);
                     BtnListaHorarios.IsEnabled = true;
                     MessageBox.Show("Lista de Horarios Salva Com Sucesso !", "Lista Horarios", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -537,7 +537,7 @@ namespace Kairos_Sync
             LblValidaDados = "Visivle";
             SpinValidaDados = "Visivle";
             bool comunica = Rb_Comunica.IsChecked ?? false;
-            
+
             if (!await _validaDados.ValidaColunas(Caminho, comunica))
             {
                 SpinValidaDados = "Hidden";
@@ -556,9 +556,9 @@ namespace Kairos_Sync
                 ["EmailDuplicado"] = _validaDados.ValidaEmailDuplicado(Caminho, comunica),
                 ["DataInvalida"] = _validaDados.ValidaDatas(Caminho, comunica),
                 ["PessoaSemCPF"] = _validaDados.ValidaPessoaSemCNPJ(Caminho, comunica),
-                ["BaseDeHorasInvalida"] = _validaDados.ValidaBaseDeHoras(Caminho, comunica)                
+                ["BaseDeHorasInvalida"] = _validaDados.ValidaBaseDeHoras(Caminho, comunica)
             };
- 
+
             await Task.WhenAll(tarefas.Values);
             bool dadosValidos = tarefas.Values.All(t => t.Result);
 
@@ -643,12 +643,14 @@ namespace Kairos_Sync
             {
                 System.IO.File.Delete(log);
             }
+
             BtnSync.IsEnabled = false;
             List<Cargo> Cargos = new();
             List<Estrutura> Estruturas = new();
             List<Horarios> Horarios = new();
             List<Pessoa> Pessoas = new();
             var tasks1 = new List<Task>();
+            var comunica = Convert.ToBoolean(Rb_Comunica.IsChecked);
             try
             {
                 CheckEstruturas = "Hidden";
@@ -670,7 +672,8 @@ namespace Kairos_Sync
                     {
                         LblEstruturas = "Visible";
                         SpinEstruturas = "Visible";
-                        await _API.InsereEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim(), CaminhoExcel: CaminhoExcel.Trim());
+                        var estruturas = await _excel.ListaEstruturas(CaminhoExcel, comunica);
+                        await _API.InsereEstruturasAPI(Key: Key.Trim(), CNPJ: CNPJ.Trim(), estruturas);
                         if (!ChkPessoa)
                         {
                             SpinEstruturas = "Hidden";
@@ -737,7 +740,16 @@ namespace Kairos_Sync
                     int Stp = 0;
                     LblPessoas = "Visible";
                     LblStatusPessoas = "Visible";
-                    Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios);
+                    if (comunica)
+                    {
+                        Pessoas = await _excel.ListaPessoasComunica(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios, comunica);
+
+                    }
+                    else
+                    {
+                        Pessoas = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcel, CPFRESP.Trim(), Cargos, Estruturas, Horarios, comunica);
+
+                    }
                     int TotalPessoa = Pessoas.Count;
                     StatusPessoas = $"{Stp}/{TotalPessoa}";
 
@@ -1117,15 +1129,15 @@ namespace Kairos_Sync
             int status = 0;
             StatusAltPessoas = $"{status}/{total}";
 
-                _cts = new CancellationTokenSource();
-                await Parallel.ForEachAsync(ListaDeAlteracoes, _cts.Token, async (pessoa, token) =>
-                {
-                    token.ThrowIfCancellationRequested();
-                   await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ, pessoa);
-                    status++;
-                    StatusAltPessoas = $"{status}/{total}";
+            _cts = new CancellationTokenSource();
+            await Parallel.ForEachAsync(ListaDeAlteracoes, _cts.Token, async (pessoa, token) =>
+            {
+                token.ThrowIfCancellationRequested();
+                await _API.AtualizaPessoasAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ, pessoa);
+                status++;
+                StatusAltPessoas = $"{status}/{total}";
 
-                });
+            });
 
             Lbl_StatusAlteraPessoa.Content = $"{total}/{total}";
             MessageBox.Show($"Pessoas alteradas com sucesso !{Environment.NewLine}Um BackUp dos dados foram salvos na pasta BKP", "Altera Pessoa", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -1155,6 +1167,7 @@ namespace Kairos_Sync
                 MessageBox.Show("Informe o CPF do responsavel", "Atualizar", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
+            var comunica = Convert.ToBoolean(Rb_Comunica.IsChecked);
             if (ChkCargo)
             {
                 CargosAPI = await _API.ListaCargosAPI(Txb_Alt_Pessoa_Chave, Txb_Alt_Pessoa_CNPJ);
@@ -1169,8 +1182,17 @@ namespace Kairos_Sync
             }
 
             BtnAltPessoaIniciar.IsEnabled = false;
-            PessoaExcel = await _excel.ListaPessoas(CaminhoExcelAltPessoa.Text, "", CargosAPI, EstruturasAPI,HorariosAPI, true);
+            if (comunica)
+            {
+                PessoaExcel = await _excel.ListaPessoasComunica(CaminhoExcel: CaminhoExcelAltPessoa.Text, CPFRESP.Trim(), CargosAPI, EstruturasAPI, HorariosAPI, comunica);
 
+            }
+            else
+            {
+                PessoaExcel = await _excel.ListaPessoas(CaminhoExcel: CaminhoExcelAltPessoa.Text, CPFRESP.Trim(), CargosAPI, EstruturasAPI, HorariosAPI);
+
+            }
+           
 
             foreach (var item in PessoaExcel)
             {
@@ -1358,7 +1380,7 @@ namespace Kairos_Sync
                     Sexo = item.Sexo
                 });
 
-                
+
                 BtnAltPessoaIniciar.IsEnabled = true;
             }
             MessageBox.Show("Lista Atualizada Com Sucesso !", "Atulizar dados", MessageBoxButton.OK, MessageBoxImage.Information);

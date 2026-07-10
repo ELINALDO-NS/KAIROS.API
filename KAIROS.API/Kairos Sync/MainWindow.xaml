@@ -53,8 +53,8 @@
                     <Image Visibility="{Binding CheckCargos,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="336,345,0,0" VerticalAlignment="Top" Source="/check.png"/>
                     <Image Visibility="{Binding CheckPessoas,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="520,347,0,0" VerticalAlignment="Top" Source="/check.png"/>
                     <Image Visibility="{Binding ErroValidaDados, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Width="25" Margin="132,343,0,0" VerticalAlignment="Top" Source="/Erro.png"/>
-                    <RadioButton x:Name="Rb_PRO"  Content="PRO" HorizontalAlignment="Left"  Margin="446,123,0,0" VerticalAlignment="Top" IsChecked="True"/>
-                    <RadioButton x:Name="Rb_Comunica" Content="Comunicação" HorizontalAlignment="Left" Margin="503,124,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="Rb_PRO"  Content="PRO" HorizontalAlignment="Left"  Margin="30,237,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                    <RadioButton x:Name="Rb_Comunica" Content="Comunicação" HorizontalAlignment="Left" Margin="88,238,0,0" VerticalAlignment="Top"/>
 
                 </Grid>
             </TabItem>

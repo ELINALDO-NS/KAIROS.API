@@ -66,9 +66,9 @@ namespace API.Repositorio
             }
             ;
         }
-        public async Task InsereEstruturasAPI(string Key, string CNPJ, string CaminhoExcel)
+        public async Task InsereEstruturasAPI(string Key, string CNPJ, List<Estrutura> estruturas)
         {
-            var estruturas = await _excel.ListaEstruturas(CaminhoExcel);
+          
             foreach (var estrutura in estruturas)
             {
                 using (var client = new RestClient(SalvaEstrutura_URL))

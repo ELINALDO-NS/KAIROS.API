@@ -12,7 +12,7 @@ namespace API.Repositorio.Interface
     {
         Task InsereCargosAPI(string Key, string CNPJ, string CaminhoExcel);
         Task<List<Cargo>> ListaCargosAPI(string Key, string CNPJ);
-        Task InsereEstruturasAPI(string Key, string CNPJ, string CaminhoExcel);
+        Task InsereEstruturasAPI(string Key, string CNPJ, List<Estrutura> estruturas);
         Task<List<Estrutura>> ListaEstruturasAPI(string Key, string CNPJ);
         Task<List<Horarios>> ListaHorariosAPI(string Key, string CNPJ);
         Task InserePessoaAPI(string Key, string CNPJ, Pessoa Pessoa);

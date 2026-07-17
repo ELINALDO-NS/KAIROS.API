@@ -22,6 +22,7 @@ namespace Kairos_Sync
         public List<Cargo> CargosAPI { get; set; }
         public List<Estrutura> EstruturasAPI { get; set; }
         public List<Horarios> HorariosAPI { get; set; }
+
         static string log = Convert.ToString(AppDomain.CurrentDomain.BaseDirectory.ToString() + @"Log\Log.txt");
         private readonly IExcelRepositorio _excel;
         private readonly IAPIRepositorio _API;

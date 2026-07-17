@@ -32,10 +32,10 @@ namespace API.Repositorio
                 while (true)
                 {
 
-                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("CARGOS", Linha, 2));
+                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("CARGOS", Linha, 2)).Trim().ToTitleCase();
                     if (!string.IsNullOrEmpty(DescricaoPlCargo))
                     {
-                        if (!cargos.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlCargo.Replace(" ", ""))))
+                        if (!cargos.Any(a => a.Descricao.Equals(DescricaoPlCargo)))
                         {
                             cargos.Add(new Cargo
                             {
@@ -53,10 +53,10 @@ namespace API.Repositorio
                 Linha = 4;
                 while (true)
                 {
-                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("FUNCIONÁRIOS", Linha, 17));
+                    string DescricaoPlCargo = FormataTexto.RemoveAcentos(excel.LeExcel("FUNCIONÁRIOS", Linha, 17)).Trim().ToTitleCase();
                     if (!string.IsNullOrEmpty(DescricaoPlCargo))
                     {
-                        if (!cargos.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlCargo.Replace(" ", ""))))
+                        if (!cargos.Any(a => a.Descricao.Equals(DescricaoPlCargo)))
                         {
                             cargos.Add(new Cargo
                             {
@@ -129,18 +129,16 @@ namespace API.Repositorio
 
                 while (!comunicacao)
                 {
-                    string DescricaoPlDepartamento = FormataTexto.RemoveAcentos(excel.LeExcel("DEPARTAMENTOS", Linha, 2));
+                    string DescricaoPlDepartamento = FormataTexto.RemoveAcentos(excel.LeExcel("DEPARTAMENTOS", Linha, 2)).Trim().ToTitleCase();
                     if (!string.IsNullOrEmpty(DescricaoPlDepartamento))
                     {
-                        if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlDepartamento.Replace(" ", ""))))
+                        if (!estrutura.Any(a => a.Descricao.Equals(DescricaoPlDepartamento)))
                         {
                             estrutura.Add(new Estrutura
                             {
                                 Descricao = DescricaoPlDepartamento
                             });
-
                         }
-
                         Linha++;
                     }
                     else
@@ -151,11 +149,11 @@ namespace API.Repositorio
                 Linha = 4;
                 while (true)
                 {
-                    string DescricaoPlFuncionario = FormataTexto.RemoveAcentos(excel.LeExcel("FUNCIONÁRIOS", Linha, coluna));
+                    string DescricaoPlFuncionario = FormataTexto.RemoveAcentos(excel.LeExcel("FUNCIONÁRIOS", Linha, coluna)).Trim().ToTitleCase();
 
                     if (!string.IsNullOrEmpty(DescricaoPlFuncionario))
                     {
-                        if (!estrutura.Any(a => a.Descricao.Replace(" ", "").Equals(DescricaoPlFuncionario.Replace(" ", ""))))
+                        if (!estrutura.Any(a => a.Descricao.Equals(DescricaoPlFuncionario)))
                         {
                             estrutura.Add(new Estrutura
                             {

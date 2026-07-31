@@ -302,7 +302,7 @@ namespace API.Repositorio
             foreach (var pessoa in pessoas)
             {
 
-                if (pessoa.CodigoPis.Substring(1) == pessoa.Cpf.SoLetrasENumeros())
+                if (pessoa.CodigoPis.Length > 10 && pessoa.CodigoPis.Substring(1) == pessoa.Cpf.SoLetrasENumeros())
                 {
                     pessoa.FlagGerarNumeroPISAutomatico = 1;
                 }

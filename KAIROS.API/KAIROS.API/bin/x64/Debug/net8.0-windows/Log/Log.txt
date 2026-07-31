@@ -1,25 +1,6 @@
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee ALESSON PIRES DOS SANTOS - Matricula : 215 - ALESSON PIRES DOS SANTOS 
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee FERNANDA DE ALMEIDA SILVA - Matricula : 173 - FERNANDA DE ALMEIDA SILVA
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee ALEXANDRE DE SENA MOREIRA - Matricula : 174 - ALEXANDRE DE SENA MOREIRA ANDRADE 
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee ANAILZA EGIDIO DOS SANTOS DE MENEZES - Matricula : 188 - ANAILZA EGIDIO DOS SANTOS DE MENEZES
-10-06-2025_16-50 - Salva Pessoa - Card number already exists in employee DIEGO SACRAMENTO DOS SANTOS - Matricula : 18 - SHEILA DA SILVA ESTRELA
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee JAMILE DE JESUS RIBEIRO - Matricula : 179 - JAMILE DE JESUS RIBEIRO
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee LUCAS FERREIRA DOS REIS - Matricula : 223 - LUCAS FERREIRA DOS REIS
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee BRUNO DE JESUS OLIVEIRA - Matricula : 230 - BRUNO DE JESUS OLIVEIRA
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee ANDREIA DOS SANTOS E SANTOS - Matricula : 101 - ANDREIA DOS SANTOS E SANTOS
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee LARISSA MATOS DA SILVA - Matricula : 141 - LARISSA MATOS DA SILVA 
-10-06-2025_16-50 - Salva Pessoa - Card number already exists in employee JAMILE DE JESUS RIBEIRO - Matricula : 21 - MAILI DOS SANTOS OLIVEIRA 
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee SULIVAN FREITAS SANTANA - Matricula : 169 - SULIVAN FREITAS SANTANA 
-10-06-2025_16-50 - Salva Pessoa - Cpf number already exists in employee CAIO CESAR FERREIRA MOTA - Matricula : 124 - CAIO CESAR FERREIRA MOTA 
-10-06-2025_16-50 - Salva Pessoa - A licença não permite adicionar mais pessoas. - Matricula : 202 - CARLIANE MATOS DA CRUZ 
-10-06-2025_16-50 - Salva Pessoa - A licença não permite adicionar mais pessoas. - Matricula : 244 - MARIA EDUARDA PEREIRA TUPINAMBA
-10-06-2025_16-50 - Salva Pessoa - A licença não permite adicionar mais pessoas. - Matricula : 294 - CRISLANE GONZAGA DE ANA SANTOS
-10-06-2025_16-50 - Salva Pessoa - A licença não permite adicionar mais pessoas. - Matricula : 220 - BEATRIZ DE SANTANA RIBEIRO
-23-02-2026_13-49 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 77777
-23-02-2026_13-49 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 77777
-23-02-2026_13-49 - Salva Pessoa - The Field Pis is invalid - Matricula : 77777 - TESTE 1 2 3 DA SILVA2
-23-02-2026_13-54 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 77777
-23-02-2026_13-54 - Salva Pessoa - The Field Pis is invalid - Matricula : 77777 - TESTE 1 2 3 DA SILVA2
-23-02-2026_13-57 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 77777
-23-02-2026_13-57 - (Horário Padrão) Horario não encontrado para o funcionario, Matricula: 77777
-23-02-2026_13-57 - Salva Pessoa - A cadeia de caracteres de entrada não estava em um formato correto. - Matricula : 77777 - TESTE 1 2 3 DA SILVA2
+24-07-2026_15-24 - Funcionario de Matricula: 620 - O(s) lançamento(s) do(s) funcionário(s) de matrícula 620 não foram salvos devido a data de lançamento ser menor que a data de abertura.
+24-07-2026_15-24 - Funcionario de Matricula: 683 - O(s) lançamento(s) do(s) funcionário(s) de matrícula 683 não foram salvos devido a data de lançamento ser menor que a data de abertura.
+24-07-2026_15-41 - Funcionario de Matricula: 661 - A cadeia de caracteres de entrada não estava em um formato correto.
+24-07-2026_15-47 - Funcionario de Matricula: 793 - Por favor, informar um valor de crédito ou débito a ser lançado no banco de horas.
+24-07-2026_15-47 - Funcionario de Matricula: 797 - Por favor, informar um valor de crédito ou débito a ser lançado no banco de horas.
+24-07-2026_15-52 - Funcionario de Matricula: 661 - A cadeia de caracteres de entrada não estava em um formato correto.

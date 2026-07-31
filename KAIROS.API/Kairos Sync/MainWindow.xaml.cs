@@ -1206,7 +1206,6 @@ namespace Kairos_Sync
                 {
                     index = PessoaAPI.ToList().FindIndex(x => x.Cpf.Replace("-", "").Replace(".", "") == item.Cpf.Replace("-", "").Replace(".", ""));
                 }
-
                 else if (Chave_Func_Matricula)
                 {
 
@@ -1222,8 +1221,6 @@ namespace Kairos_Sync
                         PessoaAPI[index].Matricula = item.Matricula;
                         PessoaAPI[index].Atualiza = true;
                         PessoaAPI[index].CpfResponsavel = CPFResponsavel;
-
-
                     }
 
                     if (ChkNome)
@@ -1315,7 +1312,7 @@ namespace Kairos_Sync
 
                     }
 
-                    if (ChkCargo && !string.IsNullOrEmpty(item.Cargo.Descricao))
+                    if (ChkCargo && !string.IsNullOrEmpty(item.Cargo?.Descricao))
                     {
                         PessoaAPI[index].Cargo = item.Cargo;
                         PessoaAPI[index].Atualiza = true;

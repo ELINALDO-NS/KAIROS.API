@@ -361,8 +361,6 @@ namespace API.Repositorio
                                           Cargo.Descricao = C.Descricao;
                                           break;
                                       }
-
-
                                   }
 
                               }
@@ -718,8 +716,6 @@ namespace API.Repositorio
             }
             return Pessoas;
         }
-
-
         public async Task SalvaBKPExcel(List<Pessoa> pessoas, string CNPJ, string SalvarEm = "")
         {
             Directory.CreateDirectory(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"\BKP");
